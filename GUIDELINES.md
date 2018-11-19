@@ -30,4 +30,4 @@
 * For longer commit messages separate the message into title and body (`git commit -m "This is title" -m "This is body"`)
 * Pull into master after each merged pull request
 * Start day by pulling from master
-* Branch names are lowercase intials "-" section we are working on (ex. "ao-test")
+* Branch names are lowercase intials "-" section we are working on (ex. "ao-test").
