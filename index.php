@@ -3,29 +3,29 @@ include 'includes/head.php';
 ?>
 
 <main class="container">
-    <header class="row justify-content-between">
-    <nav class="col-xs-6">
-        <div class="hamburger-menu d-md-none">
-            <img src="images/hamburger.svg" alt="hamburger-Menu">
+        <header class="header row">
+            <nav class="col-xs-6 d-md-none hamburger">     
+                <button class="hamburger-button">
+                    <img src="images/hamburger.svg" alt="hamburger-Menu">
+                </button>
+            </nav>
+            <div class="col-xs-6 logo">
+                    <img src="images/logo.svg" alt="millhouse-Logo">
             </div>
-    </nav>
-        <nav class="desktop-nav d-none d-md-block">
-            <ul>
-                <li>Beauty</li>
-                <li>Sunglasses</li>
-                <li>Home Decor</li>
-                <li>Categories</li>
+           
+        </header>
+        <nav class="mobile d-md-none">
+            <ul class="mobile-items">
+                <li class="mobile-item"> <a href="login.php">Log in</a></li>
+                <li class="mobile-item"> <a href="beauty.php">Beauty</a></li>
+                <li class="mobile-item"> <a href="sunglasses.php">Sunglasses</a></li>
+                <li class="mobile-item"> <a href="home_decor.php">Home Decor</a></li>
+                <li class="mobile-item"> <a href="categories.php">Categories</a></li>
             </ul>
         </nav>
-        <div class="col-xs-6 logo">
-            <img src="images/logo.svg" alt="millhouse-Logo">
-        </div>
-    </header>
-
-
-    <? // include 'includes/header.php'; ?>
-
-</main>
+        </main>
+    
+    <script src="main.js"></script>
 
 
 <?php
