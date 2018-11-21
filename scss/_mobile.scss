@@ -2,18 +2,20 @@
     display: flex;
     justify-content: space-between;
     background-color: white;
+    margin: 30px 30px 30px 30px;
     
 }
 
 .logo img {
-    width: 50px;
+    width: 40px;
    
 }
-
+/*
 .container{
     margin: 0px;
     padding: 0px;
 }
+*/
 
 .hamburger-button {
     width: 3rem;
@@ -26,7 +28,7 @@
   }
 
   .hamburger-button img {
-      width: 50px;
+      width: 40px;
   }
   
   .hamburger-button:focus {

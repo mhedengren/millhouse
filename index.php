@@ -12,7 +12,14 @@ include 'includes/head.php';
             <div class="col-xs-6 logo">
                     <img src="images/logo.svg" alt="millhouse-Logo">
             </div>
-           
+            <nav class="d-none d-md-block desktop-menu">     
+                <ul>
+                <li class="dekstop-item list-inline-item"> <a href="login.php">Beauty</a></li>
+                <li class="dekstop-item list-inline-item"> <a href="login.php">Sunglasses</a></li>
+                <li class="dekstop-item list-inline-item"> <a href="login.php">Home Decor</a></li>
+                <li class="dekstop-item list-inline-item"> <a href="login.php">Categories</a></li>
+                </ul>
+            </nav>
         </header>
         <nav class="mobile d-md-none">
             <ul class="mobile-items">
