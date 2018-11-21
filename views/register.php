@@ -30,11 +30,11 @@ if(isset($_SESSION["username"])){
                 <form action="../includes/register.php" method="post" id="form_register">
                     <div class="form-group">
                         <label for="username">User Name</label>
-                        <input type="text" class="form-control" id="name" name="username" placeholder="Please enter User Name">
+                        <input type="text" class="form-control" id="name" name="username" placeholder="Please enter User Name" required="required">
                         <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Please enter your email">
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Please enter your email" required="required">
                         <label for="password">Password</label>
-                        <input type="password" class="form-control" id="password" name="password" placeholder="Password must be longer than 6 charactors.">
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Password must be longer than 6 charactors." required="required">
                     </div>
                     <button type="submit" class="btn button-color">SIGN UP</button>
                 </form>

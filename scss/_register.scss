@@ -51,12 +51,12 @@ $highlight_bg: linear-gradient(transparent 80%, $company_color_g 80%);
         margin: auto;
         text-align: center;
         width: 100vw;
-        padding: 10vh 5vw;
+        padding: 10vh 5%;
 
         form div{
             text-align: left;
             max-width: 70vw;
-            margin: 2vh auto;
+            margin: 5% auto;
         }
     }
 
@@ -86,7 +86,7 @@ $highlight_bg: linear-gradient(transparent 80%, $company_color_g 80%);
         }
         .contents {
             width: 60vw;
-            padding: 10vh 10vw;
+            padding: 10%;
 
 
         }
@@ -104,7 +104,12 @@ $highlight_bg: linear-gradient(transparent 80%, $company_color_g 80%);
 
         .contents {
             width: 50vw;
+        
+            form div{
+                max-width: 25vw;
+                margin: 5% auto;
+            }
         }
-
+        
     }
 }
