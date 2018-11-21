@@ -1,0 +1,39 @@
+header {
+    justify-content: space-between;
+}
+
+.desktop-menu {
+    margin-top: 10px;
+}
+
+.desktop-menu li a {
+    font-family: Merriweather;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    margin-right: 1vw;
+    color: #1C3045;
+}
+
+.desktop-menu ul {
+    margin: 0;
+    padding: 0;
+}
+
+.login-button {
+    background: #1C3045;
+    border-radius: 4px;
+    padding: 5px 20px;
+}
+
+.login-button a {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    color: #FFFFFF;
+}
