@@ -1,4 +1,4 @@
-/*variabler start*/
+//variabler start
 $rubrikFamily: 'Merriweather', serif;
 $bodyFamily:'Open Sans', sans-serif;
 //Primal Color light
@@ -16,26 +16,30 @@ $margin_footer_container:0 50px 30px 50px;
 $highlight_bg: linear-gradient(transparent 80%, $company_color_g 80%);
 */
 
+//Mixin
+@mixin toCheckStyle($borderColor) {
+    border: 1px dashed $borderColor;
+}
 
-/*common*/
 
+//Initialization
 *{
     margin: 0px;
     padding: 0px;
 }
 
 #register {
-    /*borders for checking*/
+    //borders for checking
     div{
-        border: 1px dashed #9FF781;
+        @include toCheckStyle(#9FF781);
     }
 
     nav, img, i, ul, li{
-        border: 1px dashed pink;
+        @include toCheckStyle(pink);
     }
 
     main, aside, button{
-        border: 1px dashed blue;
+        @include toCheckStyle(blue);
     }
 
     .container{
@@ -74,7 +78,7 @@ $highlight_bg: linear-gradient(transparent 80%, $company_color_g 80%);
 @media screen and (min-width: 750px){
     #register {
 
-        /*borders for checking*/
+        //borders for checking
         div{
             border: 1px dashed blue;
         }
@@ -97,7 +101,7 @@ $highlight_bg: linear-gradient(transparent 80%, $company_color_g 80%);
 @media screen and (min-width: 1024px){
     #register {
 
-        /*borders for checking*/
+        //borders for checking
         div{
             border: 1px dashed pink;
         }
