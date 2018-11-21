@@ -13,7 +13,7 @@
 
             <h5 class="card-title">Login</h5>
 
-            <form action="includes/login.php" method="post" name="form">
+            <form action="../includes/login.php" method="post" name="form">
 
                 <div class="col-md-6 col-sm-6 col-xs-6 form-group">
 

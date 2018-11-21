@@ -1,6 +1,6 @@
 <?php
 
-$database_host = 'mysql:host=localhost:8889;dbname=example;charset=utf8';
+$database_host = 'mysql:host=localhost:3306;dbname=millhouse;charset=utf8';
 $database_username = 'root';
 $database_password = 'root';
 
