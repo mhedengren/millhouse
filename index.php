@@ -1,12 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>PHP Structure</title>
-</head>
-<body>
-    <h1>Welcome!</h1>
-</body>
-</html>
+<?php
+include 'includes/head.php';
+?>
+
+<main class="container">
+    <header class="row justify-content-between">
+    <nav class="col-xs-6">
+        <div class="hamburger-menu d-md-none">
+            <img src="images/hamburger.svg" alt="hamburger-Menu">
+            </div>
+        </nav>
+        <div class="col-xs-6 d-md-none logo">
+            <img src="images/logo.svg" alt="millhouse-Logo">
+        </div>
+    </header>
+
+
+    <? // include 'includes/header.php'; ?>
+
+</main>
+
+
+<?php
+include 'includes/footer.php';
+?>
