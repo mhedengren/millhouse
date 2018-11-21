@@ -21,7 +21,7 @@ if(isset($_SESSION["username"])){
 <body>
     <main id="register"> 
 
-        <div class="container">
+        <div class="container row align-items-center align-items-center">
             <div class="contents">
 
                 <!--  Register form  -->
@@ -30,14 +30,11 @@ if(isset($_SESSION["username"])){
                 <form action="../includes/register.php" method="post" id="form_register">
                     <div class="form-group">
                         <label for="username">User Name</label>
-                        <input type="text" class="form-control" id="name" name="username" placeholder="Your Username">
-                        <small class="form-text">Please enter User Name.</small>
+                        <input type="text" class="form-control" id="name" name="username" placeholder="Please enter User Name">
                         <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Your email">
-                        <small class="form-text">We'll never share your email with anyone else.</small>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Please enter your email">
                         <label for="password">Password</label>
-                        <input type="password" class="form-control" id="password" name="password" placeholder="Your password">
-                        <small class="form-text">Password must be longer than 10 charactors.</small>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Password must be longer than 6 charactors.">
                     </div>
                     <button type="submit" class="btn button-color">SIGN UP</button>
                 </form>

@@ -2,11 +2,11 @@
 $rubrikFamily: 'Merriweather', serif;
 $bodyFamily:'Open Sans', sans-serif;
 //Primal Color light
-$primalColor_l: #F0F0F0;
+$primalColorL: #F0F0F0;
 //Primal Color dark
-$primalColor_d: #1C3045;
+$primalColorD: #1C3045;
 //Second colour purple
-$primalColor_d: #60495A;
+$secondColorP: #60495A;
 /*$FontAwesome_icon: 50px;
 $box_shadow: 0 0 8px 3px rgba(#000,0.3);
 $box_shadow_u: 0 5px 5px -3px rgba(#000,0.3);
@@ -15,24 +15,96 @@ $text_shadow: 0px 0px 3px #000;
 $margin_footer_container:0 50px 30px 50px;
 $highlight_bg: linear-gradient(transparent 80%, $company_color_g 80%);
 */
-#register {
 
-    .contents {
-        background: -webkit-gradient(linear, left bottom, left top, color-stop(26.6%, $primalColor_d), to($primalColor_d));
-        background: -webkit-linear-gradient(bottom, $primalColor_d 26.6%, $primalColor_d 100%);
-        background: -o-linear-gradient(bottom, $primalColor_d 26.6%, $primalColor_d 100%);
-        background: linear-gradient(to top, $primalColor_d 26.6%, $primalColor_d 100%);
-        max-width: 60%;
+
+/*common*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#register {
+    /*borders for checking*/
+    div{
+        border: 1px dashed #9FF781;
+    }
+
+    nav, img, i, ul, li{
+        border: 1px dashed pink;
+    }
+
+    main, aside, button{
+        border: 1px dashed blue;
+    }
+
+    .container{
+        height: 100vh;
         margin: auto;
-        
+
+    }
+    .contents {
+        background: -webkit-gradient(linear, left bottom, left top, color-stop(26.6%, $primalColorD), to($secondColorP));
+        background: -webkit-linear-gradient(bottom, $primalColorD 26.6%, $secondColorP 100%);
+        background: -o-linear-gradient(bottom, $primalColorD 26.6%, $secondColorP 100%);
+        background: linear-gradient(to top, $primalColorD 26.6%, $secondColorP 100%);
+        margin: auto;
+        text-align: center;
+        width: 100vw;
+        padding: 10vh 5vw;
+
+        form div{
+            text-align: left;
+            max-width: 70vw;
+            margin: 2vh auto;
+        }
     }
 
     h1, p, form, samll, .button-color{
         color: #fff;
     }
-    
+
     .button-color{
-        background-color: $secondColor_p;
+        background-color: $secondColorP;
     }
-    
+
+}
+
+//Tablet size
+@media screen and (min-width: 750px){
+    #register {
+
+        /*borders for checking*/
+        div{
+            border: 1px dashed blue;
+        }
+        
+        .container{
+            height: 100vh;
+            margin: auto;
+
+        }
+        .contents {
+            width: 60vw;
+            padding: 10vh 10vw;
+
+
+        }
+    }
+}
+
+//Desktop size
+@media screen and (min-width: 1024px){
+    #register {
+
+        /*borders for checking*/
+        div{
+            border: 1px dashed pink;
+        }
+
+        .contents {
+            width: 50vw;
+        }
+
+    }
 }
