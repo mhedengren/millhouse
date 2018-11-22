@@ -1,4 +1,9 @@
-@import 'register';
+@import "footer";
+@import "single-posts";
+@import "header";
+@import "mobile";
+@import "tablet";
+@import "register";
 @import "login";
 
 body {
@@ -9,7 +14,6 @@ h1,h2,h3,h4,h5,h6 {
     font-family: 'Merriweather', serif;
 }
 
-//Initialization
 *{
     margin: 0px;
     padding: 0px;
