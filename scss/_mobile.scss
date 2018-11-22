@@ -4,18 +4,11 @@
     background-color: white;
     margin: 30px;
     //order: 1px solid red;
-    
 }
 
 .logo img {
     width: 40px;
 }
-/*
-.container{
-    margin: 0px;
-    padding: 0px;
-}
-*/
 
 .hamburger-button {
     width: 3rem;
@@ -28,10 +21,6 @@
 
 .hamburger-button img {
     width: 40px;
-  }
-  
-.hamburger-button:focus {
-    outline: none;
   }
   
 /*Mobile navigation*/
@@ -67,7 +56,7 @@
 .mobile-item a {
     color: white;
 }
-
+/* Variable used in main.js */
 .open {
     display: flex;
     transform: translateX(0);
