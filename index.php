@@ -49,6 +49,13 @@ $page_title = 'Index';
                 <li class="mobile-item"> <a href="categories.php">CATEGORIES</a></li>
             </ul>
         </nav>
+
+
+        <div class="row">
+            <div class="col-12"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, recusandae repudiandae numquam laudantium amet reprehenderit voluptate consequatur molestiae neque molestias magni, assumenda accusantium quaerat corporis! Voluptates, voluptatem? Quasi quam debitis, veritatis harum quod unde molestias aliquid ullam. Molestiae, dolorem illo?</p></div>
+        </div>
+
+
         </main>
     
     <script src="main.js"></script>
