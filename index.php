@@ -1,3 +1,12 @@
+<?php
+//Define the siteroot for includes/requires
+$siteroot = ".";
+
+//Page title
+$page_title = 'Index';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
