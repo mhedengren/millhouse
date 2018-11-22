@@ -14,6 +14,13 @@
                 <form>
                     <input type="submit" value="Read More">
                 </form>
+            
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 text-center">
+                <img src="">
             </div>
         </div>
     </footer>
