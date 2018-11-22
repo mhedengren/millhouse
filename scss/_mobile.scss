@@ -1,63 +1,21 @@
-.header {
-    display: flex;
-    justify-content: space-between;
-    background-color: white;
-    margin: 30px;
-    //order: 1px solid red;
-}
+/*
+   Mobile design.
+*/
 
-.logo img {
-    width: 40px;
+header {
+    justify-content: space-between;
 }
 
 .hamburger-button {
-    width: 3rem;
     background: transparent;
     border: none;
-    cursor: pointer;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-
-.hamburger-button img {
-    width: 40px;
-  }
-  
-/*Mobile navigation*/
-.mobile {
-    position: fixed;
-    top: 0;
-    background: #60495A;
-    //background: linear-gradient(95.95deg, #1C3045 0%, #D7BCC8 100% );
-    width: 80vw;
-    height: 100vh;
-    color: white;
-    display: flex;
-    /*display: none;*/
-    transform: translateX(-100%);
-    transition: transform 100ms ease-out;
-}
-
-.mobile-items {
-    font-family: Merriweather;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    margin-top: 30vw;
-    font-size: 2rem;
-}
-
-.mobile-item {
-    padding: 10px 10px;
-    margin-left: 10vw;
 
 }
-
-.mobile-item a {
-    color: white;
+.hamburger-button a {
+    color: #1c3045;
 }
-/* Variable used in main.js */
-.open {
-    display: flex;
-    transform: translateX(0);
+.hamburger-menu {
+    img {
+        width: 50px;
+    }
 }

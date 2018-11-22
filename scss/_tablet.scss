@@ -1,33 +1,12 @@
-header {
-    justify-content: space-between;
-}
+/*
+   Tablet and up changes goes in this file.
+   Changes in this file will also be 
+   applied to desktop design.
+*/
 
+/* Desktop navigation */
 .desktop-menu {
-   // margin-top: 10px;
-}
-
-/* Medie queries that overrides some bootstrap config to make navigation bahave properly*/
-@media only screen and (max-width: 768px){
-.container{
-    margin: 0px;
-    padding: 0px;
-}}
-
-@media only screen and (min-width: 576px){
-    .container{
-        max-width: 100%;
-    }}
-    
-/* Desktop menu */
-.desktop-menu li a {
-    font-family: Merriweather;
-    font-style: normal;
-    font-weight: 900;
-    line-height: normal;
-    font-size: 16px;
-    letter-spacing: 0.5px;
-    margin-right: 1vw;
-    color: #1C3045;
+    border: 1px dashed blue;
 }
 
 .desktop-menu ul {
@@ -35,11 +14,22 @@ header {
     padding: 0;
 }
 
+.desktop-menu li a {
+    font-family: Merriweather;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    margin-right: 1vw;
+    color: #1C3045;
+}
+
 /* Login button  */
 .login-button {
     background: #1C3045;
     border-radius: 4px;
-    padding: 5px 20px;
+    padding: 0px 20px;
 }
 
 .login-button a {
