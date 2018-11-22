@@ -1,5 +1,5 @@
-    <footer class="container">
-        <div class="row">
+    <footer class="container-fluid">
+        <div class="row text-center">
             <div class="col-6">
                 
                 <h3>Join the Club</h3>
