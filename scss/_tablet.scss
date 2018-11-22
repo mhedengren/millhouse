@@ -6,6 +6,12 @@ header {
    // margin-top: 10px;
 }
 
+@media only screen and (max-width: 768px){
+.container{
+    margin: 0px;
+    padding: 0px;
+}}
+
 .desktop-menu li a {
     font-family: Merriweather;
     font-style: normal;
