@@ -8,12 +8,9 @@
                     </p>
 
             </div>
-
             <div class="col-6">
                 
-                <form>
-                    <input type="submit" value="Read More">
-                </form>
+               <a href="#">Read more</a>
             
             </div>
         </div>
