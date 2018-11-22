@@ -1,5 +1,12 @@
 <!-- head require-->
 <?php
+//Define the siteroot for includes/requires
+$siteroot = "..";
+
+//Page title
+$page_title = 'Register';
+
+
 /*//Define the siteroot for includes/requires
 $siteroot = "..";
 
@@ -38,7 +45,7 @@ if(isset($_SESSION["username"])){
                     </div>
                     <button type="submit" class="btn button-color">SIGN UP</button>
                 </form>
-                
+
                 <p>Already a member? Log in!</p>
 
                 <!--  Display error message  if register is unsucceeded
