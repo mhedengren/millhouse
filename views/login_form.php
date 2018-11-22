@@ -13,9 +13,9 @@
 
             <h5 class="card-title">Login</h5>
 
-            <form action="../includes/login.php" method="post" name="form">
+            <form action="../includes/login.php" class="login" method="post" name="form">
 
-                <div class="col-md-6 col-sm-6 col-xs-6 form-group">
+                <div class="col form-group">
 
                     <label for="login_username">Username</label>
                     <input type="text" class="form-control" name="login_username" id="login_username" placeholder="Your Username"
@@ -23,7 +23,7 @@
 
                 </div>
 
-                <div class="col-md-6 col-sm-6 col-xs-6 form-group">
+                <div class="col form-group">
 
                     <label for="login_password">Password</label>
                     <input type="password" class="form-control" name="login_password" id="login_password" placeholder="Your Password"
@@ -31,7 +31,7 @@
 
                 </div>
 
-                <div class="col-md-6 col-sm-6 col-xs-6 form-group text-center">
+                <div class="col form-group text-center">
 
                     <input type="submit" value="Login" class="btn">
 
