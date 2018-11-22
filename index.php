@@ -11,7 +11,6 @@ $page_title = 'Index';
 
 <?php include 'includes/header.php';?>
     
-    
 <script src="main.js"></script>
 
 <?php
