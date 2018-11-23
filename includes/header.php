@@ -6,19 +6,19 @@
                 </button>
             </nav>
             <div class="col-xs-6 logo">
-                    <a href="index.php"><img src="images/logo.svg" alt="Home"></a>
+                    <a href="<?= $siteroot; ?>/index.php"><img src="<?= $siteroot; ?>/images/logo.svg" alt="Home"></a>
             </div>
             <nav class="d-none d-md-block col-md-8 desktop-menu">     
-                <ul>
-                <li class="dekstop-item list-inline-item"> <a href="login.php">WATCHES</a></li>
-                <li class="dekstop-item list-inline-item"> <a href="login.php">SUNGLASSES</a></li>
-                <li class="dekstop-item list-inline-item"> <a href="login.php">HOME DECOR</a></li>
-                <li class="dekstop-item list-inline-item"> <a href="login.php">CATEGORIES</a></li>
+                <ul class="d-flex justify-content-center align-items-center">
+                    <li class="dekstop-item list-inline-item"> <a href="<?= $siteroot; ?>/views/single-post.php">WATCHES</a></li>
+                    <li class="dekstop-item list-inline-item"> <a href="<?= $siteroot; ?>/views/single-post.php">SUNGLASSES</a></li>
+                    <li class="dekstop-item list-inline-item"> <a href="<?= $siteroot; ?>/views/single-post.php">HOME DECOR</a></li>
+                    <li class="dekstop-item list-inline-item"> <a href="<?= $siteroot; ?>/views/adminpage.php">ADMINPAGE</a></li>
                 </ul>
             </nav>
             <div class="d-none d-md-block login-div">
             <button class="login-button">
-                    <a href="views/register.php">LOGIN</a>
+                    <a href="<?= $siteroot; ?>/views/register.php">LOGIN</a>
             </button>
                 </div>
               
