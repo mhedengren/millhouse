@@ -1,6 +1,6 @@
 <div class="container">
         <header>
-            <nav class="navbar navbar-expand-lg green_nav">
+            <nav class="navbar navbar-expand-lg">
             <a href="<?= $siteroot; ?>/index.php" class="navbar-brand"><img src="<?= $siteroot; ?>/images/logo.svg" alt="Home"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <img src="<?= $siteroot; ?>/images/hamburger.svg" alt="hamburger-Menu">
