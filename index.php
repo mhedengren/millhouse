@@ -16,7 +16,7 @@ $page_title = 'Index';
     <div class="row justify-content-center">
 
                 <?php
-                //Looping through all the posts from the db.
+                //Looping only one post from db. (LIMIT 1)
                 foreach ($all_posts as $post): ?>
                 <div class="col-xs-12 hero-image-post-container">
                     <div class="col-xs-12 feature-post">
