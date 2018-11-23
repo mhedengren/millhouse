@@ -10,6 +10,8 @@
 
 <body>
 
+    <?php include "../includes/header.php" ?>
+
     <main id="login">
 
         <div class="container row align-items-center">
