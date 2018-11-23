@@ -38,6 +38,8 @@ if(isset($_SESSION["username"])){
 
 
 <body>
+
+    <?php include "../includes/header.php"; ?>
     <main id="register"> 
 
         <div class="container row align-items-center align-items-center">
@@ -86,5 +88,6 @@ Otherwise redirect to index.php top.-->
         </div>
 
     </main>
+    <?php include "../includes/footer.php"; ?>
 </body>
 </html>
