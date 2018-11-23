@@ -1,26 +1,37 @@
 
 
+
 .hero-image {
+    
+    
+  background: -webkit-linear-gradient(90deg, #1C3045 -1%, rgba(96, 73, 90, 0.54) 100%);
+
     img {
+        
         width: 100%;
-        height: 40vw;
+        height: 50vw;
         object-fit: cover;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        position:relative;
+        z-index:-1;
+        display:block;
+        
     }
+ 
 }
 
-.post-title {
-    font-family: 'Merriweather';
-    font-style: normal;
-    font-weight: 900;
-    line-height: 24px;
-    font-size: 20px;
-    text-align: center;
-    letter-spacing: 0.5px;
-    color: #60495A;
-    padding: 20px;
-    margin-bottom: 0px;
-}
+    .post-title {
+        font-family: 'Merriweather';
+        font-style: normal;
+        font-weight: 900;
+        line-height: 24px;
+        font-size: 20px;
+        text-align: center;
+        letter-spacing: 0.5px;
+        color: #60495A;
+        padding: 20px;
+        margin-bottom: 0px;
+    }
 
 
 
