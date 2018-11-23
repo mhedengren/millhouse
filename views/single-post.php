@@ -1,6 +1,6 @@
 <?php
     //Defines site root
-    $siteroot = "..";
+    include '../config.php';
     //Defines page title
     $page_title = "single-post";
     include '../includes/head.php';

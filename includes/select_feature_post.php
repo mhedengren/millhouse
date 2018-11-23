@@ -2,7 +2,7 @@
 include 'database-connection.php';
 
 //Fetching the products from database.
-$statement = $pdo->prepare("SELECT * FROM posts");
+$statement = $pdo->prepare("SELECT * FROM posts LIMIT 1");
 //Execute it
 $statement->execute();
 //And fetch every row that it returns. $products is now an Associative array
