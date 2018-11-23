@@ -17,7 +17,7 @@
                 </ul>
             </nav>
                 <button class="d-none d-md-block login-button">
-                    <a href="login.php">LOGIN</a>
+                    <a href="views/register.php">LOGIN</a>
                 </button>
         </header>
         </nav>
