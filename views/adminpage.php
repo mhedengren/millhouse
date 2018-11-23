@@ -1,6 +1,6 @@
 <?php
-//Define the siteroot for includes/requires
-$siteroot = "..";
+//Include for absolute path
+include '../config.php';
 
 //Page title
 $page_title = 'Admin Panel';
@@ -22,7 +22,7 @@ include '../includes/header.php';
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row new-post">
                 <div class="col-sm-12 col-md-8">
                     <h2 class="add-new-post">Add New Post</h2>
                     <form action="#" method="POST">
@@ -37,7 +37,7 @@ include '../includes/header.php';
                     </form>
                 </div>
                 <div class="col-sm-12 col-md-4">
-                    <form action="#" method="POST" enctype="multipart/form-data">
+                    <form action="#" method="POST" enctype="multipart/form-data" class="upload-image-form">
                         <h3 class="featured-image">Featured Image</h3>
                         <h4 class="select-image">Select Image to Upload:</h4>
                         <input type="file" name="myfile" id="fileToUpload">
