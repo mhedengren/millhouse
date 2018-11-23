@@ -6,7 +6,7 @@
                 </button>
             </nav>
             <div class="col-xs-6 logo">
-                    <a href="index.php"><img src="images/logo.svg" alt="Home"></a>
+                    <a href="index.php"><img src="<?= $siteroot ?>/images/logo.svg" alt="Home"></a>
             </div>
             <nav class="d-none d-md-block col-md-8 desktop-menu">     
                 <ul>
