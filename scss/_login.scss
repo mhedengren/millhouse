@@ -23,7 +23,7 @@ $highlight_bg: linear-gradient(transparent 80%, $company_color_g 80%);
 
 
 
-#register {
+#login {
     //borders for checking
     div{
         @include toCheckStyle(#9FF781);
