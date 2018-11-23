@@ -1,7 +1,7 @@
 <!-- head require-->
 <?php
-//Define the siteroot for includes/requires
-$siteroot = "..";
+//Include for absolute path
+include '../config.php';
 
 //Page title
 $page_title = 'Register';
