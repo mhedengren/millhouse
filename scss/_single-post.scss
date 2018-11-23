@@ -1,3 +1,16 @@
-.container{
-    background-color: linear-gradient(95.95deg, #1C3045 0%, #D7BCC8 100%);
+.single-post-image{
+    position: relative;
+    width: 75vw;
+}
+
+.article-title{
+    position: absolute;
+    width: 100%;
+}
+
+h2 span{
+    color: rgb(43, 39, 39);
+}
+h4 span{
+    color: rgb(43, 38, 38);
 }
