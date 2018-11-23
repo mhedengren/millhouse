@@ -43,14 +43,19 @@
 
 .upload-image-form {
     margin-top: 5.5em;
-    border: 1px solid #A29F9F;
+    border: 1px solid #CED4DA;
     box-sizing: border-box;
-
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+        
     h3 {
         font-family: $bodyFamily;
         font-weight: 600;
-        line-height: 24px;
-        font-size: 22px;
+        line-height: 22px;
+        font-size: 20px;
         letter-spacing: 0.5px;
         color: #1C3045;
         border-bottom: 1px solid #C4C4C4;
