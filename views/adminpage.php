@@ -36,6 +36,15 @@ include '../includes/header.php';
                         </div>
                     </form>
                 </div>
+                <div class="col-sm-12 col-md-4">
+                    <form action="#" method="POST">
+                        <h3>Featured Image</h3>
+                        <h4>Select Image to Upload:</h4>
+                        <input type="file" name="myfile" id="fileToUpload">
+                        <input type="submit" name="submit" value="Upload File Now">
+                    </form>
+                </div>
+
             </div>
 
 
