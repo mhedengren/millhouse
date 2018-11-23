@@ -24,7 +24,7 @@ include '../includes/header.php';
 
             <div class="row">
                 <div class="col-sm-12 col-md-8">
-                    <h2>Add New Post</h2>
+                    <h2 class="add-new-post">Add New Post</h2>
                     <form action="#" method="POST">
                         <div class="form-group">
                             <label for="post-title">Title</label>
@@ -37,9 +37,9 @@ include '../includes/header.php';
                     </form>
                 </div>
                 <div class="col-sm-12 col-md-4">
-                    <form action="#" method="POST">
-                        <h3>Featured Image</h3>
-                        <h4>Select Image to Upload:</h4>
+                    <form action="#" method="POST" enctype="multipart/form-data">
+                        <h3 class="featured-image">Featured Image</h3>
+                        <h4 class="select-image">Select Image to Upload:</h4>
                         <input type="file" name="myfile" id="fileToUpload">
                         <input type="submit" name="submit" value="Upload File Now">
                     </form>
