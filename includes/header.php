@@ -28,7 +28,7 @@
                 </div>
                 <div class="d-none d-lg-block login-div">
                     <button class="login-button">
-                        <a href="<?= $siteroot; ?>/views/register.php">LOGIN</a>
+                        <a href="<?= $siteroot; ?>/views/login_form.php">LOGIN</a>
                     </button>
                  </div>
             </nav>
