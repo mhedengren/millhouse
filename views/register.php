@@ -74,7 +74,7 @@ Otherwise redirect to index.php top.-->
                 <?php
                 if ($pdo){
                     echo "<p>Connection successful.</p>";
-                } elseif (isset($error)){
+                } else{
                     echo "<p>$error</p>";
                 }
                 ?>
