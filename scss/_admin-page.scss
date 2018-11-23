@@ -3,11 +3,81 @@
 #admin-panel {
 
     h1 {
+        font-weight: bold;
         color: $secondColorP;
+        margin-top: 4rem;
+        border-bottom: 3px solid $secondColorP;
     }
 
     h2 {
         font-family: $bodyFamily;
         color:$primalColorD;
+        font-size: 25px;
+        font-weight: 600;
+        line-height: 24px;
+        letter-spacing: 0.5px;
     }
+
+    .new-post {
+        margin-top: 3em;
+
+        .add-new-post {
+            margin-bottom: 1.5em;
+        }
+    }
+}
+
+.form-group {
+    label {
+        text-transform: uppercase;
+        color: $primalColorD;
+        line-height: 16px;
+        font-weight: bold;
+    }
+
+    input, textarea {
+        background: #F4F4F4;
+    }
+
+}
+
+.upload-image-form {
+    margin-top: 5.5em;
+    border: 1px solid #A29F9F;
+    box-sizing: border-box;
+
+    h3 {
+        font-family: $bodyFamily;
+        font-weight: 600;
+        line-height: 24px;
+        font-size: 22px;
+        letter-spacing: 0.5px;
+        color: #1C3045;
+        border-bottom: 1px solid #C4C4C4;
+        padding: 10px;
+    }
+
+    h4 {
+        font-family: $bodyFamily;
+        line-height: 22px;
+        font-size: 18px;
+        letter-spacing: 0.5px;
+        color: #1C3045;
+        padding: 10px;
+    }
+
+    input {
+        padding: 3px;
+    }
+
+    input[type="submit"] {
+        margin: 10px;
+    }
+
+    input[type="file"] {
+        padding: 10px;
+        color: $primalColorD;
+}
+
+
 }
