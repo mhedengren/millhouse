@@ -2,18 +2,66 @@
   General header styling.
 */
 
+@import "variables";
+
 header {
-    padding: 40px;
-    border: 1px solid red;
+
+   // border: 1px solid red;
+}
+
+.nav-link {
+    font-family: 'Merriweather';
+    color: $primalColorD;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.navbar-toggler {
+    outline: none;
+
 }
 
 .login-div {
-    border: 1px solid red;
+   // border: 1px solid red;
 }
 
-.logo {
-    border: 1px solid red;
-    img {
-        width: 50px;
+.navbar-brand img {
+    width: 50px;
+}
+
+.navbar-toggler img {
+    width: 50px;
+}
+
+/* Desktop navigation */
+
+@media screen and (min-width: 992px){
+    .nav-link {
+        font-family: 'Merriweather';
+        color: $primalColorD;
+        font-size: 1rem;
+        text-align: center;
     }
+
+    /* Login button  */
+    .login-button {
+        background: #1C3045;
+        border-radius: 4px;
+        padding: 0px 20px;
+    }
+
+    .login-button a {
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: bold;
+        line-height: normal;
+        font-size: 16px;
+        letter-spacing: 0.5px;
+        color: #FFFFFF;
+    }
+
+    .navbar-nav {
+        margin: 0 auto;
+    }
+
 }

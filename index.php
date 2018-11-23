@@ -13,12 +13,12 @@ $page_title = 'Index';
 <?php include 'includes/select_feature_post.php';?>
 
 <main class="container">
-    <div class="row justify-content-center">
 
+    <div class="row">
                 <?php
                 //Looping only one post from db. (LIMIT 1)
                 foreach ($all_posts as $post): ?>
-                <div class="col-xs-12 hero-image-post-container">
+                <div class="col-xs-12 hero-image-container">
                     <div class="col-xs-12 feature-post">
                         <h2 class="post-name"><?= $post["title"]; ?></h2>
                         <h6 class="post-date"><?= $post["created_on"]; ?></h6>
@@ -32,5 +32,5 @@ $page_title = 'Index';
 </main>
 
 <?php
-//include 'includes/footer.php';
+include 'includes/footer.php';
 ?>
