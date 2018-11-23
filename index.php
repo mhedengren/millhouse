@@ -1,6 +1,6 @@
 <?php
-//Define the siteroot for includes/requires
-$siteroot = ".";
+//Define the siteroot for includes/requires'
+include 'config.php';
 
 //Page title
 $page_title = 'Index';
