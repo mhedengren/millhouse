@@ -1,3 +1,114 @@
-.login {
-    margin: 0 auto;
+//variabler start
+$rubrikFamily: 'Merriweather', serif;
+$bodyFamily:'Open Sans', sans-serif;
+//Primal Color light
+$primalColorL: #F0F0F0;
+//Primal Color dark
+$primalColorD: #1C3045;
+//Second colour purple
+$secondColorP: #60495A;
+/*$FontAwesome_icon: 50px;
+$box_shadow: 0 0 8px 3px rgba(#000,0.3);
+$box_shadow_u: 0 5px 5px -3px rgba(#000,0.3);
+$box_shadow_inner:0 5px 5px -3px rgba(#19d300,1);
+$text_shadow: 0px 0px 3px #000;
+$margin_footer_container:0 50px 30px 50px;
+$highlight_bg: linear-gradient(transparent 80%, $company_color_g 80%);
+*/
+
+//Mixin
+@mixin toCheckStyle($borderColor) {
+    border: 1px dashed $borderColor;
+}
+
+
+
+#login {
+    //borders for checking
+    div{
+        @include toCheckStyle(#9FF781);
+    }
+
+    nav, img, i, ul, li{
+        @include toCheckStyle(pink);
+    }
+
+    main, aside, button{
+        @include toCheckStyle(blue);
+    }
+
+    .container{
+        height: 100vh;
+        margin: auto;
+
+    }
+    .content {
+        background: -webkit-gradient(linear, left bottom, left top, color-stop(26.6%, $primalColorD), to($secondColorP));
+        background: -webkit-linear-gradient(bottom, $primalColorD 26.6%, $secondColorP 100%);
+        background: -o-linear-gradient(bottom, $primalColorD 26.6%, $secondColorP 100%);
+        background: linear-gradient(to top, $primalColorD 26.6%, $secondColorP 100%);
+        margin: auto;
+        text-align: center;
+        width: 100vw;
+        padding: 10vh 5%;
+
+        form div{
+            text-align: left;
+            max-width: 70vw;
+            margin: 5% auto;
+        }
+    }
+
+    h1, p, form, .button-color{
+        color: #fff;
+    }
+
+    .button-color{
+        background-color: $secondColorP;
+    }
+
+}
+
+//Tablet size
+@media screen and (min-width: 750px){
+    #login {
+
+        //borders for checking
+        div{
+            border: 1px dashed blue;
+        }
+        
+        .container{
+            height: 100vh;
+            margin: auto;
+
+        }
+        .content {
+            width: 60vw;
+            padding: 10%;
+
+
+        }
+    }
+}
+
+//Desktop size
+@media screen and (min-width: 1024px){
+    #login {
+
+        //borders for checking
+        div{
+            border: 1px dashed pink;
+        }
+
+        .content {
+            width: 50vw;
+        
+            form div{
+                max-width: 25vw;
+                margin: 5% auto;
+            }
+        }
+        
+    }
 }

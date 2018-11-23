@@ -1,48 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <?php
+    //Define the siteroot for includes/requires
+    $siteroot = "..";
+
+    //Page title
+    $page_title = 'Login';
+
     require "../includes/head.php"
 ?>
 
 <body>
 
-    <main class="container">
+    <main id="login">
 
-        <div class="card text-center">
+        <div class="container row align-items-center">
 
-            <h5 class="card-title">Login</h5>
+            <div class="content">
 
-            <form action="../includes/login.php" class="login" method="post" name="form">
+                <!-- Login form -->
+                <h1>Login</h1>
 
-                <div class="col form-group">
+                <form action="../includes/login.php" class="login" method="post" id="form_login">
 
-                    <label for="login_username">Username</label>
-                    <input type="text" class="form-control" name="login_username" id="login_username" placeholder="Your Username"
-                        required>
+                    <div class="form-group">
 
-                </div>
+                        <label for="login_username">Username</label>
+                        <input type="text" class="form-control" name="login_username" id="login_username" placeholder="Your Username" required>
+                        <label for="login_password">Password</label>
+                        <input type="password" class="form-control" name="login_password" id="login_password" placeholder="Your Password" required>
 
-                <div class="col form-group">
+                    </div>
 
-                    <label for="login_password">Password</label>
-                    <input type="password" class="form-control" name="login_password" id="login_password" placeholder="Your Password"
-                        required>
+                    <button type="submit" class="btn button-color">Login</button>
 
-                </div>
+                </form>
 
-                <div class="col form-group text-center">
+                <a href="#">New? Sign up!</a>
 
-                    <input type="submit" value="Login" class="btn">
-
-                </div>
-
-            </form>
-
-            <a href="#" class="card-link">New? Sign up!</a>
-
+            </div>
         </div>
-
     </main>
 
 <?php

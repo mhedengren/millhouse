@@ -35,7 +35,7 @@ if ($is_password_correct) {
 
     //Save user globally to session
     $_SESSION["username"] = $fetched_user["username"];
-    header("Location: ../views/index.php");
+    header("Location: ../index.php");
 
 } else {
 
