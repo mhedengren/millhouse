@@ -6,12 +6,24 @@ $siteroot = "..";
 //Page title
 $page_title = 'Register';
 
+//Start session
+session_start(); 
 
-/*//Define the siteroot for includes/requires
-$siteroot = "..";
+//Database Connection
+//Use try in order to avoid exposing connection information
+try{
+    
+    include '../includes/database-connection.php';
+    
+}catch(Exception $e){
+    $error = $e->getMessage();
+}
 
-//Page title
-$page_title = 'Login';
+
+/*
+include_once('functions.php');
+
+include_once('functions.php');
 
 //If already logged in skip log in again and jump to check out page directly.
 if(isset($_SESSION["username"])){
@@ -21,7 +33,7 @@ if(isset($_SESSION["username"])){
 */
 ?>
 
-<?php    require '../includes/head.php'; ?>
+<?php    include '../includes/head.php'; ?>
 
 
 
@@ -47,19 +59,28 @@ if(isset($_SESSION["username"])){
                 </form>
 
                 <p>Already a member? Log in!</p>
+                
+
 
                 <!--  Display error message  if register is unsucceeded
 If any of input forms are missing, redirect to the top of this page and show the error message.
 Otherwise redirect to index.php top.-->
                 <?php
-                //is_error("empty_error", "error", "exist_error", null);
-                //is_successfull("register", null, null, null);
+                    //is_error("empty_error", "error", "exist_error", null);
+                    //is_successfull("register", null, null, null);
 
                 ?>          
 
-
+                <?php
+                if ($pdo){
+                    echo "<p>Connection successful.</p>";
+                } elseif (isset($error)){
+                    echo "<p>$error</p>";
+                }
+                ?>
 
             </div>
+
 
 
         </div>
