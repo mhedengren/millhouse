@@ -1,0 +1,13 @@
+@import "variables";
+
+#admin-panel {
+
+    h1 {
+        color: $secondColorP;
+    }
+
+    h2 {
+        font-family: $bodyFamily;
+        color:$primalColorD;
+    }
+}
