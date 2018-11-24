@@ -9,15 +9,8 @@ $page_title = 'Register';
 //Start session
 session_start(); 
 
-//Database Connection
-//Use try in order to avoid exposing connection information
-try{
-    
-    include '../includes/database-connection.php';
-    
-}catch(Exception $e){
-    $error = $e->getMessage();
-}
+//Database connection
+include '../includes/database-connections.php';
 
 
 /*
