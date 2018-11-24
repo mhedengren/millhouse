@@ -10,7 +10,7 @@ $page_title = 'Register';
 session_start(); 
 
 //Database connection
-include '../includes/database-connections.php';
+include '../includes/database-connection.php';
 
 
 /*
