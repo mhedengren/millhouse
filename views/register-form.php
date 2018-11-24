@@ -33,7 +33,7 @@ if(isset($_SESSION["username"])){
 <body>
 
     <?php include "../includes/header.php"; ?>
-    <main id="register"> 
+    <main id="register-form"> 
 
         <div class="container row align-items-center align-items-center">
             <div class="contents">

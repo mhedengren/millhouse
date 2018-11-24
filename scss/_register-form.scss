@@ -7,7 +7,7 @@
 
 
 
-#register {
+#register-form{
     //borders for checking
     div{
         @include toCheckStyle(#9FF781);
@@ -55,7 +55,7 @@
 
 //Tablet size
 @media screen and (min-width: 768px){
-    #register {
+    #register-form{
 
         //borders for checking
         div{
@@ -78,7 +78,7 @@
 
 //Desktop size
 @media screen and (min-width: 1024px){
-    #register {
+    #register-form {
 
         //borders for checking
         div{
