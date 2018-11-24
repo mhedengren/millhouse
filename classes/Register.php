@@ -59,14 +59,15 @@ We do not need return something from this feature then it only shall submit data
     {
         $this->set_hashed_password();
         $statement = $this->pdo->prepare("
-        INSERT INTO users (username, email, password) 
-        VALUES (:username, :email, :password)
+        INSERT INTO users (username, email, password, admin) 
+        VALUES (:username, :email, :password, :admin)
         ");
         $statement->execute(
             [
                 ":username" => $this->username,
                 ":email" => $this->email,
-                ":password" => $this->hashed_password
+                ":password" => $this->hashed_password,
+                ":admin" => true
             ]
         );
     }
