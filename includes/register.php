@@ -1,39 +1,42 @@
 <?php
 
-require 'classes/Posts.php';
-require 'includes/database-connection.php';
+require '../classes/Register.php';
+require 'database-connection.php';
 
+//Register::set_pdo($pdo);
+$args = $_POST['register'];
+$register = new Register($pdo);
+$register->args($args);
+$register->add_user();
+
+echo var_dump($register)."<br><br>";
+
+$statement = $pdo->prepare("SELECT * FROM users");
+$statement->execute();
+$connection_check = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+
+echo var_dump($connection_check);
+
+
+//require_once('../views/register-form.php');
+/*
+$username = $_POST["username"];
+$email = $_POST["email"];
+$password = $_POST["password"];
+
+echo $username, $email, $password;
+*/
 /* Pass along the $pdo variable when you create a new instance
  * of the class, $pdo becomes $this->pdo. $posts is used
  * to call the specific methods inside of the Posts class
- * */
-$posts = new Posts($pdo);
-
-/**
- * This is how we would call this file in a HTML-form if we want to
- * utilize both the GET variable and the POST variable as we do below
  * 
- * ---> TO create new post with form
- * <form action="includes/posts.php?action=create_post" method="POST">
- *  <input type="text" name="title">
- *  <input type="text" name="description">
- * </form>
- * 
- * ---> To delete a post with link or form
- * <a href="includes/posts.php?action=delete&id=3" > Delete Post </a>
- */
+$posts = new Register($pdo);
 
-$action = $_GET["action"] ?? '';
+$args = $_POST['admin'];
+$register = new Register($args);
+$admin->set_hashed_password();
+$admin->add_user($users);
+//$result = $admin->save();
 
-if($action === "delete_post")
-{ 
-  $id_to_delete = $_GET["id"];
-  // Let the class handle what happens after this
-  $posts->delete($id_to_delete);
-}
-
-if($action === "create_post")
-{
-  // Let the class handle what happens after this
-  $posts->create($_POST);
-}
+*/
