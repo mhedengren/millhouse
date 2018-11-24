@@ -1,20 +1,4 @@
-//variabler start
-$rubrikFamily: 'Merriweather', serif;
-$bodyFamily:'Open Sans', sans-serif;
-//Primal Color light
-$primalColorL: #F0F0F0;
-//Primal Color dark
-$primalColorD: #1C3045;
-//Second colour purple
-$secondColorP: #60495A;
-/*$FontAwesome_icon: 50px;
-$box_shadow: 0 0 8px 3px rgba(#000,0.3);
-$box_shadow_u: 0 5px 5px -3px rgba(#000,0.3);
-$box_shadow_inner:0 5px 5px -3px rgba(#19d300,1);
-$text_shadow: 0px 0px 3px #000;
-$margin_footer_container:0 50px 30px 50px;
-$highlight_bg: linear-gradient(transparent 80%, $company_color_g 80%);
-*/
+@import "variables";
 
 //Mixin
 @mixin toCheckStyle($borderColor) {
@@ -59,7 +43,7 @@ $highlight_bg: linear-gradient(transparent 80%, $company_color_g 80%);
         }
     }
 
-    h1, p, form, samll, .button-color{
+    h1, p, form, samll, .button-color, label{
         color: #fff;
     }
 
