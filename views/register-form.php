@@ -20,7 +20,6 @@ include '../includes/register.php';
 
 
 /*
-
 //If already logged in skip log in again and jump to check out page directly.
 if(isset($_SESSION["username"])){
     redirect_to('../index.php');
@@ -43,7 +42,12 @@ if(isset($_SESSION["username"])){
 
                 <!--  Register form  -->
                 <h1>Sign up</h1>
-                <?php echo display_errors($register->errors); ?>
+                <?php
+                //Shows the error message from validation only when $_POST is set
+                if(isset($_POST['signup'])){
+                    echo display_errors($register->errors); 
+                }
+                ?>
 
                 <form action="register-form.php" method="post" id="form_register">
                     <div class="form-group">
@@ -54,7 +58,7 @@ if(isset($_SESSION["username"])){
                         <label for="password">Password</label>
                         <input type="password" class="form-control" id="password" name="register[password]" placeholder="Password must be longer than 6 charactors." required="required">
                     </div>
-                    <button type="submit" class="btn button-color">SIGN UP</button>
+                    <button type="submit" name="signup" class="btn button-color">SIGN UP</button>
                 </form>
 
                 <p>Already a member? Log in!</p>
