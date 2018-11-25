@@ -8,6 +8,12 @@
 
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0 ">
+                         <li class="nav-item">
+                            <a class="nav-link login-mobile-button" href="<?= $siteroot; ?>/views/login_form.php">LOGIN</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link login-mobile-button" href="<?= $siteroot; ?>/views/adminpage.php">ADMINPANEL</a>
+                        </li>
                         <li class="nav-item active">
                             <a class="nav-link" href="#">WATCHES <span class="sr-only">(current)</span></a>
                         </li>
@@ -20,9 +26,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="<?= $siteroot; ?>/views/single-post.php">CATEGORIES</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="<?= $siteroot; ?>/views/adminpage.php">ADMINPANEL</a>
-                        </li>
+                        
                     
                     </ul>
                 </div>
