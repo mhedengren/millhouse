@@ -1,5 +1,5 @@
 <div class="container">
-    <header class="sticky">
+    <header>
         <nav class="navbar navbar-expand-lg">
             <a href="<?= $siteroot; ?>/index.php" class="navbar-brand order-1"><img src="<?= $siteroot; ?>/images/logo.svg" alt="Home"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
