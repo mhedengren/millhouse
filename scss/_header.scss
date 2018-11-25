@@ -19,18 +19,16 @@ header {
     text-align: left;
 }
 
+.nav-link:hover {
+   color: $secondColorP;
+}
+
 .navbar-toggler {
     outline: none;
     margin: 0px;
     padding:0px;
 
 }
-
-.login-div {
-   // border: 1px solid red;
-}
-
-
 
 .navbar-brand{
     margin: 0px;
@@ -85,3 +83,4 @@ header {
     }
 
 }
+

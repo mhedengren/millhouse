@@ -20,7 +20,7 @@ $page_title = 'Index';
                     foreach ($all_posts as $post): ?>
                     <div class="col-sm-12">
                             <div class="hero-image">
-                            <img src="<?= $post["image"]; ?>" alt="Feature-image">
+                            <img src="<?= $post["image"]; ?>" alt="feature-image">
                             </div>
                             <div class="date row justify-content-center">
                                 <div class="date-circle">
