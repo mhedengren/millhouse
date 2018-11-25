@@ -66,8 +66,6 @@ class Register
 
         if(!preg_match('/[A-Z]/', $this->username)){
             $this->errors[] = "*Username must contain at least 1 uppercase letter.";
-        }else{
-
         }
 
         if(strlen($this->email)<=6){

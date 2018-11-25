@@ -2,6 +2,7 @@
 
 
 include '../classes/Register.php';
+//include '../classes/Sesson.php.php';
 include 'database-connection.php';
 include_once 'functions.php';
 
@@ -35,6 +36,9 @@ if(isset($_POST['signup'])){
 
     if(empty($register->errors)){
         $register->add_user();
+        //$session = new Session;
+        //$session->loginAsRegister($register);
+        
 
         /*echo var_dump($register)."<br><br>";
 

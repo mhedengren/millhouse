@@ -1,7 +1,7 @@
 <!-- head require-->
 <?php
 //Start session
-session_start(); 
+//session_start(); 
 
 //Include for absolute path
 include '../config.php';
