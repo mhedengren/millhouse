@@ -44,6 +44,21 @@ class Register
     {
         $this->hashedPassword = password_hash($this->password, PASSWORD_DEFAULT);
     }
+    
+    public function find_user(){
+
+        //Prepare a SQL statement
+        $statement = $this->pdo->prepare(
+            "SELECT * FROM users WHERE username = :username");
+        $statement->execute(
+            [
+                ':username'=>$this->username
+            ]
+        );
+
+        //When select is used fetch must happen
+        return $statement->fetch(); 
+    }
 
     public function validate()
     {
@@ -51,14 +66,20 @@ class Register
 
         if(!preg_match('/[A-Z]/', $this->username)){
             $this->errors[] = "*Username must contain at least 1 uppercase letter.";
+        }else{
+
         }
-        
+
         if(strlen($this->email)<=6){
             $this->errors[] = "*Email address must contain 6 or more characters.";
         }
-        
+
         if(!preg_match("/[0-9]/", $this->password)){
             $this->errors[] = "*Password must contain at least 1 number.";
+        }
+        
+        if($this->find_user()["username"] == $this->username ){
+            $this->errors[] = "*This username is already taken.";
         }
 
         return $this->errors;
@@ -70,19 +91,19 @@ We do not need return something from this feature then it only shall submit data
 */
     public function add_user()
     {
-            $this->set_hashed_password();
-            $statement = $this->pdo->prepare("
+        $this->set_hashed_password();
+        $statement = $this->pdo->prepare("
             INSERT INTO users (username, email, password, admin) 
             VALUES (:username, :email, :password, :admin)
             ");
-            $statement->execute(
-                [
-                    ":username" => $this->username,
-                    ":email" => $this->email,
-                    ":password" => $this->hashedPassword,
-                    ":admin" => true
-                ]
-            );
+        $statement->execute(
+            [
+                ":username" => $this->username,
+                ":email" => $this->email,
+                ":password" => $this->hashedPassword,
+                ":admin" => true
+            ]
+        );
 
     }
 

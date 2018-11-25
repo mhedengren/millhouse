@@ -56,7 +56,7 @@ if(isset($_SESSION["username"])){
                         <label for="email">Email</label>
                         <input type="email" class="form-control" id="email" name="register[email]" placeholder="Use 6 or more characters" required="required">
                         <label for="password">Password</label>
-                        <input type="password" class="form-control" id="password" name="register[password]" placeholder="Use at least 1 numbers." required="required">
+                        <input type="password" class="form-control" id="password" name="register[password]" placeholder="Use at least 1 number." required="required">
                     </div>
                     <button type="submit" name="signup" class="btn button-color">SIGN UP</button>
                 </form>

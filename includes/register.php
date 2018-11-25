@@ -10,24 +10,45 @@ if(isset($_POST['signup'])){
     $register = new Register($pdo);
     $register->args($args);
     $register->validate();
-
     
+    //echo $register->username;
+    //$username = $register->username;
+    //echo $username;
+    
+    /*
+    var_dump($register->username);
+    var_dump($register->find_user());
+    $user_exist = $register->find_user();
+    echo "<br>";
+    echo "<br>";
+
+    var_dump($register->find_user()["username"]);
+    echo $user_exist["username"];
+    
+    if($register->username == $user_exist["username"]){
+        echo "ok";
+    }else{
+        echo "ng";
+    }
+
+    */
+
     if(empty($register->errors)){
         $register->add_user();
 
         /*echo var_dump($register)."<br><br>";
 
-        $statement = $pdo->prepare("SELECT * FROM users");
-        $statement->execute();
-        $connection_check = $statement->fetchAll(PDO::FETCH_ASSOC);
+            $statement = $pdo->prepare("SELECT * FROM users");
+            $statement->execute();
+            $connection_check = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 
-        echo var_dump($connection_check);
-        */
+            echo var_dump($connection_check);
+            */            
 
     }else{
         //$register->errors;
-        var_dump($register->errors);
+        //var_dump($register->errors);
         //echo display_errors($register->errors);
         //redirect_to('../views/register-form.php');
     }
