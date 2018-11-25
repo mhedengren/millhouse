@@ -8,7 +8,7 @@ class Register
     //Properties of inputting datas    
     public $username;
     public $email;
-    protected $hashed_password;
+    protected $hashedPassword;
     public $passward;
     //public $confirm_password;
     public $errors = [];
@@ -42,7 +42,7 @@ class Register
 
     protected function set_hashed_password()
     {
-        $this->hashed_password = password_hash($this->password, PASSWORD_DEFAULT);
+        $this->hashedPassword = password_hash($this->password, PASSWORD_DEFAULT);
     }
 
     public function validate()
@@ -71,7 +71,7 @@ We do not need return something from this feature then it only shall submit data
                 [
                     ":username" => $this->username,
                     ":email" => $this->email,
-                    ":password" => $this->hashed_password,
+                    ":password" => $this->hashedPassword,
                     ":admin" => true
                 ]
             );
