@@ -50,6 +50,7 @@ and the hamburger menu when collapsed */
     padding:0px;
         img {
             width: 50px;
+            
     }
 }
 
@@ -65,11 +66,13 @@ and the hamburger menu when collapsed */
         color: $primalColorD;
         font-size: 1rem;
         text-align: center;
+        
     }
 
     .nav-link-highlight{
         border-bottom: none;
      }
+
 
     #navbarTogglerDemo02 {
         margin: 0 0 0 0;
@@ -93,9 +96,15 @@ and the hamburger menu when collapsed */
     }
 
     .navbar-nav {
+        border: 1px dashed red;
         margin: 0 auto;
+    
+       
+      }
+        
+      }
 
-    }
+    
 
-}
+
 
