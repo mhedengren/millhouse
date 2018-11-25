@@ -9,10 +9,14 @@ include '../config.php';
 //Page title
 $page_title = 'Register';
 
-
-
 //Database connection
 include '../includes/database-connection.php';
+
+//Function
+include '../includes/functions.php';
+
+include '../classes/Register.php';
+$register = new Register($pdo);
 
 
 /*
@@ -42,6 +46,7 @@ if(isset($_SESSION["username"])){
 
                 <!--  Register form  -->
                 <h1>Sign up</h1>
+                <?php echo display_errors($register->errors); ?>
 
                 <form action="../includes/register.php" method="post" id="form_register">
                     <div class="form-group">
@@ -68,13 +73,6 @@ Otherwise redirect to index.php top.-->
 
                 ?>          
 
-                <?php
-                if ($pdo){
-                    echo "<p>Connection successful.</p>";
-                } else{
-                    echo "<p>$error</p>";
-                }
-                ?>
 
             </div>
 

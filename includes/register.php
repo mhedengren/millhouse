@@ -1,22 +1,31 @@
 <?php
 
-require '../classes/Register.php';
-require 'database-connection.php';
+include '../classes/Register.php';
+include 'database-connection.php';
+include 'functions.php';
 
-//Register::set_pdo($pdo);
 $args = $_POST['register'];
 $register = new Register($pdo);
 $register->args($args);
-$register->add_user();
+$register->validate();
 
-echo var_dump($register)."<br><br>";
+if(empty($register->errors)){
+    echo "yes";
+    $register->add_user();
 
-$statement = $pdo->prepare("SELECT * FROM users");
-$statement->execute();
-$connection_check = $statement->fetchAll(PDO::FETCH_ASSOC);
+    echo var_dump($register)."<br><br>";
+
+    $statement = $pdo->prepare("SELECT * FROM users");
+    $statement->execute();
+    $connection_check = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 
-echo var_dump($connection_check);
+    echo var_dump($connection_check);
+
+}else{
+    redirect_to('../views/register-form.php');
+}
+
 
 
 //require_once('../views/register-form.php');
