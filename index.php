@@ -32,7 +32,7 @@ $page_title = 'Index';
                 </div>
             <?php endforeach; ?> 
             
-            <div class="col-xs-12 col-lg-4">
+            <div class="col-xs-12 col-md-4">
             <h1>Dummy column text test</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, eveniet saepe fugiat sunt voluptatibus error sequi perferendis iure a aliquid illum nostrum quisquam odit cum neque culpa delectus illo nemo officiis pariatur nihil, obcaecati, voluptas esse temporibus! At harum ullam eveniet.</p></div>  
         </article>     

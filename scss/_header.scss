@@ -4,32 +4,20 @@
 
 @import "variables";
 
-
+/* Mobile navigation */
 header {
    margin: 30px 0 30px 0;
 }
 
-/* Margin between mobile menu items
-and the hamburger menu when collapsed */
-#navbarTogglerDemo02 {
-    margin: 30px 0px 0px 0px;
-}
-
-.nav-link {
-    font-family: 'Merriweather';
-    color: $primalColorD;
-    font-size: 2rem;
-    text-align: left;
-}
-
-.nav-link:hover {
-   color: $secondColorP;
-}
-
-/* Highlights login and adminpanel */
-.nav-link-highlight{
-   //border-bottom: 1px solid $secondColorP;
-   //font-weight: bold;
+/* Site logo.
+50px wide for accessibility */
+.navbar-brand{
+    margin: 0px;
+    padding:0px;
+        img {
+            width: 50px;
+            
+    }
 }
 
 /* Hamburger menu.
@@ -43,22 +31,56 @@ and the hamburger menu when collapsed */
     }
 
 }
-/* Site logo.
-50px wide for accessibility */
-.navbar-brand{
-    margin: 0px;
-    padding:0px;
-        img {
-            width: 50px;
-            
-    }
+
+/* Margin between mobile menu items
+and the hamburger menu when collapsed */
+#navbarTogglerDemo02 {
+    margin: 30px 0px 0px 0px;
 }
 
+
+ /* Mobile navbar link properties */
+.nav-link {
+    font-family: 'Merriweather';
+    color: $primalColorD;
+    font-size: 2rem;
+    text-align: left;
+}
+
+.nav-link:hover {
+   color: $secondColorP;
+}
+
+/* Highlights login and adminpanel 
+.nav-link-highlight{
+   border-bottom: 1px solid $secondColorP;
+    font-weight: bold;
+}
+*/
+
+/* Speed of hamburger menu dropdown */
+.collapsing {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    -webkit-transition: height .2s ease-in ;
+         -o-transition: height .2s ease;
+            transition: height .2s ease-out;
+  }
+
+
 /* Desktop navigation */
+
 @media screen and (min-width: 992px){
 
     header {
         margin: 20px 0;
+
+    }
+   
+    .navbar-nav {
+        margin: 0 auto;
+
     }
     
     .nav-link {
@@ -78,7 +100,7 @@ and the hamburger menu when collapsed */
         margin: 0 0 0 0;
     }
     
-    /* Login button  */
+    /* Login button */
     .login-button {
         background: #1C3045;
         border-radius: 4px;
@@ -94,15 +116,8 @@ and the hamburger menu when collapsed */
         letter-spacing: 0.5px;
         color: #FFFFFF;
     }
-
-    .navbar-nav {
-        border: 1px dashed red;
-        margin: 0 auto;
-    
-       
-      }
         
-      }
+}
 
     
 
