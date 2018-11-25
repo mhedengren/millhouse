@@ -41,14 +41,24 @@
             max-width: 70vw;
             margin: 5% auto;
         }
-    }
+        
+        h1, p, form, samll, .button-color, label, .errors{
+            color: #fff;
+        }
+        
+        .errors ul{
+            margin: 0;
+            list-style-type: none
+        }
 
-    h1, p, form, samll, .button-color, label{
-        color: #fff;
-    }
+        .button-color{
+            background-color: $secondColorP;
+        }
+        
+        p{
+            margin: 5% 0 0 0;
+        }
 
-    .button-color{
-        background-color: $secondColorP;
     }
 
 }

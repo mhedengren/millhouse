@@ -11,13 +11,11 @@ if(isset($_POST['signup'])){
     $register->args($args);
     $register->validate();
 
-    //Just to check if error message is released
-    /*
+    
     if(empty($register->errors)){
-        echo "yes";
         $register->add_user();
 
-        echo var_dump($register)."<br><br>";
+        /*echo var_dump($register)."<br><br>";
 
         $statement = $pdo->prepare("SELECT * FROM users");
         $statement->execute();
@@ -25,6 +23,7 @@ if(isset($_POST['signup'])){
 
 
         echo var_dump($connection_check);
+        */
 
     }else{
         //$register->errors;
@@ -32,7 +31,7 @@ if(isset($_POST['signup'])){
         //echo display_errors($register->errors);
         //redirect_to('../views/register-form.php');
     }
-    */
+ 
 }
 
 

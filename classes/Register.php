@@ -49,8 +49,16 @@ class Register
     {
         $this->errors =[];
 
-        if(strlen($this->password)<=6){
-            $this->errors[] = "Password must contain 6 or more characters.";
+        if(!preg_match('/[A-Z]/', $this->username)){
+            $this->errors[] = "*Username must contain at least 1 uppercase letter.";
+        }
+        
+        if(strlen($this->email)<=6){
+            $this->errors[] = "*Email address must contain 6 or more characters.";
+        }
+        
+        if(!preg_match("/[0-9]/", $this->password)){
+            $this->errors[] = "*Password must contain at least 1 number.";
         }
 
         return $this->errors;

@@ -20,7 +20,7 @@ function is_login($location){
 function display_errors($errors = array()){
     $output = '';
     if(!empty($errors)){
-        $output .= "<div class\"errors\">";
+        $output .= "<div class=\"errors\">";
         $output .= "<ul>";
         foreach($errors as $error){
             $output .= "<li>" .$error . "</li>";

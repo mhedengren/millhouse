@@ -45,18 +45,18 @@ if(isset($_SESSION["username"])){
                 <?php
                 //Shows the error message from validation only when $_POST is set
                 if(isset($_POST['signup'])){
-                    echo display_errors($register->errors); 
+                    echo display_errors($register->errors);
                 }
                 ?>
 
                 <form action="register-form.php" method="post" id="form_register">
                     <div class="form-group">
                         <label for="username">User Name</label>
-                        <input type="text" class="form-control" id="name" name="register[username]" placeholder="Please enter User Name" required="required">
+                        <input type="text" class="form-control" id="name" name="register[username]" placeholder="Use at least 1 uppercase letter" required="required">
                         <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" name="register[email]" placeholder="Please enter your email" required="required">
+                        <input type="email" class="form-control" id="email" name="register[email]" placeholder="Use 6 or more characters" required="required">
                         <label for="password">Password</label>
-                        <input type="password" class="form-control" id="password" name="register[password]" placeholder="Password must be longer than 6 charactors." required="required">
+                        <input type="password" class="form-control" id="password" name="register[password]" placeholder="Use at least 1 numbers." required="required">
                     </div>
                     <button type="submit" name="signup" class="btn button-color">SIGN UP</button>
                 </form>
