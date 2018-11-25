@@ -50,7 +50,7 @@ class Register
         $this->errors =[];
 
         if(strlen($this->password)<=6){
-            $this->errors[] = "Pass word must contain 6 or more characters.";
+            $this->errors[] = "Password must contain 6 or more characters.";
         }
 
         return $this->errors;

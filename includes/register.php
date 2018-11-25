@@ -1,8 +1,9 @@
 <?php
 
+
 include '../classes/Register.php';
 include 'database-connection.php';
-include 'functions.php';
+include_once 'functions.php';
 
 $args = $_POST['register'];
 $register = new Register($pdo);
@@ -23,7 +24,10 @@ if(empty($register->errors)){
     echo var_dump($connection_check);
 
 }else{
-    redirect_to('../views/register-form.php');
+    //$register->errors;
+    var_dump($register->errors);
+    //echo display_errors($register->errors);
+    //redirect_to('../views/register-form.php');
 }
 
 
