@@ -23,9 +23,9 @@ header {
    color: $secondColorP;
 }
 
-.login-mobile-button {
-    font-weight: bold;
-    
+.nav-link-highlight{
+   //border-bottom: 1px solid $secondColorP;
+   //font-weight: bold;
 }
 
 .navbar-toggler {
@@ -60,6 +60,10 @@ header {
         font-size: 1rem;
         text-align: center;
     }
+
+    .nav-link-highlight{
+        border-bottom: none;
+     }
 
     #navbarTogglerDemo02 {
         margin: 0 0 0 0;
