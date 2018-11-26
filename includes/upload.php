@@ -1,6 +1,7 @@
 <?php
 require '../includes/database-connection.php';
 
+var_dump($_POST["text"]);
 var_dump($_FILES["image"]);
 
 /**
