@@ -52,6 +52,4 @@ include '../includes/header.php';
 
     </main>
 
-</body>
-
-</html>
+    <?php include '../includes/footer.php'; ?>

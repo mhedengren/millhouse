@@ -36,7 +36,7 @@
 
                 </form>
 
-                <a href="#">New? Sign up!</a>
+                <a href="<?= $siteroot; ?>/views/register.php">New? Sign up!</a>
 
             </div>
         </div>
