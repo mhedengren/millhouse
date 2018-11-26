@@ -22,7 +22,19 @@ include '../includes/header.php';
                 </div>
             </div>
 
-           
+            <!-- If we are sending a file in a form we must supply the extra attribute
+            'encytype="multipart/form-data"', otherwise the file will be sent as a
+            string and not uploaded to the server, otherwise the form is similar to every other form -->
+            <form action="includes/upload.php" method="POST" enctype="multipart/form-data">
+                <label for="image">Image</label>
+                <!-- Use 'type="file"' to automatically create a input-field for uploads -->
+                <input type="file" name="image" id="image">
+                <label for="text">Image text</label>
+                <!-- Use a textarea for a bigger input-field, put an ID on the area for the
+                wysiwyg-editor to initialize on -->
+                <textarea name="text" id="text"></textarea>
+                <input type="submit" value="Send">
+            </form>
 
 
             <!-- <div class="row new-post">
