@@ -1,94 +1,32 @@
 <?php
 
-
 include '../classes/Register.php';
-//include '../classes/Sesson.php.php';
 include 'database-connection.php';
 include_once 'functions.php';
 
+//If sign-up btn is clicked activate Register class
 if(isset($_POST['signup'])){
+    //Stor all input which sent by POST into $args array
     $args = $_POST['register'];
+    //Call a class
     $register = new Register($pdo);
+    //Run class to stor values in $args array to properties
     $register->args($args);
+    //Run validation and collect resut of validation and error messages into error property
     $register->validate();
-    
-    //echo $register->username;
-    //$username = $register->username;
-    //echo $username;
-    
-    /*
-    var_dump($register->username);
-    var_dump($register->find_user());
-    $user_exist = $register->find_user();
-    echo "<br>";
-    echo "<br>";
-
-    var_dump($register->find_user()["username"]);
-    echo $user_exist["username"];
-    
-    if($register->username == $user_exist["username"]){
-        echo "ok";
-    }else{
-        echo "ng";
-    }
-
-    */
 
     if(empty($register->errors)){
+        //If there is no error add user information to database
         $register->add_user();
+
+        //If there is no error add username and admin/standart in the session
         $register->add_session();
         
-        var_dump($_SESSION["username"]);
-        echo "<br>";
-        var_dump($_SESSION["user_id"]);
-        echo "<br>";
-        var_dump($_SESSION["user"]);
-        echo "<br>";
+        //Redirect to login-form page
+        //redirect_to('login-form.php');
 
         
-        //$session = new Session;
-        //$session->loginAsRegister($register);
-        
-
-        /*echo var_dump($register)."<br><br>";
-
-            $statement = $pdo->prepare("SELECT * FROM users");
-            $statement->execute();
-            $connection_check = $statement->fetchAll(PDO::FETCH_ASSOC);
-
-
-            echo var_dump($connection_check);
-            */            
-
-    }else{
-        //$register->errors;
-        //var_dump($register->errors);
-        //echo display_errors($register->errors);
-        //redirect_to('../views/register-form.php');
     }
- 
+
+//Do not do anything if POST is not sent.
 }
-
-
-
-   //require_once('../views/register-form.php');
-   /*
-$username = $_POST["username"];
-$email = $_POST["email"];
-$password = $_POST["password"];
-
-echo $username, $email, $password;
-*/
-   /* Pass along the $pdo variable when you create a new instance
- * of the class, $pdo becomes $this->pdo. $posts is used
- * to call the specific methods inside of the Posts class
- * 
-$posts = new Register($pdo);
-
-$args = $_POST['admin'];
-$register = new Register($args);
-$admin->set_hashed_password();
-$admin->add_user($users);
-//$result = $admin->save();
-
-*/

@@ -1,7 +1,6 @@
-<!-- head require-->
 <?php
 //Start session
-//session_start(); 
+session_start(); 
 
 //Include for absolute path
 include '../config.php';
@@ -45,7 +44,9 @@ if(isset($_SESSION["username"])){
                 <?php
                 //Shows the error message from validation only when $_POST is set
                 if(isset($_POST['signup'])){
-                    echo display_errors($register->errors);
+                    if(!empty($register->errors)){
+                        echo display_errors($register->errors);
+                    }
                 }
                 ?>
 
@@ -62,17 +63,6 @@ if(isset($_SESSION["username"])){
                 </form>
 
                 <p>Already a member? <a href="./login-form.php">Log in!</a></p>
-                
-
-
-                <!--  Display error message  if register is unsucceeded
-If any of input forms are missing, redirect to the top of this page and show the error message.
-Otherwise redirect to index.php top.-->
-                <?php
-                    //is_error("empty_error", "error", "exist_error", null);
-                    //is_successfull("register", null, null, null);
-
-                ?>          
 
 
             </div>
