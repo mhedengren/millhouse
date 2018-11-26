@@ -1,5 +1,8 @@
 <?php
-require 'partials/pdo.php';
+require '../includes/database-connection.php';
+
+var_dump($_FILES["image"]);
+
 /**
  * If the file is sent via a form with 'enctype="multiplart/form-data"' the
  * file is saved go the superglobal '$_FILES' variable and inside of $_FILES["image"]
@@ -31,12 +34,12 @@ $upload_ok = move_uploaded_file($temporary_location, $new_location);
  * Here I am also sending along the text from the editor, that text is saved as usual in $_POST
  */
 if($upload_ok){
-  $statement = $pdo->prepare("INSERT INTO images (image, text) VALUES (:image, :text)");
+  $statement = $pdo->prepare("INSERT INTO posts (image, description) VALUES (:image, :text)");
   $statement->execute([
     ":image" => $new_location,
     ":text"  => $image_text
   ]);
   
   //When everything is done, redirect
-  header('Location: /');
+  header('Location: views/admin-page.php');
 }
