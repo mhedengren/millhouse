@@ -22,8 +22,6 @@ include '../includes/header.php';
                 </div>
             </div>
 
-
-
             <div class="row new-post">
                 <div class="col-sm-12 col-md-8">
                     <h2 class="add-new-post">Add New Post</h2>
@@ -36,18 +34,16 @@ include '../includes/header.php';
                         <textarea name="text" id="text"></textarea>
                         <input type="submit" value="Send">
                     </form>
-            </div>
-            <div class="col-sm-12 col-md-4">
-                <div class="upload-image-form">
-                    <h3 class="featured-image">Featured Image</h3>
-                    <h4 class="select-image">Select Image to Upload:</h4>
-                    <input type="file" name="fileToUpload" id="fileToUpload" for="upload-form">
-                    <input type="submit" name="submit" value="Upload Image" for="upload-form">
                 </div>
+                 <div class="col-sm-12 col-md-4">
+                    <div class="upload-image-form">
+                        <h3 class="featured-image">Featured Image</h3>
+                        <h4 class="select-image">Select Image to Upload:</h4>
+                        <input type="file" name="image" id="image" for="upload-form">
+                    </div>
+                </div>
+
             </div>
-
-        </div>
-
 
         </div>
 
