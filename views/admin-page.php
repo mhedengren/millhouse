@@ -32,7 +32,9 @@ include '../includes/header.php';
                         </div>
                         <div class="form-group">
                             <label for="text-area">Body</label>
-                            <textarea class="form-control" id="text-area" rows="15" placeholder="Enter text here"></textarea>
+                            <form method="post">
+                                <textarea id="summernote" name="editordata"></textarea>
+                            </form>
                         </div>
                     </form>
                 </div>
@@ -51,5 +53,11 @@ include '../includes/header.php';
         </div>
 
     </main>
+
+<script>
+    $(document).ready(function() {
+        $('#summernote').summernote();
+    });
+  </script>
 
     <?php include '../includes/footer.php'; ?>
