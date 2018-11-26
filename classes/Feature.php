@@ -15,9 +15,20 @@ class Feature
   public function getFeaturePost(){
     $stmt = $this->pdo->prepare("SELECT * FROM posts ORDER BY posts_id DESC LIMIT 1");
     $stmt->execute();
-    $latest_post = $stmt->fetch();
-    return $latest_post; 
+    $latestPost = $stmt->fetch();
+    return $latestPost; 
 
+  }
+
+  public function getLatestPosts(){
+    $stmt = $this->pdo->prepare("SELECT * FROM posts ORDER BY posts_id DESC LIMIT 4");
+    $stmt->execute();
+    $rows = $stmt->fetchAll();
+    foreach ($rows as $row);{
+      echo $row['title'];
+      
+    }
+ 
   }
   
 }
