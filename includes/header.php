@@ -10,10 +10,10 @@
                     <div class="collapse navbar-collapse order-2" id="navbarTogglerDemo02">
                         <ul class="navbar-nav mr-auto mt-2 mt-lg-0 ">
                             <li class="nav-item d-lg-none">
-                                <a class="nav-link nav-link-highlight" href="<?= $siteroot; ?>/views/login_form.php">LOGIN</a>
+                                <a class="nav-link nav-link-highlight" href="<?= $siteroot; ?>/views/login-form.php">LOGIN</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link nav-link-highlight" href="<?= $siteroot; ?>/views/adminpage.php">ADMINPANEL</a>
+                                <a class="nav-link nav-link-highlight" href="<?= $siteroot; ?>/views/admin-page.php">ADMINPANEL</a>
                             </li>
                             <li class="nav-item active">
                                 <a class="nav-link" href="#">WATCHES <span class="sr-only">(current)</span></a>
@@ -31,7 +31,7 @@
                     </div>
                         <div class="d-none d-lg-block order-3 login-div">
                             <button class="login-button">
-                        <a href="<?= $siteroot; ?>/views/login_form.php">LOGIN</a>
+                        <a href="<?= $siteroot; ?>/views/login-form.php">LOGIN</a>
                         </button>
                 </div>
             </nav>
