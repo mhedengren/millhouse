@@ -36,7 +36,8 @@ $post = $object->getFeaturePost();
             </div>
                     <h2 class="post-title"><?= $post["title"]; ?></h2>
                         
-                    <p class="post-description"><?= substr($post["description"], 0, 50); ?></p>
+                    <p class="post-description"><b><?= substr($post["description"], 0, 50); ?></b></p>
+                    <p class="post-description"><?= $post["description"]; ?></p>
                         
         </div>
     </div>
