@@ -6,7 +6,8 @@
     include '../includes/head.php';
     include '../includes/header.php';
     include '../includes/database-connection.php';
-    include '../includes/select_feature_post.php';   
+    include '../includes/select_feature_post.php';
+    include '../classes/Feature.php';   
 ?>
 
 <main class="container">
@@ -19,20 +20,26 @@
         
         </div>    
     </div>-->
-    <div class="row justify-content-center">    
-        <div class="col-10">
-        <?php
-                //Looping through all the posts from the db.
-                foreach ($all_posts as $post): ?>
-                <div class="hero-image-post-container">
-                    <div class="feature-post">
-                        <h2 class="post-name"><?= $post["title"]; ?></h2>
-                        <h6 class="post-date"><?= $post["created_on"]; ?></h6>
-                        <p class="post-description"><?= substr($post["description"], 0, 50); ?></p>
-                        <img src="../<?= $post["image"]; ?>" alt="Hero-image">
-                    </div>
+<?php
+$object = new Feature($pdo);        
+$post = $object->getFeaturePost();
+?>
+    <div class="hero-image-post-container row justify-content-center">
+        <div class="feature-post col-10 text-center">
+            <div class="hero-image">
+                <img src="../<?= $post["image"]; ?>" alt="Hero-image">
+            </div>
+            <div class="date row justify-content-center">
+                <div class="date-circle">    
+                    <h6 class="post-date"><?= $post["created_on"]; ?></h6>
                 </div>
-                <?php endforeach; ?>
+            </div>
+                    <h2 class="post-title"><?= $post["title"]; ?></h2>
+                        
+                    <p class="post-description"><?= substr($post["description"], 0, 50); ?></p>
+                        
+        </div>
+    </div>
     
 </main>
 

@@ -1,6 +1,13 @@
 footer.container-fluid{
-    margin-top: 50vw;
-    max-height: 150px;
+    margin-top: 50px;
+    height: 15vh;
     background: linear-gradient(95.95deg, #1C3045 0%, #D7BCC8 100%);
     margin-top: 40px;
+    color: linear-gradient(95.95deg, white 0%, rgb(56, 55, 55) 100%);
+}
+
+a.button-link{
+    background-color: #1C3045;
+    border: #1C3045 solid 2px;
+    color: #fff;
 }
