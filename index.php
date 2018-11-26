@@ -11,45 +11,28 @@ $page_title = 'Index';
 <?php include 'includes/header.php';?>
 <?php include 'includes/database-connection.php';?>
 <?php include 'classes/Feature.php';?>
-<?php include 'includes/select_feature_post.php';?>
-
-
-
-
-
 
 <?php 
 $object = new Feature($pdo);
 $object->getFeaturePost();
-
-
-
-
-var_dump($object->getFeaturePost());
-
-
+$post = $object->getFeaturePost();
 ?>
-
 
 <main id="index-page">
     <div class="container">
         <article class="row feature-post">
-            <?php
-            //Looping only one post from db. (LIMIT 1)
-            foreach ($all_posts as $post): ?>
-                <div class="col-sm-12 col-md-12">
-                    <div class="hero-image">
-                    <img src="<?= $post["image"]; ?>" alt="feature-image">
-                    </div>
-                        <div class="date row justify-content-center">
+            <div class="col-sm-12 col-md-12">
+                <div class="hero-image">
+                <img src="<?= $post["image"]; ?>" alt="feature-image">
+                </div>
+                    <div class="date row justify-content-center">
                         <div class="date-circle">
                         <h6><?= substr($post["created_on"], 8, 15); ?></h6>
                         </div>
                     </div>
-                    <h2 class="post-title"><?= $post["title"]; ?></h2>
-                    <p class="post-description"><?= substr($post["description"], 0, 150); ?></p>
-                </div>
-            <?php endforeach; ?> 
+                <h2 class="post-title"><?= $post["title"]; ?></h2>
+                <p class="post-description"><?= substr($post["description"], 0, 150); ?></p>
+            </div>
         </article>     
     </div>
 </main>
