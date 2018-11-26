@@ -12,6 +12,7 @@
 * Single line comment with `//`, multiline with `/**/`
 * camelCase for variables
 * PascalCase for classes
+*{} should be separate separated for class and methods.
 
 ## Files and folders
 

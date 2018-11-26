@@ -12,25 +12,29 @@ $page_title = 'Index';
 <?php include 'includes/database-connection.php';?>
 <?php include 'includes/select_feature_post.php';?>
 
-<main class="container">
-    <div class="row justify-content-center">
-
-                <?php
-                //Looping only one post from db. (LIMIT 1)
-                foreach ($all_posts as $post): ?>
-                <div class="col-xs-12 hero-image-post-container">
-                    <div class="col-xs-12 feature-post">
-                        <h2 class="post-name"><?= $post["title"]; ?></h2>
-                        <h6 class="post-date"><?= $post["created_on"]; ?></h6>
-                        <p class="post-description"><?= substr($post["description"], 0, 50); ?></p>
-                        <img src="<?= $post["image"]; ?>" alt="Hero-image">
+<main id="index-page">
+    <div class="container">
+        <article class="row feature-post">
+            <?php
+            //Looping only one post from db. (LIMIT 1)
+            foreach ($all_posts as $post): ?>
+                <div class="col-sm-12 col-md-12">
+                    <div class="hero-image">
+                    <img src="<?= $post["image"]; ?>" alt="feature-image">
                     </div>
+                        <div class="date row justify-content-center">
+                        <div class="date-circle">
+                        <h6><?= substr($post["created_on"], 8, 15); ?></h6>
+                        </div>
+                    </div>
+                    <h2 class="post-title"><?= $post["title"]; ?></h2>
+                    <p class="post-description"><?= substr($post["description"], 0, 150); ?></p>
                 </div>
-                <?php endforeach; ?>
-                
+            <?php endforeach; ?> 
+        </article>     
     </div>
 </main>
 
 <?php
-//include 'includes/footer.php';
+include 'includes/footer.php';
 ?>

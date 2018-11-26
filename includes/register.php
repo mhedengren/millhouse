@@ -1,39 +1,94 @@
 <?php
 
-require 'classes/Posts.php';
-require 'includes/database-connection.php';
 
-/* Pass along the $pdo variable when you create a new instance
+include '../classes/Register.php';
+//include '../classes/Sesson.php.php';
+include 'database-connection.php';
+include_once 'functions.php';
+
+if(isset($_POST['signup'])){
+    $args = $_POST['register'];
+    $register = new Register($pdo);
+    $register->args($args);
+    $register->validate();
+    
+    //echo $register->username;
+    //$username = $register->username;
+    //echo $username;
+    
+    /*
+    var_dump($register->username);
+    var_dump($register->find_user());
+    $user_exist = $register->find_user();
+    echo "<br>";
+    echo "<br>";
+
+    var_dump($register->find_user()["username"]);
+    echo $user_exist["username"];
+    
+    if($register->username == $user_exist["username"]){
+        echo "ok";
+    }else{
+        echo "ng";
+    }
+
+    */
+
+    if(empty($register->errors)){
+        $register->add_user();
+        $register->add_session();
+        
+        var_dump($_SESSION["username"]);
+        echo "<br>";
+        var_dump($_SESSION["user_id"]);
+        echo "<br>";
+        var_dump($_SESSION["user"]);
+        echo "<br>";
+
+        
+        //$session = new Session;
+        //$session->loginAsRegister($register);
+        
+
+        /*echo var_dump($register)."<br><br>";
+
+            $statement = $pdo->prepare("SELECT * FROM users");
+            $statement->execute();
+            $connection_check = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+
+            echo var_dump($connection_check);
+            */            
+
+    }else{
+        //$register->errors;
+        //var_dump($register->errors);
+        //echo display_errors($register->errors);
+        //redirect_to('../views/register-form.php');
+    }
+ 
+}
+
+
+
+   //require_once('../views/register-form.php');
+   /*
+$username = $_POST["username"];
+$email = $_POST["email"];
+$password = $_POST["password"];
+
+echo $username, $email, $password;
+*/
+   /* Pass along the $pdo variable when you create a new instance
  * of the class, $pdo becomes $this->pdo. $posts is used
  * to call the specific methods inside of the Posts class
- * */
-$posts = new Posts($pdo);
-
-/**
- * This is how we would call this file in a HTML-form if we want to
- * utilize both the GET variable and the POST variable as we do below
  * 
- * ---> TO create new post with form
- * <form action="includes/posts.php?action=create_post" method="POST">
- *  <input type="text" name="title">
- *  <input type="text" name="description">
- * </form>
- * 
- * ---> To delete a post with link or form
- * <a href="includes/posts.php?action=delete&id=3" > Delete Post </a>
- */
+$posts = new Register($pdo);
 
-$action = $_GET["action"] ?? '';
+$args = $_POST['admin'];
+$register = new Register($args);
+$admin->set_hashed_password();
+$admin->add_user($users);
+//$result = $admin->save();
 
-if($action === "delete_post")
-{ 
-  $id_to_delete = $_GET["id"];
-  // Let the class handle what happens after this
-  $posts->delete($id_to_delete);
-}
-
-if($action === "create_post")
-{
-  // Let the class handle what happens after this
-  $posts->create($_POST);
-}
+*/
