@@ -32,7 +32,7 @@ include '../includes/header.php';
                 <label for="text">Image text</label>
                 <!-- Use a textarea for a bigger input-field, put an ID on the area for the
                 wysiwyg-editor to initialize on -->
-                <textarea name="text" id="text"></textarea>
+                <textarea name="text" id="summernote"></textarea>
                 <input type="submit" value="Send">
             </form>
 
@@ -74,11 +74,12 @@ include '../includes/header.php';
   <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script> 
   <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote.js"></script>
   <script>
-
-    <script>
-        $(document).ready(function () {
-            $('#summernote').summernote();
-        });
-    </script>
+    /**
+     * use the id of the textarea in the form to initialize this text-editor: #text
+     */
+    $(document).ready(function() {
+      $('#text').summernote();
+    });
+  </script>
 
     <?php include '../includes/footer.php'; ?>
