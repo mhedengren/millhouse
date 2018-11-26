@@ -19,9 +19,9 @@
 
 .date-circle {
 
-    margin-top: -20px;
-    width: 60px;
-    height: 60px;
+    margin-top: -40px;
+    width: 70px;
+    height: 70px;
     background-color: $secondColorP;
     border-radius: 50%;
     display: inline-block;
@@ -30,14 +30,14 @@
     display: flex;
     
         h6 {
-            
+            text-transform: uppercase;
             color: white;
             text-align: center;
             font-family: 'Open Sans';
             font-style: normal;
             font-weight: normal;
-            line-height: 15px;
-            font-size: 20px;
+            line-height: 20px;
+            font-size: 18px;
             text-align: center;
             letter-spacing: 0.5px;
             padding: 0;

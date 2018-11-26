@@ -5,7 +5,6 @@ include 'config.php';
 //Page title
 $page_title = 'Index';
 
-
 ?>
 
 <?php include 'includes/head.php'; ?>
@@ -13,12 +12,14 @@ $page_title = 'Index';
 <?php include 'includes/database-connection.php';?>
 <?php include 'classes/Feature.php';?>
 
+
 <?php 
 $object = new Feature($pdo);
 $object->getFeaturePost();
 $feature = $object->getFeaturePost();
 ?>
 
+<?php include 'includes/date.php';?>
 <main id="index-page">
     <div class="container">
         <article class="row feature-post">
@@ -28,7 +29,7 @@ $feature = $object->getFeaturePost();
             </div>
             <div class="date row justify-content-center">
             <div class="date-circle">
-            <h6><?= substr($feature["created_on"], 8, 15); ?></h6>
+            <h6><?= $month; ?><br><?= $day; ?></h6>
             </div>
             </div>
             <h2 class="post-title"><?= $feature["title"]; ?></h2>
