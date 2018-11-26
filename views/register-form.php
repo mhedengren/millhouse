@@ -1,30 +1,25 @@
 <!-- head require-->
 <?php
+//Start session
+//session_start(); 
+
 //Include for absolute path
 include '../config.php';
 
 //Page title
 $page_title = 'Register';
 
-//Start session
-session_start(); 
+//Database connection
+include '../includes/database-connection.php';
 
-//Database Connection
-//Use try in order to avoid exposing connection information
-try{
-    
-    include '../includes/database-connection.php';
-    
-}catch(Exception $e){
-    $error = $e->getMessage();
-}
+//Functions
+include_once '../includes/functions.php';
+
+//Registering actions
+include '../includes/register.php';
 
 
 /*
-include_once('functions.php');
-
-include_once('functions.php');
-
 //If already logged in skip log in again and jump to check out page directly.
 if(isset($_SESSION["username"])){
     redirect_to('../index.php');
@@ -40,24 +35,30 @@ if(isset($_SESSION["username"])){
 <body>
 
     <?php include "../includes/header.php"; ?>
-    <main id="register"> 
+    <main id="register-form"> 
 
-        <div class="container row align-items-center align-items-center">
+        <div class="container row">
             <div class="contents">
 
                 <!--  Register form  -->
                 <h1>Sign up</h1>
+                <?php
+                //Shows the error message from validation only when $_POST is set
+                if(isset($_POST['signup'])){
+                    echo display_errors($register->errors);
+                }
+                ?>
 
-                <form action="../includes/register.php" method="post" id="form_register">
+                <form action="register-form.php" method="post" id="form_register">
                     <div class="form-group">
                         <label for="username">User Name</label>
-                        <input type="text" class="form-control" id="name" name="username" placeholder="Please enter User Name" required="required">
+                        <input type="text" class="form-control" id="name" name="register[username]" placeholder="Use at least 1 uppercase letter" required="required">
                         <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Please enter your email" required="required">
+                        <input type="email" class="form-control" id="email" name="register[email]" placeholder="Use 6 or more characters" required="required">
                         <label for="password">Password</label>
-                        <input type="password" class="form-control" id="password" name="password" placeholder="Password must be longer than 6 charactors." required="required">
+                        <input type="password" class="form-control" id="password" name="register[password]" placeholder="Use at least 1 number." required="required">
                     </div>
-                    <button type="submit" class="btn button-color">SIGN UP</button>
+                    <button type="submit" name="signup" class="btn button-color">SIGN UP</button>
                 </form>
 
                 <p>Already a member? Log in!</p>
@@ -73,13 +74,6 @@ Otherwise redirect to index.php top.-->
 
                 ?>          
 
-                <?php
-                if ($pdo){
-                    echo "<p>Connection successful.</p>";
-                } else{
-                    echo "<p>$error</p>";
-                }
-                ?>
 
             </div>
 
