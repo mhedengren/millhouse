@@ -45,7 +45,7 @@
     </main>
 
 <?php
-    require "../includes/footer.php"
+    require "../includes/scripts.php"
 ?>
 
 </body>
