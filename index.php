@@ -10,7 +10,26 @@ $page_title = 'Index';
 <?php include 'includes/head.php'; ?>
 <?php include 'includes/header.php';?>
 <?php include 'includes/database-connection.php';?>
+<?php include 'classes/Feature.php';?>
 <?php include 'includes/select_feature_post.php';?>
+
+
+
+
+
+
+<?php 
+$object = new Feature($pdo);
+$object->getFeaturePost();
+
+
+
+
+var_dump($object->getFeaturePost());
+
+
+?>
+
 
 <main id="index-page">
     <div class="container">

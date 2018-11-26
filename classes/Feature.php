@@ -1,6 +1,6 @@
 <?php
 
-class Fetch
+class Feature
 {
   private $pdo;
 
@@ -12,13 +12,12 @@ class Fetch
     $this->pdo = $pdo;
   }
 
-  public function delete()
-  {
-    return true;
-  }
+  public function getFeaturePost(){
+    $stmt = $this->pdo->prepare("SELECT * FROM posts ORDER BY posts_id DESC LIMIT 1");
+    $stmt->execute();
+    $latest_post = $stmt->fetch();
+    return $latest_post; 
 
-  public function create($newPost)
-  {
-    return true;
   }
+  
 }
