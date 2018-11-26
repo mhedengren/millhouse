@@ -40,8 +40,8 @@ include '../includes/header.php';
                     <form action="#" method="POST" enctype="multipart/form-data" class="upload-image-form">
                         <h3 class="featured-image">Featured Image</h3>
                         <h4 class="select-image">Select Image to Upload:</h4>
-                        <input type="file" name="myfile" id="fileToUpload">
-                        <input type="submit" name="submit" value="Upload File Now">
+                        <input type="file" name="fileToUpload" id="fileToUpload">
+                        <input type="submit" name="submit" value="Upload Image">
                     </form>
                 </div>
 
