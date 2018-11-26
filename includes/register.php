@@ -36,6 +36,16 @@ if(isset($_POST['signup'])){
 
     if(empty($register->errors)){
         $register->add_user();
+        $register->add_session();
+        
+        var_dump($_SESSION["username"]);
+        echo "<br>";
+        var_dump($_SESSION["user_id"]);
+        echo "<br>";
+        var_dump($_SESSION["user"]);
+        echo "<br>";
+
+        
         //$session = new Session;
         //$session->loginAsRegister($register);
         

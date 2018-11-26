@@ -10,7 +10,10 @@ class Register
     public $email;
     protected $hashedPassword;
     public $passward;
-    //public $confirm_password;
+    /*If I have time..
+    public $confirm_password;
+    */
+    //Property for correcting error messages
     public $errors = [];
 
     /*
@@ -23,6 +26,8 @@ class Register
     }
 
     /*
+    I want to use static for args etc if i have time..
+    
     static private $pdo;
 
     static public function set_pdo($pdo)
@@ -45,8 +50,8 @@ class Register
         $this->hashedPassword = password_hash($this->password, PASSWORD_DEFAULT);
     }
     
-    public function find_user(){
-
+    public function find_user()
+    {
         //Prepare a SQL statement
         $statement = $this->pdo->prepare(
             "SELECT * FROM users WHERE username = :username");
@@ -105,4 +110,15 @@ We do not need return something from this feature then it only shall submit data
 
     }
 
+    public function add_session()
+    {
+        $_SESSION["username"] = $this->find_user()["username"];
+        $_SESSION["user_id"] = $this->find_user()["id"];
+        if($this->find_user()["admin"] == true ){
+            $_SESSION["user"] = "admin";
+        } else{
+            $_SESSION["user"] = "standard";
+
+        }
+    }
 }
