@@ -37,7 +37,7 @@ include '../includes/header.php';
                     </form>
                 </div>
                 <div class="col-sm-12 col-md-4">
-                    <form action="upload.php" method="POST" enctype="multipart/form-data" class="upload-image-form">
+                    <form action="includes/upload.php" method="POST" enctype="multipart/form-data" class="upload-image-form">
                         <h3 class="featured-image">Featured Image</h3>
                         <h4 class="select-image">Select Image to Upload:</h4>
                         <input type="file" name="fileToUpload" id="fileToUpload">
