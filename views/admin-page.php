@@ -22,7 +22,10 @@ include '../includes/header.php';
                 </div>
             </div>
 
-            <div class="row new-post">
+           
+
+
+            <!-- <div class="row new-post">
                 <div class="col-sm-12 col-md-8">
                     <h2 class="add-new-post">Add New Post</h2>
                     <form action="#" method="POST">
@@ -47,18 +50,17 @@ include '../includes/header.php';
                     </form>
                 </div>
 
-            </div>
+            </div>-->
 
 
         </div>
 
     </main>
 
-<script>
-    $(document).ready(function() {
-        $('#summernote').summernote();
-    });
-  </script>
+    <script>
+        $(document).ready(function () {
+            $('#summernote').summernote();
+        });
+    </script>
 
     <?php include '../includes/footer.php'; ?>
- 
