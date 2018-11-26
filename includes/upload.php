@@ -1,42 +1,42 @@
 <?php
-$target_dir = "uploads/";
-$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-$uploadOk = 1;
-$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-
-// Check if image file is a actual image or fake image
-if(isset($_POST["submit"])) {
-    $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
-    if($check !== false) {
-        echo "File is an image - " . $check["mime"] . ".";
-        $uploadOk = 1;
-    } else {
-        echo "File is not an image.";
-        $uploadOk = 0;
-    }
-}
-
-// Check file size
-if ($_FILES["fileToUpload"]["size"] > 500000) {
-    echo "Sorry, your file is too large.";
-    $uploadOk = 0;
-}
-
-// Allow certain file formats
-if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-&& $imageFileType != "gif" ) {
-    echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
-    $uploadOk = 0;
-}
-
-// Check if $uploadOk is set to 0 by an error
-if ($uploadOk == 0) {
-    echo "Sorry, your file was not uploaded.";
-// if everything is ok, try to upload file
-} else {
-    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-        echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
-    } else {
-        echo "Sorry, there was an error uploading your file.";
-    }
+require 'partials/pdo.php';
+/**
+ * If the file is sent via a form with 'enctype="multiplart/form-data"' the
+ * file is saved go the superglobal '$_FILES' variable and inside of $_FILES["image"]
+ */
+$image = $_FILES["image"];
+$image_text = $_POST["text"];
+/**
+ * When it is uploaded it is stored at a temporary location inside a /tmp folder
+ * on your computer or server. We must move this temporary file to a permanent location
+ * which we will do futher down. The path to the temporary location is inside of $_FILES["image"]["tmp_name"]
+ */
+$temporary_location = $image["tmp_name"];
+/**
+ * We must create a new filename and location and decide where we will put the uploaded file.
+ * We can specify this new location as 'uploads/' (the name of the folder where we want our images)
+ * and then reuse the name of the uploaded file. In my example the file is named 'tired.png' so the
+ * new file will be named 'uploads/tired.png'
+ */
+$new_location = "uploads/" . $image["name"];
+/**
+ * 'move_uploaded_file' moves the file from the temporary location to your newly specified location
+ * if the transfer is complete we will get a true/false return value from the function indiciating
+ * everything went ok with the transfer of the file
+ */
+$upload_ok = move_uploaded_file($temporary_location, $new_location);
+/**
+ * If the transfer went OK we can insert the pathname to the image into the database, not the actual
+ * file, the file is stored in a folder, and the path to the file is saved in the database as a VARCHAR
+ * Here I am also sending along the text from the editor, that text is saved as usual in $_POST
+ */
+if($upload_ok){
+  $statement = $pdo->prepare("INSERT INTO images (image, text) VALUES (:image, :text)");
+  $statement->execute([
+    ":image" => $new_location,
+    ":text"  => $image_text
+  ]);
+  
+  //When everything is done, redirect
+  header('Location: /');
 }
