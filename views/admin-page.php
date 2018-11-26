@@ -31,15 +31,16 @@ include '../includes/header.php';
                     <form action="../includes/upload.php" method="POST" enctype="multipart/form-data" id="upload-form">
                         <!-- Use a textarea for a bigger input-field, put an ID on the area for the
                         wysiwyg-editor to initialize on -->
+                         <label for="text">Text Body</label>
                         <textarea name="text" id="text"></textarea>
                         <input type="submit" value="Send">
                     </form>
                 </div>
                  <div class="col-sm-12 col-md-4">
                     <div class="upload-image-form">
-                        <h3 class="featured-image">Featured Image</h3>
+                        <label class="featured-image" for="image">Featured Image<label>
                         <h4 class="select-image">Select Image to Upload:</h4>
-                        <input type="file" name="image" id="image" for="upload-form">
+                        <input type="file" name="image" id="image" form="upload-form"> 
                     </div>
                 </div>
 
