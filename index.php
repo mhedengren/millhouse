@@ -39,10 +39,12 @@ $feature = $object->getFeaturePost();
     </div>
         
         <?php 
+        /*
         $object2 = new Feature($pdo);
         $object2->getLatestPosts();
         $latestPosts = $object2->getLatestPosts();
         var_dump($latestPosts);
+        */
         ?>
 
         <!--
