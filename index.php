@@ -21,6 +21,7 @@ include 'includes/date.php';
     <div class="container">
         <article class="row feature-post">
             <div class="col-sm-12 col-md-12">
+            <h2 class="big-post-title d-none d-md-block"><?= $feature["title"]; ?></h2>
             <div class="hero-image">
             <img src="<?= $feature["image"]; ?>" alt="feature-image">
             </div>
@@ -29,8 +30,8 @@ include 'includes/date.php';
             <h6><?= $month; ?><br><?= $day; ?></h6>
             </div>
             </div>
-            <h2 class="post-title"><?= $feature["title"]; ?></h2>
-            <p class="post-description"><?= substr($feature["description"], 0, 60); ?></p>
+            <h2 class="post-title d-md-none"><?= $feature["title"]; ?></h2>
+            <p class="post-description d-md-none"><?= substr($feature["description"], 0, 60); ?></p>
             </div>
         </article> 
     </div>
@@ -63,11 +64,11 @@ $latestPosts = $object2->getLatestPosts();
             <h2 class="post-title-gallery"><?= $post["title"]; ?></h2>
             <p class="post-description-gallery"><?= substr($post["description"], 0, 75); ?></p>
             <p class="read-more d-none d-md-block"><a href="views/single-post.php?id=<?= $post["posts_id"]; ?>">Read article</a></p>
-            <div class="row justify-content-center">
+            <!--<div class="row justify-content-center">
             <div class="col-6 d-md-none">
             <hr>
             </div>
-            </div>
+            </div> -->
             </div>
             <?php endforeach ;?>
         </section>
