@@ -18,9 +18,12 @@
                         <a class="nav-link nav-link-highlight" href="<?= $siteroot; ?>/includes/logout.php">LOGOUT</a>
                     </li>
                     <?php endif; ?>
+                    <?php if(!isset($_SESSION['username'])): ?>
+                    <?php else: ?>
                     <li class="nav-item">
                         <a class="nav-link nav-link-highlight" href="<?= $siteroot; ?>/views/admin-page.php">ADMINPANEL</a>
                     </li>
+                    <?php endif; ?>
                     <li class="nav-item active">
                         <a class="nav-link" href="#">WATCHES <span class="sr-only">(current)</span></a>
                     </li>
