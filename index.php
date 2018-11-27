@@ -30,7 +30,6 @@ include 'includes/date.php';
             </div>
             </div>
             <h2 class="post-title"><?= $feature["title"]; ?></h2>
-            <p><a href="views/single-post.php?id=<?= $feature["posts_id"]; ?>">Read article</a></p>
             <p class="post-description"><?= substr($feature["description"], 0, 150); ?></p>
             </div>
         </article> 
@@ -46,16 +45,17 @@ include 'includes/date.php';
         ?>
         <div class="container">
         <section class="row latest-posts">
-            <div class="col-sm-12">
+            <article class="col-sm-12">
                 <?php foreach ($latestPosts as $post) :?>
                 <div class="hero-image-small">
-                <img src="<?= $feature["image"]; ?>" alt="feature-image">
+                <img src="<?= $post["image"]; ?>" alt="feature-image">
                 </div>
                 <h2 class="post-title"><?= $post["title"]; ?></h2>
-                <p class="post-description"><?= substr($feature["description"], 0, 100); ?></p>
+                <p class="post-description"><?= substr($post["description"], 0, 100); ?></p>
+                <hr>
 
                 <?php endforeach ;?>
-            </div>
+            </article>
         </section>
     </div>
 
