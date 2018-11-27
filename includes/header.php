@@ -9,9 +9,15 @@
             </button>
             <div class="collapse navbar-collapse order-2" id="navbarTogglerDemo02">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0 ">
+                <?php if(!isset($_SESSION['username'])): ?>
                     <li class="nav-item d-lg-none">
                         <a class="nav-link nav-link-highlight" href="<?= $siteroot; ?>/views/login-form.php">LOGIN</a>
                     </li>
+                    <?php else: ?>
+                    <li class="nav-item d-lg-none">
+                        <a class="nav-link nav-link-highlight" href="<?= $siteroot; ?>/includes/logout.php">LOGOUT</a>
+                    </li>
+                    <?php endif; ?>
                     <li class="nav-item">
                         <a class="nav-link nav-link-highlight" href="<?= $siteroot; ?>/views/admin-page.php">ADMINPANEL</a>
                     </li>
