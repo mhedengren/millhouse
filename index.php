@@ -38,7 +38,8 @@ $feature = $object->getFeaturePost();
             </div>
         </article> 
     </div>
-        
+    <p><a href="views/single-post.php?id=<?= $feature["posts_id"]; ?>">Read article</a></p>
+
         <?php 
         /*
         $object2 = new Feature($pdo);

@@ -2,6 +2,8 @@
 //Start session
 session_start(); 
 
+var_dump($_GET["id"]);
+
 //Defines site root
 
     include '../config.php';
@@ -11,8 +13,10 @@ session_start();
     include '../includes/header.php';
     include '../includes/database-connection.php';
     include '../includes/select_feature_post.php';
-    include '../classes/Feature.php';   
+    include '../classes/Feature_single.php';   
+
 ?>
+
 
 <main class="container" id="single-post">
     <!--<div class="row">
@@ -25,8 +29,8 @@ session_start();
         </div>    
     </div>-->
 <?php
-$object = new Feature($pdo);        
-$post = $object->getFeaturePost();
+$object = new FeatureSingle($pdo);        
+    $post = $object->getFeaturePostSingle();
 ?>
     <div class="hero-image-post-container row justify-content-center">
         <div class="feature-post col-10 text-center">
