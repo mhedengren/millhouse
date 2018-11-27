@@ -30,28 +30,36 @@ include 'includes/date.php';
             </div>
             </div>
             <h2 class="post-title"><?= $feature["title"]; ?></h2>
+            <p><a href="views/single-post.php?id=<?= $feature["posts_id"]; ?>">Read article</a></p>
             <p class="post-description"><?= substr($feature["description"], 0, 150); ?></p>
             </div>
         </article> 
     </div>
         
         <?php 
-        /*
+        
         $object2 = new Feature($pdo);
         $object2->getLatestPosts();
         $latestPosts = $object2->getLatestPosts();
-        var_dump($latestPosts);
-        */
+       // var_dump($latestPosts);
+        
         ?>
-
-        <!--
-         <section class="row index-content">
-            <div class="col-sm-12 col-md-12 col-lg-8 left-container">
-                <div class="col-xs-11 col-md-4 col-lg-4">
-                
+        <div class="container">
+        <section class="row latest-posts">
+            <div class="col-sm-12">
+                <?php foreach ($latestPosts as $post) :?>
+                <div class="hero-image-small">
+                <img src="<?= $feature["image"]; ?>" alt="feature-image">
                 </div>
-             
-         </section> -->
+                <h2 class="post-title"><?= $post["title"]; ?></h2>
+                <p class="post-description"><?= substr($feature["description"], 0, 100); ?></p>
+
+                <?php endforeach ;?>
+            </div>
+        </section>
+    </div>
+
+     
     
 </main>
 
