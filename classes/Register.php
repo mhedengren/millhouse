@@ -10,9 +10,9 @@ class Register
     public $email;
     protected $hashedPassword;
     public $password;
-    /*If I have time..
-    public $confirm_password;
-    */
+    public $confirmPassword;
+    protected $hashedConfirmPassword;
+
     //Property for correcting error messages
     public $errors = [];
 
@@ -40,13 +40,18 @@ class Register
         $this->username = $args['username'] ?? '';
         $this->email = $args['email'] ?? '';
         $this->password = $args['password'] ?? '';
-        //$this->confirm_password = $args['confirm_password'] ?? '';  
+        $this->confirmPassword = $args['confirm_password'] ?? '';  
     }
 
     //Encrypt password
     protected function set_hashed_password()
     {
         $this->hashedPassword = password_hash($this->password, PASSWORD_DEFAULT);
+    }
+    
+    //Verify password to check if password and re-entered password matches
+    public function verify_password($password){
+        return password_verify($password, $this->hashedPassword);
     }
     
     //Collect user information from database (to check username duplication)
@@ -87,6 +92,11 @@ class Register
         //Check if there is the same username existing in the database
         if($this->find_user()["username"] == $this->username ){
             $this->errors[] = "*This username is already taken.";
+        }
+        
+        //Check if confirm_password can match with password
+        if($this->password !== $this->confirmPassword){
+            $this->errors[] = "Password and confirm password must match.";
         }
 
         return $this->errors;

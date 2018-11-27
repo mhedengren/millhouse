@@ -23,7 +23,7 @@ if(isset($_POST['signup'])){
         $register->add_session();
         
         //Redirect to login-form page
-        //redirect_to('login-form.php');
+        redirect_to('login-form.php');
 
         
     }

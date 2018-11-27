@@ -58,6 +58,8 @@ if(isset($_SESSION["username"])){
                         <input type="email" class="form-control" id="email" name="register[email]" placeholder="Use 6 or more characters" required="required">
                         <label for="password">Password</label>
                         <input type="password" class="form-control" id="password" name="register[password]" placeholder="Use at least 1 number" required="required">
+                        <label for="password">Confirm password</label>
+                        <input type="password" class="form-control" id="password" name="register[confirm_password]" placeholder="Enter your password again" required="required">
                     </div>
                     <button type="submit" name="signup" class="btn button-color">SIGN UP</button>
                 </form>
