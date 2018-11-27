@@ -42,7 +42,7 @@
             margin: 5% auto;
         }
         
-        h1, p, form, samll, .button-color, label, .errors{
+        *:not(input){
             color: #fff;
         }
         

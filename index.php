@@ -1,4 +1,5 @@
 <?php
+session_start();
 //Define the siteroot for includes/requires'
 include 'config.php';
 
