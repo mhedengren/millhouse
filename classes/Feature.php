@@ -19,7 +19,7 @@ class Feature
     return $latestPost; 
 
   }
-
+/*
   public function getLatestPosts(){
     $stmt = $this->pdo->prepare("SELECT * FROM posts ORDER BY posts_id DESC LIMIT 4");
     $stmt->execute();
@@ -30,5 +30,5 @@ class Feature
     }
  
   }
-  
+  */
 }
