@@ -1,5 +1,8 @@
 <?php
-    //Define the siteroot for includes/requires
+//Start session
+session_start();
+
+//Define the siteroot for includes/requires
     $siteroot = "..";
 
     //Page title
@@ -37,7 +40,7 @@
                 </form>
 
 
-                <a href="<?= $siteroot; ?>/views/register.php">New? Sign up!</a>
+                <a href="<?= $siteroot; ?>/views/register-form.php">New? Sign up!</a>
 
 
             </div>
@@ -45,7 +48,7 @@
     </main>
 
 <?php
-    require "../includes/footer.php"
+    require "../includes/scripts.php"
 ?>
 
 </body>
