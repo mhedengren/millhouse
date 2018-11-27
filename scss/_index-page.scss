@@ -1,4 +1,5 @@
 //Index mobile
+
 .hero-image {
 
     background: -webkit-linear-gradient(90deg, #1C3045 -1%, rgba(96, 73, 90, 0.54) 100%);
@@ -95,6 +96,22 @@
 
 }
 
+.post-description-gallery {
+        
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 24px;
+    font-size: 122px;
+    letter-spacing: 0.5px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    
+    
+
+}
+
     .post-title-gallery {
 
         font-family: 'Merriweather';
@@ -110,29 +127,18 @@
 
     }
 
-    .post-description-gallery {
-
-
-        font-family: Open Sans;
-        font-style: normal;
-        font-weight: normal;
-        line-height: 24px;
-        font-size: 12px;
-        letter-spacing: 0.5px;
-        margin: 0;
-        padding: 0;
-        text-align: center;
-        
-    
-    }
+  
 
 //Index tablet
 @media screen and (min-width: 768px) {
-
+    
+    .latest-posts{
+        margin-top: 1rem;
+    }
     //Index small gallery tablet
     .hero-image-gallery {
         
-        margin-top: 2rem;
+        //margin-top: 2rem;
 
         img {   
 
@@ -195,6 +201,24 @@
             
         }
     }
+
+    .edit-remove-buttons {
+        
+        width: 95%;
+        opacity: 0.5;
+        text-align: right;
+
+        ul {
+            padding: 0;
+            margin: 0;
+        }
+    }
+        .edit-button a {
+            color: gray;
+        }
+        .remove-button a {
+            color: red;
+        }
 
 //Index desktop
 @media screen and (min-width: 992px){

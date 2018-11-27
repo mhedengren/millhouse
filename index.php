@@ -45,6 +45,13 @@ $latestPosts = $object2->getLatestPosts();
         <section class="row latest-posts">
             <?php foreach ($latestPosts as $post) :?>
             <div class="col-sm-12 col-md-6">
+            <?php if(!isset($_SESSION['username'])): ?>
+            <?php else: ?>
+            <ul class="edit-remove-buttons">
+                <li class="list-inline-item edit-button"><a href=""><i class="fas fa-pencil-alt"></i></a></li>
+                <li class="list-inline-item remove-button"><a href=""><i class="far fa-trash-alt"></i></a></li>
+            </ul>
+            <?php endif; ?>
             <div class="hero-image-gallery">
             <img src="<?= $post["image"]; ?>" alt="feature-image">
             </div>
@@ -55,7 +62,7 @@ $latestPosts = $object2->getLatestPosts();
             </div>
             <h2 class="post-title-gallery"><?= $post["title"]; ?></h2>
             <p class="post-description-gallery"><?= substr($post["description"], 0, 75); ?></p>
-            <p class="read-more"><a href="views/single-post.php?id=<?= $post["posts_id"]; ?>">Read article</a></p>
+            <p class="read-more d-none d-md-block"><a href="views/single-post.php?id=<?= $post["posts_id"]; ?>">Read article</a></p>
             <div class="row justify-content-center">
             <div class="col-6 d-md-none">
             <hr>
