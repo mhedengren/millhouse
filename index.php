@@ -1,26 +1,22 @@
 <?php
 session_start();
+
 //Define the siteroot for includes/requires'
 include 'config.php';
 
 //Page title
 $page_title = 'Index';
 
-?>
-
-<?php include 'includes/head.php'; ?>
-<?php include 'includes/header.php';?>
-<?php include 'includes/database-connection.php';?>
-<?php include 'classes/Feature.php';?>
-
-
-<?php 
+include 'includes/head.php'; 
+include 'includes/header.php';
+include 'includes/database-connection.php';
+include 'classes/Feature.php';
 $object = new Feature($pdo);
 $object->getFeaturePost();
 $feature = $object->getFeaturePost();
+include 'includes/date.php';
 ?>
 
-<?php include 'includes/date.php';?>
 <main id="index-page">
     <div class="container">
         <article class="row feature-post">
