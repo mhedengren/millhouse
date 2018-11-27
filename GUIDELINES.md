@@ -4,6 +4,7 @@
 
 * Use hyphen-case (-) for css-classnames
 * Never style with ID
+*
 
 ## PHP & HTML
 
