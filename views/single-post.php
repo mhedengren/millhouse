@@ -1,4 +1,5 @@
 <?php
+session_start();
     //Defines site root
     include '../config.php';
     //Defines page title
@@ -10,7 +11,7 @@
     include '../classes/Feature.php';   
 ?>
 
-<main class="container">
+<main class="container" id="single-post">
     <!--<div class="row">
         <div class="col-12">
             <img src="../images/hero-image.jpg" alt="woman's body in floral dress" class="single-post-image">
