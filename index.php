@@ -46,25 +46,27 @@ include 'includes/date.php';
       
         <div class="container">
         <section class="row latest-posts">
-            <article class="col-sm-12">
+            
                 <?php foreach ($latestPosts as $post) :?>
+                <div class="col-sm-12 col-md-6">
                 <div class="hero-image-small">
                 <img src="<?= $post["image"]; ?>" alt="feature-image">
                 </div>
                 <div class="date row justify-content-center">
-                <div class="date-circle">
+                <div class="date-circle d-md-none">
                 <h6><?= $month; ?><br><?= $day; ?></h6>
                 </div>
                 </div>
                 <h2 class="post-title"><?= $post["title"]; ?></h2>
-                <p class="post-description"><?= substr($post["description"], 0, 100); ?></p>
+                <p class="post-description"><?= substr($post["description"], 0, 75); ?></p>
                 <div class="row justify-content-center">
-                    <div class="col-6">
-                        <hr>
-                    </div>
+                <div class="col-6 d-md-none">
+                <hr>
+                </div>
+                </div>
                 </div>
                 <?php endforeach ;?>
-            </article>
+         
         </section>
     </div>
 
