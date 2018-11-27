@@ -1,4 +1,4 @@
-//Index feature mobile
+//Index mobile
 .hero-image {
 
     background: -webkit-linear-gradient(90deg, #1C3045 -1%, rgba(96, 73, 90, 0.54) 100%);
@@ -29,6 +29,7 @@
     display: flex;
     
         h6 {
+
             text-transform: uppercase;
             color: white;
             text-align: center;
@@ -41,6 +42,7 @@
             letter-spacing: 0.5px;
             padding: 0;
             margin: 0;  
+
         }
 
 }
@@ -62,7 +64,7 @@
 
 .post-description {
 
-    text-align: center;
+   
     padding: 0 20px;
     font-family: Open Sans;
     font-style: normal;
@@ -75,8 +77,9 @@
 
 }
 
-//Small gallery mobile
-.hero-image-small {
+//Index small gallery mobile
+
+.hero-image-gallery {
 
         img {   
 
@@ -92,9 +95,108 @@
 
 }
 
+    .post-title-gallery {
+
+        font-family: 'Merriweather';
+        font-style: normal;
+        font-weight: 900;
+        line-height: 24px;
+        font-size: 20px;
+        text-align: center;
+        letter-spacing: 0.5px;
+        color: #60495A;
+        padding: 20px;
+        margin-bottom: 0px;
+
+    }
+
+    .post-description-gallery {
 
 
-//Index feature desktop
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        line-height: 24px;
+        font-size: 12px;
+        letter-spacing: 0.5px;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        
+    
+    }
+
+//Index tablet
+@media screen and (min-width: 768px) {
+
+    //Index small gallery tablet
+    .hero-image-gallery {
+        
+        margin-top: 2rem;
+
+        img {   
+
+            width: 95%;
+            height: 200px;
+            object-fit: cover;
+            box-shadow: none;
+            position:relative;
+            z-index:-1;
+            display:block;  
+            margin-top: 1rem;  
+        }
+
+}
+    
+    .post-title-gallery {
+
+        font-family: Open Sans;
+        text-align: left;
+        font-style: normal;
+        font-weight: bold;
+        line-height: 30px;
+        font-size: 18px;
+        letter-spacing: 0.5px;
+        color: #1C3045;
+        margin: 0;
+        padding: 10px 0 5px 0;
+
+        }
+    }
+
+    .post-description-gallery {
+
+        
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        line-height: 24px;
+        font-size: 12px;
+        letter-spacing: 0.5px;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+        
+    }
+
+    .read-more {
+
+        padding: 5px 0;
+        
+        a {
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: normal;
+            line-height: 24px;
+            font-size: 16px;
+            letter-spacing: 0.5px;
+            text-decoration-line: underline;
+            color: #A6C9C6;
+            
+        }
+    }
+
+//Index desktop
 @media screen and (min-width: 992px){
 
     .hero-image {
@@ -104,7 +206,7 @@
             img {   
     
                 width: 100%;
-                height: 40vw;
+                height: 450px;
                 object-fit: cover;
                 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
                 position:relative;
@@ -116,4 +218,5 @@
     
     }
 
+    
 }

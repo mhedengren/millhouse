@@ -25,53 +25,46 @@ include 'includes/date.php';
             <img src="<?= $feature["image"]; ?>" alt="feature-image">
             </div>
             <div class="date row justify-content-center">
-            <div class="date-circle">
+            <div class="date-circle d-md-none">
             <h6><?= $month; ?><br><?= $day; ?></h6>
             </div>
             </div>
             <h2 class="post-title"><?= $feature["title"]; ?></h2>
-            <p class="post-description"><?= substr($feature["description"], 0, 150); ?></p>
+            <p class="post-description"><?= substr($feature["description"], 0, 60); ?></p>
             </div>
         </article> 
     </div>
         
-        <?php 
-        
-        $object2 = new Feature($pdo);
-        $object2->getLatestPosts();
-        $latestPosts = $object2->getLatestPosts();
-     
-        
-        ?>
+<?php 
+$object2 = new Feature($pdo);
+$object2->getLatestPosts();
+$latestPosts = $object2->getLatestPosts();
+?>
       
-        <div class="container">
+    <div class="container">
         <section class="row latest-posts">
-            
-                <?php foreach ($latestPosts as $post) :?>
-                <div class="col-sm-12 col-md-6">
-                <div class="hero-image-small">
-                <img src="<?= $post["image"]; ?>" alt="feature-image">
-                </div>
-                <div class="date row justify-content-center">
-                <div class="date-circle d-md-none">
-                <h6><?= $month; ?><br><?= $day; ?></h6>
-                </div>
-                </div>
-                <h2 class="post-title"><?= $post["title"]; ?></h2>
-                <p class="post-description"><?= substr($post["description"], 0, 75); ?></p>
-                <div class="row justify-content-center">
-                <div class="col-6 d-md-none">
-                <hr>
-                </div>
-                </div>
-                </div>
-                <?php endforeach ;?>
-         
+            <?php foreach ($latestPosts as $post) :?>
+            <div class="col-sm-12 col-md-6">
+            <div class="hero-image-gallery">
+            <img src="<?= $post["image"]; ?>" alt="feature-image">
+            </div>
+            <div class="date row justify-content-center">
+            <div class="date-circle d-md-none">
+            <h6><?= $month; ?><br><?= $day; ?></h6>
+            </div>
+            </div>
+            <h2 class="post-title-gallery"><?= $post["title"]; ?></h2>
+            <p class="post-description-gallery"><?= substr($post["description"], 0, 75); ?></p>
+            <p class="read-more"><a href="views/single-post.php?id=<?= $post["posts_id"]; ?>">Read article</a></p>
+            <div class="row justify-content-center">
+            <div class="col-6 d-md-none">
+            <hr>
+            </div>
+            </div>
+            </div>
+            <?php endforeach ;?>
         </section>
     </div>
-
-     
-    
 </main>
 
 <?php
