@@ -1,4 +1,7 @@
 <?php
+//Start session
+session_start(); 
+
 //Define the siteroot for includes/requires'
 include 'config.php';
 
@@ -21,13 +24,10 @@ $page_title = 'Index';
 <?php 
 $object = new Feature($pdo);
 $object->getFeaturePost();
+$post = $object->getFeaturePost();
+$top_posts = $object->getPost();
 
-
-
-
-var_dump($object->getFeaturePost());
-
-
+//var_dump($top_posts);
 ?>
 
 
@@ -36,22 +36,44 @@ var_dump($object->getFeaturePost());
         <article class="row feature-post">
             <?php
             //Looping only one post from db. (LIMIT 1)
-            foreach ($all_posts as $post): ?>
+            //foreach ($all_posts as $post): ?>
                 <div class="col-sm-12 col-md-12">
                     <div class="hero-image">
                     <img src="<?= $post["image"]; ?>" alt="feature-image">
                     </div>
                         <div class="date row justify-content-center">
                         <div class="date-circle">
-                        <h6><?= substr($post["created_on"], 8, 15); ?></h6>
+                        <h6><?= substr($post["created_on"], 5, 5); ?></h6>
                         </div>
                     </div>
                     <h2 class="post-title"><?= $post["title"]; ?></h2>
                     <p class="post-description"><?= substr($post["description"], 0, 150); ?></p>
                 </div>
+            <?php //endforeach; ?> 
+        </article>     
+
+        <article class="row feature-post">
+            <?php   
+            //Looping 4 posts from db. (LIMIT 4)
+            foreach ($top_posts as $index_post): ?>
+            <div class="col-sm-12 col-md-12">
+                <div class="hero-image">
+                    <img src="<?= $index_post["image"]; ?>" alt="feature-image">
+                </div>
+                <div class="date row justify-content-center">
+                    <div class="date-circle">
+                        <h6><?= substr($index_post["created_on"], 5, 5); ?></h6>
+                    </div>
+                </div>
+                <h2 class="post-title"><?= $index_post["title"]; ?></h2>
+                <p class="post-description"><?= substr($index_post["description"], 0, 150); ?></p>
+            </div>
             <?php endforeach; ?> 
         </article>     
-    </div>
+
+      
+       
+        </div>
 </main>
 
 <?php
