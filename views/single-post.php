@@ -1,5 +1,8 @@
 <?php
-    //Defines site root
+//Start session
+session_start(); 
+
+//Defines site root
     include '../config.php';
     //Defines page title
     $page_title = "single-post";

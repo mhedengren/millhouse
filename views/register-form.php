@@ -1,7 +1,6 @@
-<!-- head require-->
 <?php
 //Start session
-//session_start(); 
+session_start(); 
 
 //Include for absolute path
 include '../config.php';
@@ -45,7 +44,9 @@ if(isset($_SESSION["username"])){
                 <?php
                 //Shows the error message from validation only when $_POST is set
                 if(isset($_POST['signup'])){
-                    echo display_errors($register->errors);
+                    if(!empty($register->errors)){
+                        echo display_errors($register->errors);
+                    }
                 }
                 ?>
 
@@ -57,22 +58,13 @@ if(isset($_SESSION["username"])){
                         <input type="email" class="form-control" id="email" name="register[email]" placeholder="Use 6 or more characters" required="required">
                         <label for="password">Password</label>
                         <input type="password" class="form-control" id="password" name="register[password]" placeholder="Use at least 1 number" required="required">
+                        <label for="password">Confirm password</label>
+                        <input type="password" class="form-control" id="password" name="register[confirm_password]" placeholder="Enter your password again" required="required">
                     </div>
                     <button type="submit" name="signup" class="btn button-color">SIGN UP</button>
                 </form>
 
                 <p>Already a member? <a href="./login-form.php">Log in!</a></p>
-                
-
-
-                <!--  Display error message  if register is unsucceeded
-If any of input forms are missing, redirect to the top of this page and show the error message.
-Otherwise redirect to index.php top.-->
-                <?php
-                    //is_error("empty_error", "error", "exist_error", null);
-                    //is_successfull("register", null, null, null);
-
-                ?>          
 
 
             </div>

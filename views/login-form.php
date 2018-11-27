@@ -1,5 +1,8 @@
 <?php
-    //Define the siteroot for includes/requires
+//Start session
+session_start();
+
+//Define the siteroot for includes/requires
     $siteroot = "..";
 
     //Page title
