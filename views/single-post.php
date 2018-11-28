@@ -29,13 +29,24 @@ session_start();
                     <h6 class="post-date"><?= $month; ?><br><?= $day; ?></h6>
                 </div>
             </div>
-                <h2 class="post-title"><?= $post["title"]; ?></h2>        
+                <h2 class="post-title"><?= $post["title"]; ?></h2>
+                <div class="row justify-content-center">
+                    <div class="d-none d-md-block col-md-3 text-center">    
+                        <hr class="before-post">
+                    </div>        
+                </div>
                 <p class="post-description"><b><?= substr($post["description"], 0, 50); ?></b></p>
-                <p class="post-description"><?= $post["description"]; ?></p>                      
+                <p class="post-description"><?= $post["description"]; ?></p> 
+                                     
         </div>
     </div>
     
 </main>
+    <div class="row justify-content-center">
+        <div class="col-10 text-center">
+            <hr class="after-post">
+        </div>
+    </div>
 
 <?php
     include '../includes/footer.php';
