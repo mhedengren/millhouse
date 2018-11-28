@@ -1,9 +1,12 @@
 <?php
 //Start session
 session_start(); 
+ini_set(‘display_errors’, 1); ini_set(‘display_startup_errors’, 1); error_reporting(E_ALL);
 
 //Include for absolute path
 include '../config.php';
+require '../includes/database-connection.php';
+include '../includes/functions.php';
 
 //Page title
 $page_title = 'Admin Panel';
@@ -18,7 +21,6 @@ include '../includes/header.php';
     <main id="admin-panel">
 
         <div class="container">
-
             <div class="row">
                 <div class="col-sm">
                     <h1>Admin Panel</h1>
@@ -28,16 +30,15 @@ include '../includes/header.php';
             <div class="row new-post">
                 <div class="col-sm-12 col-md-8">
                     <h2 class="add-new-post">Add New Post</h2>
-    
+                    <?php new_post_form_check(); ?>
                     <form action="../includes/upload.php" method="POST" enctype="multipart/form-data" id="upload-form">
                         <label for="title">Title</label> 
-                        <input type="text" id="title" name="postTitle" class="form-control" placeholder="Your title here" 
-                        value='<?php if(isset($error)){ echo $_POST['postTitle'];}?>'><!-- if validation fails then show all content entered into the form's input and textarea -->
+                        <input type="text" id="title" name="postTitle" class="form-control" placeholder="Your title here"><!-- if validation fails then show all content entered into the form's input and textarea -->
+
                         <label for="text">Text Body</label>
-                        <textarea name="text" id="text" class="form-control"><?php if(isset($error)){ echo $_POST['text'];}?></textarea>
+                        <textarea name="postDesc" id="text" class="form-control"></textarea>
                         <input type="submit" name="submit" value="Send">
                     </form>
-
 
                 </div>
                  <div class="col-sm-12 col-md-4">
@@ -66,13 +67,6 @@ include '../includes/header.php';
     <script>
         $(function () {
             $('textarea').froalaEditor()
-        });
-    </script>
-    <script>
-        $(function() {
-            $('div#froala-editor').froalaEditor({
-                height: 400
-            })
         });
     </script>
 
