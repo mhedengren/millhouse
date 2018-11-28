@@ -36,22 +36,8 @@ function display_errors($errors = array()){
   the inputs field in the add new post form */
 function new_post_form_check() {
 
-    //if form has been submitted process it
-    if(isset($_POST['submit'])){
-
-        $_POST = array_map( 'stripslashes', $_POST );
-
-        //collect form data
-        extract($_POST);
-
-        if($postTitle ==''){
-            $error[] = 'Please enter the title.';
-        }
-
-        if($postDesc ==''){
-            $error[] = 'Please enter the description.';
-        }
-
+    if($_GET['action'] == 'empty') {
+        echo "<div class='alert alert-danger text-center' role='alert'>You did not fill in all fields!</div>";
     }
 }
 
