@@ -17,11 +17,20 @@ $feature = $object->getFeaturePost();
 include 'includes/date.php';
 ?>
 
+<?php
+$text = $feature["title"]; 
+$titleWithWrap = wordwrap($text, 20, "<br />\n ");
+
+//echo $titleWithWrap;
+?>
 <main id="index-page">
    <div class="container">
        <article class="row feature-post">
            <div class="col-sm-12 col-md-12">
-           <h2 class="big-post-title d-none d-md-block"><?= $feature["title"]; ?></h2>
+           <div class="title-feature">
+           <h6><?= $month; ?><?= $day ?><?= $year; ?></h6>
+           <h2 class="big-post-title d-none d-md-block"><span><?= $feature["title"]; ?></span></h2>
+           </div>
            <div class="hero-image">
            <img src="<?= $feature["image"]; ?>" alt="feature-image">
            </div>
@@ -35,6 +44,8 @@ include 'includes/date.php';
            </div>
        </article>
    </div>
+
+
 
 <?php
 $object2 = new Feature($pdo);
