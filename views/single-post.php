@@ -2,8 +2,6 @@
 //Start session
 session_start(); 
 
-var_dump($_GET["id"]);
-
 //Defines site root
 
     include '../config.php';
@@ -13,8 +11,9 @@ var_dump($_GET["id"]);
     include '../includes/header.php';
     include '../includes/database-connection.php';
     include '../includes/select_feature_post.php';
-
+    //this is my SinglePost class 
     include '../classes/Single-post.php';
+    //this initiates a new object
     $object = new SinglePost($pdo);        
     $post = $object->getSinglePost();
     include '../includes/date-single.php';
@@ -23,18 +22,23 @@ var_dump($_GET["id"]);
 
 
 <main class="container" id="single-post">
-
+<!--this allows all info from a single post to be shown from the database-->
     <div class="hero-image-post-container row justify-content-center">
         <div class="feature-post col-10 text-center">
+            <!--takes image from database-->
             <div class="hero-image">
                 <img src="../<?= $post["image"]; ?>" alt="Hero-image">
             </div>
+            <!--takes date and displays clean from database-->
             <div class="date row justify-content-center">
                 <div class="date-circle">    
                     <h6 class="post-date"><?= $month; ?><br><?= $day; ?></h6>
                 </div>
             </div>
-                <h2 class="post-title"><?= $post["title"]; ?></h2>
+                <!--takes title from database-->
+                <h2 class="post-title"><span class="d-none d-md-block"><?= $post["title"]; ?></span></h2>
+                <!--takes title from database-->
+                <p class="post-author"><?= $post["username"]; ?></p>
                 <div class="row justify-content-center">
                     <div class="d-none d-md-block col-md-3 text-center">    
                         <hr class="before-post">
