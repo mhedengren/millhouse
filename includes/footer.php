@@ -1,8 +1,8 @@
-    <footer class="container-fluid">
+    <footer class="container-fluid" id="footer">
         <div class="row d-flex align-items-center">
             <div class="col-md-6 text-center">
-                <h3>Join the Club</h3>
-                    <p>Sign up now and get 10% off in-store or online +
+                <h3 class="footer-title">Join the Club</h3>
+                    <p class="footer-p">Sign up now and get 10% off in-store or online +
                     always free delivery!</p>
             </div>
             <div class="col-md-6 text-center">
