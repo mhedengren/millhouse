@@ -2,8 +2,6 @@
 //Start session
 session_start(); 
 
-var_dump($_GET["id"]);
-
 //Defines site root
 
     include '../config.php';
@@ -35,6 +33,7 @@ var_dump($_GET["id"]);
                 </div>
             </div>
                 <h2 class="post-title"><?= $post["title"]; ?></h2>
+                <p class="post-author"><?= $post["username"]; ?></p>
                 <div class="row justify-content-center">
                     <div class="d-none d-md-block col-md-3 text-center">    
                         <hr class="before-post">
