@@ -4,12 +4,35 @@ require '../includes/database-connection.php';
 var_dump($_POST["text"]);
 var_dump($_FILES["image"]);
 
+/* We now process the form data:
+if form has been submitted then process it*/
+if(isset($_POST['submit'])){
+//remove any slashed in the $_POST array
+$_POST = array_map( 'stripslashes', $_POST );
+
+//collect form data
+ extract($_POST);
+
+/* any post element is then accessible 
+by using just its name so $_POST['postTitle'] becomes $postTitle */
+if($postTitle ==''){
+   $error[] = 'Please enter the title.';
+}
+
+if($text ==''){
+   $error[] = 'Please enter the description.';
+ }
+}
+
+
+
 /**
  * If the file is sent via a form with 'enctype="multiplart/form-data"' the
  * file is saved go the superglobal '$_FILES' variable and inside of $_FILES["image"]
  */
 $image = $_FILES["image"];
 $image_text = $_POST["text"];
+$title = $_POST["title"];
 /**
  * When it is uploaded it is stored at a temporary location inside a /tmp folder
  * on your computer or server. We must move this temporary file to a permanent location
