@@ -36,7 +36,7 @@ if(isset($_POST['submit'])){
         $statement->execute(array(
             ':postTitle' => $postTitle,
             ':postDesc' => $postDesc,
-            ':created_by' => $created_by,
+            ':created_by' => 1,
             ':postDate' => $created_on,
             ":image" => $new_location
         ));
