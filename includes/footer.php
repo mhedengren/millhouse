@@ -1,11 +1,11 @@
     <footer class="container-fluid">
         <div class="row d-flex align-items-center">
-            <div class="col-6 text-center">
+            <div class="col-md-6 text-center">
                 <h3>Join the Club</h3>
                     <p>Sign up now and get 10% off in-store or online +
                     always free delivery!</p>
             </div>
-            <div class="col-6 text-center">
+            <div class="col-md-6 text-center">
                <a href="#" class="button-link">READ MORE</a>
             </div>
      

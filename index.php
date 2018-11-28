@@ -21,6 +21,7 @@ include 'includes/date.php';
     <div class="container">
         <article class="row feature-post">
             <div class="col-sm-12 col-md-12">
+            <p><a href="views/single-post.php?posts_id=<?= $feature["posts_id"]; ?>">Read article</a></p>
             <div class="hero-image">
             <img src="<?= $feature["image"]; ?>" alt="feature-image">
             </div>
