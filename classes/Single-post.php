@@ -13,7 +13,7 @@ class SinglePost
   }
 
   public function getSinglePost(){
-    $posts_id = isset($_GET['posts_id']) ? $_GET['posts_id'] : 0;
+    //$posts_id = isset($_GET['posts_id']) ? $_GET['posts_id'] : 0;
     $stmt = $this->pdo->prepare("SELECT * FROM posts where posts_id = :posts_id");
     $stmt->execute([
       ":posts_id" => $_GET["posts_id"],

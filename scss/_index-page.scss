@@ -136,7 +136,8 @@
     .hero-image {
 
         background: -webkit-linear-gradient(90deg, #1C3045 -1%, rgba(96, 73, 90, 0.54) 100%);
-        width: 100%;
+        width: 80%;
+        float:right;
     
             img {   
                 
@@ -152,20 +153,22 @@
     
     .big-post-title {
         opacity: 1;
-        background-color: #60495A;
         font-family: 'Merriweather';
         font-style: normal;
         font-weight: 900;
-        line-height: 24px;
+        //line-height: 24px;
         font-size: 25px;
-        padding: 10px 15px;
-        text-align: center;
+        text-align: left;
         letter-spacing: 0.5px;
         color:white;
-        position: absolute;
-        top: 70%;
-        left: 40%;
-        transform: translate(-50%, -50%);
+       
+       
+            span {
+                background-color: #60495A;
+                padding: 10px;
+            }
+       
+        
 
     }
 

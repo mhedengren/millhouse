@@ -41,4 +41,5 @@ function new_post_form_check() {
     }
 }
 
+
 ?>
