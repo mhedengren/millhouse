@@ -136,8 +136,9 @@
     .hero-image {
 
         background: -webkit-linear-gradient(90deg, #1C3045 -1%, rgba(96, 73, 90, 0.54) 100%);
-        width: 80%;
-        float:right;
+        width: 100%;
+        
+    
     
             img {   
                 
@@ -151,26 +152,36 @@
     
     }
     
-    .big-post-title {
-        opacity: 1;
-        font-family: 'Merriweather';
-        font-style: normal;
-        font-weight: 900;
-        //line-height: 24px;
-        font-size: 25px;
-        text-align: left;
-        letter-spacing: 0.5px;
-        color:white;
-       
-       
-            span {
-                background-color: #60495A;
-                padding: 10px;
-            }
-       
+
+    .title-feature {
+
+        position: absolute;
+        bottom: 20px;
+        //left: 20px;
+        padding-right: 20px;
+        padding-left: 20px;
         
+        .big-post-title {
+            opacity: 1;
+            font-family: 'Merriweather';
+            font-style: normal;
+            font-weight: 900;
+            //line-height: 24px;
+            font-size: 25px;
+            text-align: left;
+            letter-spacing: 0.5px;
+            color:white;
+        
+        
+                span {
+                    background-color: #60495A;
+                    padding: 10px;
+                }
+        
+            }
 
     }
+    
 
     .latest-posts{
         margin-top: 1rem;
