@@ -162,7 +162,7 @@
     .title-feature {
 
         position: absolute;
-        bottom: 30px;
+        bottom: 10px;
         //left: 20px;
         padding-right: 20px;
         padding-left: 20px;
@@ -183,6 +183,22 @@
                     padding: 5px;
                 }
         
+            }
+
+            .read-more-desktop {
+
+            
+                a {
+                    font-family: Open Sans;
+                    font-style: normal;
+                    font-weight: normal;
+                    line-height: 24px;
+                    font-size: 16px;
+                    letter-spacing: 0.5px;
+                    text-decoration-line: underline;
+                    color: #A6C9C6;
+                    
+                }
             }
 
         h6 {
@@ -320,7 +336,7 @@
     .title-feature {
 
         position: absolute;
-        bottom: 75%;
+        bottom: 10px;
         //left: 20px;
         padding-right: 20px;
         padding-left: 20px;
@@ -344,5 +360,22 @@
             }
 
    
+        }
+
+
+        .read-more-desktop {
+
+            
+            a {
+                font-family: Open Sans;
+                font-style: normal;
+                font-weight: normal;
+                line-height: 24px;
+                font-size: 16px;
+                letter-spacing: 0.5px;
+                text-decoration-line: underline;
+                color: #A6C9C6;
+                
+            }
         }
 }
