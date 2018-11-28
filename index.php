@@ -51,7 +51,7 @@ $latestPosts = $object2->getLatestPosts();
                    <?php if(!isset($_SESSION['username'])): ?>
                    <?php else: ?>
                        <ul class="edit-remove-buttons">
-                           <li class="list-inline-item edit-button"><a href=""><i class="fas fa-pencil-alt"></i></a></li>
+                           <li class="list-inline-item edit-button"><a href="includes/posts.php?action=edit&id=<?= $post["posts_id"]; ?>"><i class="fas fa-pencil-alt"></i></a></li>
                            <li class="list-inline-item remove-button"><a href=""><i class="far fa-trash-alt"></i></a></li>
                        </ul>
                    <?php endif; ?>
