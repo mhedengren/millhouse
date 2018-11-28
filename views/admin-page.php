@@ -33,9 +33,10 @@ include '../includes/header.php';
                     <form action="../includes/upload.php" method="POST" enctype="multipart/form-data" id="upload-form">
                         <label for="title">Title</label> 
                         <input type="text" id="title" name="postTitle" class="form-control" placeholder="Your title here"><!-- if validation fails then show all content entered into the form's input and textarea -->
-
-                        <label for="text">Text Body</label>
-                        <textarea name="postDesc" id="text" class="form-control"></textarea>
+                        <label for="desc">Description</label> 
+                        <input type="text" id="desc" name="postDesc" class="form-control" placeholder="Your description here">
+                        <label for="content">Content</label>
+                        <textarea name="postCont" id="content" class="form-control"></textarea>
                         <input type="submit" name="submit" value="Send">
                     </form>
 
