@@ -25,7 +25,7 @@ if(isset($_POST['submit'])){
         exit();
     }
 
-  //if no error has been set then insert the data into the database
+  //if all the inputs have been filled in then insert the data into the database
   if($upload_ok){
     try {
         $statement = $pdo->prepare(
