@@ -1,0 +1,19 @@
+//Button style
+@mixin buttonStyle($bg_color,$t_color) {
+    background-color: $bg_color;
+    color: $t_color;
+	line-height: 20px;
+    padding: 10px;
+    margin: 10px;
+    text-decoration: none;
+    border: none;
+      -webkit-border-radius: 3px;
+         -moz-border-radius: 3px;
+          -ms-border-radius: 3px;
+              border-radius: 3px;
+}
+
+//To check division/breakpoint etc
+@mixin toCheckStyle($borderColor) {
+    border: 1px dashed $borderColor;
+}
