@@ -32,10 +32,12 @@ include '../includes/header.php';
                     'encytype="multipart/form-data"', otherwise the file will be sent as a
                     string and not uploaded to the server, otherwise the form is similar to every other form -->
                     <form action="../includes/upload.php" method="POST" enctype="multipart/form-data" id="upload-form">
+                        <label for="title">Title</label>
+                        <input type="text" id="title" class="form-control" placeholder="Your title here">
                         <!-- Use a textarea for a bigger input-field, put an ID on the area for the
                         wysiwyg-editor to initialize on -->
-                         <label for="text">Text Body</label>
-                        <textarea name="text" id="text"></textarea>
+                        <label for="text">Text Body</label>
+                        <textarea name="text" id="text" class="form-control"></textarea>
                         <input type="submit" value="Send">
                     </form>
                 </div>
@@ -46,7 +48,7 @@ include '../includes/header.php';
                         <input type="file" name="image" id="image" form="upload-form"> 
                     </div>
                 </div>
-
+    
             </div>
 
         </div>
@@ -65,6 +67,13 @@ include '../includes/header.php';
     <script>
         $(function () {
             $('textarea').froalaEditor()
+        });
+    </script>
+    <script>
+        $(function() {
+            $('div#froala-editor').froalaEditor({
+                height: 400
+            })
         });
     </script>
 
