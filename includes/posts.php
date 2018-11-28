@@ -1,7 +1,7 @@
 <?php
 
-require 'classes/Posts.php';
-require 'includes/database-connection.php';
+require '../classes/Posts.php';
+require 'database-connection.php';
 
 /* Pass along the $pdo variable when you create a new instance
  * of the class, $pdo becomes $this->pdo. $posts is used

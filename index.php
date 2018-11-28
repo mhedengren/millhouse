@@ -52,9 +52,9 @@ $latestPosts = $object2->getLatestPosts();
                    <?php else: ?>
                        <ul class="edit-remove-buttons">
                            <li class="list-inline-item edit-button">
-                               <a href="includes/posts.php?action=create&id=<?= $post["posts_id"]; ?>"><i class="fas fa-pencil-alt"></i></a></li>
+                               <a href="includes/posts.php?action=create_post&id=<?= $post["posts_id"]; ?>"><i class="fas fa-pencil-alt"></i></a></li>
                            <li class="list-inline-item remove-button">
-                               <a href="includes/posts.php?action=delete&id=<?= $post["posts_id"]; ?>"><i class="far fa-trash-alt"></i></a></li>
+                               <a href="includes/posts.php?action=delete_post&id=<?= $post["posts_id"]; ?>"><i class="far fa-trash-alt"></i></a></li>
                        </ul>
                    <?php endif; ?>
                    <a href="views/single-post.php?posts_id=<?= $post["posts_id"]; ?>">
