@@ -1,27 +1,48 @@
 <?php
 require '../includes/database-connection.php';
 
-var_dump($_POST["text"]);
-var_dump($_FILES["image"]);
+//var_dump($_POST["text"]);
+//var_dump($_FILES["image"]);
 
 /* We now process the form data:
 if form has been submitted then process it*/
 if(isset($_POST['submit'])){
-//remove any slashed in the $_POST array
-$_POST = array_map( 'stripslashes', $_POST );
+  //remove any slashed in the $_POST array
+  $_POST = array_map( 'stripslashes', $_POST );
 
-//collect form data
- extract($_POST);
+  //collect form data
+  extract($_POST);
 
-/* any post element is then accessible 
-by using just its name so $_POST['postTitle'] becomes $postTitle */
-if($postTitle ==''){
-   $error[] = 'Please enter the title.';
-}
+    /* any post element is then accessible 
+    by using just its name so $_POST['postTitle'] becomes $postTitle */
+    if($postTitle ==''){
+      $error[] = 'Please enter the title.';
+    }
 
-if($text ==''){
-   $error[] = 'Please enter the description.';
- }
+    if($text ==''){
+      $error[] = 'Please enter the description.';
+    }
+    
+
+} else if(!isset($error)){
+  //if no error has been set then insert the data into the database
+
+    try {
+        $stmt = $db->prepare('INSERT INTO posts (title, description, created_by, created_on, image) VALUES (:postTitle, :text, :admin, :postDate, :image)') ;
+        $stmt->execute(array(
+            ':postTitle' => $postTitle,
+            ':postDesc' => $postDesc,
+            ':postDate' => date('Y-m-d H:i:s')
+        ));
+
+        //redirect to index page
+        header('Location: index.php?action=added');
+        exit;
+
+    } catch(PDOException $e) {
+        echo $e->getMessage();
+    }
+
 }
 
 
