@@ -63,7 +63,7 @@ $latestPosts = $object2->getLatestPosts();
            </div>
            <h2 class="post-title-gallery"><?= $post["title"]; ?></h2>
            <p class="post-description-gallery"><?= substr($post["description"], 0, 75); ?></p>
-           <p class="read-more d-none d-md-block"><a href="views/single-post.php?id=<?= $post["posts_id"]; ?>">Read article</a></p>
+           <p class="read-more d-none d-md-block"><a href="views/single-post.php?posts_id=<?= $post["posts_id"]; ?>">Read article</a></p>
            <!--<div class="row justify-content-center">
            <div class="col-6 d-md-none">
            <hr>
