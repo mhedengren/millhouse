@@ -2,6 +2,8 @@
 //Start session
 session_start(); 
 
+var_dump($_GET["id"]);
+
 //Defines site root
 
     include '../config.php';
@@ -11,11 +13,14 @@ session_start();
     include '../includes/header.php';
     include '../includes/database-connection.php';
     include '../includes/select_feature_post.php';
+
     include '../classes/Single-post.php';
     $object = new SinglePost($pdo);        
     $post = $object->getSinglePost();
     include '../includes/date-single.php';
+
 ?>
+
 
 <main class="container" id="single-post">
 
