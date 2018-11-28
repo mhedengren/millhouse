@@ -31,4 +31,28 @@ function display_errors($errors = array()){
     return $output;
 }
 
+
+/*This function checks if the admin has filled in 
+  the inputs field in the add new post form */
+function new_post_form_check() {
+
+    //if form has been submitted process it
+    if(isset($_POST['submit'])){
+
+        $_POST = array_map( 'stripslashes', $_POST );
+
+        //collect form data
+        extract($_POST);
+
+        if($postTitle ==''){
+            $error[] = 'Please enter the title.';
+        }
+
+        if($postDesc ==''){
+            $error[] = 'Please enter the description.';
+        }
+
+    }
+}
+
 ?>
