@@ -1,3 +1,5 @@
+@import "variables";
+
 //Index mobile
 
 .hero-image {
@@ -28,6 +30,8 @@
     justify-content: center;
     align-items: center;
     display: flex;
+
+    
     
         h6 {
 
@@ -57,7 +61,7 @@
     font-size: 20px;
     text-align: center;
     letter-spacing: 0.5px;
-    color: #60495A;
+    color: $secondColorP;
     padding: 20px;
     margin-bottom: 0px;
 
@@ -121,9 +125,10 @@
         font-size: 20px;
         text-align: center;
         letter-spacing: 0.5px;
-        color: #60495A;
+        color: $secondColorP;
         padding: 20px;
         margin-bottom: 0px;
+
 
     }
 
@@ -144,6 +149,7 @@
                 
                 height: 300px;
                 object-fit: cover;
+                object-position: 0px -100px;
                 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
                 position:relative;
                 z-index:-1;
@@ -156,7 +162,7 @@
     .title-feature {
 
         position: absolute;
-        bottom: 20px;
+        bottom: 30px;
         //left: 20px;
         padding-right: 20px;
         padding-left: 20px;
@@ -172,13 +178,24 @@
             letter-spacing: 0.5px;
             color:white;
         
-        
-                span {
-                    background-color: #60495A;
-                    padding: 10px;
+                .bg-color {
+                    background-color: $secondColorP;
+                    padding: 5px;
                 }
         
             }
+
+        h6 {
+            opacity: 1;
+            font-family: 'Merriweather';
+            font-style: normal;
+            //line-height: 24px;
+            font-size: 20px;
+            text-align: left;
+            letter-spacing: 0.5px;
+            color:white;
+            
+        }
 
     }
     
@@ -186,8 +203,6 @@
     .latest-posts{
         margin-top: 1rem;
     }
-
-   
 
 
     //Index small gallery tablet
@@ -274,6 +289,7 @@
         .remove-button a {
             color: red;
         }
+    
 
 //Index desktop
 @media screen and (min-width: 992px){
@@ -290,6 +306,7 @@
                 width: 100%;
                 height: 450px;
                 object-fit: cover;
+                object-position: 0px -100px;
                 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
                 position:relative;
                 z-index:-1;
@@ -300,10 +317,32 @@
     
     }
 
+    .title-feature {
+
+        position: absolute;
+        bottom: 75%;
+        //left: 20px;
+        padding-right: 20px;
+        padding-left: 20px;
+        
+        .big-post-title {
+            opacity: 1;
+            font-family: 'Merriweather';
+            font-style: normal;
+            font-weight: 900;
+            //line-height: 24px;
+            font-size: 40px;
+            text-align: left;
+            letter-spacing: 0.5px;
+            color:white;
+        
+                .bg-color {
+                    background-color: $secondColorP;
+                    padding: 5px;
+                }
+        
+            }
+
    
-
-    
-
-
-    
+        }
 }
