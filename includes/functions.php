@@ -31,4 +31,14 @@ function display_errors($errors = array()){
     return $output;
 }
 
+
+/*This function checks if the admin has filled in 
+  the inputs field in the add new post form */
+function new_post_form_check() {
+
+    if($_GET['action'] == 'empty') {
+        echo "<div class='alert alert-danger text-center' role='alert'>You did not fill in all fields!</div>";
+    }
+}
+
 ?>
