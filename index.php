@@ -6,11 +6,11 @@ include 'config.php';
 
 //Page title
 $page_title = 'Index';
-
 include 'includes/head.php';
 include 'includes/header.php';
 include 'includes/database-connection.php';
 include 'classes/Feature.php';
+
 $object = new Feature($pdo);
 $object->getFeaturePost();
 $feature = $object->getFeaturePost();
@@ -32,7 +32,7 @@ $titleWithWrap = wordwrap($text, 20, "<br />\n ");
            <h2 class="big-post-title d-none d-md-block"><span><?= $feature["title"]; ?></span></h2>
            </div>
            <div class="hero-image">
-           <img src="<?= $feature["image"]; ?>" alt="feature-image">
+           <img src="includes/<?= $feature["image"]; ?>" alt="feature-image">
            </div>
            <div class="date row justify-content-center">
            <div class="date-circle d-md-none">
@@ -65,7 +65,7 @@ $latestPosts = $object2->getLatestPosts();
            </ul>
            <?php endif; ?>
            <div class="hero-image-gallery">
-           <img src="<?= $post["image"]; ?>" alt="feature-image">
+           <img src="includes/<?= $post["image"]; ?>" alt="feature-image">
            </div>
            <div class="date row justify-content-center">
            <div class="date-circle d-md-none">
