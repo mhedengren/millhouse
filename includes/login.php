@@ -40,5 +40,5 @@ if ($is_password_correct) {
 } else {
 
     //Handle errors, go back to frontpage and populate $_GET
-    header("Location: ../views/login_form.php?login_failed=true");
+    header("Location: ../views/login-form.php?login_failed=true");
 }

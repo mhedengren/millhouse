@@ -1,4 +1,5 @@
 <?php
+session_start();
 require '../includes/database-connection.php';
 
 //var_dump($_POST["postTitle"]);
@@ -10,7 +11,8 @@ if(isset($_POST['submit'])){
   //Retrieve the inputs values from the form
   $postTitle = $_POST['postTitle'];
   $postDesc = $_POST['postDesc'];
-  $created_by = $_SESSION['admin'];
+  $postCont = $_POST['postCont'];
+  $created_by = $_SESSION['user'];
   $created_on = date('Y-m-d');
   $image = $_FILES["image"];
 
@@ -29,13 +31,14 @@ if(isset($_POST['submit'])){
   if($upload_ok){
     try {
         $statement = $pdo->prepare(
-          'INSERT INTO posts (title, description, created_by, created_on, image) 
-          VALUES (:postTitle, :postDesc, :created_by, :postDate, :image)'
+          'INSERT INTO posts (title, description, content, created_by, created_on, image) 
+          VALUES (:postTitle, :postDesc, :postCont, :created_by, :postDate, :image)'
           );
 
         $statement->execute(array(
             ':postTitle' => $postTitle,
             ':postDesc' => $postDesc,
+            ':postCont' => $postCont,
             ':created_by' => 1,
             ':postDate' => $created_on,
             ":image" => $new_location
