@@ -1,4 +1,4 @@
-    <footer class="container-fluid">
+    <footer class="container-fluid d-none">
         <div class="row d-flex align-items-center">
             <div class="col-6 text-center">
                 <h3>Join the Club</h3>
