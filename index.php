@@ -40,7 +40,7 @@ $titleWithWrap = wordwrap($text, 20, "<br />\n ");
            </div>
            </div>
            <h2 class="post-title d-md-none"><?= $feature["title"]; ?></h2>
-           <p class="post-description d-md-none"><?= substr($feature["description"], 0, 60); ?></p>
+           <p class="post-description d-md-none"><?= $feature["description"]; ?></p>
            </div>
        </article>
    </div>
