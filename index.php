@@ -19,9 +19,9 @@ include 'includes/date.php';
   <div class="container">
        <article class="row feature-post">
            <div class="col-sm-12 col-md-12">
-               <div class="title-feature d-none d-md-block">
+               <div class="main-feature-headings d-none d-md-block">
                    <h6><?= $month; ?><?= $day . ' ' ?><?= $year; ?></h6>
-                   <h2 class="big-post-title"><span class="bg-color"><?= $feature["title"]; ?></span></h2>
+                   <h2><span class="bg-color"><?= $feature["title"]; ?></span></h2>
                    <p class="read-more-desktop d-none d-md-block">
                        <a href="views/single-post.php?posts_id=<?= $feature["posts_id"]; ?>">Read featured article!</a>
                     </p>
@@ -34,7 +34,7 @@ include 'includes/date.php';
                        <h6><?= $month; ?><br><?= $day; ?></h6>
                    </div>
                </div>
-               <h2 class="post-title d-md-none"><?= $feature["title"]; ?></h2>
+               <h2 class="feature-title d-md-none"><?= $feature["title"]; ?></h2>
                <p class="post-description d-md-none"><?= $feature["description"]; ?></p>
            </div>
        </article>
@@ -52,7 +52,7 @@ $latestPosts = $object2->getLatestPosts();
 ?>
 
    
-       <section class="row latest-posts">
+       <section class="gallery row">
            <?php foreach ($latestPosts as $post) :?>
                <div class="col-sm-12 col-md-6">
                    <?php if(!isset($_SESSION['username'])): ?>
@@ -69,17 +69,17 @@ $latestPosts = $object2->getLatestPosts();
                        </ul>
                    <?php endif; ?>
                    <a href="views/single-post.php?posts_id=<?= $post["posts_id"]; ?>">
-                       <div class="hero-image-gallery">
+                       <div class="gallery-hero-image">
                            <img src="includes/<?= $post["image"]; ?>" alt="feature-image">
                        </div>
-                       <div class="date row justify-content-center">
-                           <div class="date-circle d-md-none">
+                       <div class="date row d-md-none justify-content-center">
+                           <div class="date-circle">
                            <h6><?= $month; ?><br><?= $day; ?></h6>
                            </div>
                        </div>
-                       <h2 class="post-title-gallery"><?= $post["title"]; ?></h2>
+                       <h2 class="gallery-post-title"><?= $post["title"]; ?></h2>
                    </a>
-                   <p class="post-description-gallery">
+                   <p class="gallery-post-description">
                        <?= $post["description"] ?>
                     </p>
                    <p class="read-more d-none d-md-block">
