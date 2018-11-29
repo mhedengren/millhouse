@@ -43,22 +43,24 @@
 
 .upload-image-form {
     margin-top: 5.5em;
+    padding: 15px 0;
     border: 1px solid #CED4DA;
     box-sizing: border-box;
+    margin-left: 20px;
     border-radius: 4px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     -ms-border-radius: 4px;
     -o-border-radius: 4px;
         
-    .featured-image {
+    .upload-label {
         font-family: $bodyFamily;
         font-weight: 600;
-        line-height: 22px;
         font-size: 20px;
         letter-spacing: 0.5px;
         color: #1C3045;
-        padding: 10px;
+        margin-left: 15px;
+        margin-bottom: 20px;
     }
 
     h4 {
@@ -67,21 +69,25 @@
         font-size: 18px;
         letter-spacing: 0.5px;
         color: #1C3045;
-        padding: 10px;
+        margin-left: 15px;
     }
 
-    input {
-        padding: 3px;
+    /*hiding the input visually but keeping it visible for the browser
+      so that it can be styled */
+    
+
+    input[type="submit"],
+    input[type="file"],
+    select {
+        margin: 10px;
+        //@include buttonStyle($secondColorP, #fff);
     }
 
     input[type="submit"] {
-        margin: 10px;
+        @include buttonStyle($secondColorP, #fff);
     }
 
-    input[type="file"] {
-        padding: 10px;
-        color: $primalColorD;
-}
+
 
 
 }

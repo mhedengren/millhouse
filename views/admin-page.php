@@ -42,23 +42,23 @@ include '../includes/header.php';
                 </div>
                 <div class="col-sm-12 col-md-4">
                     <div class="upload-image-form">
-                    <?php upload_file_check(); ?>
-                        <label class="featured-image" for="image">Featured Image<label>
-                                <h4 class="select-image">Select Image to Upload:</h4>
-                                <input type="file" name="image" id="image" form="upload-form">
-                                <label class="featured-image" for="categories">Category</label>
-                                <h4 class="select-category">Select the category:</h4>
-                                <select name="categories" form="upload-form" id="categories">
-                                    <option value="sunglasses">Sunglasses</option>
-                                    <option value="watches">Watches</option>
-                                    <option value="accessories">Accessories</option>
-                                </select>
+                        <?php upload_file_check(); ?>
+                        <label for="upload-input" class="upload-label">Select Image</label>
+                        <input type="file" class="input-file" name="image" id="upload-input" form="upload-form" />
+                        <hr>
+                        <h4 class="upload-label">Select category</h4>
+                        <select name="categories" form="upload-form" id="categories">
+                            <option value="sunglasses">Sunglasses</option>
+                            <option value="watches">Watches</option>
+                            <option value="accessories">Accessories</option>
+                        </select>
+
                     </div>
                 </div>
 
-            </div>
+            </div><!-- row new-post -->
 
-        </div>
+        </div><!-- container -->
 
     </main>
 
