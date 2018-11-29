@@ -16,8 +16,7 @@ $feature = $object->getFeaturePost();
 include 'includes/date.php';
 ?>
 
-<main id="index-page">
-   <div class="container">
+  <div class="container">
        <article class="row feature-post">
            <div class="col-sm-12 col-md-12">
                <div class="title-feature d-none d-md-block">
@@ -41,13 +40,18 @@ include 'includes/date.php';
        </article>
    </div>
 
+
+<div class="container main-container row"><!-- need to add for aside-->
+    <main id="index-page" class="col-lg-8">
+ 
+
 <?php
 $object2 = new Feature($pdo);
 $object2->getLatestPosts();
 $latestPosts = $object2->getLatestPosts(); 
 ?>
 
-   <div class="container">
+   
        <section class="row latest-posts">
            <?php foreach ($latestPosts as $post) :?>
                <div class="col-sm-12 col-md-6">
@@ -84,7 +88,8 @@ $latestPosts = $object2->getLatestPosts();
                </div>
            <?php endforeach ;?>
        </section>
-   </div>
+   
 </main>
-
+<?php include 'includes/aside.php'; ?>
+</div>
 <?php include 'includes/footer.php'; ?>
