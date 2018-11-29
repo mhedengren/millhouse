@@ -14,9 +14,13 @@ class Posts
 
   public function delete()
   {
-      $stmt = $this->pdo->prepare("SELECT * FROM posts ORDER BY posts_id DESC LIMIT 1");
-      $stmt->execute();
-      $latestPost = $stmt->fetch();
+      $stmt = $this->pdo->prepare("DELETE FROM posts WHERE posts_id = :posts_id");
+      $stmt->execute(
+          [
+      ":posts_id" => $_GET["id"],
+          ]
+      );
+      header('Location: ../index.php');
       return true;
   }
 

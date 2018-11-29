@@ -27,7 +27,7 @@ $action = $_GET["action"] ?? '';
 
 if($action === "delete_post")
 { 
-  $id_to_delete = $_GET["posts_id"];
+  $id_to_delete = $_GET["id"];
   // Let the class handle what happens after this
   $posts->delete($id_to_delete);
 }
