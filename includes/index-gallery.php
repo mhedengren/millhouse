@@ -16,7 +16,7 @@ $latestPosts = $object2->getLatestPosts();
                             </li>
                            <li class="list-inline-item remove-button">
                                <a href="includes/posts.php?action=delete_post&id=<?= $post["posts_id"]; ?>">
-                               <i class="far fa-trash-alt"></i></a>
+                               <i class="fas fa-times"></i></a>
                             </li>
                        </ul>
                    <?php endif; ?>

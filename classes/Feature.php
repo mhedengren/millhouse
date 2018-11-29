@@ -21,7 +21,7 @@ class Feature
   }
 //fetches the 4 latests posts from the db.
   public function getLatestPosts(){
-    $stmt = $this->pdo->prepare("SELECT * FROM posts ORDER BY posts_id DESC LIMIT 4");
+    $stmt = $this->pdo->prepare("SELECT * FROM posts ORDER BY posts_id DESC LIMIT 1,4");
     $stmt->execute();
     $rows = $stmt->fetchAll();
     return $rows;
