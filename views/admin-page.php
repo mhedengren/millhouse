@@ -42,6 +42,7 @@ include '../includes/header.php';
                 </div>
                 <div class="col-sm-12 col-md-4">
                     <div class="upload-image-form">
+                    <?php upload_file_check(); ?>
                         <label class="featured-image" for="image">Featured Image<label>
                                 <h4 class="select-image">Select Image to Upload:</h4>
                                 <input type="file" name="image" id="image" form="upload-form">
