@@ -59,7 +59,7 @@ $latestPosts = $object2->getLatestPosts();
                    <?php else: ?>
                        <ul class="edit-remove-buttons">
                            <li class="list-inline-item edit-button">
-                               <a href="includes/posts.php?action=create_post&id=<?= $post["posts_id"]; ?>">
+                               <a href="includes/posts.php?action=edit_post&id=<?= $post["posts_id"]; ?>">
                                <i class="fas fa-pencil-alt"></i></a>
                             </li>
                            <li class="list-inline-item remove-button">
@@ -90,6 +90,7 @@ $latestPosts = $object2->getLatestPosts();
        </section>
    
 </main>
+
 <?php include 'includes/aside.php'; ?>
 </div>
 <?php include 'includes/footer.php'; ?>
