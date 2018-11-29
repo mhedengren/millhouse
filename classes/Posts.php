@@ -14,7 +14,10 @@ class Posts
 
   public function delete()
   {
-    return true;
+      $stmt = $this->pdo->prepare("SELECT * FROM posts ORDER BY posts_id DESC LIMIT 1");
+      $stmt->execute();
+      $latestPost = $stmt->fetch();
+      return true;
   }
 
   public function create($newPost)
