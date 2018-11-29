@@ -1,0 +1,66 @@
+@import "index-page";
+@import "variables";
+@import "mixins";
+
+aside{
+    
+    .container{
+        background-color: $paleGrayB;
+        margin-top: 1rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+
+        hr{
+            background-color: $colorAside;
+            height: 0.1rem;
+        }
+
+        h5{
+            color: $colorAside;
+        }
+        
+        article{
+            @include toCheckStyle(pink); 
+            margin-bottom: 1%;
+            padding-left: 0;
+            padding-right: 0;
+
+            //borders for checking
+            div{
+                @include toCheckStyle(#9FF781);
+            }
+
+            nav, img, i, ul, li{
+                @include toCheckStyle(pink);
+            }
+
+            main, aside, button{
+                @include toCheckStyle(blue);
+            }
+
+            .article-images{
+                padding-left: 0;
+                padding-right: 0;
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .article-contents p{
+                color: $paleGray;
+            }
+        }
+        
+        .button-color{
+            @include buttonStyle($secondColorP,#fff); 
+        
+            &:hover{
+                @include buttonStyle($primalColorD,#fff); 
+            }
+        }
+    }
+}
+
