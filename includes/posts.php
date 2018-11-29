@@ -25,6 +25,7 @@ $posts = new Posts($pdo);
 
 $action = $_GET["action"] ?? '';
 
+// Handles what happens if the GET action is delete.
 if($action === "delete_post")
 { 
   $id_to_delete = $_GET["id"];
@@ -32,7 +33,7 @@ if($action === "delete_post")
   $posts->delete($id_to_delete);
 }
 
-if($action === "create_post")
+if($action === "edit_post")
 {
   // Let the class handle what happens after this
   $posts->create($_POST);
