@@ -44,7 +44,7 @@
             }
     }
 
-    .post-title {
+    .post-title-mobile {
         font-family: 'Merriweather';
         font-style: normal;
         font-weight: 900;
@@ -52,10 +52,7 @@
         font-size: 20px;
         text-align: center;
         letter-spacing: 0.5px;
-        background-color: #60495A;
-        border: #1C3045 1px solid;
-        border-radius: 4%;
-        color: white;
+        color: #60495A;
         padding: 20px;
         margin-bottom: 0px;
     }
@@ -70,6 +67,10 @@
         font-size: 12px;
         text-align: center;
         letter-spacing: 0.5px;
+    }
+
+    .post-content{
+        text-align: center;
     }
 
 @media screen and (min-width: 768px){
