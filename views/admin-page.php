@@ -31,24 +31,31 @@ include '../includes/header.php';
                     <h2 class="add-new-post">Add New Post</h2>
                     <?php new_post_form_check(); ?>
                     <form action="../includes/upload.php" method="POST" enctype="multipart/form-data" id="upload-form">
-                        <label for="title">Title</label> 
+                        <label for="title">Title</label>
                         <input type="text" id="title" name="postTitle" class="form-control" placeholder="Your title here"><!-- if validation fails then show all content entered into the form's input and textarea -->
-                        <label for="desc">Description</label> 
+                        <label for="desc">Description</label>
                         <input type="text" id="desc" name="postDesc" class="form-control" placeholder="Your description here">
                         <label for="content">Content</label>
                         <textarea name="postCont" id="content" class="form-control"></textarea>
                         <input type="submit" name="submit" value="Send">
                     </form>
-
                 </div>
-                 <div class="col-sm-12 col-md-4">
+                <div class="col-sm-12 col-md-4">
                     <div class="upload-image-form">
+                    <?php upload_file_check(); ?>
                         <label class="featured-image" for="image">Featured Image<label>
-                        <h4 class="select-image">Select Image to Upload:</h4>
-                        <input type="file" name="image" id="image" form="upload-form"> 
+                                <h4 class="select-image">Select Image to Upload:</h4>
+                                <input type="file" name="image" id="image" form="upload-form">
+                                <label class="featured-image" for="categories">Category</label>
+                                <h4 class="select-category">Select the category:</h4>
+                                <select name="categories" form="upload-form" id="categories">
+                                    <option value="sunglasses">Sunglasses</option>
+                                    <option value="watches">Watches</option>
+                                    <option value="accessories">Accessories</option>
+                                </select>
                     </div>
                 </div>
-    
+
             </div>
 
         </div>
