@@ -12,7 +12,7 @@ if(isset($_POST['submit'])){
   $postTitle = $_POST['postTitle'];
   $postDesc = $_POST['postDesc'];
   $postCont = $_POST['postCont'];
-  $created_by = $_SESSION['user'];
+  //$created_by = $_SESSION['user'];
   $created_on = date('Y-m-d');
   $image = $_FILES["image"];
 

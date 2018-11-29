@@ -11,7 +11,7 @@ class Feature
   {
     $this->pdo = $pdo;
   }
-  //fetches the last post from the db
+  //fetches the last post from the db.
   public function getFeaturePost(){
     $stmt = $this->pdo->prepare("SELECT * FROM posts ORDER BY posts_id DESC LIMIT 1");
     $stmt->execute();
@@ -19,7 +19,7 @@ class Feature
     return $latestPost; 
 
   }
-
+//fetches the 4 latests posts from the db.
   public function getLatestPosts(){
     $stmt = $this->pdo->prepare("SELECT * FROM posts ORDER BY posts_id DESC LIMIT 4");
     $stmt->execute();
