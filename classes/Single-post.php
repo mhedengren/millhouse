@@ -15,7 +15,7 @@ class SinglePost
   public function getSinglePost(){
     //$posts_id = isset($_GET['posts_id']) ? $_GET['posts_id'] : 0;
 
-    $stmt = $this->pdo->prepare("SELECT posts.title, posts.description, posts.created_by, posts.created_on, posts.image, users.username FROM posts
+    $stmt = $this->pdo->prepare("SELECT posts.title, posts.description, posts.created_by, posts.created_on, posts.image, posts.content, users.username FROM posts
     INNER JOIN users
     ON posts.created_by = users.admin
     where posts_id = :posts_id");

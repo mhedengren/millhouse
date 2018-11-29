@@ -27,7 +27,7 @@ session_start();
         <div class="feature-post col-10 text-center">
             <!--takes image from database-->
             <div class="hero-image">
-                <img src="../<?= $post["image"]; ?>" alt="Hero-image">
+                <img src="../includes/<?= $post["image"]; ?>" alt="Hero-image">
             </div>
             <!--takes date and displays clean from database-->
             <div class="date row justify-content-center">
@@ -44,9 +44,8 @@ session_start();
                         <hr class="before-post">
                     </div>        
                 </div>
-                <p class="post-description"><b><?= substr($post["description"], 0, 50); ?></b></p>
                 <p class="post-description"><?= $post["description"]; ?></p> 
-                                     
+                <p class="post-content"><?= $post["content"]; ?></p>                     
         </div>
     </div>
     
