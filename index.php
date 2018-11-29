@@ -24,7 +24,7 @@ include 'includes/date.php';
                    <h6><?= $month; ?><?= $day . ' ' ?><?= $year; ?></h6>
                    <h2 class="big-post-title"><span class="bg-color"><?= $feature["title"]; ?></span></h2>
                    <p class="read-more-desktop d-none d-md-block">
-                       <a href="views/single-post.php?posts_id=<?= $feature["posts_id"]; ?>">Read featured article</a>
+                       <a href="views/single-post.php?posts_id=<?= $feature["posts_id"]; ?>">Read featured article!</a>
                     </p>
                </div>
                <div class="hero-image">

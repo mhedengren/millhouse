@@ -30,8 +30,6 @@
     justify-content: center;
     align-items: center;
     display: flex;
-
-    
     
         h6 {
 
@@ -79,7 +77,6 @@
     text-align: center;
     letter-spacing: 0.5px;
     
-
 }
 
 //Index small gallery mobile
@@ -111,8 +108,6 @@
     margin: 0;
     padding: 0;
     text-align: center;
-    
-    
 
 }
 
@@ -129,10 +124,7 @@
         padding: 20px;
         margin-bottom: 0px;
 
-
     }
-
-  
 
 //Index tablet
 @media screen and (min-width: 768px) {
@@ -143,8 +135,6 @@
         background: -webkit-linear-gradient(90deg, #1C3045 -1%, rgba(96, 73, 90, 0.54) 100%);
         width: 100%;
         
-    
-    
             img {   
                 
                 height: 300px;
@@ -158,7 +148,6 @@
     
     }
     
-
     .title-feature {
 
         position: absolute;
@@ -186,7 +175,6 @@
             }
 
             .read-more-desktop {
-
             
                 a {
                     font-family: Open Sans;
@@ -219,7 +207,6 @@
     .latest-posts{
         margin-top: 1rem;
     }
-
 
     //Index small gallery tablet
     .hero-image-gallery {
@@ -315,7 +302,6 @@
         background: -webkit-linear-gradient(90deg, #1C3045 -1%, rgba(96, 73, 90, 0.54) 100%);
         width: 100%;
         //float: right;
-      
     
             img {   
     
@@ -327,10 +313,8 @@
                 position:relative;
                 z-index:-1;
                 display:block; 
-                
-                 
+                        
             }
-    
     }
 
     .title-feature {
@@ -354,18 +338,15 @@
         
                 .bg-color {
                     background-color: $secondColorP;
-                    padding: 5px;
+                    padding: 0px;
                 }
         
             }
 
-   
         }
-
 
         .read-more-desktop {
 
-            
             a {
                 font-family: Open Sans;
                 font-style: normal;
