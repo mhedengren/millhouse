@@ -1,4 +1,6 @@
 @import "variables";
+@import "mixins";
+
 //#footer{
     footer.container-fluid{
         margin-top: 50px;
@@ -9,10 +11,8 @@
     }
 
     a.button-link{
-        background-color: #1C3045;
-        border: #1C3045 solid 2px;
-        color: #fff;
-    }
+        @include buttonStyleFooter(#fff,#fff);
+}
 
     .footer-title{
         margin-top: 20px;

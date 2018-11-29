@@ -1,11 +1,5 @@
 @import "variables";
-
-//Mixin
-@mixin toCheckStyle($borderColor) {
-    border: 1px dashed $borderColor;
-}
-
-
+@import "mixins";
 
 #register-form{
     //borders for checking
