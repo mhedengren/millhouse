@@ -29,22 +29,22 @@ aside{
         }
 
         article{
-            @include toCheckStyle(pink); 
+           // @include toCheckStyle(pink); 
             margin-bottom: 1%;
             padding-left: 0;
             padding-right: 0;
 
             //borders for checking
             div{
-                @include toCheckStyle(#9FF781);
+               // @include toCheckStyle(#9FF781);
             }
 
             nav, img, i, ul, li{
-                @include toCheckStyle(pink);
+               // @include toCheckStyle(pink);
             }
 
             main, aside, button{
-                @include toCheckStyle(blue);
+               // @include toCheckStyle(blue);
             }
 
             .article-images{
@@ -70,7 +70,7 @@ aside{
             margin: 0px; 
 
             &:hover{
-                @include buttonStyle($primalColorD,#fff); 
+               // @include buttonStyle($primalColorD,#fff); 
                 margin: 0px; 
             }
         }
@@ -103,7 +103,7 @@ aside{
             
 
         .container{
-            @include toCheckStyle(blue);
+         //   @include toCheckStyle(blue);
 
             article{
                 .article-images{
