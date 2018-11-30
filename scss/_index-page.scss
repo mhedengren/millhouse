@@ -124,10 +124,11 @@
             text-align: left;
             letter-spacing: 0.5px;
             color:white;
+            background-color: $secondColorP;
         
                 .bg-color {
-                    background-color: $secondColorP;
-                    padding: 5px;
+                   // background-color: $secondColorP;
+                   // padding: 5px;
                 }
         
     }
@@ -169,10 +170,14 @@
 //Index desktop
 @media screen and (min-width: 992px){
 
+    .feature-post{
+       // @include toCheckStyle(blue);
+    }
+
     .hero-image {
 
         background: -webkit-linear-gradient(90deg, #1C3045 -1%, rgba(96, 73, 90, 0.54) 100%);
-        width: 85%;
+        width: 80%;
         float: right;
     
             img {   
@@ -191,27 +196,34 @@
 
     .main-feature-headings {
 
+        
         position: absolute;
         top: 15%;
         //left: 20px;
         padding-right: 20px;
         padding-left: 20px;
-        width: 50%;
+        width: 40%;
+        //@include toCheckStyle(pink); 
         
         h2 {
             opacity: 1;
             font-family: 'Merriweather';
             font-style: normal;
             font-weight: 900;
-            //line-height: 24px;
-            font-size: 40px;
+            line-height: 44px;
+            font-size: 1.9rem;
             text-align: left;
             letter-spacing: 0.5px;
             color:white;
-           // background-color: $secondColorP;
-        
+            //@include toCheckStyle(pink); 
+            background-color: $secondColorP;
+            padding: 0.8rem;
+            border-radius: 2px;
+
+
+          
                 .bg-color {
-                    background-color: $secondColorP;
+                    background-color: none;
                     padding: 0px;
                 }
         
@@ -220,16 +232,15 @@
             hr {
                margin: 0;
                padding: 0;
-                border: 0;
-                border-top: 3px solid $secondColorP;
-                width: 50%;
+               border: 0;
+               border-top: 3px solid $secondColorP;
+               width: 70%;
+         }
 
-    }
-
-    p {
-        margin-top: 0;
-        margin-bottom: 0rem; 
-    }
+            p {
+                margin-top: 0;
+                margin-bottom: 0rem; 
+            }
 
             h6{
                 color:$secondColorP;
@@ -237,8 +248,6 @@
 
             .read-more-desktop {
 
-
-          
                 a {
                     font-family: Open Sans;
                     font-style: normal;
@@ -249,11 +258,112 @@
                     color: $secondColorP;
                     
                 }
-
-             
-
        
         }
+
+    
     }
+
+
+    
+}
+
+@media screen and (min-width: 1200px){
+
+    .feature-post{
+       // @include toCheckStyle(blue);
+    }
+
+    .hero-image {
+
+        background: -webkit-linear-gradient(90deg, #1C3045 -1%, rgba(96, 73, 90, 0.54) 100%);
+        width: 80%;
+        float: right;
+    
+            img {   
+    
+                width: 100%;
+                height: 450px;
+                object-fit: cover;
+                //object-position: 0px -100px;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                position:relative;
+                z-index:-1;
+                display:block; 
+                        
+            }
+    }
+
+    .main-feature-headings {
+
+        
+        position: absolute;
+        top: 15%;
+        //left: 20px;
+        padding-right: 20px;
+        padding-left: 20px;
+        width: 40%;
+        //@include toCheckStyle(pink); 
+        
+        h2 {
+            opacity: 1;
+            font-family: 'Merriweather';
+            font-style: normal;
+            font-weight: 900;
+            line-height: 44px;
+            font-size: 2.1rem;
+            text-align: left;
+            letter-spacing: 0.5px;
+            color:white;
+            //@include toCheckStyle(pink); 
+            background-color: $secondColorP;
+            padding: 0.8rem;
+
+
+          
+                .bg-color {
+                    background-color: none;
+                    padding: 0px;
+                }
+        
+            }
+
+            hr {
+               margin: 0;
+               padding: 0;
+               border: 0;
+               border-top: 3px solid $secondColorP;
+               width: 70%;
+         }
+
+            p {
+                margin-top: 0;
+                margin-bottom: 0rem; 
+            }
+
+            h6{
+                color:$secondColorP;
+            }
+
+            .read-more-desktop {
+
+                a {
+                    font-family: Open Sans;
+                    font-style: normal;
+                    font-weight: 600;
+                    text-decoration: none;
+                    font-size: 14px;
+                    letter-spacing: 0.5px;
+                    color: $secondColorP;
+                    
+                }
+       
+        }
+
+    
+    }
+
+
+    
 }
 

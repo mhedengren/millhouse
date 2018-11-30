@@ -19,7 +19,7 @@ include 'includes/date.php';
 
   <div class="container">
        <article class="row justify-content-center feature-post">
-           <div class="col-sm-12 col-md-12 col-lg-11">
+           <div class="col-sm-12 col-md-12 col-lg-10">
                <div class="main-feature-headings d-none d-md-block">
                    <h6><?= $month; ?><?= $day . ' ' ?><?= $year; ?></h6>
                    <h2><span class="bg-color"><?= $feature["title"]; ?></span></h2>

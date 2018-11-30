@@ -24,11 +24,12 @@ font-family: Open Sans;
 font-style: normal;
 font-weight: normal;
 line-height: 24px;
-font-size: 122px;
+font-size: 0.8rem;
 letter-spacing: 0.5px;
 margin: 0;
 padding: 0;
 text-align: center;
+margin-bottom: 1rem;
 
 }
 
@@ -71,8 +72,11 @@ text-align: center;
 
 //Index small gallery tablet
 .main-container {
+    margin-top: 1rem;
     padding: 2rem;
 }
+
+
 
 .gallery-hero-image {
     
@@ -106,21 +110,23 @@ text-align: center;
     padding: 10px 0 5px 0;
 
     }
-}
 
-.gallery-post-description {
-
-    font-family: Open Sans;
-    font-style: normal;
-    font-weight: normal;
-    line-height: 24px;
-    font-size: 12px;
-    letter-spacing: 0.5px;
-    margin: 0;
-    padding: 0;
-    text-align: left;
+    .gallery-post-description {
     
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        line-height: 24px;
+        font-size: 0.8rem;
+        letter-spacing: 0.5px;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+        margin-bottom: 0;
+        
+        }
 }
+
 
 .read-more {
 
@@ -145,6 +151,7 @@ text-align: center;
     margin-top: 0;
     opacity: 0.5;
     text-align: right;
+    margin-bottom: 0.3rem;
 
     ul {
         padding: 0;
