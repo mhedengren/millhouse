@@ -87,7 +87,7 @@ include 'includes/date.php';
                           <h6><?= $month; ?><br><?= $day; ?></h6>
                           </div>
                       </div>
-                      <h2 class="gallery-post-title"><?= insert_line_break($post["title"]); ?></h2>
+                      <h2 class="gallery-post-title"><?= $post["title"]; ?></h2>
                   </a>
                   <p class="gallery-post-description">
                       <?= $post["description"]; ?>

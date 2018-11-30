@@ -2,7 +2,7 @@
 <header>
     <div class="container">
         <nav class="navbar navbar-expand-lg">
-            <a href="<?= $siteroot; ?>/index.php" class="navbar-brand order-1"><img src="<?= $siteroot; ?>/images/logo_dark.png" alt="Home"></a>
+            <a href="<?= $siteroot; ?>/index.php" class="navbar-brand order-1"><img src="<?= $siteroot; ?>/images/logo.svg" alt="Home"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
                     aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <img src="<?= $siteroot; ?>/images/hamburger.svg" alt="hamburger-Menu">
@@ -52,7 +52,7 @@
                 <?php
                 else:
                 ?>
-                <span>Hi, <?= $_SESSION["username"];?>!</span>
+            
                 <button class="login-button">
                     <a href="<?= $siteroot; ?>/includes/logout.php">LOGOUT</a>
                 </button>
