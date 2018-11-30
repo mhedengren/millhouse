@@ -96,7 +96,7 @@ class Register
         
         //Check if confirm_password can match with password
         if($this->password !== $this->confirmPassword){
-            $this->errors[] = "Password and confirm password must match.";
+            $this->errors[] = "*Password and confirm password must match.";
         }
 
         return $this->errors;
@@ -115,12 +115,13 @@ class Register
                 ":username" => $this->username,
                 ":email" => $this->email,
                 ":password" => $this->hashedPassword,
-                ":admin" => true
+                ":admin" => false //true: admin, false:standarduser
             ]
         );
 
     }
-
+    
+//This should be deleted when login page is done    
     public function add_session()
     {
         $_SESSION["username"] = $this->find_user()["username"];
@@ -132,4 +133,27 @@ class Register
 
         }
     }
+}
+
+
+class Login extends Register
+{
+    
+    public function add_session()
+    {
+        $_SESSION["username"] = $this->find_user()["username"];
+        $_SESSION["user_id"] = $this->find_user()["id"];
+        if($this->find_user()["admin"] == true ){
+            $_SESSION["user"] = "admin";
+        } else{
+            $_SESSION["user"] = "standard";
+
+        }
+    }
+    
+    //Verify password to check if password matches with the one in the database
+    public function verify_password($password){
+        return password_verify($password, $this->find_user()["password"] );
+    }
+
 }

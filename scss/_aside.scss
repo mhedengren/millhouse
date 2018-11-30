@@ -3,7 +3,7 @@
 @import "mixins";
 
 aside{
-    
+
     .container{
         background-color: $paleGrayB;
         margin-top: 1rem;
@@ -18,7 +18,7 @@ aside{
         h5{
             color: $colorAside;
         }
-        
+
         article{
             @include toCheckStyle(pink); 
             margin-bottom: 1%;
@@ -41,6 +41,7 @@ aside{
             .article-images{
                 padding-left: 0;
                 padding-right: 0;
+                height: 9rem;
 
                 img{
                     width: 100%;
@@ -53,10 +54,10 @@ aside{
                 color: $paleGray;
             }
         }
-        
+
         .button-color{
             @include buttonStyle($secondColorP,#fff); 
-        
+
             &:hover{
                 @include buttonStyle($primalColorD,#fff); 
             }
@@ -64,3 +65,26 @@ aside{
     }
 }
 
+//md (Large devices (desktops, 992px and up))
+@media screen and (min-width: 992px){
+    aside{
+
+        .container{
+            @include toCheckStyle(blue);
+
+            article{
+                .article-images{
+                    height: 6rem;
+
+                }
+            }
+        }
+    }
+
+    //Desktop size
+    @media screen and (min-width: 1024px){
+        aside {
+        }
+
+    }
+}
