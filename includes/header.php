@@ -52,7 +52,7 @@
                 <?php
                 else:
                 ?>
-                <span>Hi, <?= $_SESSION["username"];?>!</span>
+            
                 <button class="login-button">
                     <a href="<?= $siteroot; ?>/includes/logout.php">LOGOUT</a>
                 </button>
