@@ -6,7 +6,7 @@ session_start();
 include '../config.php';
 
 //Page title
-$page_title = 'Register';
+$page_title = 'Sign in';
 
 //Database connection
 include '../includes/database-connection.php';

@@ -23,6 +23,9 @@ $posts = new Posts($pdo);
  * <a href="includes/posts.php?action=delete&id=3" > Delete Post </a>
  */
 
+/* Following the MVC-model, this would be the controller. 
+   Index is the view. And Class is model. */
+
 $action = $_GET["action"] ?? '';
 
 // Handles what happens if the GET action is delete.
@@ -36,5 +39,5 @@ if($action === "delete_post")
 if($action === "edit_post")
 {
   // Let the class handle what happens after this
-  $posts->create($_POST);
+  $posts->edit_post($_POST);
 }

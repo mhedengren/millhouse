@@ -96,7 +96,7 @@ class Register
         
         //Check if confirm_password can match with password
         if($this->password !== $this->confirmPassword){
-            $this->errors[] = "Password and confirm password must match.";
+            $this->errors[] = "*Password and confirm password must match.";
         }
 
         return $this->errors;
@@ -115,11 +115,12 @@ class Register
                 ":username" => $this->username,
                 ":email" => $this->email,
                 ":password" => $this->hashedPassword,
-                ":admin" => true
+                ":admin" => false //true: admin, false:standarduser
             ]
         );
 
     }
+
 }
 
 class Login extends Register
@@ -141,5 +142,4 @@ class Login extends Register
         {
             return password_verify($password, $this->find_user()["password"]);
         }
-    
 }
