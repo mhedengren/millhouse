@@ -39,5 +39,5 @@ if($action === "delete_post")
 if($action === "edit_post")
 {
   // Let the class handle what happens after this
-  $posts->create($_POST);
+  $posts->edit_post($_POST);
 }
