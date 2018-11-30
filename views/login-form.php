@@ -3,12 +3,14 @@
 session_start();
 
 //Define the siteroot for includes/requires
-    $siteroot = "..";
+    include "../config.php";
 
     //Page title
     $page_title = 'Login';
 
-    require "../includes/head.php"
+    require "../includes/head.php";
+
+    include "../includes/login.php";
 ?>
 
 <body>
@@ -23,8 +25,16 @@ session_start();
 
                 <!-- Login form -->
                 <h1>Login</h1>
+                <?php
+                //Shows the error message from validation only when $_POST is set
+                    if(isset($_POST['login'])){
+                        if(!empty($errors)){
+                            echo display_errors($errors);
+                        }
+                    }
+                    ?>
 
-                <form action="../includes/login.php" class="login" method="post" id="form_login">
+                <form action="login-form.php" class="login" method="post" id="form_login">
 
                     <div class="form-group">
 
@@ -35,7 +45,7 @@ session_start();
 
                     </div>
 
-                    <button type="submit" class="btn button-color">Login</button>
+                    <button type="submit" name="login" class="btn button-color">Login</button>
 
                 </form>
 
