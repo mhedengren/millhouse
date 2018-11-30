@@ -1,44 +1,37 @@
 <?php
 
-session_start();
 
-include "database-connection.php";
+include '../classes/Register.php';
+include 'database-connection.php';
+include_once 'functions.php';
 
-// Easier way to handle postform
-
-$username = $_POST["login_username"];
-$password = $_POST["login_password"];
-
-//No whitespace betweem $pdo and prepare
-
-$statement = $pdo->prepare("SELECT * FROM users WHERE username = :username");
-
-// Execute populates the statement and runs it
-
-$statement->execute(
-[
-    ":username" => $username
-]
-);
-
-//When select is used, fetch must happen
-
-$fetched_user = $statement->fetch();
+$errors = [];
 
 
+//If sign-up btn is clicked activate Register class
+if(isset($_POST['login'])){
+    //Call a class
+    $login = new Login($pdo);
+    //Run class to stor values in $args array to properties
+    
+    $login->username = $_POST['login_username'];
+    $password = $_POST['login_password'];
+    $login->find_user();
+    $login->verify_password($password);
 
-// 4. Compare
 
-$is_password_correct = password_verify($password, $fetched_user["password"]);
+    if($login->verify_password($password)){
 
-if ($is_password_correct) {
+        //If there is no error add username and admin/standart in the session
+        $login->add_session();
+        
+        //Redirect to login-form page
+        redirect_to('../index.php');
+        
+    }else{
+        $errors[] = "Password or username does not match.";
+    }
 
-    //Save user globally to session
-    $_SESSION["username"] = $fetched_user["username"];
-    header("Location: ../index.php");
-
-} else {
-
-    //Handle errors, go back to frontpage and populate $_GET
-    header("Location: ../views/login-form.php?login_failed=true");
+//Do not do anything if POST is not sent.
 }
+
