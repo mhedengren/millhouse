@@ -64,7 +64,7 @@ function upload_file_check() {
 
 function insert_line_break($text){
     if (strlen($text) < 10 ) {
-        echo "<br>";
+        return "<br>";
     }
 }
 

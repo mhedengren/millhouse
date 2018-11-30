@@ -3,20 +3,29 @@
 @import "mixins";
 
 aside{
-
+   //Inizialise bootrap default margin
+   .row, .row>div, main{
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+}
     .container{
         background-color: $paleGrayB;
         margin-top: 1rem;
         padding-top: 1rem;
         padding-bottom: 1rem;
 
-        hr{
-            background-color: $colorAside;
-            height: 0.1rem;
-        }
-
+      
         h5{
-            color: $colorAside;
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: bold;
+        line-height: 24px;
+        font-size: 16px;
+        letter-spacing: 0.5px;
+        color: #252525;
+
         }
 
         article{
@@ -55,11 +64,14 @@ aside{
             }
         }
 
+       
         .button-color{
-            @include buttonStyle($secondColorP,#fff); 
+            @include buttonStyle($secondColorP,#fff);
+            margin: 0px; 
 
             &:hover{
                 @include buttonStyle($primalColorD,#fff); 
+                margin: 0px; 
             }
         }
     }
@@ -68,6 +80,27 @@ aside{
 //md (Large devices (desktops, 992px and up))
 @media screen and (min-width: 992px){
     aside{
+
+        h2 {
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 20px;
+        font-size: 12px;
+        letter-spacing: 0.5px;
+        color: #1C3045;
+        }
+            p {
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 20px;
+            font-size: 12px;
+            letter-spacing: 0.5px;
+            color: rgba(28, 48, 69, 0.5);
+            }
+
+            
 
         .container{
             @include toCheckStyle(blue);

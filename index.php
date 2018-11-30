@@ -27,6 +27,19 @@ include 'includes/date.php';
                        <a href="views/single-post.php?posts_id=<?= $feature["posts_id"]; ?>">Read featured article!</a>
                     </p>
                </div>
+               <?php if(!isset($_SESSION['username'])): ?>
+                  <?php else: ?>
+                      <ul class="edit-remove-buttons">
+                          <li class="list-inline-item edit-button">
+                              <a href="includes/posts.php?action=update_post&id=<?= $feature["posts_id"]; ?>">
+                              <i class="fas fa-pencil-alt"></i></a>
+                           </li>
+                          <li class="list-inline-item remove-button">
+                              <a href="includes/posts.php?action=delete_post&id=<?= $feature["posts_id"]; ?>">
+                              <i class="fas fa-times"></i></a>
+                           </li>
+                      </ul>
+                  <?php endif; ?>
                <div class="hero-image">
                    <img src="includes/<?= $feature["image"]; ?>" alt="feature-image">
                </div>
@@ -41,7 +54,7 @@ include 'includes/date.php';
        </article>
    </div>
 
-<div class="container">
+<div class="main-container container">
 <div class="row">
    <main id="index-page" class="col-lg-8">
     <?php
@@ -74,7 +87,7 @@ include 'includes/date.php';
                           <h6><?= $month; ?><br><?= $day; ?></h6>
                           </div>
                       </div>
-                      <h2 class="gallery-post-title"><?= $post["title"]; ?></h2>
+                      <h2 class="gallery-post-title"><?= insert_line_break($post["title"]); ?></h2>
                   </a>
                   <p class="gallery-post-description">
                       <?= $post["description"]; ?>

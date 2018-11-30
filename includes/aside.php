@@ -8,9 +8,9 @@
                 <div class="article-images col-4">
                     <img src="includes/<?= $post["image"]; ?>" alt="<?= $post["title"]; ?>">
                 </div>
-                <div class="article-contents col-8">
-                    <h2 class="gallery-post-title"><?= $post["title"]; ?></h2>
-                    <p class=""><?= $month; ?><?= $day; ?></p>
+                <div class="article-contents col-7">
+                    <h2 class="aside-post-title"><?= $post["title"]; ?></h2>
+                    <p class=""><?= $month . ' ' ?><?= $day . ', ' ?><?= $year ?></p>
                 </div>
             </article>
             <?php endforeach ;?>
@@ -20,7 +20,7 @@
         <div>
             <form action="#" method="post">
                 <div class="form-group">
-                    <label for="email">Email</label>
+                    <label class="d-none" for="email">Email</label>
                     <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email..." required="required">
                 </div>
                 <button type="submit" name="signup" class="btn button-color">SUBSCRIBE</button>
