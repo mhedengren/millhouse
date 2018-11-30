@@ -18,9 +18,6 @@ if(isset($_POST['signup'])){
     if(empty($register->errors)){
         //If there is no error add user information to database
         $register->add_user();
-
-        //If there is no error add username and admin/standart in the session
-        $register->add_session();
         
         //Redirect to login-form page
         redirect_to('login-form.php');
