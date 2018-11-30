@@ -47,7 +47,11 @@
         }
 
         .button-color{
-            background-color: $secondColorP;
+            @include buttonStyle($secondColorP, #fff); 
+
+            &:hover{
+                @include buttonStyle($primalColorL, $primalColorD); 
+            }
         }
         
         p{
