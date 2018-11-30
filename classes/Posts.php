@@ -29,8 +29,8 @@ class Posts
       return true;
   }
 
-  public function create($newPost)
+  public function update_post($newPost)
   {
-    return true;
+    header('Location: ../views/update-post.php');
   }
 }

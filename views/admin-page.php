@@ -16,7 +16,9 @@ include '../includes/header.php';
 ?>
 
 <body>
-
+<?php
+$title_x = 'James';
+?>
     <main id="admin-panel">
 
         <div class="container">
@@ -32,7 +34,7 @@ include '../includes/header.php';
                     <?php new_post_form_check(); ?>
                     <form action="../includes/upload.php" method="POST" enctype="multipart/form-data" id="upload-form">
                         <label for="title">Title</label>
-                        <input type="text" id="title" name="postTitle" class="form-control" placeholder="Your title here"><!-- if validation fails then show all content entered into the form's input and textarea -->
+                        <input type="text" id="title" name="postTitle" class="form-control" value=<?= $title_x;?> placeholder="Your title here"><!-- if validation fails then show all content entered into the form's input and textarea -->
                         <label for="desc">Description</label>
                         <input type="text" id="desc" name="postDesc" class="form-control" placeholder="Your description here">
                         <label for="content">Content</label>
