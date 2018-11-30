@@ -9,7 +9,7 @@
                     <img src="includes/<?= $post["image"]; ?>" alt="<?= $post["title"]; ?>">
                 </div>
                 <div class="article-contents col-8">
-                    <h2 class="post-title-gallery"><?= $post["title"]; ?></h2>
+                    <h2 class="gallery-post-title"><?= $post["title"]; ?></h2>
                     <p class=""><?= $month; ?><?= $day; ?></p>
                 </div>
             </article>
