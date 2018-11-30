@@ -50,7 +50,7 @@ if(isset($_SESSION["username"])){
 
                 <form action="register-form.php" method="post" id="form_register">
                     <div class="form-group">
-                        <label for="username">User Name</label>
+                        <label for="username">Username</label>
                         <input type="text" class="form-control" id="name" name="register[username]" placeholder="Use at least 1 uppercase letter" required="required">
                         <label for="email">Email</label>
                         <input type="email" class="form-control" id="email" name="register[email]" placeholder="Use 6 or more characters" required="required">
