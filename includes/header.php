@@ -2,7 +2,12 @@
 <header>
     <div class="container">
         <nav class="navbar navbar-expand-lg">
-            <a href="<?= $siteroot; ?>/index.php" class="navbar-brand order-1"><img src="<?= $siteroot; ?>/images/logo.svg" alt="Home"></a>
+            <div class="logo-mobile d-md-none">
+            <a href="<?= $siteroot; ?>/index.php" class="navbar-brand order-2"><img src="<?= $siteroot; ?>/images/logo.svg" alt="Home"></a>
+            </div>
+            <div class="logo-desktop order-1 d-none d-md-block">
+            <a href="<?= $siteroot; ?>/index.php" class="navbar-brand"><img src="<?= $siteroot; ?>/images/logo_dark.png" alt="Home"></a>
+            </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
                     aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <img src="<?= $siteroot; ?>/images/hamburger.svg" alt="hamburger-Menu">
@@ -14,7 +19,7 @@
                         <a class="nav-link nav-link-highlight" href="<?= $siteroot; ?>/views/login-form.php">LOGIN</a>
                     </li>
                     <?php else: ?>
-                    <span class="d-lg-none">Hi, <?= $_SESSION["username"];?>!</span>
+                   
                     <li class="nav-item d-lg-none">
                         <a class="nav-link nav-link-highlight" href="<?= $siteroot; ?>/includes/logout.php">LOGOUT</a>
                     </li>

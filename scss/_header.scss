@@ -69,6 +69,16 @@ and the hamburger menu when collapsed */
             transition: height .2s ease-out;
   }
 
+  @media screen and (min-width: 768px){
+    .logo-desktop{
+        margin: 0px;
+        padding:0px;
+            img {
+                width:150px;
+                
+        }
+    }
+  }
 
 // Desktop navigation
 
@@ -78,6 +88,19 @@ and the hamburger menu when collapsed */
         margin: 30px 0;
 
     }
+
+    /* Site logo.
+    50px wide for accessibility */
+
+    .logo-desktop{
+        margin: 0px;
+        padding:0px;
+            img {
+                width:150px;
+                
+        }
+    }
+
 
    
     .navbar-nav {
