@@ -14,7 +14,7 @@ aside{
         background-color: $paleGrayB;
        // margin-top: 1rem;
        padding-top: 1rem;
-       // padding-bottom: 1rem;
+       padding-bottom: 1rem;
 
       
         h5{
@@ -70,8 +70,8 @@ aside{
             margin: 0px; 
 
             &:hover{
-               // @include buttonStyle($primalColorD,#fff); 
-                margin: 0px; 
+               @include buttonStyle($primalColorD,#fff); 
+               margin: 0px; 
             }
         }
     }
