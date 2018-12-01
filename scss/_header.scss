@@ -152,6 +152,7 @@ and the hamburger menu when collapsed */
         
         &:hover{
             @include buttonStyle($secondColorP, #fff); 
+            margin: 0; 
         }
 
     }
