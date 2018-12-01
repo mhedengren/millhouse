@@ -104,8 +104,10 @@ and the hamburger menu when collapsed */
     }
 
     header {
-        margin: 2rem 0;
+        margin: 0 0 3rem 0;
        // @include toCheckStyle(blue);
+       background-color: #f6f6f6;
+       padding: 1.5rem 0;
 
     }
 
