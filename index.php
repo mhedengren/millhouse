@@ -18,13 +18,14 @@ include 'includes/date.php';
 ?>
 
   <div class="container">
-       <article class="row feature-post">
-           <div class="col-sm-12 col-md-12">
+       <article class="row justify-content-end feature-post">
+           <div class="col-sm-12 col-md-12 col-lg-10">
                <div class="main-feature-headings d-none d-md-block">
-                   <h6><?= $month; ?><?= $day . ' ' ?><?= $year; ?></h6>
+                   <h6><?= $month . ' ' ?><?= $day . ', ' ?><?= $year; ?></h6>
                    <h2><span class="bg-color"><?= $feature["title"]; ?></span></h2>
                    <p class="read-more-desktop d-none d-md-block">
-                       <a href="views/single-post.php?posts_id=<?= $feature["posts_id"]; ?>">Read featured article!</a>
+                       <a href="views/single-post.php?posts_id=<?= $feature["posts_id"]; ?>">Read article</a>
+                       <hr>
                     </p>
                </div>
                <?php if(isset($_SESSION['user']) && $_SESSION['user'] == "admin"): ?>
