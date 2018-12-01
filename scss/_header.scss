@@ -147,7 +147,8 @@ and the hamburger menu when collapsed */
     
     // Login button 
     .login-button {
-        @include buttonStyle($primalColorD, #fff); 
+        @include buttonStyle($primalColorD, #fff);
+        margin: 0; 
         
         &:hover{
             @include buttonStyle($secondColorP, #fff); 
