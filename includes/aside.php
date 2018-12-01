@@ -10,14 +10,14 @@ $asidePosts = $object->getPostAside();
         <h5>TOP ARTICLES</h5>
         <hr>
         <div class="row latest-posts">
-            <?php foreach ($asidePosts as $post) :?>
+            <?php foreach ($asidePosts as $asidePost) :?>
             <article class="col-6 col-md-12 row">
                 <div class="article-images col-4">
-                    <img src="<?= $siteroot ?>/includes/<?= $post["image"]; ?>" alt="<?= $post["title"]; ?>">
+                    <img src="<?= $siteroot ?>/includes/<?= $asidePost["image"]; ?>" alt="<?= $asidePost["title"]; ?>">
                 </div>
                 <div class="article-contents col-7">
-                    <h2 class="aside-post-title"><?= $post["title"]; ?></h2>
-                    <p><?= date('M d Y', strtotime($post["created_on"])); ?></p>
+                    <h2 class="aside-post-title"><?= $asidePost["title"]; ?></h2>
+                    <p><?= date('M d Y', strtotime($asidePost["created_on"])); ?></p>
                 </div>
             </article>
             <?php endforeach ;?>
