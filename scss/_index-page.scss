@@ -124,11 +124,11 @@
             text-align: left;
             letter-spacing: 0.5px;
             color:white;
-            background-color: $secondColorP;
+          //  background-color: $secondColorP;
         
                 .bg-color {
-                   // background-color: $secondColorP;
-                   // padding: 5px;
+                   background-color: $secondColorP;
+                   padding: 5px;
                 }
         
     }
@@ -171,7 +171,7 @@
 @media screen and (min-width: 992px){
 
     .feature-post{
-       // @include toCheckStyle(blue);
+       margin: 0;
     }
 
     .hero-image {
@@ -201,11 +201,12 @@
         top: 15%;
         //left: 20px;
         padding-right: 20px;
-        padding-left: 20px;
+        padding-left: 0px;
         width: 40%;
         //@include toCheckStyle(pink); 
         
         h2 {
+            margin-top: 0.7rem;
             opacity: 1;
             font-family: 'Merriweather';
             font-style: normal;
@@ -243,7 +244,14 @@
             }
 
             h6{
-                color:$secondColorP;
+                font-family: Open Sans;
+                font-style: normal;
+                font-weight: 600;
+                text-decoration: none;
+                font-size: 14px;
+                letter-spacing: 0.5px;
+                color: $secondColorP;
+                
             }
 
             .read-more-desktop {
@@ -301,7 +309,7 @@
         top: 15%;
         //left: 20px;
         padding-right: 20px;
-        padding-left: 20px;
+        padding-left: 0px;
         width: 40%;
         //@include toCheckStyle(pink); 
         

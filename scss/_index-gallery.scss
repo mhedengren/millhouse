@@ -39,7 +39,7 @@ margin-bottom: 1rem;
     font-style: normal;
     font-weight: 900;
     line-height: 24px;
-    font-size: 20px;
+    font-size: 1rem;
     text-align: center;
     letter-spacing: 0.5px;
     color: $secondColorP;
@@ -103,7 +103,7 @@ margin-bottom: 1rem;
     font-style: normal;
     font-weight: bold;
     line-height: 30px;
-    font-size: 18px;
+    font-size: 1rem;
     letter-spacing: 0.5px;
     color: #1C3045;
     margin: 0;
@@ -163,5 +163,14 @@ margin-bottom: 1rem;
     }
     .remove-button a {
         color: red;
+    }
+
+
+    @media screen and (min-width: 992px) {
+
+
+        .gallery {
+            //padding-right: 1rem;
+        }
     }
 
