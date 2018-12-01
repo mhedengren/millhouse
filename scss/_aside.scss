@@ -103,9 +103,9 @@ aside{
             
 
         .container{
-         //   @include toCheckStyle(blue);
-
+         padding: 1rem;
             article{
+                margin-bottom: 1rem;
                 .article-images{
                     height: 6rem;
 

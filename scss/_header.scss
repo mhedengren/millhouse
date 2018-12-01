@@ -82,20 +82,43 @@ and the hamburger menu when collapsed */
 }
   }
 
-// Desktop navigation
-@media screen and (min-width: 992px){
-
-    header {
-        margin: 1rem 0;
-
-    }
-
-    //ite logo.
+//Tablet
+@media screen and (min-width: 768px){
+     //site logo.
     .navbar-brand{
         margin: 0px;
         padding:0px;
             img {
-            width:100px;
+            width:50px;
+            
+    }
+}
+   
+}
+
+// Desktop navigation
+@media screen and (min-width: 992px){
+
+    .container {
+        //@include toCheckStyle(blue);
+    }
+
+    header {
+        margin: 2rem 0;
+       // @include toCheckStyle(blue);
+
+    }
+
+    .navbar {
+        padding: 0 1rem;
+    }
+
+    //site logo.
+    .navbar-brand{
+        margin: 0px;
+        padding:0px;
+            img {
+            width:50px;
             
     }
 }
