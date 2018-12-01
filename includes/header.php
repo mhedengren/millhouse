@@ -33,16 +33,16 @@
                     </li>
                     <?php endif; ?>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">WATCHES <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="<?= $siteroot; ?>/views/categories.php">WATCHES <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= $siteroot; ?>/views/single-post.php">SUNGLASSES</a>
+                        <a class="nav-link" href="<?= $siteroot; ?>/views/categories.php">SUNGLASSES</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= $siteroot; ?>/views/single-post.php">HOME DECOR</a>
+                        <a class="nav-link" href="<?= $siteroot; ?>/views/categories.php">HOME DECOR</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= $siteroot; ?>/views/single-post.php">CATEGORIES</a>
+                        <a class="nav-link" href="<?= $siteroot; ?>/views/categories.php">CATEGORIES</a>
                     </li>
                 </ul>
             </div>
