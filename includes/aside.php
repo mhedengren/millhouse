@@ -1,9 +1,15 @@
+<?php
+include 'classes/Aside.php';
+$object = new Aside($pdo);
+$asidePosts = $object->getPostAside();
+?>
+
 <aside class="d-none d-md-block col-lg-4">
     <div class="container">
         <h5>TOP ARTICLES</h5>
         <hr>
         <div class="row latest-posts">
-            <?php foreach ($latestPosts as $post) :?>
+            <?php foreach ($asidePosts as $post) :?>
             <article class="col-6 col-md-12 row">
                 <div class="article-images col-4">
                     <img src="includes/<?= $post["image"]; ?>" alt="<?= $post["title"]; ?>">
