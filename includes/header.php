@@ -2,12 +2,7 @@
 <header>
     <div class="container">
         <nav class="navbar navbar-expand-lg">
-            <div class="logo-mobile">
-            <a href="<?= $siteroot; ?>/index.php" class="navbar-brand order-2"><img src="<?= $siteroot; ?>/images/logo.svg" alt="Home"></a>
-            </div>
-            <div class="logo-desktop order-1 d-none ">
-            <a href="<?= $siteroot; ?>/index.php" class="navbar-brand"><img src="<?= $siteroot; ?>/images/logo_dark.png" alt="Home"></a>
-            </div>
+            <a href="<?= $siteroot; ?>/index.php" class="navbar-brand order-1"><img src="<?= $siteroot; ?>/images/logo.svg" alt="Home"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
                     aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <img src="<?= $siteroot; ?>/images/hamburger.svg" alt="hamburger-Menu">
