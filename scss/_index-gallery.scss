@@ -108,6 +108,10 @@ margin-bottom: 1rem;
     color: #1C3045;
     margin: 0;
     padding: 10px 0 5px 0;
+    //This makes the title automatically break off and add the ...
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 
     }
 
@@ -123,13 +127,13 @@ margin-bottom: 1rem;
         padding: 0;
         text-align: left;
         margin-bottom: 0;
+
         //This makes the description automatically break off and add the ...
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
         
-        
-        }
+    }
 }
 
 
