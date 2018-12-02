@@ -3,48 +3,53 @@
 @import "mixins";
 
 aside{
-   //Inizialise bootrap default margin
-   .row, .row>div, main{
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 0;
-    padding-right: 0;
-}
+    //Inizialise bootrap default margin
+    .row, .row>div, main{
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 0;
+        padding-right: 0;
+
+        a:hover{
+            color: $secondColorP;
+        }
+
+    }
     .container{
         background-color: $paleGrayB;
-       // margin-top: 1rem;
-       padding-top: 1rem;
-       padding-bottom: 1rem;
+        // margin-top: 1rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
 
-      
+
         h5{
-        font-family: Open Sans;
-        font-style: normal;
-        font-weight: bold;
-        line-height: 24px;
-        font-size: 16px;
-        letter-spacing: 0.5px;
-        color: #252525;
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: bold;
+            line-height: 24px;
+            font-size: 16px;
+            letter-spacing: 0.5px;
+            color: #252525;
 
         }
 
         article{
-           // @include toCheckStyle(pink); 
+            // @include toCheckStyle(pink); 
             margin-bottom: 1%;
             padding-left: 0;
             padding-right: 0;
 
             //borders for checking
             div{
-               // @include toCheckStyle(#9FF781);
+                // @include toCheckStyle(#9FF781);
             }
 
             nav, img, i, ul, li{
-               // @include toCheckStyle(pink);
+                // @include toCheckStyle(pink);
             }
 
             main, aside, button{
-               // @include toCheckStyle(blue);
+                // @include toCheckStyle(blue);
             }
 
             .article-images{
@@ -64,14 +69,14 @@ aside{
             }
         }
 
-       
+
         .button-color{
             @include buttonStyle($secondColorP,#fff);
             margin: 0px; 
 
             &:hover{
-               @include buttonStyle($primalColorD,#fff); 
-               margin: 0px; 
+                @include buttonStyle($primalColorD,#fff); 
+                margin: 0px; 
             }
         }
     }
@@ -82,15 +87,15 @@ aside{
     aside{
 
         h2 {
-        font-family: Open Sans;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 20px;
-        font-size: 12px;
-        letter-spacing: 0.5px;
-        color: #1C3045;
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 20px;
+            font-size: 12px;
+            letter-spacing: 0.5px;
+            color: #1C3045;
         }
-            p {
+        p {
             font-family: Open Sans;
             font-style: normal;
             font-weight: 600;
@@ -98,12 +103,12 @@ aside{
             font-size: 12px;
             letter-spacing: 0.5px;
             color: rgba(28, 48, 69, 0.5);
-            }
+        }
 
-            
+
 
         .container{
-         //   @include toCheckStyle(blue);
+            //   @include toCheckStyle(blue);
 
             article{
                 .article-images{
