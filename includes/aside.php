@@ -3,6 +3,7 @@ include dirname(__DIR__) .'/classes/Aside.php';
 
 $object = new Aside($pdo);
 $asidePosts = $object->getPostAside();
+
 ?>
 
 <aside class="d-none d-md-block col-lg-4">
@@ -11,15 +12,18 @@ $asidePosts = $object->getPostAside();
         <hr>
         <div class="row latest-posts">
             <?php foreach ($asidePosts as $asidePost) :?>
-            <article class="col-6 col-md-12 row">
-                <div class="article-images col-4">
-                    <img src="<?= $siteroot ?>/includes/<?= $asidePost["image"]; ?>" alt="<?= $asidePost["title"]; ?>">
-                </div>
-                <div class="article-contents col-7">
-                    <h2 class="aside-post-title"><?= $asidePost["title"]; ?></h2>
-                    <p><?= date('M d Y', strtotime($asidePost["created_on"])); ?></p>
-                </div>
-            </article>
+
+            <a href="<?= $siteroot ?>/views/single-post.php?posts_id=<?= $asidePost["posts_id"]; ?>">
+                <article class="col-6 col-md-12 row">
+                    <div class="article-images col-4">
+                        <img src="<?= $siteroot ?>/includes/<?= $asidePost["image"]; ?>" alt="<?= $asidePost["title"]; ?>">
+                    </div>
+                    <div class="article-contents col-7">
+                        <h2 class="aside-post-title"><?= $asidePost["title"]; ?></h2>
+                        <p><?= date('M d Y', strtotime($asidePost["created_on"])); ?></p>
+                    </div>
+                </article>
+            </a>
             <?php endforeach ;?>
         </div>
         <hr>
