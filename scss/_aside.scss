@@ -20,7 +20,6 @@ aside{
         // margin-top: 1rem;
         padding-top: 1rem;
         padding-bottom: 1rem;
-        font-size: $textSize;
 
         h2{
             //font-family: Open Sans;
@@ -36,15 +35,13 @@ aside{
             padding-right: 0;
             
             h5 {
+                font-size: $textSize;
                 font-weight: bold;
-                font-size: 12px;
-                letter-spacing: 0.5px;
-                color: #1C3045;
+                color: $primalColorD;
             }
             p {
                 font-size: 12px;
                 letter-spacing: 0.5px;
-                color: rgba(28, 48, 69, 0.5);
             }
 
 
@@ -74,7 +71,7 @@ aside{
             }
 
             .article-contents p{
-                color: $paleGray;
+                color: $secondColorP;
             }
         }
 
