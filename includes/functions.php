@@ -20,7 +20,7 @@ function is_admin($location){
     }
 }
 
-//This function displays error messages which is corrected in Class
+//This function displays error messages which are corrected in Class
 function display_errors($errors = array()){
     $output = '';
     if(!empty($errors)){
