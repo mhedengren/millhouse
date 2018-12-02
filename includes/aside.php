@@ -8,7 +8,7 @@ $asidePosts = $object->getPostAside();
 
 <aside class="d-none d-md-block col-lg-4">
     <div class="container">
-        <h5>TOP ARTICLES</h5>
+        <h2>TOP ARTICLES</h2>
         <hr>
         <div class="row latest-posts">
             <?php foreach ($asidePosts as $asidePost) :?>
@@ -19,7 +19,7 @@ $asidePosts = $object->getPostAside();
                         <img src="<?= $siteroot ?>/includes/<?= $asidePost["image"]; ?>" alt="<?= $asidePost["title"]; ?>">
                     </div>
                     <div class="article-contents col-7">
-                        <h2 class="aside-post-title"><?= $asidePost["title"]; ?></h2>
+                        <h5 class="aside-post-title"><?= $asidePost["title"]; ?></h5>
                         <p><?= date('M d Y', strtotime($asidePost["created_on"])); ?></p>
                     </div>
                 </article>
@@ -27,7 +27,7 @@ $asidePosts = $object->getPostAside();
             <?php endforeach ;?>
         </div>
         <hr>
-        <h5>GET WEEKLY UPPDATES</h5>
+        <h2>GET WEEKLY UPPDATES</h2>
         <div>
             <form action="#" method="post">
                 <div class="form-group">

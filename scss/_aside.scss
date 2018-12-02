@@ -20,17 +20,13 @@ aside{
         // margin-top: 1rem;
         padding-top: 1rem;
         padding-bottom: 1rem;
+        font-size: 0.8em;
 
-
-        h5{
-            font-family: Open Sans;
-            font-style: normal;
+        h2{
+            //font-family: Open Sans;
             font-weight: bold;
-            line-height: 24px;
-            font-size: 16px;
-            letter-spacing: 0.5px;
-            color: #252525;
-
+            font-size: 1rem;
+            color: $colorAside;
         }
 
         article{
@@ -38,6 +34,19 @@ aside{
             margin-bottom: 1%;
             padding-left: 0;
             padding-right: 0;
+            
+            h5 {
+                font-weight: bold;
+                font-size: 12px;
+                letter-spacing: 0.5px;
+                color: #1C3045;
+            }
+            p {
+                font-size: 12px;
+                letter-spacing: 0.5px;
+                color: rgba(28, 48, 69, 0.5);
+            }
+
 
             //borders for checking
             div{
@@ -85,28 +94,7 @@ aside{
 //md (Large devices (desktops, 992px and up))
 @media screen and (min-width: 992px){
     aside{
-
-        h2 {
-            font-family: Open Sans;
-            font-style: normal;
-            font-weight: 600;
-            line-height: 20px;
-            font-size: 12px;
-            letter-spacing: 0.5px;
-            color: #1C3045;
-        }
-        p {
-            font-family: Open Sans;
-            font-style: normal;
-            font-weight: 600;
-            line-height: 20px;
-            font-size: 12px;
-            letter-spacing: 0.5px;
-            color: rgba(28, 48, 69, 0.5);
-        }
-
-
-
+        
         .container{
             //   @include toCheckStyle(blue);
 
