@@ -45,12 +45,12 @@ session_start();
 
                     </div>
 
-                    <button type="submit" name="login" class="btn button-color">Login</button>
+                    <button type="submit" name="login" class="btn button-color">LOGIN</button>
 
                 </form>
 
 
-                <a href="<?= $siteroot; ?>/views/register-form.php">New? Sign up!</a>
+               <p>New to the site? <a href="<?= $siteroot; ?>/views/register-form.php">Sign up!</a></p>
 
 
             </div>
