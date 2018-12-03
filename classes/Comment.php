@@ -55,4 +55,19 @@ class Comments{
             ]
         );
     }
+
+    public function readComments($posts_id)
+    {
+        $statement = $this->pdo->prepare("SELECT users.username, users.id, comments.content, comments.posts_id, comments.created_by, comments.created_on FROM comments
+        INNER JOIN users
+        ON users.id = comments.created_by
+        WHERE posts_id = :posts_id");
+        $statement->execute(
+            [
+            ":posts_id" => $posts_id
+            ]
+        );
+        $comments = $statement->fetchAll();
+        return $comments;
+    }
 }

@@ -4,40 +4,40 @@ session_start();
 
 //Defines site root
 
-    include '../config.php';
-    //Defines page title
-    $page_title = "single-post";
-    include '../includes/head.php';
-    include '../includes/header.php';
-    include '../includes/database-connection.php';
-    include '../includes/select_feature_post.php';
-    //this is my SinglePost class 
-    include '../classes/Single-post.php';
-    //this initiates a new object
-    $object = new SinglePost($pdo);        
-    $post = $object->getSinglePost();
-    include '../includes/date-single.php';
-    //include '../classes/Comment.php';
-    //$object2 = new Comments($pdo);        
-    //$comment = $object2->addComment();
-
+include '../config.php';
+//Defines page title
+$page_title = "single-post";
+include '../includes/head.php';
+include '../includes/header.php';
+include '../includes/database-connection.php';
+include '../includes/select_feature_post.php';
+//this is my SinglePost class 
+include '../classes/Single-post.php';
+//this initiates a new object
+$object = new SinglePost($pdo);        
+$post = $object->getSinglePost();
+include '../includes/date-single.php';
+//this is my Comment class
+include '../classes/Comment.php';
+$comments = new Comments($pdo);
+$read = $comments->readComments($_GET['posts_id']);
 ?>
 <div class="container row">
-    
-<main class="container col-lg-8" id="single-post">
-<!--this allows all info from a single post to be shown from the database-->
-    <article class="hero-image-post-container row justify-content-center">
-        <div class="feature-post col-10  text-center">
-            <!--takes image from database-->
-            <div class="hero-image">
-                <img src="../includes/<?= $post["image"]; ?>" alt="Hero-image">
-            </div>
-            <!--takes date and displays clean from database-->
-            <div class="date row justify-content-center">
-                <div class="date-circle">    
-                    <h6 class="post-date"><?= $month; ?><br><?= $day; ?></h6>
+
+    <main class="container col-lg-8" id="single-post">
+        <!--this allows all info from a single post to be shown from the database-->
+        <article class="hero-image-post-container row justify-content-center">
+            <div class="feature-post col-10  text-center">
+                <!--takes image from database-->
+                <div class="hero-image">
+                    <img src="../includes/<?= $post["image"]; ?>" alt="Hero-image">
                 </div>
-            </div>
+                <!--takes date and displays clean from database-->
+                <div class="date row justify-content-center">
+                    <div class="date-circle">    
+                        <h6 class="post-date"><?= $month; ?><br><?= $day; ?></h6>
+                    </div>
+                </div>
                 <!--takes title from database up to 767.9px-->
                 <h2 class="post-title-mobile d-md-none"><?= $post["title"]; ?></h2>
                 <!--takes title from database for tablet and larger-->
@@ -53,20 +53,35 @@ session_start();
                 <p class="post-content"><?= $post["content"]; ?></p>
                 <p class="written-by d-md-none text-left">Written by</p>
                 <p class="post-author-mobile d-md-none text-left"><?= $post["username"]; ?></p>                     
+            </div>
+        </article>
+        <div class="row justify-content-center">
+            <div class="d-lg-none col-lg-10 text-center">
+                <hr class="after-post">
+            </div>
         </div>
-    </article>
-    <div class="row justify-content-center">
-        <div class="d-lg-none col-lg-10 text-center">
-            <hr class="after-post">
-        </div>
-    </div>
-    
-</main>
 
-<?php include '../includes/aside.php'; ?>
+    </main>
+
+    <?php include '../includes/aside.php'; ?>
 
 </div>
 
+<div class="row">
+    <div class="col-6">
+        <h2>Comments()</h2>
+    </div>
+</div>
+    <?php foreach ($read as $single_comment) :?>
+    <div class="row">
+        <div class>
+            <p><?= $single_comment["username"]; ?></p>
+            <p><?= $single_comment["created_on"]; ?></p>
+            <p><?= $single_comment["content"]; ?></p>
+
+        </div>
+    </div>
+    <?php endforeach; ?>
     <div class="row justify-content-center">
         <div class="d-none d-lg-block col-lg-10 text-center">
             <hr class="after-post">
@@ -78,16 +93,16 @@ session_start();
             <form action="../includes/comments.php" method="POST">
                 <label for="write-comment"></label>
                 <input type="hidden" name="posts_id" value="<?= $post['posts_id']; ?>"> 
-                
+
                 <input type="text" id="write-comment" name="content" placeholder="Write comment here....">
                 <input type="submit" value="POST" id="post-comment" name="post-comment">
             </form>
         </div>
     </div>
-    
 
-<?php
+
+    <?php
 
     include '../includes/footer.php';
-?>    
+    ?>    
 

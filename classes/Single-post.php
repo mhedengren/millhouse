@@ -12,13 +12,13 @@ class SinglePost
     $this->pdo = $pdo;
   }
 
+  //Select statment to prepare and fetch single post
   public function getSinglePost(){
-    //$posts_id = isset($_GET['posts_id']) ? $_GET['posts_id'] : 0;
 
     $stmt = $this->pdo->prepare("SELECT posts_id, posts.title, posts.description, posts.created_by, posts.created_on, posts.image, posts.content, 
     users.username FROM posts
     INNER JOIN users
-    ON posts.created_by = users.admin
+    ON posts.created_by = users.id
     where posts_id = :posts_id");
     
     $stmt->execute([
@@ -27,6 +27,6 @@ class SinglePost
 
     $singlePost = $stmt->fetch();
     return $singlePost; 
-    //$scid = isset($_GET['scid']) ? $_GET['scid'] : 0;
+   
   }
 }
