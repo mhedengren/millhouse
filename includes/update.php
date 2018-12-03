@@ -63,19 +63,18 @@ if(isset($_POST['submit'])){
   if($upload_ok){
     try {
         $statement = $pdo->prepare(
-          'UPDATE posts SET title, description, content, created_by, created_on, image WHERE posts_id = :posts_id'
+          'UPDATE posts SET title = :postTitle, description = :postDesc, content = :postCont, image = :image
+           WHERE posts_id = :posts_id'
           );
 
         $statement->execute(array(
             ':postTitle' => $postTitle,
             ':postDesc' => $postDesc,
             ':postCont' => $postCont,
-            ':created_by' => 1,
-            ':postDate' => $created_on,
-            ':image' => $new_location,
-            ':posts_id' => $postId
+            ':posts_id' => $postId,
+            ':image' => $new_location
         ));
-
+/*
         $statement = $pdo->prepare(
           'INSERT INTO categories (category) VALUES (:categories)'
         );
@@ -83,11 +82,11 @@ if(isset($_POST['submit'])){
         $statement->execute(array(
           ':categories' => $category
         ));
-
+*/
         
 
         //redirect to admin page
-        header('Location: ../views/admin-page.php?action=added');
+        header('Location: ../views/edit-post.php?action=added');
         exit;
 
     } catch(PDOException $e) {
