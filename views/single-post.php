@@ -23,12 +23,12 @@ $comments = new Comments($pdo);
 $read = $comments->readComments($_GET['posts_id']);
 
 ?>
-<div class="container row">
+<div class="container">
 
-    <main class="container col-lg-8" id="single-post">
+    <main class="row justify-content-center feature-post" id="single-post">
         <!--this allows all info from a single post to be shown from the database-->
         <article class="hero-image-post-container row justify-content-center">
-            <div class="feature-post col-10  text-center">
+            <div class="feature-post col-10  text-left">
                 <!--takes image from database-->
                 <div class="hero-image">
                     <img src="../includes/<?= $post["image"]; ?>" alt="Hero-image">
@@ -67,6 +67,8 @@ $read = $comments->readComments($_GET['posts_id']);
     <?php include '../includes/aside.php'; ?>
 
 </div>
+
+<div class="container">
 
 <div class="row">
     <div class="col-6">
@@ -108,6 +110,7 @@ $read = $comments->readComments($_GET['posts_id']);
         <p>Please log in to comment</p>
         <?php endif; ?>
         </div>
+    </div>
     </div>
 
 
