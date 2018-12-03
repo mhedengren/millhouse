@@ -77,9 +77,9 @@ session_start();
         <div class="col-9 text-center">
             <form action="../includes/comments.php" method="POST">
                 <label for="write-comment"></label>
-                <input type="hidden" name="posts_id" <?= $post["posts_id"]; ?>> 
-                <input type="hidden" name="username" <?= $post["username"]; ?>>
-                <input type="text" id="write-comment" placeholder="Write comment here....">
+                <input type="hidden" name="posts_id" value="<?= $post['posts_id']; ?>"> 
+                
+                <input type="text" id="write-comment" name="content" placeholder="Write comment here....">
                 <input type="submit" value="POST" id="post-comment" name="post-comment">
             </form>
         </div>
@@ -88,6 +88,11 @@ session_start();
 
 <?php
 var_dump($post["posts_id"]);
+var_dump($post["username"]);
+var_dump($post["created_by"]);
+var_dump($_SESSION["username"]);
+var_dump($_SESSION["user_id"]);
+
     include '../includes/footer.php';
 ?>    
 

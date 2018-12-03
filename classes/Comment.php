@@ -34,17 +34,26 @@ class Comments{
         $posts_id = $statement->fetch();
         return $posts_id;
     }
-
+/*
+    public function addUsernameSession()
+    {
+        $statement = $this->pdo->prepare("SELECT username FROM users");
+        $statement->execute();
+    }
+        $created_by = $statement->fetch();
+        return $created_by
+*/        
     //Attempting to insert into comments table
     public function addComments()
     {
         $statement = $this->pdo->prepare("INSERT INTO comments (content, 
         posts_id, created_by, created_on) VALUES (:content, :posts_id, :created_by, :created_on)");
         $statement->execute(
+
             [
             ":content" => $this->content,
             ":posts_id" => $this->posts_id,
-            ":created_by" => $_SESSION['username'],
+            ":created_by" => $this->created_by,
             ":created_on" => $this->date
             ]
         );
