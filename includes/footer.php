@@ -1,15 +1,21 @@
 <footer class="container-fluid" id="footer">
    
         <div class="row footer-color d-flex align-items-center justify-content-center">
-            <div class="col-sm-12 col-md-6 text-center">
+            <div class="col-6 text-center">
                 <h3 class="footer-title">Join the Club</h3>
                     <p class="footer-p">Sign up now and get 10% off in-store or online +<br>
                     always free delivery!</p>
             </div>
-            <div class="col-sm-12 col-md-6 text-center">
+            <div class="col-6 text-center">
                <a href="#" class="button-link">READ MORE</a>
             </div>
-        </div>    
+        </div> 
+
+        <div class="row justify-content-center">
+            <div class="col-12 text-center">
+                <img src="../images/logo_dark.png" alt="logo with Millhouse text" class="footer-logo">
+            </div>
+        </div>   
 
     </footer>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
