@@ -31,6 +31,7 @@ class Posts
   }
 
   public function edit_post(){
+
     $stmt = $this->pdo->prepare("SELECT * FROM posts where posts_id = :posts_id");
     $stmt->execute([
       ":posts_id" => 89,
