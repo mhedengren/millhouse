@@ -27,13 +27,18 @@ include '../includes/header.php';
             </div>
 
 
+            <?php
+            $statement = $pdo->prepare(
+            "SELECT categories_id FROM categories WHERE category = 'accessories'"
 
+            );
 
+            echo $statement->execute();
+        
 
+            ?>
 
-
-
-
+         unicorns
         </div> <!-- container -->  
 
     </main>
