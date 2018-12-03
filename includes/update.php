@@ -16,12 +16,15 @@ if(isset($_POST['submit'])){
   $created_on = date('Y-m-d');
   $image = $_FILES['image'];
   $category = $_POST['categories'];
+
+  //Post ID fetched from a hidden input-field in edit-post.php
   $postId = $_POST['postId'];
 
 
   $temporary_location = $image["tmp_name"];
   $new_location = "uploads/" . $image["name"];
   $upload_ok = move_uploaded_file($temporary_location, $new_location);
+
 /*
   //Check if the user has uploaded an image
   if (!isset($_FILES['image']) || $_FILES['image']['error'] == UPLOAD_ERR_NO_FILE) {
@@ -59,23 +62,22 @@ if(isset($_POST['submit'])){
     
 
 
-  //if all the inputs have been filled in then insert the data into the database
+  //if all the inputs have been filled in then update the data in the database
   if($upload_ok){
     try {
         $statement = $pdo->prepare(
-          'UPDATE posts SET title, description, content, created_by, created_on, image WHERE posts_id = :posts_id'
+          'UPDATE posts SET title = :postTitle, description = :postDesc, content = :postCont, image = :image
+           WHERE posts_id = :posts_id'
           );
 
         $statement->execute(array(
             ':postTitle' => $postTitle,
             ':postDesc' => $postDesc,
             ':postCont' => $postCont,
-            ':created_by' => 1,
-            ':postDate' => $created_on,
-            ':image' => $new_location,
-            ':posts_id' => $postId
+            ':posts_id' => $postId,
+            ':image' => $new_location
         ));
-
+/*
         $statement = $pdo->prepare(
           'INSERT INTO categories (category) VALUES (:categories)'
         );
@@ -83,11 +85,11 @@ if(isset($_POST['submit'])){
         $statement->execute(array(
           ':categories' => $category
         ));
-
+*/
         
 
         //redirect to admin page
-        header('Location: ../views/admin-page.php?action=added');
+        header('Location: ../index.php?action=added');
         exit;
 
     } catch(PDOException $e) {
