@@ -74,7 +74,7 @@ $read = $comments->readComments($_GET['posts_id']);
 </div>
     <?php foreach ($read as $single_comment) :?>
     <div class="row">
-        <div class>
+        <div class="col-10">
             <p><?= $single_comment["username"]; ?></p>
             <p><?= date('F d Y', strtotime($single_comment["created_on"])); ?></p>
             <p><?= $single_comment["content"]; ?></p>
