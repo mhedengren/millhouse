@@ -48,7 +48,7 @@ and the hamburger menu when collapsed */
 
  // Mobile navbar link properties 
 .nav-link {
-    font-family: 'Merriweather';
+    font-family: 'Open Sans';
     color: $primalColorD;
     font-size: 2rem;
     text-align: left;
@@ -69,19 +69,6 @@ and the hamburger menu when collapsed */
             transition: height .2s ease-out;
   }
 
-  @media screen and (min-width: 768px){
-
-      /* Site logo.*/
-      .navbar-brand{
-        margin: 0px;
-        padding:0px;
-            img {
-            width:150px;
-            
-    }
-}
-  }
-
 //Tablet
 @media screen and (min-width: 768px){
      //site logo.
@@ -96,7 +83,7 @@ and the hamburger menu when collapsed */
 
  // Tablet navbar link properties 
  .nav-link {
-    font-family: 'Merriweather';
+    font-family: 'Open Sans';
     color: $primalColorD;
     font-size: 1.3rem;
     text-align: left;
@@ -148,10 +135,11 @@ and the hamburger menu when collapsed */
     }
     
     .nav-link {
-        font-family: 'Merriweather';
+        font-family: 'Open Sans';
         color: $primalColorD;
         font-size: 1rem;
         text-align: center;
+        font-weight: 900;
        
         
     }
@@ -177,20 +165,4 @@ and the hamburger menu when collapsed */
 
     }
 
-    /*
-    .login-button a {
-        font-family: Open Sans;
-        font-style: normal;
-        font-weight: bold;
-        line-height: normal;
-        font-size: 16px;
-        letter-spacing: 0.5px;
-        color: #FFFFFF;
-    }
-      */  
 }
-
-    
-
-
-

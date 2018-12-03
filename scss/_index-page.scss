@@ -311,7 +311,7 @@
         //left: 20px;
         padding-right: 20px;
         padding-left: 0px;
-        width: 40%;
+        width: 50%;
         //@include toCheckStyle(pink); 
         
         h2 {
@@ -320,13 +320,14 @@
             font-style: normal;
             font-weight: bolder;
             line-height: 60px;
-            font-size: 3rem;
+            font-size: 2.7rem;
             text-align: left;
-           // letter-spacing: 0.5px;
+            letter-spacing: 0.5px;
             color:white;
             //@include toCheckStyle(pink); 
             background-color: $secondColorP;
             padding: 0.8rem;
+            font-weight: 900;
 
 
           

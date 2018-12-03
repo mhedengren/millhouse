@@ -29,8 +29,21 @@ class Posts
       return true;
   }
 
-  public function update_post($newPost)
+  public function edit_post($newPost)
   {
-    header('Location: ../views/update-post.php');
+     // Preperare the query
+     $stmt = $this->pdo->prepare("SELECT * FROM posts WHERE posts_id = :posts_id");
+     $stmt->execute(
+         [
+     // Fetches the unique post id and executes the query.
+     ":posts_id" => $_GET["id"],
+         ]
+     );
+     $postValues = $stmt->fetchAll();
+     var_dump($postValues);
+     return $postValues;
+  
+    
+    
   }
 }

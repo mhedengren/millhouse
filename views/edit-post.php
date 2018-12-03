@@ -12,11 +12,19 @@ $page_title = 'Admin Panel';
 
 include '../includes/head.php'; 
 include '../includes/header.php';
+//Class
+include '../classes/Posts.php';
 
 ?>
 
 <body>
 
+<?php
+$object = new Posts($pdo);
+$object->edit_post();
+$post = $object->edit_post();
+
+?>
 
     <main id="admin-panel">
 
