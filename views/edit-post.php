@@ -17,7 +17,7 @@ include '../includes/header.php';
 include '../classes/Edit.php';
 
 $object = new SinglePost($pdo);        
-$post = $object->getSinglePost();
+$postValue = $object->getSinglePost();
 
 ?>
 
@@ -36,15 +36,17 @@ $post = $object->getSinglePost();
 
             <div class="row new-post">
                 <div class="col-sm-12 col-md-8">
-                    <h2 class="add-new-post">Add New Post</h2>
+                    <h2 class="add-new-post">Edit your post</h2>
                     <?php new_post_form_check(); ?>
                     <form action="../includes/update.php" method="POST" enctype="multipart/form-data" id="upload-form">
                         <label for="title">Title</label>
-                        <input type="text" id="title" name="postTitle" value="<?= $post["title"] ?>" class="form-control" placeholder="Your title here"><!-- if validation fails then show all content entered into the form's input and textarea -->
+                        <input type="text" id="title" name="postTitle" value="<?= $postValue["title"] ?>" class="form-control" placeholder="Your title here"><!-- if validation fails then show all content entered into the form's input and textarea -->
                         <label for="desc">Description</label>
-                        <input type="text" id="desc" name="postDesc" value="<?= $post["description"] ?>" class="form-control" placeholder="Your description here">
+                        <input type="text" id="desc" name="postDesc" value="<?= $postValue["description"] ?>" class="form-control" placeholder="Your description here">
+                        <!-- hidden post id value -->
+                        <input hidden type="text" id="postId" name="postId" value="<?= $postValue["posts_id"] ?>" class="form-control" placeholder="Your description here">
                         <label for="content">Content</label>
-                        <textarea name="postCont" id="content" class="form-control">  <div id="froala-editor"><p><?= $post["content"] ?> </div></textarea>
+                        <textarea name="postCont" id="content" class="form-control">  <?= $postValue["content"] ?> </textarea>
                         <input type="submit" name="submit" value="Send">
                     </form>
                 </div>

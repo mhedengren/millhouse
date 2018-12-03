@@ -29,7 +29,7 @@ class Posts
       header('Location: ../index.php');
       return true;
   }
-
+/*
   public function edit_post(){
 
     $stmt = $this->pdo->prepare("SELECT * FROM posts where posts_id = :posts_id");
@@ -40,6 +40,7 @@ class Posts
     return $postValues;
   
   }
+  */
 }
 
   

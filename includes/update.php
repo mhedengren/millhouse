@@ -16,18 +16,13 @@ if(isset($_POST['submit'])){
   $created_on = date('Y-m-d');
   $image = $_FILES['image'];
   $category = $_POST['categories'];
-  
-include '../classes/Edit.php';
+  $postId = $_POST['postId'];
 
-$object = new SinglePost($pdo);        
-$post = $object->getSinglePost();
-$id = $post["id"];
-var_dump($post);
 
   $temporary_location = $image["tmp_name"];
   $new_location = "uploads/" . $image["name"];
   $upload_ok = move_uploaded_file($temporary_location, $new_location);
-
+/*
   //Check if the user has uploaded an image
   if (!isset($_FILES['image']) || $_FILES['image']['error'] == UPLOAD_ERR_NO_FILE) {
       header('Location: ../views/admin-page.php?upload=empty');
@@ -43,7 +38,7 @@ var_dump($post);
         exit();
       }
     } 
-
+*/
 
   //Check if the text inputs are empty
   if(empty($_POST["postTitle"]) && empty($_POST["postDesc"]) && empty($_POST["postCont"])) {
@@ -68,9 +63,8 @@ var_dump($post);
   if($upload_ok){
     try {
         $statement = $pdo->prepare(
-          'UPDATE posts SET title = :postTitle WHERE title = :postTitle);'
+          'UPDATE posts SET title, description, content, created_by, created_on, image WHERE posts_id = :posts_id'
           );
-
 
         $statement->execute(array(
             ':postTitle' => $postTitle,
@@ -78,9 +72,8 @@ var_dump($post);
             ':postCont' => $postCont,
             ':created_by' => 1,
             ':postDate' => $created_on,
-            ':id' => $id,
-            ':image' => $new_location
-            
+            ':image' => $new_location,
+            ':posts_id' => $postId
         ));
 
         $statement = $pdo->prepare(
@@ -90,6 +83,8 @@ var_dump($post);
         $statement->execute(array(
           ':categories' => $category
         ));
+
+        
 
         //redirect to admin page
         header('Location: ../views/admin-page.php?action=added');

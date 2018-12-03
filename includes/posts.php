@@ -42,5 +42,5 @@ if($action === "edit_post")
    $posts->edit_post($_POST);
   }
 
-  header('Location: ../views/edit-post.php');
+  
   
