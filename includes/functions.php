@@ -1,5 +1,5 @@
 <?php
-//Redirect
+//This function redirects to a specific page
 /*
 * Example:
 * redirect_to('../views/register-form.php');
@@ -9,14 +9,18 @@ function redirect_to($location){
     exit; //exit() should be set if more action is set after this redirect.
 }
 
-//Redirect if user is not logged in
-function is_login($location){
-    if(!isset($_SESSION['username'])){
+//This function redirects if user is not logged in as an admin
+/*
+* Example:
+* is_admin('register-form.php');
+*/
+function is_admin($location){
+    if(!isset($_SESSION['user']) && !$_SESSION['user'] == "admin"){
         redirect_to($location);
     }
 }
 
-//To display error messages which is corrected in Class
+//This function displays error messages which are corrected in Class
 function display_errors($errors = array()){
     $output = '';
     if(!empty($errors)){
