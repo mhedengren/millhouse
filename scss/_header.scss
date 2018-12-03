@@ -93,6 +93,15 @@ and the hamburger menu when collapsed */
             
     }
 }
+
+ // Tablet navbar link properties 
+ .nav-link {
+    font-family: 'Merriweather';
+    color: $primalColorD;
+    font-size: 1.3rem;
+    text-align: left;
+}
+
    
 }
 
@@ -111,7 +120,7 @@ and the hamburger menu when collapsed */
 */
 
     header {
-        margin: 2rem 0;
+        margin: 3rem 0 4rem 0;
        // @include toCheckStyle(blue);
 
     }
@@ -143,6 +152,7 @@ and the hamburger menu when collapsed */
         color: $primalColorD;
         font-size: 1rem;
         text-align: center;
+       
         
     }
 
