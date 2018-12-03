@@ -4,7 +4,7 @@ require '../includes/database-connection.php';
 
 //var_dump($_POST["postTitle"]);
 //var_dump($_POST["postDesc"]);
-//var_dump($_FILES["image"]);
+var_dump($_SESSION['user_id']);
 
 if(isset($_POST['submit'])){
 
@@ -12,7 +12,7 @@ if(isset($_POST['submit'])){
   $postTitle = $_POST['postTitle'];
   $postDesc = $_POST['postDesc'];
   $postCont = $_POST['postCont'];
-  //$created_by = $_SESSION['user'];
+  $created_by = $_SESSION['user_id'];
   $created_on = date('Y-m-d');
   $image = $_FILES['image'];
   $category = $_POST['categories'];
@@ -70,7 +70,7 @@ if(isset($_POST['submit'])){
             ':postTitle' => $postTitle,
             ':postDesc' => $postDesc,
             ':postCont' => $postCont,
-            ':created_by' => 1,
+            ':created_by' => $_SESSION['user_id'],
             ':postDate' => $created_on,
             ':image' => $new_location
         ));
