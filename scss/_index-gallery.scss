@@ -20,16 +20,21 @@
 
 .gallery-post-description {
     
-font-family: Open Sans;
-font-style: normal;
-font-weight: normal;
-line-height: 24px;
-font-size: 0.8rem;
-letter-spacing: 0.5px;
-margin: 0;
-padding: 0;
-text-align: center;
-margin-bottom: 1rem;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 24px;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    margin-bottom: 1rem;
+
+    //This makes the description automatically break off and add the ...
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 
 }
 
@@ -45,6 +50,12 @@ margin-bottom: 1rem;
     color: $secondColorP;
     padding: 20px;
     margin-bottom: 0px;
+
+    //This makes the title automatically break off and add the ...
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
 
 }
 
@@ -124,7 +135,7 @@ margin-bottom: 1rem;
         text-align: left;
         margin-bottom: 0;
         
-        }
+    }
 }
 
 
