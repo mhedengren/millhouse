@@ -20,7 +20,7 @@ $asidePosts = $object->getPostAside();
                     </div>
                     <div class="article-contents col-7">
                         <h5 class="aside-post-title"><?= $asidePost["title"]; ?></h5>
-                        <p><?= date('M d Y', strtotime($asidePost["created_on"])); ?></p>
+                        <p><?= date('F d Y', strtotime($asidePost["created_on"])); ?></p>
                     </div>
                 </article>
             </a>
