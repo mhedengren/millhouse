@@ -10,6 +10,7 @@ class Comments{
     public $created_on;
     public $created_by;
     public $posts_id;
+    public $errors;
 
     //Inject the pdo connection so it is available inside of the class so we can call it with '$this->pdo', always available inside of the class
     public function __construct($pdo)
@@ -55,6 +56,16 @@ class Comments{
             ]
         );
     }
+
+    public function validation()
+    {
+        
+        if(empty($this->content)){
+            $this->errors = "Please fill in comment box before posting.";
+        }
+        return $this->errors;
+    }
+
 
     public function readComments($posts_id)
     {
