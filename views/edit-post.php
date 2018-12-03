@@ -23,6 +23,7 @@ include '../classes/Posts.php';
 $object = new Posts($pdo);
 $object->edit_post();
 $post = $object->edit_post();
+var_dump($post);
 
 ?>
 

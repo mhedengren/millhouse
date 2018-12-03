@@ -3,6 +3,7 @@
 class Posts
 {
   private $pdo;
+  
 
   /* Inject the pdo connection so it is available inside of the class
    * so we can call it with '$this->pdo', always available inside of the class
@@ -29,21 +30,16 @@ class Posts
       return true;
   }
 
-  public function edit_post($newPost)
-  {
-     // Preperare the query
-     $stmt = $this->pdo->prepare("SELECT * FROM posts WHERE posts_id = :posts_id");
-     $stmt->execute(
-         [
-     // Fetches the unique post id and executes the query.
-     ":posts_id" => $_GET["id"],
-         ]
-     );
-     $postValues = $stmt->fetchAll();
-     var_dump($postValues);
-     return $postValues;
+  public function edit_post(){
+    $stmt = $this->pdo->prepare("SELECT * FROM posts where posts_id = :posts_id");
+    $stmt->execute([
+      ":posts_id" => 89,
+    ]);
+    $postValues = $stmt->fetchAll();
+    return $postValues;
   
-    
-    
   }
 }
+
+  
+    

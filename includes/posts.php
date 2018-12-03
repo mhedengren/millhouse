@@ -37,7 +37,10 @@ if($action === "delete_post")
 }
 
 if($action === "edit_post")
-{
+{ 
+  $id_to_edit = $_GET["id"];
   // Let the class handle what happens after this
-  $posts->edit_post($_POST);
+  $posts->edit_post($id_to_edit);
+  header('Location: ../views/edit-post.php');
+  
 }
