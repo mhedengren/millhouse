@@ -7,11 +7,9 @@ class Comments{
 
     //properties for inputting data;
     public $content;
-    public $date;  // = date(Y-m-d);
-
-    //Attempting to bring a session username as property but getting "invalid operations" error
-    public $created_by; //= $_SESSION['username'];
-    //public $posts_id;
+    public $created_on;
+    public $created_by;
+    public $posts_id;
 
     //Inject the pdo connection so it is available inside of the class so we can call it with '$this->pdo', always available inside of the class
     public function __construct($pdo)
@@ -20,7 +18,7 @@ class Comments{
     }
     
     //Attempting to get posts.posts_id available to insert into comments table
-    public function getPosts_id()
+    /*public function getPosts_id()
     {
         $statement = $this->pdo->prepare("SELECT posts.id FROM posts 
         INNER JOIN comments
@@ -33,18 +31,17 @@ class Comments{
         );
         $posts_id = $statement->fetch();
         return $posts_id;
-    }
-/*
-    public function addUsernameSession()
+    }*/
+    //This sets properties for comments 
+    public function prepareInfoForComments($content, $posts_id, $user_id, $created_on)
     {
-        $statement = $this->pdo->prepare("SELECT username FROM users");
-        $statement->execute();
+        $this->content = $content;
+        $this->posts_id = $posts_id;
+        $this->user_id = $user_id;
+        $this->created_on = $created_on;
     }
-        $created_by = $statement->fetch();
-        return $created_by
-*/        
-    //Attempting to insert into comments table
-    public function addComments()
+
+    public function insertComments()
     {
         $statement = $this->pdo->prepare("INSERT INTO comments (content, 
         posts_id, created_by, created_on) VALUES (:content, :posts_id, :created_by, :created_on)");
