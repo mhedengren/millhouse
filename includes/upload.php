@@ -14,7 +14,8 @@ if(isset($_POST['submit'])){
   $postCont = $_POST['postCont'];
   //$created_by = $_SESSION['user'];
   $created_on = date('Y-m-d');
-  $image = $_FILES["image"];
+  $image = $_FILES['image'];
+  $category = $_POST['categories'];
 
 
   $temporary_location = $image["tmp_name"];
@@ -36,12 +37,6 @@ if(isset($_POST['submit'])){
         exit();
       }
     } 
-  
-
-
-
-
-
 
 
   //Check if the text inputs are empty
@@ -77,7 +72,15 @@ if(isset($_POST['submit'])){
             ':postCont' => $postCont,
             ':created_by' => 1,
             ':postDate' => $created_on,
-            ":image" => $new_location
+            ':image' => $new_location
+        ));
+
+        $statement = $pdo->prepare(
+          'INSERT INTO categories (category) VALUES (:categories)'
+        );
+
+        $statement->execute(array(
+          ':categories' => $category
         ));
 
         //redirect to admin page
