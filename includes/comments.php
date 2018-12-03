@@ -4,8 +4,13 @@ session_start();
 include '../includes/database-connection.php';
 include '../classes/Comment.php';
 
-$object = new Comments($pdo);
+$comments = new Comments($pdo);
 
-var_dump($_POST["content"]);
+$comments->prepareInfoForComments($_POST['content'], $_POST['posts_id'], $_SESSION['user_id'], date('Y-m-d'));
+
+$comments->insertComments();
+
+var_dump($comments->created_by);
+//var_dump($_POST["content"]);
 var_dump($_POST['posts_id']);
-var_dump($_SESSION['username']);
+var_dump($_SESSION['user_id']);

@@ -33,11 +33,11 @@ class Comments{
         return $posts_id;
     }*/
     //This sets properties for comments 
-    public function prepareInfoForComments($content, $posts_id, $user_id, $created_on)
+    public function prepareInfoForComments($content, $posts_id, $created_by, $created_on)
     {
         $this->content = $content;
         $this->posts_id = $posts_id;
-        $this->user_id = $user_id;
+        $this->created_by = $created_by;
         $this->created_on = $created_on;
     }
 
@@ -51,7 +51,7 @@ class Comments{
             ":content" => $this->content,
             ":posts_id" => $this->posts_id,
             ":created_by" => $this->created_by,
-            ":created_on" => $this->date
+            ":created_on" => $this->created_on
             ]
         );
     }

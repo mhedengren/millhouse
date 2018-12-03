@@ -87,11 +87,6 @@ session_start();
     
 
 <?php
-var_dump($post["posts_id"]);
-var_dump($post["username"]);
-var_dump($post["created_by"]);
-var_dump($_SESSION["username"]);
-var_dump($_SESSION["user_id"]);
 
     include '../includes/footer.php';
 ?>    
