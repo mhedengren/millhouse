@@ -33,10 +33,10 @@ class Posts
   public function edit_post(){
 
     $stmt = $this->pdo->prepare("SELECT * FROM posts where posts_id = :posts_id");
-    $stmt->execute([
+    $stmt->execute([s
       ":posts_id" => 89,
     ]);
-    $postValues = $stmt->fetchAll();
+    $postValues = $stmt->fetchAll(PDO::FETCH_ASSOC);
     return $postValues;
   
   }

@@ -14,18 +14,13 @@ include '../includes/head.php';
 include '../includes/header.php';
 //Class
 
-include '../classes/Posts.php';
+include '../classes/Edit.php';
 
-
-?>
-<?php
-
-$object = new Posts($pdo);
-$object->edit_post();
-$post = $object->edit_post();
-var_dump($post);
+$object = new SinglePost($pdo);        
+$post = $object->getSinglePost();
 
 ?>
+
 
 <body>
 
@@ -43,13 +38,13 @@ var_dump($post);
                 <div class="col-sm-12 col-md-8">
                     <h2 class="add-new-post">Add New Post</h2>
                     <?php new_post_form_check(); ?>
-                    <form action="../includes/upload.php" method="POST" enctype="multipart/form-data" id="upload-form">
+                    <form action="../includes/update.php" method="POST" enctype="multipart/form-data" id="upload-form">
                         <label for="title">Title</label>
-                        <input type="text" id="title" name="postTitle" class="form-control" placeholder="Your title here"><!-- if validation fails then show all content entered into the form's input and textarea -->
+                        <input type="text" id="title" name="postTitle" value="<?= $post["title"] ?>" class="form-control" placeholder="Your title here"><!-- if validation fails then show all content entered into the form's input and textarea -->
                         <label for="desc">Description</label>
-                        <input type="text" id="desc" name="postDesc" class="form-control" placeholder="Your description here">
+                        <input type="text" id="desc" name="postDesc" value="<?= $post["description"] ?>" class="form-control" placeholder="Your description here">
                         <label for="content">Content</label>
-                        <textarea name="postCont" id="content" class="form-control"></textarea>
+                        <textarea name="postCont" id="content" class="form-control">  <div id="froala-editor"><p><?= $post["content"] ?> </div></textarea>
                         <input type="submit" name="submit" value="Send">
                     </form>
                 </div>
