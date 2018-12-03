@@ -21,6 +21,7 @@ include '../includes/date-single.php';
 include '../classes/Comment.php';
 $comments = new Comments($pdo);
 $read = $comments->readComments($_GET['posts_id']);
+
 ?>
 <div class="container row">
 
@@ -87,16 +88,25 @@ $read = $comments->readComments($_GET['posts_id']);
             <hr class="after-post">
         </div>
     </div>
-
+    <?php 
+        if(!empty($comments->validation())){
+            echo $comments->validation();
+        }
+    ?>    
     <div class="comments-form row">
         <div class="col-9 text-center">
+        <?php if(isset($_SESSION['username'])) : ?>
+        
             <form action="../includes/comments.php" method="POST">
                 <label for="write-comment"></label>
                 <input type="hidden" name="posts_id" value="<?= $post['posts_id']; ?>"> 
-
                 <input type="text" id="write-comment" name="content" placeholder="Write comment here....">
                 <input type="submit" value="POST" id="post-comment" name="post-comment">
             </form>
+        
+        <?php else: ?>
+        <p>Please log in to comment</p>
+        <?php endif; ?>
         </div>
     </div>
 
