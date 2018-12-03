@@ -90,6 +90,17 @@
         text-align: center;
     }
 
+    .post-author-mobile {
+        text-align: center;
+        font-family: Open Sans;
+        color: rgb(0, 0, 0);
+        line-height: 1rem;
+        font-size: 1.3rem;
+        font-weight: 600;
+        text-align: center;
+        letter-spacing: 0.1rem;
+    }
+
 @media screen and (min-width: 768px){
     .post-title{
         background-color: #60495A;
