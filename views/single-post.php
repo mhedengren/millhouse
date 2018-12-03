@@ -72,7 +72,7 @@ $read = $comments->readComments($_GET['posts_id']);
 
 <div class="row">
     <div class="col-6">
-        <h2>Comments()</h2>
+        <h2>Comments(<?= count($read) ?>)</h2>
     </div>
 </div>
     <?php foreach ($read as $single_comment) :?>
