@@ -50,7 +50,7 @@ $read = $comments->readComments($_GET['posts_id']);
                         <hr class="before-post">
                     </div>        
                 </div>
-                <p class="post-description"><?= $post["description"]; ?></p> 
+                <h2 class="post-description"><?= $post["description"]; ?></h2> 
                 <p class="post-content"><?= $post["content"]; ?></p>
                 <p class="written-by d-md-none text-left">Written by</p>
                 <p class="post-author-mobile d-md-none text-left"><?= $post["username"]; ?></p>                     

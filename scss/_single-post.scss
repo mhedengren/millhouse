@@ -61,15 +61,32 @@
         text-align: center;
         padding: 0 20px;
         font-family: Open Sans;
-        font-style: normal;
-        font-weight: normal;
-        line-height: 24px;
-        font-size: 12px;
+        text-decoration-line: underline;
+        line-height: 1.2rem;
+        font-size: 1rem;
+        font-weight: 600;
         text-align: center;
-        letter-spacing: 0.5px;
+        letter-spacing: 0.01rem;
+        color:  #60495A;
     }
 
     .post-content{
+        text-align: center;
+        font-family: Open Sans;
+        line-height: 1rem;
+        font-size: 1rem;
+        font-weight: 600;
+        text-align: left;
+        letter-spacing: 0.5px;
+    }
+
+    .written-by {
+        text-align: center;
+        font-family: Open Sans;
+        color: $paleGray;
+        line-height: 1rem;
+        font-size: 0.7rem;
+        font-weight: 600;
         text-align: center;
     }
 
