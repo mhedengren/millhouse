@@ -31,7 +31,7 @@ include 'includes/date.php';
                <?php if(isset($_SESSION['user']) && $_SESSION['user'] == "admin"): ?>
                       <ul class="edit-remove-buttons">
                           <li class="list-inline-item edit-button">
-                              <a href="includes/posts.php?action=edit_post&id=<?= $feature["posts_id"]; ?>">
+                              <a href="views/edit-post.php?posts_id=<?= $feature["posts_id"]; ?>">
                               <i class="fas fa-pencil-alt"></i></a>
                            </li>
                           <li class="list-inline-item remove-button">
@@ -69,7 +69,7 @@ include 'includes/date.php';
                   
                       <ul class="edit-remove-buttons">
                           <li class="list-inline-item edit-button">
-                              <a href="includes/posts.php?action=edit_post&id=<?= $post["posts_id"]; ?>">
+                          <a href="views/edit-post.php?posts_id=<?= $post["posts_id"]; ?>">
                               <i class="fas fa-pencil-alt"></i></a>
                            </li>
                           <li class="list-inline-item remove-button">
