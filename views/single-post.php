@@ -17,9 +17,9 @@ session_start();
     $object = new SinglePost($pdo);        
     $post = $object->getSinglePost();
     include '../includes/date-single.php';
-    include '../classes/Comment.php';
-    $object2 = new Comments($pdo);        
-    $comment = $object2->addComment();
+    //include '../classes/Comment.php';
+    //$object2 = new Comments($pdo);        
+    //$comment = $object2->addComment();
 
 ?>
 <div class="container row">
@@ -75,15 +75,19 @@ session_start();
 
     <div class="comments-form row">
         <div class="col-9 text-center">
-            <form action="../views/single-post.php" method="POST">
+            <form action="../includes/comments.php" method="POST">
                 <label for="write-comment"></label>
+                <input type="hidden" name="posts_id" <?= $post["posts_id"]; ?>> 
+                <input type="hidden" name="username" <?= $post["username"]; ?>>
                 <input type="text" id="write-comment" placeholder="Write comment here....">
                 <input type="submit" value="POST" id="post-comment" name="post-comment">
             </form>
         </div>
     </div>
+    
 
 <?php
+var_dump($post["posts_id"]);
     include '../includes/footer.php';
 ?>    
 
