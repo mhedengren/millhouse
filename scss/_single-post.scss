@@ -1,4 +1,5 @@
 @import "variables";
+@import "mixins";
 
 #single-post{
 
@@ -44,6 +45,13 @@
             }
     }
 
+    .feature-post {
+        border-bottom: 0.1rem solid #F4F4F4;
+        margin: 5%;
+        padding: 5%;
+    }
+
+
     .post-title-mobile {
         font-family: 'Merriweather';
         font-style: normal;
@@ -83,6 +91,7 @@
         font-size: 0.7rem;
         font-weight: 600;
         text-align: center;
+        margin-bottom: 0.2rem;
     }
 
     .post-author-mobile {
@@ -95,6 +104,46 @@
         text-align: center;
         letter-spacing: 0.1rem;
     }
+
+    .comment-user{
+
+        p {
+            text-align: center;
+            font-family: Open Sans;
+            color: rgb(0, 0, 0);
+            line-height: 1rem;
+            font-size: 1.3rem;
+            font-weight: 600;
+            text-align: center;
+        }
+    }
+
+    .comment-date{
+
+        p {
+            text-align: center;
+            font-family: Open Sans;
+            color: $paleGray;
+            line-height: 1rem;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-align: center;
+        }
+    }
+    
+
+    .post-comment-btn {
+
+        margin: 5% 0;
+
+        @include buttonStyle($secondColorP, #fff);
+
+        &:hover{
+            @include buttonStyle($primalColorL, $primalColorD); 
+        }
+    }
+
+
 
 @media screen and (min-width: 768px){
     .post-title{

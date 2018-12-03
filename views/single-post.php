@@ -68,22 +68,28 @@ $read = $comments->readComments($_GET['posts_id']);
 
 </div>
 
-<div class="container">
+<div class="container comment-container">
 
 <div class="row">
     <div class="col-6">
-        <h2>Comments(<?= count($read) ?>)</h2>
+        <h4>Comments(<?= count($read) ?>)</h4>
     </div>
 </div>
     <?php foreach ($read as $single_comment) :?>
     <div class="row">
-        <div class="col-10">
+        <div class="col-3 comment-user">
             <p><?= $single_comment["username"]; ?></p>
+        </div>
+        <div class="col">
             <p><?= date('F d Y', strtotime($single_comment["created_on"])); ?></p>
-            <p><?= $single_comment["content"]; ?></p>
-
         </div>
     </div>
+        <div class="row">
+            <div class="col-sm">
+                <p><?= $single_comment["content"]; ?></p>
+            </div>
+        </div>
+
     <?php endforeach; ?>
     <div class="row justify-content-center">
         <div class="d-none d-lg-block col-lg-10 text-center">
@@ -95,23 +101,21 @@ $read = $comments->readComments($_GET['posts_id']);
             echo $comments->validation();
         }
     ?>    
-    <div class="comments-form row">
-        <div class="col-9 text-center">
+    <div class="comments-form text-center">
         <?php if(isset($_SESSION['username'])) : ?>
         
             <form action="../includes/comments.php" method="POST">
                 <label for="write-comment"></label>
                 <input type="hidden" name="posts_id" value="<?= $post['posts_id']; ?>"> 
-                <input type="text" id="write-comment" name="content" placeholder="Write comment here....">
-                <input type="submit" value="POST" id="post-comment" name="post-comment">
+                <textarea class="form-control" type="text" id="write-comment" name="content" placeholder="Write comment here...."></textarea>
+                <input class="btn post-comment-btn" type="submit" value="POST" id="post-comment" name="post-comment">
             </form>
         
         <?php else: ?>
         <p>Please log in to comment</p>
         <?php endif; ?>
-        </div>
     </div>
-    </div>
+</div>
 
 
     <?php
