@@ -25,10 +25,10 @@ if(isset($_POST['submit'])){
   $new_location = "uploads/" . $image["name"];
   $upload_ok = move_uploaded_file($temporary_location, $new_location);
 
-/*
+
   //Check if the user has uploaded an image
   if (!isset($_FILES['image']) || $_FILES['image']['error'] == UPLOAD_ERR_NO_FILE) {
-      header('Location: ../views/admin-page.php?upload=empty');
+      header('Location: ../views/edit-post.php?upload=empty');
       exit(); 
   } else if(isset($_FILES['image'])){
       $errors= array();
@@ -37,11 +37,11 @@ if(isset($_POST['submit'])){
       
       //Checking the file format of the uploaded file
       if(in_array($file_ext,$formats) === false) {
-        header('Location: ../views/admin-page.php?upload=wrongformat');
+        header('Location: ../views/edit-post.php?upload=wrongformat');
         exit();
       }
     } 
-*/
+
 
   //Check if the text inputs are empty
   if(empty($_POST["postTitle"]) && empty($_POST["postDesc"]) && empty($_POST["postCont"])) {

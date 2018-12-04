@@ -1,6 +1,6 @@
 <?php
 
-class Edit
+class GetPostToEdit
 {
   private $pdo;
 
@@ -12,7 +12,7 @@ class Edit
     $this->pdo = $pdo;
   }
 
-  public function getSinglePost(){
+  public function edit_post(){
     $stmt = $this->pdo->prepare("SELECT posts_id, posts.title, posts.description, posts.created_by, posts.created_on, posts.image, posts.content
     FROM posts
     where posts_id = :posts_id");

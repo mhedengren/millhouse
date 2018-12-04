@@ -4,6 +4,7 @@ class Posts
 {
   private $pdo;
   
+  
 
   /* Inject the pdo connection so it is available inside of the class
    * so we can call it with '$this->pdo', always available inside of the class
@@ -29,18 +30,17 @@ class Posts
       header('Location: ../index.php');
       return true;
   }
-/*
-  public function edit_post(){
 
-    $stmt = $this->pdo->prepare("SELECT * FROM posts where posts_id = :posts_id");
-    $stmt->execute([s
-      ":posts_id" => 89,
-    ]);
-    $postValues = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    return $postValues;
-  
+  public function create_post(){
+    
   }
-  */
+
+  public function update_post(){
+    
+  }
+  
+  
+
 }
 
   
