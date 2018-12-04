@@ -11,6 +11,8 @@ class Comments{
     public $created_by;
     public $posts_id;
     public $errors;
+    public $comments_id;
+
 
     //Inject the pdo connection so it is available inside of the class so we can call it with '$this->pdo', always available inside of the class
     public function __construct($pdo)
@@ -54,7 +56,7 @@ class Comments{
 
     public function readComments($posts_id)
     {
-        $statement = $this->pdo->prepare("SELECT users.username, users.id, comments.content, comments.posts_id, comments.created_by, comments.created_on FROM comments
+        $statement = $this->pdo->prepare("SELECT users.username, users.id, comments.comments_id, comments.content, comments.posts_id, comments.created_by, comments.created_on FROM comments
         INNER JOIN users
         ON users.id = comments.created_by
         WHERE posts_id = :posts_id");
@@ -65,5 +67,18 @@ class Comments{
         );
         $comments = $statement->fetchAll();
         return $comments;
+    }
+    public function deleteComment()
+    {
+        // Preperare the query
+        $stmt = $this->pdo->prepare("DELETE FROM comments WHERE comments_id = :comments_id");
+        $stmt->execute(
+            [
+        // Fetches the unique comment id and executes the query.
+        ":comments_id" => $this->comments_id
+            ]
+        );
+        
+        return true;
     }
 }
