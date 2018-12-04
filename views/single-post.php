@@ -28,11 +28,13 @@ $read = $comments->readComments($_GET['posts_id']);
     <main class="row justify-content-center feature-post" id="single-post">
         <!--this allows all info from a single post to be shown from the database-->
         <article class="hero-image-post-container row justify-content-center">
-            <div class="feature-post col-10  text-left">
+            <div class="feature-post col-12  text-left">
                 <!--takes image from database-->
                 <div class="hero-image">
                     <img src="../includes/<?= $post["image"]; ?>" alt="Hero-image">
                 </div>
+            </div>
+            <div class="col-10">
                 <!--takes date and displays clean from database-->
                 <div class="date row justify-content-center">
                     <div class="date-circle">    
@@ -89,7 +91,10 @@ $read = $comments->readComments($_GET['posts_id']);
         <div class="col-3 comment-user">
             <p><?= $single_comment["username"]; ?></p>
         </div>
-        <div class="col comment-date">
+        <div class="col-1">
+            <i class="fas fa-circle fa-xs" style="color:rgba(180, 180, 180, 0.308)"></i>
+        </div>
+        <div class="col-4 comment-date">
             <p><?= date('F d Y', strtotime($single_comment["created_on"])); ?></p>
         </div>
     </div>
