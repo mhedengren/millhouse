@@ -18,21 +18,6 @@ class Comments{
         $this->pdo = $pdo;
     }
     
-    //Attempting to get posts.posts_id available to insert into comments table
-    /*public function getPosts_id()
-    {
-        $statement = $this->pdo->prepare("SELECT posts.id FROM posts 
-        INNER JOIN comments
-        ON posts.posts_id = comments.posts_id
-        WHERE posts_id = :posts_id");
-        $statement->execute(
-            [
-            ":posts_id" => $_GET['posts_id']
-            ]
-        );
-        $posts_id = $statement->fetch();
-        return $posts_id;
-    }*/
     //This sets properties for comments 
     public function prepareInfoForComments($content, $posts_id, $created_by, $created_on)
     {
