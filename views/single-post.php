@@ -23,12 +23,12 @@ $comments = new Comments($pdo);
 $read = $comments->readComments($_GET['posts_id']);
 
 ?>
-<div class="container row">
+<div class="container">
 
-    <main class="container col-lg-8" id="single-post">
+    <main class="row justify-content-center feature-post" id="single-post">
         <!--this allows all info from a single post to be shown from the database-->
         <article class="hero-image-post-container row justify-content-center">
-            <div class="feature-post col-10  text-center">
+            <div class="feature-post col-10  text-left">
                 <!--takes image from database-->
                 <div class="hero-image">
                     <img src="../includes/<?= $post["image"]; ?>" alt="Hero-image">
@@ -50,7 +50,7 @@ $read = $comments->readComments($_GET['posts_id']);
                         <hr class="before-post">
                     </div>        
                 </div>
-                <p class="post-description"><?= $post["description"]; ?></p> 
+                <h2 class="post-description"><?= $post["description"]; ?></h2> 
                 <p class="post-content"><?= $post["content"]; ?></p>
                 <p class="written-by d-md-none text-left">Written by</p>
                 <p class="post-author-mobile d-md-none text-left"><?= $post["username"]; ?></p>                     
@@ -68,20 +68,28 @@ $read = $comments->readComments($_GET['posts_id']);
 
 </div>
 
+<div class="container comment-container">
+
 <div class="row">
     <div class="col-6">
-        <h2>Comments()</h2>
+        <h4>Comments(<?= count($read) ?>)</h4>
     </div>
 </div>
     <?php foreach ($read as $single_comment) :?>
     <div class="row">
-        <div class="col-10">
+        <div class="col-3 comment-user">
             <p><?= $single_comment["username"]; ?></p>
+        </div>
+        <div class="col comment-date">
             <p><?= date('F d Y', strtotime($single_comment["created_on"])); ?></p>
-            <p><?= $single_comment["content"]; ?></p>
-
         </div>
     </div>
+        <div class="row">
+            <div class="col-sm">
+                <p><?= $single_comment["content"]; ?></p>
+            </div>
+        </div>
+
     <?php endforeach; ?>
     <div class="row justify-content-center">
         <div class="d-none d-lg-block col-lg-10 text-center">
@@ -93,22 +101,21 @@ $read = $comments->readComments($_GET['posts_id']);
             echo $comments->validation();
         }
     ?>    
-    <div class="comments-form row">
-        <div class="col-9 text-center">
+    <div class="comments-form text-center">
         <?php if(isset($_SESSION['username'])) : ?>
         
             <form action="../includes/comments.php" method="POST">
                 <label for="write-comment"></label>
                 <input type="hidden" name="posts_id" value="<?= $post['posts_id']; ?>"> 
-                <input type="text" id="write-comment" name="content" placeholder="Write comment here....">
-                <input type="submit" value="POST" id="post-comment" name="post-comment">
+                <textarea class="form-control" type="text" id="write-comment" name="content" placeholder="Write comment here...."></textarea>
+                <input class="btn post-comment-btn" type="submit" value="POST" id="post-comment" name="post-comment">
             </form>
         
         <?php else: ?>
         <p>Please log in to comment</p>
         <?php endif; ?>
-        </div>
     </div>
+</div>
 
 
     <?php
