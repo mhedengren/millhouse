@@ -6,10 +6,10 @@
     
     .footer-color{
         margin-top: 50px;
-        max-height: 15%;
+        height: 25vh;
         background: linear-gradient(95.95deg, #1C3045 0%, #D7BCC8 100%);
         padding: 10px;
-        color: linear-gradient(95.95deg, white 0%, rgb(56, 55, 55) 100%);
+       
     }
 
     a.button-link{
@@ -24,7 +24,7 @@
 
     .footer-p{
         color: white;
-        font-size: 0.7em;
+        font-size: 0.5em;
     }
 
     .footer-logo{
@@ -48,6 +48,11 @@
     .footer-logo{
         max-width: 25%; 
 
+    }
+    .footer-color{
+       
+        height: 30vh;
+      
     }
 
 }
