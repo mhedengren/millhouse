@@ -115,7 +115,7 @@ class Register
                 ":username" => $this->username,
                 ":email" => $this->email,
                 ":password" => $this->hashedPassword,
-                ":admin" => false //true: admin, false:standarduser
+                ":admin" => 0 //true: admin, false:standarduser
             ]
         );
 
