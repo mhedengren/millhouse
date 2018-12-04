@@ -70,10 +70,10 @@ $read = $comments->readComments($_GET['posts_id']);
 
 </div>
 
-<div class="container comment-container">
+<div id="comments" class="container comment-container">
 
 <div class="row">
-    <div class="col-6">
+    <div class="col-12">
         <h4>Comments(<?= count($read) ?>)</h4>
     </div>
 </div>
@@ -88,19 +88,19 @@ $read = $comments->readComments($_GET['posts_id']);
                       </ul>
                   <?php endif; ?>
     <div class="row">
-        <div class="col-3 comment-user">
+        <div class="col-2 comment-user">
             <p><?= $single_comment["username"]; ?></p>
         </div>
-        <div class="col-1">
-            <i class="fas fa-circle fa-xs" style="color:rgba(180, 180, 180, 0.308)"></i>
+        <div class="col-1 comment-dot">
+            <p>.</p>
         </div>
         <div class="col-4 comment-date">
             <p><?= date('F d Y', strtotime($single_comment["created_on"])); ?></p>
         </div>
     </div>
         <div class="row">
-            <div class="col-sm">
-                <p><?= $single_comment["content"]; ?></p>
+            <div class="col-sm comment-content">
+                <p><?=  $single_comment["content"]; ?></p>
             </div>
         </div>
 

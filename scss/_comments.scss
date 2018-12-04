@@ -1,37 +1,69 @@
-.comment-user{
+@import "variables";
+@import "mixins";
 
-    p {
-        text-align: center;
-        font-family: Open Sans;
-        color: rgb(0, 0, 0);
-        line-height: 1rem;
-        font-size: 1.3rem;
-        font-weight: 600;
-        text-align: center;
+#comments {
+    .comment-user {
+
+        p {
+            text-align: left;
+            font-family: Open Sans;
+            color: rgb(0, 0, 0);
+            line-height: 1rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin:0;
+            padding:0;
+        }
     }
-}
 
-.comment-date{
+    .comment-dot {
 
-    p {
-        text-align: center;
-        font-family: Open Sans;
-        color: $paleGray;
-        line-height: 1rem;
-        font-size: 0.7rem;
-        font-weight: 600;
-        text-align: center;
+        p {
+            text-align: left;
+            font-family: Open Sans;
+            color: rgb(143, 143, 143);
+            line-height: 1rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin:0;
+        }
     }
-}
 
+    .comment-date {
 
-.post-comment-btn {
-
-    margin: 5% 0;
-
-    @include buttonStyle($secondColorP, #fff);
-
-    &:hover{
-        @include buttonStyle($primalColorL, $primalColorD); 
+        p {
+            text-align: left;
+            font-family: Open Sans;
+            color: $paleGray;
+            line-height: 1rem;
+            font-size: 0.7rem;
+            font-weight: 600;
+            
+        }
     }
+    .comment-content {
+
+        p {
+            text-align: left;
+            font-family: Open Sans;
+            line-height: 1rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin:0;
+            padding:0;
+        }
+    }
+
+
+    .post-comment-btn {
+
+        margin: 5% 0;
+
+        @include buttonStyle($secondColorP, #fff);
+
+        &:hover {
+            @include buttonStyle($primalColorL, $primalColorD);
+        }
+    }
+
 }
