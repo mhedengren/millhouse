@@ -80,7 +80,7 @@ $read = $comments->readComments($_GET['posts_id']);
         <div class="col-3 comment-user">
             <p><?= $single_comment["username"]; ?></p>
         </div>
-        <div class="col">
+        <div class="col comment-date">
             <p><?= date('F d Y', strtotime($single_comment["created_on"])); ?></p>
         </div>
     </div>
