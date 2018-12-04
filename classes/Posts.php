@@ -31,11 +31,11 @@ class Posts
       return true;
   }
 
-  public function create_post(){
+  public function create(){
     
   }
 
-  public function update_post(){
+  public function update(){
     
   }
   

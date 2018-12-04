@@ -3,7 +3,7 @@
         <div class="row footer-color d-flex align-items-center justify-content-center">
             <div class="col-6 text-center">
                 <h3 class="footer-title">Join the Club</h3>
-                    <p class="footer-p">Sign up now and get 10% off in-store or online +<br>
+                    <p class="footer-p">Sign up now and get 10% off in-store<br> or online +
                     always free delivery!</p>
             </div>
             <div class="col-6 text-center">
