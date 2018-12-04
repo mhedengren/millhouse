@@ -36,10 +36,16 @@ if($action === "delete_post")
   $posts->delete($id_to_delete);
 }
 
-if($action === "edit_post")
-{ 
 
-   $posts->edit_post($_POST);
+if($action === "create_post")
+{ 
+   $posts->create($_POST);
+  }
+  
+
+if($action === "update_post")
+{ 
+   $posts->update_post($_POST);
   }
 
   
