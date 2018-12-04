@@ -13,7 +13,7 @@
 
         <div class="row justify-content-center">
             <div class="col-12 text-center">
-                <img src="images/logo_dark.png" alt="logo with Millhouse text" class="footer-logo">
+                <img src="<?= $siteroot; ?>/images/logo_dark.png" alt="logo with Millhouse text" class="footer-logo">
             </div>
         </div>   
 
