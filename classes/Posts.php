@@ -6,7 +6,9 @@ class Posts
   //property for pdo
   private $pdo;
 
-   //properties for inputting data;
+   //properties for inputting data; 
+   public $title;
+   public $description;
    public $content;
    public $created_on;
    public $created_by;
