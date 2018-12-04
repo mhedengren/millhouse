@@ -16,7 +16,7 @@ include '../includes/header.php';
 
 include '../classes/Edit.php';
 
-$object = new SinglePost($pdo);        
+$object = new Edit($pdo);        
 $postValue = $object->getSinglePost();
 
 ?>
@@ -47,7 +47,7 @@ $postValue = $object->getSinglePost();
                         <input hidden type="text" id="postId" name="postId" value="<?= $postValue["posts_id"] ?>" class="form-control" placeholder="Your description here">
                         <label for="content">Content</label>
                         <textarea name="postCont" id="content" class="form-control">  <?= $postValue["content"] ?> </textarea>
-                        <input type="submit" name="submit" value="Send">
+                        <input type="submit" name="submit" value="Update">
                     </form>
                 </div>
                 <div class="col-sm-12 col-md-4">

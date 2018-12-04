@@ -1,6 +1,6 @@
 <?php
 
-class SinglePost
+class Edit
 {
   private $pdo;
 
@@ -13,12 +13,8 @@ class SinglePost
   }
 
   public function getSinglePost(){
-    //$posts_id = isset($_GET['posts_id']) ? $_GET['posts_id'] : 0;
-
-    $stmt = $this->pdo->prepare("SELECT posts_id, posts.title, posts.description, posts.created_by, posts.created_on, posts.image, posts.content, 
-    users.username FROM posts
-    INNER JOIN users
-    ON posts.created_by = users.admin
+    $stmt = $this->pdo->prepare("SELECT posts_id, posts.title, posts.description, posts.created_by, posts.created_on, posts.image, posts.content
+    FROM posts
     where posts_id = :posts_id");
     
     $stmt->execute([
@@ -27,6 +23,5 @@ class SinglePost
 
     $singlePost = $stmt->fetch();
     return $singlePost; 
-    //$scid = isset($_GET['scid']) ? $_GET['scid'] : 0;
   }
 }

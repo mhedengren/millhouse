@@ -93,7 +93,7 @@ include 'includes/date.php';
                       <?= $post["description"]; ?>
                    </p>
                   <p class="read-more d-none d-md-block">
-                      <a href="views/single-post.php?posts_id=<?= $post["posts_id"]; ?>">Read article</a>
+                      <a href="views/single-post.php?posts_id=<?= $post["posts_id"]; ?>">Read/comment article</a>
                    </p>
               </div>
           <?php endforeach ;?>
