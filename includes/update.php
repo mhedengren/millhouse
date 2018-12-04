@@ -89,7 +89,7 @@ if(isset($_POST['submit'])){
         
 
         //redirect to admin page
-        header('Location: ../index.php?action=added');
+        header('Location: ../index.php');
         exit;
 
     } catch(PDOException $e) {
