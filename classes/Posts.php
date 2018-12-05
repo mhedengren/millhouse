@@ -50,12 +50,15 @@ class Posts
         ":postCont" => $content,
         ":created_by" => $created_by,
         ":postDate" => $created_on,
-        ":image" => "hej"
+        ":image" => $image
         ]
     );
 
-    return true;
     
+     //redirect to admin page
+     header('Location: ../views/admin-page.php?action=added');
+     return true;
+     exit;
   }
 
   

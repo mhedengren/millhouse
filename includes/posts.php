@@ -42,6 +42,7 @@ $temporary_location = $image["tmp_name"];
 $new_location = "uploads/" . $image["name"];
 $upload_ok = move_uploaded_file($temporary_location, $new_location);
 
+
 if($action === "create_post"){ 
    $posts->create($_POST["postTitle"], $_POST["postDesc"], $_POST["postCont"], $_SESSION["user_id"], date('Y-m-d'), $new_location );
 
