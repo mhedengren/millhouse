@@ -2,13 +2,21 @@
 
 class Posts
 {
+
+  //property for pdo
   private $pdo;
+
+   //properties for inputting data; 
+   public $title;
+   public $description;
+   public $content;
+   public $created_on;
+   public $created_by;
+   public $posts_id;
+   public $errors;
   
-
   /* Inject the pdo connection so it is available inside of the class
-   * so we can call it with '$this->pdo', always available inside of the class
-   */
-
+   * so we can call it with '$this->pdo', always available inside of the class */
   public function __construct($pdo)
   {
     $this->pdo = $pdo;
@@ -29,18 +37,37 @@ class Posts
       header('Location: ../index.php');
       return true;
   }
-/*
-  public function edit_post(){
+ //Method for creating a new post
+  public function create($title, $description, $content, $created_by, $created_on, $image){
+    
+    $statement = $this->pdo->prepare("INSERT INTO posts (title, description, content, created_by, created_on, image) 
+    VALUES (:postTitle, :postDesc, :postCont, :created_by, :postDate, :image)");
+    $statement->execute(
+        [
+        ":postTitle" => $title,
+        ":postDesc" => $description,  
+        ":postCont" => $content,
+        ":created_by" => $created_by,
+        ":postDate" => $created_on,
+        ":image" => $image
+        ]
+    );
 
-    $stmt = $this->pdo->prepare("SELECT * FROM posts where posts_id = :posts_id");
-    $stmt->execute([s
-      ":posts_id" => 89,
-    ]);
-    $postValues = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    return $postValues;
-  
+    
+     //redirect to admin page
+     header('Location: ../views/admin-page.php?action=added');
+     return true;
+     exit;
   }
-  */
+
+  
+
+  public function update(){
+    
+  }
+  
+  
+
 }
 
   

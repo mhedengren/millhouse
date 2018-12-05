@@ -1,7 +1,7 @@
 <?php
-
-require '../classes/Posts.php';
+session_start();
 require 'database-connection.php';
+require '../classes/Posts.php';
 
 /* Pass along the $pdo variable when you create a new instance
  * of the class, $pdo becomes $this->pdo. $posts is used
@@ -36,11 +36,23 @@ if($action === "delete_post")
   $posts->delete($id_to_delete);
 }
 
-if($action === "edit_post")
-{ 
+$image = $_FILES['image'];
+//Moves image from temporary location to set location.
+$temporary_location = $image["tmp_name"];
+$new_location = "uploads/" . $image["name"];
+$upload_ok = move_uploaded_file($temporary_location, $new_location);
 
-   $posts->edit_post($_POST);
-  }
+if($action === "create_post"){ 
+   $posts->create($_POST["postTitle"], $_POST["postDesc"], $_POST["postCont"], $_SESSION["user_id"], date('Y-m-d'), $new_location );
+
+}
+
+if($action === "update_post")
+{ 
+   $id_to_update = $_GET["id"];
+   $posts->update();
+
+}
 
   
   

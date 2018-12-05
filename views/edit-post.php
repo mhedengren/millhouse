@@ -16,8 +16,8 @@ include '../includes/header.php';
 
 include '../classes/Edit.php';
 
-$object = new Edit($pdo);        
-$postValue = $object->getSinglePost();
+$object = new GetPostToEdit($pdo);        
+$postValue = $object->edit_post();
 
 ?>
 

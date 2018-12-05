@@ -4,15 +4,15 @@
 #login {
     //borders for checking
     div{
-        @include toCheckStyle(#9FF781);
+       // @include toCheckStyle(#9FF781);
     }
 
     nav, img, i, ul, li{
-        @include toCheckStyle(pink);
+        //@include toCheckStyle(pink);
     }
 
     main, aside, button{
-        @include toCheckStyle(blue);
+       // @include toCheckStyle(blue);
     }
 
     .container{
@@ -67,7 +67,7 @@
 
         //borders for checking
         div{
-            border: 1px dashed blue;
+            //border: 1px dashed blue;
         }
         
         .container{
@@ -90,7 +90,7 @@
 
         //borders for checking
         div{
-            border: 1px dashed pink;
+            //border: 1px dashed pink;
         }
 
         .content {

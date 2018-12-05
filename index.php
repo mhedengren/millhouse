@@ -25,13 +25,13 @@ include 'includes/date.php';
                    <h2><span class="bg-color"><?= $feature["title"]; ?></span></h2>
                    <p class="read-more-desktop d-none d-md-block">
                        <a href="views/single-post.php?posts_id=<?= $feature["posts_id"]; ?>">Read article</a>
+                   </p>
                        <hr>
-                    </p>
                </div>
                <?php if(isset($_SESSION['user']) && $_SESSION['user'] == "admin"): ?>
                       <ul class="edit-remove-buttons">
                           <li class="list-inline-item edit-button">
-                              <a href="views/edit-post.php?posts_id=<?= $feature["posts_id"]; ?>">
+                              <a href="includes/posts.php?action=update_post&id=<?= $feature["posts_id"]; ?>">
                               <i class="fas fa-pencil-alt"></i></a>
                            </li>
                           <li class="list-inline-item remove-button">
@@ -64,7 +64,7 @@ include 'includes/date.php';
     ?>
       <section class="gallery row">
           <?php foreach ($latestPosts as $post) :?>
-              <div class="col-sm-12 col-md-6">
+              <div class="col-sm-12 col-md-6 gallery-card">
                   <?php if(isset($_SESSION['user']) && $_SESSION['user'] == "admin"): ?>
                   
                       <ul class="edit-remove-buttons">
