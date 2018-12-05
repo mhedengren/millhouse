@@ -38,11 +38,27 @@ class Posts
       return true;
   }
 
-  public function create($newPost){
+  public function create($title, $description, $content, $created_by, $created_on, $image){
     
+    $statement = $this->pdo->prepare("INSERT INTO posts (title, description, content, created_by, created_on, image) 
+    VALUES (:postTitle, :postDesc, :postCont, :created_by, :postDate, :image)");
+    $statement->execute(
+
+        [
+        ":postTitle" => $title,
+        ":postDesc" => $description,  
+        ":postCont" => $content,
+        ":created_by" => $created_by,
+        ":postDate" => $created_on,
+        ":image" => "hej"
+        ]
+    );
+
     return true;
     
   }
+
+  
 
   public function update(){
     
