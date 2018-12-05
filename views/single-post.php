@@ -36,17 +36,26 @@ $read = $comments->readComments($_GET['posts_id']);
             </div>
             <div class="col-10">
                 <!--takes date and displays clean from database-->
-                <div class="date row justify-content-center">
-                    <div class="date-circle d-none d-sm-block d-md-none">    
+                <div class="row justify-content-center">
+                    <div class="date-circle">    
                         <h6 class="post-date"><?= $month; ?><br><?= $day; ?></h6>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center">
+                    <div class="col-10">
+                        <div class="date-author">    
+                            <h2 class="post-date d-none d-md-block"><?= $month . " " . $day . " - " . $post["username"] ?></h2>
+                        </div>
                     </div>
                 </div>
                 <!--takes title from database up to 767.9px-->
                 <h2 class="post-title-mobile d-md-none"><?= $post["title"]; ?></h2>
                 <!--takes title from database for tablet and larger-->
-                <h2 class="post-title d-none d-md-block"><span><?= $post["title"]; ?></span></h2>
-                <!--takes title from database-->
-                <p class="post-author d-none d-md-block"><?= $post["username"]; ?></p>
+                <div class="row d-flex justify-content-center">
+                    <div class="col-12 post-title">
+                        <h2 class="d-none d-md-block"><span><?= $post["title"]; ?></span></h2>
+                    </div>
+                </div>
                 <div class="row justify-content-center">
                     <div class="d-none d-md-block col-md-3 text-center">    
                         <hr class="before-post">
