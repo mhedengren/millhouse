@@ -64,6 +64,7 @@ $read = $comments->readComments($_GET['posts_id']);
             </div>
         </div>
 
+
     </main>
 
     <?php include '../includes/aside.php'; ?>
@@ -88,10 +89,10 @@ $read = $comments->readComments($_GET['posts_id']);
                       </ul>
                   <?php endif; ?>
     <div class="row">
-        <div class="col-2 comment-user">
+        <div class="col-sm-2 comment-user">
             <p><?= $single_comment["username"]; ?></p>
         </div>
-        <div class="col-4 comment-date">
+        <div class="col-sm-4 comment-date">
             <p><?= date('F d Y', strtotime($single_comment["created_on"])); ?></p>
         </div>
     </div>

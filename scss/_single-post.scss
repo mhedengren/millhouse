@@ -3,6 +3,11 @@
 
 #single-post{
 
+    article {
+        padding: 5% 0;
+        border-bottom: 0.03em solid $paleGray;
+    }
+
     .hero-image {
 
         background: -webkit-linear-gradient(90deg, #1C3045 -1%, rgba(96, 73, 90, 0.54) 100%);
