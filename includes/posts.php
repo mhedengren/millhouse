@@ -49,7 +49,6 @@ if($action === "create_post"){
 
 }
 
-  
 
 if($action === "update_post")
 { 
