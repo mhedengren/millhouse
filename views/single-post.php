@@ -74,12 +74,12 @@ $read = $comments->readComments($_GET['posts_id']);
 
 <div class="row">
     <div class="col-12">
-        <h4>Comments(<?= count($read) ?>)</h4>
+        <h4>Comments (<?= count($read) ?>)</h4>
     </div>
 </div>
     <?php foreach ($read as $single_comment) :?>
     <?php if(isset($_SESSION['user']) && $_SESSION['user'] == "admin"): ?>
-                  
+                  <div class="comment-field">
                       <ul class="edit-remove-buttons">
                           <li class="list-inline-item remove-button">
                               <a href="../includes/comments.php?action=delete_comment&comments_id=<?= $post["posts_id"]; ?>">
@@ -90,9 +90,6 @@ $read = $comments->readComments($_GET['posts_id']);
     <div class="row">
         <div class="col-2 comment-user">
             <p><?= $single_comment["username"]; ?></p>
-        </div>
-        <div class="col-1 comment-dot">
-            <p>.</p>
         </div>
         <div class="col-4 comment-date">
             <p><?= date('F d Y', strtotime($single_comment["created_on"])); ?></p>
@@ -110,6 +107,7 @@ $read = $comments->readComments($_GET['posts_id']);
             <hr class="after-post">
         </div>
     </div>
+</div>
     <?php 
         if(!empty($comments->validation())){
             echo $comments->validation();
