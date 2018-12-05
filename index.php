@@ -64,7 +64,7 @@ include 'includes/date.php';
     ?>
       <section class="gallery row">
           <?php foreach ($latestPosts as $post) :?>
-              <div class="col-sm-12 col-md-6">
+              <div class="col-sm-12 col-md-6 gallery-card">
                   <?php if(isset($_SESSION['user']) && $_SESSION['user'] == "admin"): ?>
                   
                       <ul class="edit-remove-buttons">

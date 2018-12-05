@@ -37,10 +37,30 @@ class Posts
       header('Location: ../index.php');
       return true;
   }
-
-  public function create(){
+ //Method for creating a new post
+  public function create($title, $description, $content, $created_by, $created_on, $image){
     
+    $statement = $this->pdo->prepare("INSERT INTO posts (title, description, content, created_by, created_on, image) 
+    VALUES (:postTitle, :postDesc, :postCont, :created_by, :postDate, :image)");
+    $statement->execute(
+        [
+        ":postTitle" => $title,
+        ":postDesc" => $description,  
+        ":postCont" => $content,
+        ":created_by" => $created_by,
+        ":postDate" => $created_on,
+        ":image" => $image
+        ]
+    );
+
+    
+     //redirect to admin page
+     header('Location: ../views/admin-page.php?action=added');
+     return true;
+     exit;
   }
+
+  
 
   public function update(){
     
