@@ -152,22 +152,34 @@
 
 @media screen and (min-width: 768px){
 
+    .hero-image {
+
+            img {   
+
+                width: 80vw;
+                height: 50vh;   
+            }
+    }
     .post-title{
         background-color: #60495A;
-        border: #1C3045 1px solid;
-        border-radius: 4%;
+        border-radius: 2%;
         color: white;
         margin-bottom: 5%;
         text-align: center;
+        position: absolute;
+        width: 130%;
+        height: 30%;
+        top: -60%;
+        left: -15%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Merriweather;
+        font-weight: 900;
+        font-size: 30px;
+        letter-spacing: 0.5px;
+
     
-    }
-
-    .post-author-mobile {
-        display: none;
-    }
-
-    .date-circle {
-        display: none;
     }
 }    
     

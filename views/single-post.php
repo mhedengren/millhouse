@@ -37,7 +37,7 @@ $read = $comments->readComments($_GET['posts_id']);
             <div class="col-10">
                 <!--takes date and displays clean from database-->
                 <div class="date row justify-content-center">
-                    <div class="date-circle">    
+                    <div class="date-circle d-none d-sm-block d-md-none">    
                         <h6 class="post-date"><?= $month; ?><br><?= $day; ?></h6>
                     </div>
                 </div>
@@ -55,7 +55,7 @@ $read = $comments->readComments($_GET['posts_id']);
                 <h2 class="post-description"><?= $post["description"]; ?></h2> 
                 <p class="post-content"><?= $post["content"]; ?></p>
                 <p class="written-by d-md-none text-left">Written by</p>
-                <p class="post-author-mobile d-md-none text-left"><?= $post["username"]; ?></p>                     
+                <p class="post-author-mobile d-md-none d-lg-block text-left"><?= $post["username"]; ?></p>                 
             </div>
         </article>
         <div class="row justify-content-center">
@@ -91,13 +91,19 @@ $read = $comments->readComments($_GET['posts_id']);
     <div class="row">
         <div class="col-sm-2 comment-user">
             <p><?= $single_comment["username"]; ?></p>
-        </div>
-        <div class="col-sm-4 comment-date">
+            <div class="d-sm-none d-md-block comment-date">
             <p><?= date('F d Y', strtotime($single_comment["created_on"])); ?></p>
+        </div>
+        </div>
+        <div class="col-sm-4 d-none d-sm-block d-md-none comment-date">
+            <p><?= date('F d Y', strtotime($single_comment["created_on"])); ?></p>
+        </div>
+        <div class="col-md-10 d-sm-none d-md-block comment-content">
+                <p><?=  $single_comment["content"]; ?></p>
         </div>
     </div>
         <div class="row">
-            <div class="col-sm comment-content">
+            <div class="col-sm d-none d-sm-block d-md-none comment-content">
                 <p><?=  $single_comment["content"]; ?></p>
             </div>
         </div>
