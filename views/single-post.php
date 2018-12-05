@@ -100,6 +100,7 @@ $read = $comments->readComments($_GET['posts_id']);
                 <p><?=  $single_comment["content"]; ?></p>
             </div>
         </div>
+    </div>
 
     <?php endforeach; ?>
     <div class="row justify-content-center">
@@ -107,7 +108,7 @@ $read = $comments->readComments($_GET['posts_id']);
             <hr class="after-post">
         </div>
     </div>
-</div>
+
     <?php 
         if(!empty($comments->validation())){
             echo $comments->validation();
