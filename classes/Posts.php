@@ -38,7 +38,9 @@ class Posts
       return true;
   }
 
-  public function create(){
+  public function create($newPost){
+    
+    return true;
     
   }
 
