@@ -6,12 +6,12 @@ class Register
     private $pdo;
 
     //Properties of inputting datas    
-    private $username;
-    private $email;
-    private $hashedPassword;
-    private $password;
-    private $confirmPassword;
-    private $hashedConfirmPassword;
+    public $username;
+    public $email;
+    protected $hashedPassword;
+    public $password;
+    public $confirmPassword;
+    protected $hashedConfirmPassword;
 
     //Property for correcting error messages
     public $errors = [];
