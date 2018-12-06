@@ -29,10 +29,16 @@ $watches = $object2->getWatchesCat();
     <section class="cards"> 
 
     <div class="container"> 
+        <div class="row">
+            <div class="col-sm">
+                <h1>Category: Watches</h1>
+            </div>
+        </div>
 
 <?php 
     if(isset($watches)) {
         foreach($watches as $single_category) : ?>
+        <div class="row">
             <div class="col-sm-12 col-md-4">
                 <div class="category-card">
                         <a href="single-post.php?posts_id=<?= $single_category["posts_id"]; ?>">
@@ -55,6 +61,7 @@ $watches = $object2->getWatchesCat();
                     </div>
                 </div>     
             </div> 
+        </div>     
 
 
         <?php endforeach ;  

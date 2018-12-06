@@ -28,11 +28,17 @@ $sunglasses = $object3->getSunglassesCat();
 <main>  
     <section class="cards"> 
 
-    <div class="container"> 
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <h1>Category: Sunglasses</h1>
+            </div>
+        </div> 
 
 <?php 
     if(isset($sunglasses)) {
         foreach($sunglasses as $single_category) : ?>
+        <div class="row">
             <div class="col-sm-12 col-md-4">
                 <div class="category-card">
                         <a href="single-post.php?posts_id=<?= $single_category["posts_id"]; ?>">
@@ -54,7 +60,8 @@ $sunglasses = $object3->getSunglassesCat();
                     </p>
                     </div>
                 </div>     
-            </div> 
+            </div>
+        </div>     
 
 
         <?php endforeach ;  

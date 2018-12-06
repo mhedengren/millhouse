@@ -29,6 +29,11 @@ $categories = $object->getAllCategories();
     <section class="cards"> 
 
     <div class="container"> 
+    <div class="row">
+            <div class="col-sm">
+                <h1>All categories</h1>
+            </div>
+        </div>
 
 <?php 
     if(isset($categories)) {
