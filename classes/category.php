@@ -28,5 +28,51 @@ class Category
     }
 
 
+    public function getWatchesCat(){
+        //select all data
+        $statement = $this->pdo->prepare(
+            "SELECT * FROM posts
+            WHERE posts.category = 'watches'"
+        );
 
+        $statement->execute();
+        $rows = $statement->fetchAll();
+
+ 
+        return $rows;
+
+
+    } 
+    
+    public function getSunglassesCat(){
+        //select all data
+        $statement = $this->pdo->prepare(
+            "SELECT * FROM posts
+            WHERE posts.category = 'sunglasses'"
+        );
+
+        $statement->execute();
+        $rows = $statement->fetchAll();
+
+ 
+        return $rows;
+
+
+    } 
+
+    public function getHomeDecoCat(){
+        //select all data
+        $statement = $this->pdo->prepare(
+            "SELECT * FROM posts
+            WHERE posts.category = 'home decor'"
+        );
+
+        $statement->execute();
+        $rows = $statement->fetchAll();
+
+ 
+        return $rows;
+
+
+    } 
 }   
