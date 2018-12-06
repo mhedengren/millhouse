@@ -10,7 +10,7 @@ class Category
         $this->pdo = $pdo;
     }
  
-    // used by select drop-down list
+    //Used to fetch all the categories in one single page
     public function getAllCategories(){
         //select all data
         $statement = $this->pdo->prepare(
@@ -26,5 +26,7 @@ class Category
  
         return $rows;
     }
+
+
 
 }   
