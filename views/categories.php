@@ -17,8 +17,8 @@ include '../includes/header.php';
 
 include '../classes/category.php';
 $object = new Category($pdo);
-$object->getCategory();
-$categories = $object->getCategory();
+$object->getAllCategories();
+$categories = $object->getAllCategories();
 
 
 //var_dump($categories);
