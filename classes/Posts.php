@@ -14,6 +14,7 @@ class Posts
    public $created_by;
    public $posts_id;
    public $errors;
+   public $category;
   
   /* Inject the pdo connection so it is available inside of the class
    * so we can call it with '$this->pdo', always available inside of the class */
@@ -38,10 +39,10 @@ class Posts
       return true;
   }
  //Method for creating a new post
-  public function create($title, $description, $content, $created_by, $created_on, $image){
+  public function create($title, $description, $content, $created_by, $created_on, $image, $category){
     
-    $statement = $this->pdo->prepare("INSERT INTO posts (title, description, content, created_by, created_on, image) 
-    VALUES (:postTitle, :postDesc, :postCont, :created_by, :postDate, :image)");
+    $statement = $this->pdo->prepare("INSERT INTO posts (title, description, content, created_by, created_on, image, category) 
+    VALUES (:postTitle, :postDesc, :postCont, :created_by, :postDate, :image, :categories)");
     $statement->execute(
         [
         ":postTitle" => $title,
@@ -49,7 +50,9 @@ class Posts
         ":postCont" => $content,
         ":created_by" => $created_by,
         ":postDate" => $created_on,
-        ":image" => $image
+        ":image" => $image,
+        ":categories" => $category
+        
         ]
     );
 
