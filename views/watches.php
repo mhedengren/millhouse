@@ -20,9 +20,6 @@ $object2 = new Category($pdo);
 $object2->getWatchesCat();
 $watches = $object2->getWatchesCat();
 
-
-//var_dump($categories);
-
 ?>
 
 <main>  

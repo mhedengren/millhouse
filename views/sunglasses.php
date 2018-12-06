@@ -21,8 +21,6 @@ $object3->getSunglassesCat();
 $sunglasses = $object3->getSunglassesCat();
 
 
-//var_dump($categories);
-
 ?>
 
 <main>  

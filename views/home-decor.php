@@ -21,8 +21,6 @@ $object4->getHomeDecoCat();
 $homeDecor = $object4->getHomeDecoCat();
 
 
-//var_dump($categories);
-
 ?>
 
 <main>  
