@@ -49,9 +49,8 @@ if($action === "create_post"){
 
 if($action === "update_post")
 { 
-   $id_to_update = $_GET["id"];
-   $posts->update();
-
+   header('Location: ../views/edit-post.php');
+   
 }
 
 

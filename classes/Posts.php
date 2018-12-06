@@ -85,6 +85,20 @@ class Posts
          return true;
   }
 
+
+  public function readPost(){
+    $stmt = $this->pdo->prepare("SELECT posts_id, posts.title, posts.description, posts.created_by, posts.created_on, posts.image, posts.content
+    FROM posts
+    where posts_id = :posts_id");
+    
+    $stmt->execute([
+      ":posts_id" => $_GET["posts_id"],
+    ]);
+
+    $singlePost = $stmt->fetch();
+    return $singlePost; 
+  }
+
 }
 
   

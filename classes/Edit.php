@@ -12,7 +12,7 @@ class GetPostToEdit
     $this->pdo = $pdo;
   }
 
-  public function edit_post(){
+  public function readPost(){
     $stmt = $this->pdo->prepare("SELECT posts_id, posts.title, posts.description, posts.created_by, posts.created_on, posts.image, posts.content
     FROM posts
     where posts_id = :posts_id");

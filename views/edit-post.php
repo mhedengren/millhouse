@@ -14,10 +14,12 @@ include '../includes/head.php';
 include '../includes/header.php';
 //Class
 
-include '../classes/Edit.php';
+include '../classes/Posts.php';
 
-$object = new GetPostToEdit($pdo);        
-$postValue = $object->edit_post();
+$object = new Posts($pdo);        
+$post = $object->readPost();
+
+var_dump($post);
 
 ?>
 
