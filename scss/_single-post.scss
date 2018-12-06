@@ -1,54 +1,57 @@
 @import "variables";
 @import "mixins";
 
-#single-post{
+#single-post {
+
+    article {
+        padding: 5% 0;
+        border-bottom: 0.03em solid $paleGray;
+    }
 
     .hero-image {
 
         background: -webkit-linear-gradient(90deg, #1C3045 -1%, rgba(96, 73, 90, 0.54) 100%);
 
-            img {   
+        img {
 
-                width: 100%;
-                height: 40vw;
-                object-fit: cover;
-                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-                position:relative;
-                z-index:-1;
-                display:block;    
-            }
+           // width: 100vw;
+            height: 40vw;
+            object-fit: cover;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            position: relative;
+            z-index: -1;
+            display: block;
+        }
     }
 
     .date-circle {
         margin-top: -20px;
         width: 60px;
         height: 60px;
-        background-color: rgba(96, 73, 90, 0.54);
+        background-color: rgb(96, 73, 90);
         border-radius: 50%;
         display: inline-block;
         justify-content: center;
         align-items: center;
         display: flex;
-    
-            h6 {
-                color: white;
-                text-align: center;
-                font-family: 'Open Sans';
-                font-style: normal;
-                font-weight: normal;
-                line-height: 15px;
-                font-size: 20px;
-                text-align: center;
-                letter-spacing: 0.5px;
-                padding: 0;
-                margin: 0;  
-            }
+
+        h6 {
+            color: white;
+            text-align: center;
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: normal;
+            line-height: 15px;
+            font-size: 20px;
+            text-align: center;
+            letter-spacing: 0.5px;
+            padding: 0;
+            margin: 0;
+        }
     }
 
-    .feature-post {
-        border-bottom: 0.1rem solid #F4F4F4;
-        margin: 5%;
-        padding: 5%;
+    .container {
+        border-bottom: 1rem solid;
     }
 
 
@@ -75,12 +78,7 @@
         font-weight: 600;
         text-align: center;
         letter-spacing: 0.01rem;
-        color:  #60495A;
-    }
-
-    //Cant style this part cuz of WYSIWYG
-    .post-content{
-        
+        color: #60495A;
     }
 
     .written-by {
@@ -105,7 +103,7 @@
         letter-spacing: 0.1rem;
     }
 
-    .comment-user{
+    .comment-user {
 
         p {
             text-align: center;
@@ -118,7 +116,14 @@
         }
     }
 
-    .comment-date{
+    .comment-dot {
+
+        font-size: 3rem;
+        font-weight: 900;
+        color: red;
+    }
+
+    .comment-date {
 
         p {
             text-align: center;
@@ -130,7 +135,7 @@
             text-align: center;
         }
     }
-    
+
 
     .post-comment-btn {
 
@@ -138,32 +143,61 @@
 
         @include buttonStyle($secondColorP, #fff);
 
-        &:hover{
-            @include buttonStyle($primalColorL, $primalColorD); 
+        &:hover {
+            @include buttonStyle($primalColorL, $primalColorD);
         }
     }
 
 
 
-@media screen and (min-width: 768px){
+    @media screen and (min-width: 768px) {
 
-    .post-title{
-        background-color: #60495A;
-        border: #1C3045 1px solid;
-        border-radius: 4%;
-        color: white;
-        margin-bottom: 5%;
-        text-align: center;
-    
+        .hero-image {
+
+            img {
+                height: 50vh;
+
+            }
+        }
+
+        .post-title {
+            background-color: #60495A;
+            border-radius: 2%;
+            object-fit: cover;
+            color: white;
+            margin-bottom: 5%;
+            text-align: center;
+            position: absolute;
+            width: 100vw;
+            height: 20%;
+            top: -50%;
+            
+            h2 {
+            font-family: Merriweather;
+            font-weight: 900;
+            font-size: 1.5rem;
+            letter-spacing: 0.01rem;
+            }
+
+        }
+
+        .date-circle {
+            display:none;
+        }
+
+        .date-author {
+            //position: absolute;
+            text-align: center;
+
+            h2 {
+                font-size: 2rem;
+                font-family: Open Sans;
+                font-weight: bold;
+                letter-spacing: 0.01rem;
+        
+            }
+        }
+
     }
 
-    .post-author-mobile {
-        display: none;
-    }
-
-    .date-circle {
-        display: none;
-    }
-}    
-    
 }

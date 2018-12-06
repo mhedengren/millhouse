@@ -1,0 +1,86 @@
+@import "variables";
+@import "mixins";
+
+#comments {
+
+    h4 {
+        text-align: left;
+            font-family: Open Sans;
+            line-height: 1rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 5% 0;
+    }
+
+    .comment-field{
+        //border-top: 0.01rem solid $paleGray;
+        border-bottom: 0.03rem solid $paleGray;
+    }
+
+    .comment-user {
+
+        p {
+            text-align: left;
+            font-family: Open Sans;
+            line-height: 1rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin:0;
+            padding:0;
+            
+        }
+    }
+
+    .comment-dot {
+
+        p {
+            text-align: left;
+            font-family: Open Sans;
+            color: $paleGray;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin:0;
+            padding:0;
+        }
+    }
+
+    .comment-date {
+
+        p {
+            text-align: left;
+            font-family: Open Sans;
+            color: $paleGray;
+            line-height: 1rem;
+            font-size: 0.7rem;
+            font-weight: 600;
+            margin:0;
+            padding:0;
+            
+        }
+    }
+    .comment-content {
+
+        p {
+            text-align: left;
+            font-family: Open Sans;
+            line-height: 1rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin:0;
+            padding:5% 0;
+        }
+    }
+
+
+    .post-comment-btn {
+
+        margin: 5% 0;
+
+        @include buttonStyle($secondColorP, #fff);
+
+        &:hover {
+            @include buttonStyle($primalColorL, $primalColorD);
+        }
+    }
+
+}
