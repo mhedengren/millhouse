@@ -63,7 +63,6 @@ class Posts
         ]
     );
 
-    
      //redirect to admin page
      header('Location: ../views/admin-page.php?action=added');
      return true;
