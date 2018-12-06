@@ -66,10 +66,24 @@ class Posts
   
 
   public function update(){
-    
+      
+    $statement = $this->pdo->prepare(
+        'UPDATE posts SET title = :postTitle, description = :postDesc, content = :postCont, image = :image
+         WHERE posts_id = :posts_id'
+        );
+
+      $statement->execute(array(
+          ':postTitle' => $postTitle,
+          ':postDesc' => $postDesc,
+          ':postCont' => $postCont,
+          ':posts_id' => $postId,
+          ':image' => $new_location,
+          ":categories" => $category
+      ));
+         // Return to index
+         header('Location: ../index.php');
+         return true;
   }
-  
-  
 
 }
 
