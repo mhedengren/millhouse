@@ -28,13 +28,13 @@
                     </li>
                     <?php endif; ?>
                     <li class="nav-item active">
-                        <a class="nav-link" href="<?= $siteroot; ?>/views/categories.php">WATCHES <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="<?= $siteroot; ?>/views/watches.php">WATCHES <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= $siteroot; ?>/views/categories.php">SUNGLASSES</a>
+                        <a class="nav-link" href="<?= $siteroot; ?>/views/sunglasses.php">SUNGLASSES</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= $siteroot; ?>/views/categories.php">HOME DECOR</a>
+                        <a class="nav-link" href="<?= $siteroot; ?>/views/home-decor.php">HOME DECOR</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="<?= $siteroot; ?>/views/categories.php">CATEGORIES</a>

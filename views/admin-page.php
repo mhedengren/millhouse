@@ -31,7 +31,7 @@ include '../includes/header.php';
                 <div class="col-sm-12 col-md-8">
                     <h2 class="add-new-post">Add New Post</h2>
                     <?php new_post_form_check(); ?>
-                    <form action="../includes/upload.php" method="POST" enctype="multipart/form-data" id="upload-form">
+                    <form action="../includes/posts.php?action=create_post" method="POST" enctype="multipart/form-data" id="upload-form">
                         <label for="title">Title</label>
                         <input type="text" id="title" name="postTitle" class="form-control" placeholder="Your title here"><!-- if validation fails then show all content entered into the form's input and textarea -->
                         <label for="desc">Description</label>
@@ -51,7 +51,7 @@ include '../includes/header.php';
                         <select name="categories" form="upload-form" id="categories">
                             <option value="sunglasses">Sunglasses</option>
                             <option value="watches">Watches</option>
-                            <option value="accessories">Accessories</option>
+                            <option value="homedecor">Home Decor</option>
                         </select>
 
                     </div>

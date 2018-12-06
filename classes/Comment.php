@@ -29,7 +29,7 @@ class Comments{
         $this->created_on = $created_on;
     }
 
-    public function insertComments()
+    public function insertComment()
     {
         $statement = $this->pdo->prepare("INSERT INTO comments (content, 
         posts_id, created_by, created_on) VALUES (:content, :posts_id, :created_by, :created_on)");
@@ -68,6 +68,7 @@ class Comments{
         $comments = $statement->fetchAll();
         return $comments;
     }
+
     public function deleteComment()
     {
         // Preperare the query
@@ -75,10 +76,12 @@ class Comments{
         $stmt->execute(
             [
         // Fetches the unique comment id and executes the query.
-        ":comments_id" => $this->comments_id
+        ":comments_id" => $_GET["comments_id"]
             ]
         );
         
         return true;
-    }
+          
+    }   
+    
 }
