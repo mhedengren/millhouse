@@ -34,6 +34,13 @@ class Posts
       ":posts_id" => $_GET["id"],
           ]
       );
+
+      $stmt = $this->pdo->prepare("DELETE FROM comments WHERE posts_id = :posts_id");
+      $stmt->execute(
+          [
+              ":posts_id" => $_GET["id"]
+          ]
+        );
       // Return to index
       header('Location: ../index.php');
       return true;
