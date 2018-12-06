@@ -69,14 +69,44 @@ class Posts
      return true;
      exit;
   }
-
-  
-
-  public function update(){
+ //Method for readig the post that is going to be updated
+  public function readPost(){
+    $stmt = $this->pdo->prepare("SELECT posts_id, posts.title, posts.description, posts.created_by, posts.created_on, posts.image, posts.content
+    FROM posts
+    where posts_id = :posts_id");
     
+    $stmt->execute([
+      ":posts_id" => $_GET["id"],
+    ]);
+    $singlePost = $stmt->fetch();
+    return $singlePost; 
   }
-  
-  
+
+  public function update($title, $description, $content, $image, $category){
+      
+    $postId = $_POST['postId'];
+    $image = $_FILES['image'];
+    //Moves image from temporary location to set location.
+    $temporary_location = $image["tmp_name"];
+    $new_location = "uploads/" . $image["name"];
+    $upload_ok = move_uploaded_file($temporary_location, $new_location);
+
+    $statement = $this->pdo->prepare(
+        'UPDATE posts SET title = :postTitle, description = :postDesc, content = :postCont, image = :image
+         WHERE posts_id = :posts_id'
+        );
+
+      $statement->execute(array(
+          ':postTitle' => $title,
+          ':postDesc' => $description,
+          ':postCont' => $content,
+          ':posts_id' => $postId,
+          ':image' => $new_location
+      ));
+         // Return to index
+         header('Location: ../index.php');
+         exit;
+  }
 
 }
 

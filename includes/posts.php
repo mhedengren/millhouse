@@ -47,11 +47,18 @@ if($action === "create_post"){
    
 }
 
+if($action === "read_post")
+{ 
+
+   $id_to_read = $_GET["id"];
+   header('Location: ../views/edit-post.php?id='.$id_to_read);
+}
+
+
 if($action === "update_post")
 { 
-   $id_to_update = $_GET["id"];
-   $posts->update();
-
+   $postId = $_POST['postId'];
+   $posts->update($_POST["postTitle"], $_POST["postDesc"], $_POST["postCont"], $_POST["postId"], $new_location, $_POST['categories'] );
 }
 
 
