@@ -172,11 +172,13 @@
             width: 200%;
             height: 20%;
             top: -50%;
+            
+            h2 {
             font-family: Merriweather;
-            line-height: 4.5rem;
             font-weight: 900;
-            font-size: 2rem;
+            font-size: 1.5rem;
             letter-spacing: 0.01rem;
+            }
 
         }
 
@@ -185,14 +187,15 @@
         }
 
         .date-author {
-            position: absolute;
+            //position: absolute;
             text-align: center;
-            
+
             h2 {
                 font-size: 2rem;
                 font-family: Open Sans;
                 font-weight: bold;
                 letter-spacing: 0.01rem;
+        
             }
         }
 

@@ -41,10 +41,10 @@ $read = $comments->readComments($_GET['posts_id']);
                         <h6 class="post-date"><?= $month; ?><br><?= $day; ?></h6>
                     </div>
                 </div>
-                <div class="row d-flex justify-content-center">
+                <div class="row justify-content-center">
                     <div class="col-10">
                         <div class="date-author">    
-                            <h2 class="post-date d-none d-md-block"><?= $month . " " . $day . " " . $year . " - " . $post["username"] ?></h2>
+                            <h2 class="post-date d-none d-md-block"><?= $month . " " . $day . ", " . $year . " - " . $post["username"] ?></h2>
                         </div>
                     </div>
                 </div>
