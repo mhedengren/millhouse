@@ -2,7 +2,7 @@
 
 class Posts
 {
-
+  
   //property for pdo
   private $pdo;
 
@@ -39,7 +39,6 @@ class Posts
       return true;
   }
 
-
  //Method for creating a new post
   public function create($title, $description, $content, $created_by, $created_on, $image, $category){
     
@@ -54,16 +53,14 @@ class Posts
         ":postDate" => $created_on,
         ":image" => $image,
         ":categories" => $category
-        
         ]
     );
 
-     //redirect to admin page
+     //Redirect to admin page.
      header('Location: ../views/admin-page.php?action=added');
      return true;
      exit;
   }
-
 
  //Method for reading the post that is going to be updated.
   public function readPost(){
@@ -77,7 +74,6 @@ class Posts
     $singlePost = $stmt->fetch();
     return $singlePost; 
   }
-
 
   //Method for updating a post.
   public function update($title, $description, $content, $image, $category, $postId){
@@ -100,7 +96,6 @@ class Posts
          header('Location: ../index.php');
          exit;
   }
-
 }
 
   
