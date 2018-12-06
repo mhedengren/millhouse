@@ -92,7 +92,8 @@ $read = $comments->readComments($_GET['posts_id']);
                   <div class="comment-field">
                       <ul class="edit-remove-buttons">
                           <li class="list-inline-item remove-button">
-                              <a href="../includes/comments.php?action=delete_comment&comments_id=<?= $post["posts_id"]; ?>">
+                          
+                          <a href="../includes/comments.php?action=delete_comment&comments_id=<?= $single_comment["comments_id"]; ?>">    
                               <i class="fas fa-times"></i></a>
                            </li>
                       </ul>
@@ -133,7 +134,7 @@ $read = $comments->readComments($_GET['posts_id']);
     <div class="comments-form text-center">
         <?php if(isset($_SESSION['username'])) : ?>
         
-            <form action="../includes/comments.php" method="POST">
+            <form action="../includes/comments.php?action=create_comment" method="POST">
                 <label for="write-comment"></label>
                 <input type="hidden" name="posts_id" value="<?= $post['posts_id']; ?>"> 
                 <textarea class="form-control" type="text" id="write-comment" name="content" placeholder="Write comment here...."></textarea>

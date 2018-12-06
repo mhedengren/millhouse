@@ -68,6 +68,17 @@ class Comments{
         $comments = $statement->fetchAll();
         return $comments;
     }
+    public function fetchPostID($comment_to_delete)
+    {
+        $statement = $this->pdo->prepare("SELECT posts_id FROM comments WHERE comments_id = :comments_id");
+        $statement->execute(
+            [
+                ":comments_id" => $comment_to_delete
+            ]
+            );
+            return $statement->fetch();
+    }
+
     public function deleteComment()
     {
         // Preperare the query
@@ -75,10 +86,12 @@ class Comments{
         $stmt->execute(
             [
         // Fetches the unique comment id and executes the query.
-        ":comments_id" => $this->comments_id
+        ":comments_id" => $_GET["comments_id"]
             ]
         );
         
         return true;
-    }
+          
+    }   
+    
 }
