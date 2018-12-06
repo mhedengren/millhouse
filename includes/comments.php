@@ -16,7 +16,7 @@ $action = $_GET["action"] ?? '';
 if($action === "create_comment"){
     $comments->prepareInfoForComments($_POST['content'], $_POST['posts_id'], $_SESSION['user_id'], date('Y-m-d'));
     if(empty($comments->validation())){
-    $comments->insertComments();
+    $comments->insertComment();
     header('Location: ../views/single-post.php?posts_id='.$comments->posts_id);
     } else {
     header('Location: ../views/single-post.php?posts_id='.$comments->posts_id); 
@@ -24,13 +24,12 @@ if($action === "create_comment"){
 }
 // Handles what happens if the GET action is delete.
 if($action === "delete_comment")
-{ 
-  $post_id = $comments->fetchPostID($_GET["comments_id"])['posts_id'];  
+{  
   $comment_to_delete = $_GET["comments_id"];
   
   // Let the class handle what happens after this
   $comments->deleteComment($comment_to_delete);
-
+//var_dump($_GET["post_id"]);
   //Redirect to single-post after deleting comment
-  header('Location: ../views/single-post.php?posts_id='.$post_id); 
+    header('Location: ../views/single-post.php?posts_id='.$_GET["post_id"]); 
 }
