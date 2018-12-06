@@ -32,6 +32,12 @@ $read = $comments->readComments($_GET['posts_id']);
                 <!--takes image from database-->
                 <div class="hero-image col-12">
                     <img src="../includes/<?= $post["image"]; ?>" alt="Hero-image">
+                    <!--takes title from database for tablet and larger-->
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-12 post-title">
+                            <h2 class="d-none d-md-block"><span><?= $post["title"]; ?></span></h2>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col-10">
@@ -50,12 +56,6 @@ $read = $comments->readComments($_GET['posts_id']);
                 </div>
                 <!--takes title from database up to 767.9px-->
                 <h2 class="post-title-mobile d-md-none"><?= $post["title"]; ?></h2>
-                <!--takes title from database for tablet and larger-->
-                <div class="row d-flex justify-content-center">
-                    <div class="col-12 post-title">
-                        <h2 class="d-none d-md-block"><span><?= $post["title"]; ?></span></h2>
-                    </div>
-                </div>
                 <div class="row justify-content-center">
                     <div class="d-none d-md-block col-md-3 text-center">    
                         <hr class="before-post">
