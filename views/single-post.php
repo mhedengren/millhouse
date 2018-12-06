@@ -30,7 +30,7 @@ $read = $comments->readComments($_GET['posts_id']);
         <article class="hero-image-post-container row justify-content-center">
             <div class="feature-post col-12  text-left">
                 <!--takes image from database-->
-                <div class="hero-image">
+                <div class="hero-image col-12">
                     <img src="../includes/<?= $post["image"]; ?>" alt="Hero-image">
                 </div>
             </div>
@@ -137,7 +137,7 @@ $read = $comments->readComments($_GET['posts_id']);
                 <label for="write-comment"></label>
                 <input type="hidden" name="posts_id" value="<?= $post['posts_id']; ?>"> 
                 <textarea class="form-control" type="text" id="write-comment" name="content" placeholder="Write comment here...."></textarea>
-                <input class="btn post-comment-btn" type="submit" value="POST" id="post-comment" name="post-comment">
+                <input class="post-comment-btn" type="submit" value="POST" id="post-comment" name="post-comment">
             </form>
         
         <?php else: ?>
