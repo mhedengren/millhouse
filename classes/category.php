@@ -16,8 +16,7 @@ class Category
         $statement = $this->pdo->prepare(
             "SELECT * FROM posts
             LEFT JOIN post_category ON posts.posts_id = post_category.posts_id
-            LEFT JOIN categories ON categories.categories_id = post_category.category_id
-            ORDER BY posts.created_on DESC"
+            LEFT JOIN categories ON categories.categories_id = post_category.category_id"
         );
 
         $statement->execute();
@@ -28,5 +27,51 @@ class Category
     }
 
 
+    public function getWatchesCat(){
+        //select all data
+        $statement = $this->pdo->prepare(
+            "SELECT * FROM posts
+            WHERE posts.category = 'watches'"
+        );
 
+        $statement->execute();
+        $rows = $statement->fetchAll();
+
+ 
+        return $rows;
+
+
+    } 
+    
+    public function getSunglassesCat(){
+        //select all data
+        $statement = $this->pdo->prepare(
+            "SELECT * FROM posts
+            WHERE posts.category = 'sunglasses'"
+        );
+
+        $statement->execute();
+        $rows = $statement->fetchAll();
+
+ 
+        return $rows;
+
+
+    } 
+
+    public function getHomeDecoCat(){
+        //select all data
+        $statement = $this->pdo->prepare(
+            "SELECT * FROM posts
+            WHERE posts.category = 'homedecor'"
+        );
+
+        $statement->execute();
+        $rows = $statement->fetchAll();
+
+ 
+        return $rows;
+
+
+    } 
 }   

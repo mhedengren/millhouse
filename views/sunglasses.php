@@ -16,25 +16,26 @@ include '../includes/head.php';
 include '../includes/header.php';
 
 include '../classes/category.php';
-$object2 = new Category($pdo);
-$object2->getWatchesCat();
-$watches = $object2->getWatchesCat();
+$object3 = new Category($pdo);
+$object3->getSunglassesCat();
+$sunglasses = $object3->getSunglassesCat();
+
 
 ?>
 
 <main id="categories">  
 
-    <div class="container"> 
+    <div class="container">
         <div class="row">
             <div class="col-sm">
-                <h1>Category: Watches</h1>
+                <h1>Category: Sunglasses</h1>
             </div>
-        </div>
+        </div> 
 
         <div class="row category-list">
-        <?php foreach($watches as $single_category) : ?>
+        <?php foreach($sunglasses as $single_category) : ?>
         
-            <div class="col-sm-12 col-md-4">
+            <div class="col-sm-12 col-md-6 col-lg-4">
                 <div class="category-card">
                         <a href="single-post.php?posts_id=<?= $single_category["posts_id"]; ?>">
                         <div class="gallery-hero-image">
@@ -53,13 +54,13 @@ $watches = $object2->getWatchesCat();
                     <p class="read-more d-none d-md-block">
                         <a href="single-post.php?posts_id=<?= $single_category["posts_id"]; ?>">Read/comment article</a>
                     </p>
-                    </div><!-- category-card -->
-                </div><!-- col -->    
+                </div><!-- category-card -->
+            </div><!-- col -->    
             
-            <?php endforeach ;?>
+        <?php endforeach ;?>
         </div><!--- category-list -->
     </div>
-     
+
 </main>
 
 

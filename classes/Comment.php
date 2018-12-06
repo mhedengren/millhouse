@@ -29,7 +29,7 @@ class Comments{
         $this->created_on = $created_on;
     }
 
-    public function insertComments()
+    public function insertComment()
     {
         $statement = $this->pdo->prepare("INSERT INTO comments (content, 
         posts_id, created_by, created_on) VALUES (:content, :posts_id, :created_by, :created_on)");
@@ -46,7 +46,6 @@ class Comments{
 
     public function validation()
     {
-        
         if(empty($this->content)){
             $this->errors = "Please fill in comment box before posting.";
         }
@@ -67,16 +66,6 @@ class Comments{
         );
         $comments = $statement->fetchAll();
         return $comments;
-    }
-    public function fetchPostID($comment_to_delete)
-    {
-        $statement = $this->pdo->prepare("SELECT posts_id FROM comments WHERE comments_id = :comments_id");
-        $statement->execute(
-            [
-                ":comments_id" => $comment_to_delete
-            ]
-            );
-            return $statement->fetch();
     }
 
     public function deleteComment()

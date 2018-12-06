@@ -16,9 +16,10 @@ include '../includes/head.php';
 include '../includes/header.php';
 
 include '../classes/category.php';
-$object2 = new Category($pdo);
-$object2->getWatchesCat();
-$watches = $object2->getWatchesCat();
+$object4 = new Category($pdo);
+$object4->getHomeDecoCat();
+$homeDecor = $object4->getHomeDecoCat();
+
 
 ?>
 
@@ -27,13 +28,13 @@ $watches = $object2->getWatchesCat();
     <div class="container"> 
         <div class="row">
             <div class="col-sm">
-                <h1>Category: Watches</h1>
+                <h1>Category: Home Decor</h1>
             </div>
-        </div>
-
+        </div>        
+    
         <div class="row category-list">
-        <?php foreach($watches as $single_category) : ?>
-        
+        <?php foreach($homeDecor as $single_category) : ?>
+         
             <div class="col-sm-12 col-md-4">
                 <div class="category-card">
                         <a href="single-post.php?posts_id=<?= $single_category["posts_id"]; ?>">
@@ -59,7 +60,7 @@ $watches = $object2->getWatchesCat();
             <?php endforeach ;?>
         </div><!--- category-list -->
     </div>
-     
+        
 </main>
 
 
