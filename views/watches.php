@@ -20,19 +20,20 @@ $object2 = new Category($pdo);
 $object2->getWatchesCat();
 $watches = $object2->getWatchesCat();
 
-
-//var_dump($categories);
-
 ?>
 
-<main>  
-    <section class="cards"> 
+<main id="categories">  
 
     <div class="container"> 
+        <div class="row">
+            <div class="col-sm">
+                <h1>Category: Watches</h1>
+            </div>
+        </div>
 
-<?php 
-    if(isset($watches)) {
-        foreach($watches as $single_category) : ?>
+        <div class="row category-list">
+        <?php foreach($watches as $single_category) : ?>
+        
             <div class="col-sm-12 col-md-4">
                 <div class="category-card">
                         <a href="single-post.php?posts_id=<?= $single_category["posts_id"]; ?>">
@@ -52,16 +53,13 @@ $watches = $object2->getWatchesCat();
                     <p class="read-more d-none d-md-block">
                         <a href="single-post.php?posts_id=<?= $single_category["posts_id"]; ?>">Read/comment article</a>
                     </p>
-                    </div>
-                </div>     
-            </div> 
-
-
-        <?php endforeach ;  
-    }
-?>
-        
-    </section> 
+                    </div><!-- category-card -->
+                </div><!-- col -->    
+            
+            <?php endforeach ;?>
+        </div><!--- category-list -->
+    </div>
+     
 </main>
 
 

@@ -21,19 +21,21 @@ $object3->getSunglassesCat();
 $sunglasses = $object3->getSunglassesCat();
 
 
-//var_dump($categories);
-
 ?>
 
-<main>  
-    <section class="cards"> 
+<main id="categories">  
 
-    <div class="container"> 
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <h1>Category: Sunglasses</h1>
+            </div>
+        </div> 
 
-<?php 
-    if(isset($sunglasses)) {
-        foreach($sunglasses as $single_category) : ?>
-            <div class="col-sm-12 col-md-4">
+        <div class="row category-list">
+        <?php foreach($sunglasses as $single_category) : ?>
+        
+            <div class="col-sm-12 col-md-6 col-lg-4">
                 <div class="category-card">
                         <a href="single-post.php?posts_id=<?= $single_category["posts_id"]; ?>">
                         <div class="gallery-hero-image">
@@ -52,16 +54,13 @@ $sunglasses = $object3->getSunglassesCat();
                     <p class="read-more d-none d-md-block">
                         <a href="single-post.php?posts_id=<?= $single_category["posts_id"]; ?>">Read/comment article</a>
                     </p>
-                    </div>
-                </div>     
-            </div> 
+                </div><!-- category-card -->
+            </div><!-- col -->    
+            
+        <?php endforeach ;?>
+        </div><!--- category-list -->
+    </div>
 
-
-        <?php endforeach ;  
-    }
-?>
-        
-    </section> 
 </main>
 
 
