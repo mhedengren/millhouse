@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 ini_set(‘display_errors’, 1); ini_set(‘display_startup_errors’, 1); error_reporting(E_ALL);
 
@@ -9,6 +10,8 @@ include '../includes/functions.php';
 include '../includes/date.php';
 
 
+//Page title
+$page_title = 'Categories'; 
 include '../includes/head.php';
 include '../includes/header.php';
 
