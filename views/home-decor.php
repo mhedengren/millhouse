@@ -23,20 +23,18 @@ $homeDecor = $object4->getHomeDecoCat();
 
 ?>
 
-<main>  
-    <section class="cards"> 
+<main id="categories">  
 
     <div class="container"> 
-    <div class="row">
+        <div class="row">
             <div class="col-sm">
                 <h1>Category: Home Decor</h1>
             </div>
-    </div>
-
-<?php 
-    if(isset($homeDecor)) {
-        foreach($homeDecor as $single_category) : ?>
-         <div class="row">
+        </div>        
+    
+        <div class="row category-list">
+        <?php foreach($homeDecor as $single_category) : ?>
+         
             <div class="col-sm-12 col-md-4">
                 <div class="category-card">
                         <a href="single-post.php?posts_id=<?= $single_category["posts_id"]; ?>">
@@ -56,17 +54,13 @@ $homeDecor = $object4->getHomeDecoCat();
                     <p class="read-more d-none d-md-block">
                         <a href="single-post.php?posts_id=<?= $single_category["posts_id"]; ?>">Read/comment article</a>
                     </p>
-                    </div>
-                </div>     
-            </div>
-        </div>     
-
-
-        <?php endforeach ;  
-    }
-?>
+                    </div><!-- category-card -->
+                </div><!-- col -->    
+            
+            <?php endforeach ;?>
+        </div><!--- category-list -->
+    </div>
         
-    </section> 
 </main>
 
 
