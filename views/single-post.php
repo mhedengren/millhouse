@@ -93,33 +93,34 @@ $read = $comments->readComments($_GET['posts_id']);
                       <ul class="edit-remove-buttons">
                           <li class="list-inline-item remove-button">
                           
+
                           <a href="../includes/comments.php?action=delete_comment&post_id=<?= $post["posts_id"] ?>&comments_id=<?= $single_comment["comments_id"]; ?>">    
                               <i class="fas fa-times"></i></a>
                            </li>
                       </ul>
                   <?php endif; ?>
-    <div class="row">
-        <div class="col-sm-2 comment-user">
-            <p><?= $single_comment["username"]; ?></p>
-            <div class="d-sm-none d-md-block comment-date">
-            <p><?= date('F d Y', strtotime($single_comment["created_on"])); ?></p>
-        </div>
-        </div>
-        <div class="col-sm-4 d-none d-sm-block d-md-none comment-date">
-            <p><?= date('F d Y', strtotime($single_comment["created_on"])); ?></p>
-        </div>
-        <div class="col-md-10 d-sm-none d-md-block comment-content">
-                <p><?=  $single_comment["content"]; ?></p>
-        </div>
-    </div>
-        <div class="row">
-            <div class="col-sm d-none d-sm-block d-md-none comment-content">
-                <p><?=  $single_comment["content"]; ?></p>
-            </div>
-        </div>
-    </div>
+                    <div class="row">
+                        <div class="col-sm-2 comment-user">
+                            <p><?= $single_comment["username"]; ?></p>
+                            <div class="d-sm-none d-md-block comment-date">
+                                <p><?= date('F d Y', strtotime($single_comment["created_on"])); ?></p>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 d-none d-sm-block d-md-none comment-date">
+                            <p><?= date('F d Y', strtotime($single_comment["created_on"])); ?></p>
+                        </div>
+                        <div class="col-md-10 d-sm-none d-md-block comment-content">
+                            <p><?=  $single_comment["content"]; ?></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm d-none d-sm-block d-md-none comment-content">
+                            <p><?=  $single_comment["content"]; ?></p>
+                        </div>
+                    </div>
+                    <?php endforeach; ?>
+                </div>
 
-    <?php endforeach; ?>
     <div class="row justify-content-center">
         <div class="d-none d-lg-block col-lg-10 text-center">
             <hr class="after-post">
