@@ -57,9 +57,7 @@ if($action === "read_post")
 
 if($action === "update_post")
 { 
-
-   $id_to_update = $_GET["id"];
-   header('Location: ../views/edit-post.php?id='.$id_to_update);
+   $posts->update($_POST["postTitle"], $_POST["postDesc"], $_POST["postCont"], $_SESSION["user_id"], $new_location, $_POST['categories'] );
 }
 
 
