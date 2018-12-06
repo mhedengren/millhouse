@@ -11,7 +11,7 @@ class Category
     }
  
     // used by select drop-down list
-    public function getCategory(){
+    public function getAllCategories(){
         //select all data
         $statement = $this->pdo->prepare(
             "SELECT * FROM posts
