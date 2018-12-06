@@ -42,13 +42,13 @@ var_dump($post);
                     <?php new_post_form_check(); ?>
                     <form action="../includes/update.php" method="POST" enctype="multipart/form-data" id="upload-form">
                         <label for="title">Title</label>
-                        <input type="text" id="title" name="postTitle" value="<?= $postValue["title"] ?>" class="form-control" placeholder="Your title here"><!-- if validation fails then show all content entered into the form's input and textarea -->
+                        <input type="text" id="title" name="postTitle" value="<?= $post["title"] ?>" class="form-control" placeholder="Your title here"><!-- if validation fails then show all content entered into the form's input and textarea -->
                         <label for="desc">Description</label>
-                        <input type="text" id="desc" name="postDesc" value="<?= $postValue["description"] ?>" class="form-control" placeholder="Your description here">
+                        <input type="text" id="desc" name="postDesc" value="<?= $post["description"] ?>" class="form-control" placeholder="Your description here">
                         <!-- hidden post id value -->
-                        <input hidden type="text" id="postId" name="postId" value="<?= $postValue["posts_id"] ?>" class="form-control" placeholder="Your description here">
+                        <input hidden type="text" id="postId" name="postId" value="<?= $post["posts_id"] ?>" class="form-control" placeholder="Your description here">
                         <label for="content">Content</label>
-                        <textarea name="postCont" id="content" class="form-control">  <?= $postValue["content"] ?> </textarea>
+                        <textarea name="postCont" id="content" class="form-control">  <?= $post["content"] ?> </textarea>
                         <input type="submit" name="submit" value="Update">
                     </form>
                 </div>

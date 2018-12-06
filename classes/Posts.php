@@ -82,7 +82,7 @@ class Posts
       ));
          // Return to index
          header('Location: ../index.php');
-         return true;
+         exit;
   }
 
 
@@ -92,7 +92,7 @@ class Posts
     where posts_id = :posts_id");
     
     $stmt->execute([
-      ":posts_id" => $_GET["posts_id"],
+      ":posts_id" => $_GET["id"],
     ]);
 
     $singlePost = $stmt->fetch();
