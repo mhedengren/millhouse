@@ -16,9 +16,9 @@ include '../includes/head.php';
 include '../includes/header.php';
 
 include '../classes/category.php';
-$object2 = new Category($pdo);
-$object2->getWatchesCat();
-$watches = $object2->getWatchesCat();
+$object4 = new Category($pdo);
+$object4->getHomeDecoCat();
+$homeDecor = $object4->getHomeDecoCat();
 
 
 //var_dump($categories);
@@ -31,8 +31,8 @@ $watches = $object2->getWatchesCat();
     <div class="container"> 
 
 <?php 
-    if(isset($watches)) {
-        foreach($watches as $single_category) : ?>
+    if(isset($homeDecor)) {
+        foreach($homeDecor as $single_category) : ?>
             <div class="col-sm-12 col-md-4">
                 <div class="category-card">
                         <a href="single-post.php?posts_id=<?= $single_category["posts_id"]; ?>">
