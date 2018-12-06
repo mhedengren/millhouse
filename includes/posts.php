@@ -57,7 +57,8 @@ if($action === "read_post")
 
 if($action === "update_post")
 { 
-   $posts->update($_POST["postTitle"], $_POST["postDesc"], $_POST["postCont"], $_SESSION["user_id"], $new_location, $_POST['categories'] );
+   $postId = $_POST['postId'];
+   $posts->update($_POST["postTitle"], $_POST["postDesc"], $_POST["postCont"], $_POST["postId"], $new_location, $_POST['categories'] );
 }
 
 
