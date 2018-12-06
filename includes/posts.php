@@ -26,13 +26,13 @@ if($action === "create_post")
 if($action === "read_post")
 { 
    $id_to_read = $_GET["id"];
+   //Pass ID along header location for it to be available on the next page.
    header('Location: ../views/edit-post.php?id='.$id_to_read);
 }
 
 // Handles what happens if the GET action is update_post.
 if($action === "update_post")
 { 
-   
    $posts->update($_POST["postTitle"], $_POST["postDesc"], $_POST["postCont"], $new_location, $_POST['categories'], $postId );
 }
 
