@@ -18,7 +18,7 @@ class SinglePost
     $stmt = $this->pdo->prepare("SELECT posts_id, posts.title, posts.description, posts.created_by, posts.created_on, posts.image, posts.content, 
     users.username FROM posts
     INNER JOIN users
-    ON posts.created_by = users.admin
+    ON posts.created_by = users.id
     where posts_id = :posts_id");
     
     $stmt->execute([

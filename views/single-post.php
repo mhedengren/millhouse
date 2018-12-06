@@ -93,7 +93,7 @@ $read = $comments->readComments($_GET['posts_id']);
                       <ul class="edit-remove-buttons">
                           <li class="list-inline-item remove-button">
                           
-                          <a href="../includes/comments.php?action=delete_comment&comments_id=<?= $single_comment["comments_id"]; ?>">    
+                          <a href="../includes/comments.php?action=delete_comment&post_id=<?= $post["posts_id"] ?>&comments_id=<?= $single_comment["comments_id"]; ?>">    
                               <i class="fas fa-times"></i></a>
                            </li>
                       </ul>
