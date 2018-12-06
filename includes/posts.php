@@ -47,11 +47,19 @@ if($action === "create_post"){
    
 }
 
+if($action === "read_post")
+{ 
+
+   $id_to_read = $_GET["id"];
+   header('Location: ../views/edit-post.php?id='.$id_to_read);
+}
+
+
 if($action === "update_post")
 { 
+
    $id_to_update = $_GET["id"];
    header('Location: ../views/edit-post.php?id='.$id_to_update);
-   
 }
 
 

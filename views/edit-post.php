@@ -19,13 +19,10 @@ include '../classes/Posts.php';
 $object = new Posts($pdo);        
 $post = $object->readPost();
 
-var_dump($post);
 
 ?>
 
-
 <body>
-
 
     <main id="admin-panel">
 
