@@ -64,7 +64,7 @@ class Category
         //select all data
         $statement = $this->pdo->prepare(
             "SELECT * FROM posts
-            WHERE posts.category = 'home decor'"
+            WHERE posts.category = 'homedecor'"
         );
 
         $statement->execute();
