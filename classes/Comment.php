@@ -46,7 +46,6 @@ class Comments{
 
     public function validation()
     {
-        
         if(empty($this->content)){
             $this->errors = "Please fill in comment box before posting.";
         }
