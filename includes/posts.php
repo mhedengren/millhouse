@@ -19,7 +19,7 @@ $action = $_GET["action"] ?? '';
 // Handles what happens if the GET action is create_post.
 if($action === "create_post")
 { 
-   $posts->create($_POST["postTitle"], $_POST["postDesc"], $_POST["postCont"], $_SESSION["user_id"], date('Y-m-d'), $new_location, $_POST['categories'] );
+   $posts->create($_POST["postTitle"], $_POST["postDesc"], $_POST["postCont"], $_SESSION["user_id"], date('Y-m-d H:i:s'), $new_location, $_POST['categories'] );
 }
 
 // Handles what happens if the GET action is read_post.

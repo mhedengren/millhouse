@@ -5,8 +5,6 @@ session_start();
 require '../config.php';
 require '../includes/database-connection.php';
 include '../includes/functions.php';
-include '../includes/date.php';
-
 
 //Page title
 $page_title = 'Categories'; 
