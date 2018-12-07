@@ -203,12 +203,10 @@
         //left: 20px;
         padding-right: 0px;
         padding-left: 0px;
-        width: 40%;
+        width: 50%;
         //@include toCheckStyle(pink); 
         
         h2 {
-            margin-top: 0.7rem;
-            opacity: 1;
             font-family: 'Merriweather';
             font-style: normal;
             font-weight: 900;
@@ -222,8 +220,6 @@
             padding: 0.8rem;
             border-radius: 4px;
 
-
-          
                 .bg-color {
                     background-color: none;
                     padding: 0px;
@@ -249,7 +245,7 @@
                 font-style: normal;
                 font-weight: 600;
                 text-decoration: none;
-                font-size: 14px;
+                font-size: 1rem;
                 letter-spacing: 0.5px;
                 color: $secondColorP;
                 
@@ -309,16 +305,15 @@
         //left: 20px;
         padding-right: 0px;
         padding-left: 0px;
-        width: 40%;
+        //width: 50%;
         //@include toCheckStyle(pink); 
         
         h2 {
-            opacity: 1;
             font-family: 'Merriweather';
             font-style: normal;
             font-weight: bolder;
             line-height: 60px;
-            font-size: 2.2rem;
+            font-size: 2.6rem;
             text-align: left;
             letter-spacing: 0.5px;
             color:white;

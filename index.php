@@ -40,6 +40,7 @@ include 'includes/date.php';
                            </li>
                       </ul>
                   <?php endif; ?>
+                  <a href="views/single-post.php?posts_id=<?= $feature["posts_id"]; ?>">
                <div class="hero-image">
                    <img src="includes/<?= $feature["image"]; ?>" alt="feature-image">
                </div>
@@ -49,6 +50,7 @@ include 'includes/date.php';
                    </div>
                </div>
                <h2 class="feature-title d-md-none"><?= $feature["title"]; ?></h2>
+               </a>
                <p class="post-description d-md-none"><?= $feature["description"]; ?></p>
            </div>
        </article>
@@ -61,9 +63,11 @@ include 'includes/date.php';
     $object2 = new Feature($pdo);
     $object2->getLatestPosts();
     $latestPosts = $object2->getLatestPosts();
+    
     ?>
       <section class="gallery row">
           <?php foreach ($latestPosts as $post) :?>
+          <?php include 'includes/date-gallery.php';?>
               <div class="col-sm-12 col-md-6 gallery-card">
                   <?php if(isset($_SESSION['user']) && $_SESSION['user'] == "admin"): ?>
                       <ul class="edit-remove-buttons">

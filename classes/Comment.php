@@ -21,44 +21,36 @@ class Comments{
     }
     
     //This sets properties for comments 
-    public function prepareInfoForComments($content, $posts_id, $created_by, $created_on)
+   /* public function prepareInfoForComments($content, $posts_id, $created_by, $created_on)
     {
         $this->content = $content;
         $this->posts_id = $posts_id;
         $this->created_by = $created_by;
         $this->created_on = $created_on;
-    }
+    }*/
 
-    public function insertComment()
+    public function insertComment($content, $posts_id, $created_by, $created_on)
     {
         $statement = $this->pdo->prepare("INSERT INTO comments (content, 
         posts_id, created_by, created_on) VALUES (:content, :posts_id, :created_by, :created_on)");
         $statement->execute(
 
             [
-            ":content" => $this->content,
-            ":posts_id" => $this->posts_id,
-            ":created_by" => $this->created_by,
-            ":created_on" => $this->created_on
+            ":content" => $content,
+            ":posts_id" => $posts_id,
+            ":created_by" => $created_by,
+            ":created_on" => $created_on
             ]
         );
     }
-
-    public function validation()
-    {
-        if(empty($this->content)){
-            $this->errors = "Please fill in comment box before posting.";
-        }
-        return $this->errors;
-    }
-
 
     public function readComments($posts_id)
     {
         $statement = $this->pdo->prepare("SELECT users.username, users.id, comments.comments_id, comments.content, comments.posts_id, comments.created_by, comments.created_on FROM comments
         INNER JOIN users
         ON users.id = comments.created_by
-        WHERE posts_id = :posts_id");
+        WHERE posts_id = :posts_id
+        ORDER BY comments.created_on DESC");
         $statement->execute(
             [
             ":posts_id" => $posts_id

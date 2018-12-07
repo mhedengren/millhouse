@@ -29,7 +29,8 @@ class Category
         //select all data
         $statement = $this->pdo->prepare(
             "SELECT * FROM posts
-            WHERE posts.category = 'watches'"
+            WHERE posts.category = 'watches' 
+            order by created_on DESC"
         );
 
         $statement->execute();
@@ -45,7 +46,8 @@ class Category
         //select all data
         $statement = $this->pdo->prepare(
             "SELECT * FROM posts
-            WHERE posts.category = 'sunglasses'"
+            WHERE posts.category = 'sunglasses'
+            order by created_on DESC"
         );
 
         $statement->execute();
@@ -61,7 +63,8 @@ class Category
         //select all data
         $statement = $this->pdo->prepare(
             "SELECT * FROM posts
-            WHERE posts.category = 'homedecor'"
+            WHERE posts.category = 'homedecor'
+            order by created_on DESC"
         );
 
         $statement->execute();
