@@ -14,7 +14,7 @@ $comments = new Comments($pdo);
 $action = $_GET["action"] ?? '';
 
 if($action === "create_comment"){
-
+  
     if(!empty($_POST['content'])){
     $comments->insertComment($_POST['content'], $_POST['posts_id'], $_SESSION['user_id'], date('Y-m-d H:i:s'));
     header('Location: ../views/single-post.php?posts_id='.$_GET['posts_id'].'&action=added');
@@ -23,7 +23,7 @@ if($action === "create_comment"){
     header('Location: ../views/single-post.php?posts_id='.$_GET['posts_id'].'&empty=content'); 
     }
   
-}
+} 
 // Handles what happens if the GET action is delete.
 if($action === "delete_comment")
 {  
