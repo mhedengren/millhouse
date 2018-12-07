@@ -119,8 +119,8 @@ include '../includes/functions.php';
                             <p><?=  $single_comment["content"]; ?></p>
                         </div>
                     </div>
-                    </div>
                     <?php endforeach; ?>
+                    </div>
             
 
     <?php 
