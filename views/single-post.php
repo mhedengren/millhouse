@@ -10,7 +10,6 @@ $page_title = "single-post";
 include '../includes/head.php';
 include '../includes/header.php';
 include '../includes/database-connection.php';
-include '../includes/select_feature_post.php';
 //this is my SinglePost class 
 include '../classes/Single-post.php';
 //this initiates a new object
