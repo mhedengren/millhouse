@@ -38,7 +38,7 @@ $post = $object->readPost();
                 <div class="col-sm-12 col-md-8">
                     <h2 class="add-new-post">Edit your post</h2>
                     <?php new_post_form_check(); ?>
-                    <form action="../includes/posts.php?action=update_post" method="POST" enctype="multipart/form-data" id="upload-form">
+                    <form action="../includes/posts.php?action=update_post&id=<?= $post["posts_id"] ?>" method="POST" enctype="multipart/form-data" id="upload-form">
                         <label for="title">Title</label>
                         <input type="text" id="title" name="postTitle" value="<?= $post["title"] ?>" class="form-control" placeholder="Your title here"><!-- if validation fails then show all content entered into the form's input and textarea -->
                         <label for="desc">Description</label>
