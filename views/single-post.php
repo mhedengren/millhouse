@@ -24,14 +24,14 @@ $read = $comments->readComments($_GET['posts_id']);
 include '../includes/functions.php';
 
 ?>
-<div class="container" id="single-post">
+<div class="container">
 
-    <div class="row">
-    <main class="col-lg-8">
-        <!--this allows all info from a single post to be shown from the database-->
-        <article class="hero-image-post-container row justify-content-center">
-            <div class="feature-post hero-image col-10-sm col-12">
-                <!--takes image from database-->
+    <div class="row" id="single-post">
+        <main class="col-lg-8">
+            <!--this allows all info from a single post to be shown from the database-->
+            <article class="hero-image-post-container row justify-content-center">
+                <div class="feature-post hero-image col-10-sm col-12">
+                    <!--takes image from database-->
                     <img src="../includes/<?= $post["image"]; ?>" alt="Hero-image">
                     <!--takes title from database for tablet and larger-->
                     <div class="row d-flex justify-content-center">
@@ -48,7 +48,7 @@ include '../includes/functions.php';
                     </div>
                 </div>
                 <div class="col-10">
-                <!--takes date and displays clean from database-->
+                    <!--takes date and displays clean from database-->
                     <div class="row justify-content-center">
                         <div class="date-circle">    
                             <h6 class="post-date"><?= $month; ?><br><?= $day; ?></h6>
@@ -74,81 +74,84 @@ include '../includes/functions.php';
             </div>
 
 
-    </main>
+        </main>
 
-    <?php include '../includes/aside.php'; ?>
+        <?php include '../includes/aside.php'; ?>
 
-</div>
-
-
-<div id="comments" class="container comment-container">
-
-    <div class="row">
-        <div class="col-12">
-            <h4>Comments (<?= count($read) ?>)</h4>
-        </div>
     </div>
-    <?php foreach ($read as $single_comment) :?>
-    <?php if(isset($_SESSION['user']) && $_SESSION['user'] == "admin"): ?>
-                  <div class="comment-field">
-                      <ul class="edit-remove-buttons">
-                          <li class="list-inline-item remove-button">
-                          
 
-                          <a href="../includes/comments.php?action=delete_comment&post_id=<?= $post["posts_id"] ?>&comments_id=<?= $single_comment["comments_id"]; ?>">    
-                              <i class="fas fa-times"></i></a>
-                           </li>
-                      </ul>
-                  <?php endif; ?>
-                    <div class="row">
-                        <div class="col-sm-2 comment-user">
-                            <p><?= $single_comment["username"]; ?></p>
-                            <div class="d-sm-none d-md-block comment-date">
-                                <p><?= date('F d Y', strtotime($single_comment["created_on"])); ?></p>
-                            </div>
-                        </div>
-                        <div class="col-sm-4 d-none d-sm-block d-md-none comment-date">
-                            <p><?= date('F d Y', strtotime($single_comment["created_on"])); ?></p>
-                        </div>
-                        <div class="col-md-10 d-sm-none d-md-block comment-content">
-                            <p><?=  $single_comment["content"]; ?></p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm d-none d-sm-block d-md-none comment-content">
-                            <p><?=  $single_comment["content"]; ?></p>
-                        </div>
-                    </div>
-                    <?php endforeach; ?>
-                    </div>
-            
 
-    <?php 
+    <div id="comments" class="container comment-container">
+
+        <div class="row">
+            <div class="col-12">
+                <h4>Comments (<?= count($read) ?>)</h4>
+            </div>
+        </div>
+        <div>
+            <?php foreach ($read as $single_comment) :?>
+
+            <?php if(isset($_SESSION['user']) && $_SESSION['user'] == "admin"): ?>
+
+            <ul class="edit-remove-buttons">
+                <li class="list-inline-item remove-button">
+
+
+                    <a href="../includes/comments.php?action=delete_comment&post_id=<?= $post["posts_id"] ?>&comments_id=<?= $single_comment["comments_id"]; ?>">    
+                        <i class="fas fa-times"></i></a>
+                </li>
+            </ul>
+            <?php endif; ?>
+            <div class="comment-field row">
+                <div class="col-sm-2 comment-user">
+                    <p><?= $single_comment["username"]; ?></p>
+                    <div class="d-sm-none d-md-block comment-date">
+                        <p><?= date('F d Y', strtotime($single_comment["created_on"])); ?></p>
+                    </div>
+                </div>
+                <div class="col-sm-4 d-none d-sm-block d-md-none comment-date">
+                    <p><?= date('F d Y', strtotime($single_comment["created_on"])); ?></p>
+                </div>
+                <div class="col-md-10 d-sm-none d-md-block comment-content">
+                    <p><?=  $single_comment["content"]; ?></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm d-none d-sm-block d-md-none comment-content">
+                    <p><?=  $single_comment["content"]; ?></p>
+                </div>
+            </div>
+            <?php endforeach; ?>
+        </div>
+
+
+        <?php 
         new_comment_form_check();
-    ?>    
-    <div class="comments-form text-center">
-        <?php if(isset($_SESSION['username'])) : ?>
-        
+        ?>    
+        <div class="comments-form text-center">
+            <?php if(isset($_SESSION['username'])) : ?>
+
             <form action="../includes/comments.php?action=create_comment&posts_id=<?= $post['posts_id']; ?>" method="POST">
                 <label for="write-comment"></label>
                 <input type="hidden" name="posts_id" value="<?= $post['posts_id']; ?>"> 
                 <textarea class="form-control" type="text" id="write-comment" name="content" placeholder="Write comment here...."></textarea>
                 <input class="post-comment-btn" type="submit" value="POST" id="post-comment" name="post-comment">
             </form>
-        
-        <?php else: ?>
-        <div class="alert alert-danger text-center" role="alert">
-            <p>Please log in to comment</p>
+
+            <?php else: ?>
+            <div class="alert alert-danger text-center" role="alert">
+                <p>Please log in to comment</p>
+            </div>
+            <?php endif; ?>
         </div>
-        <?php endif; ?>
-        </div>
+
     </div>
 </div>
 
 
 
-    <?php
+<?php
 
-    include '../includes/footer.php';
-    ?>    
+include '../includes/footer.php';
+?>    
 
