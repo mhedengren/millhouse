@@ -11,8 +11,6 @@ $temporary_location = $image["tmp_name"];
 $new_location = "uploads/" . $image["name"];
 $upload_ok = move_uploaded_file($temporary_location, $new_location);
 
-/* Following the MVC-model. This is the controller. 
-   Index is the view. And Class is the model. */
 
 $action = $_GET["action"] ?? '';
 

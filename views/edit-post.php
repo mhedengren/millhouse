@@ -60,7 +60,7 @@ $post = $object->readPost();
                         <select name="categories" form="upload-form" id="categories">
                             <option value="sunglasses">Sunglasses</option>
                             <option value="watches">Watches</option>
-                            <option value="accessories">Accessories</option>
+                            <option value="homedecor">Home Decor</option>
                         </select>
 
                     </div>
