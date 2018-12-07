@@ -77,15 +77,16 @@ $read = $comments->readComments($_GET['posts_id']);
 
     <?php include '../includes/aside.php'; ?>
 
+</div>
 
 
 <div id="comments" class="container comment-container">
 
-<div class="row">
-    <div class="col-12">
-        <h4>Comments (<?= count($read) ?>)</h4>
+    <div class="row">
+        <div class="col-12">
+            <h4>Comments (<?= count($read) ?>)</h4>
+        </div>
     </div>
-</div>
     <?php foreach ($read as $single_comment) :?>
     <?php if(isset($_SESSION['user']) && $_SESSION['user'] == "admin"): ?>
                   <div class="comment-field">
@@ -119,14 +120,7 @@ $read = $comments->readComments($_GET['posts_id']);
                     </div>
                     </div>
                     <?php endforeach; ?>
-                </div>
-            </div>
-
-    <div class="row justify-content-center">
-        <div class="d-none d-lg-block col-lg-10 text-center">
-            <hr class="after-post">
-        </div>
-    </div>
+            
 
     <?php 
         if(!empty($comments->validation())){
@@ -146,8 +140,10 @@ $read = $comments->readComments($_GET['posts_id']);
         <?php else: ?>
         <p>Please log in to comment</p>
         <?php endif; ?>
+        </div>
     </div>
 </div>
+
 
 
     <?php
