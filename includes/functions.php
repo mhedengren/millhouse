@@ -84,5 +84,3 @@ function insert_line_break($text){
     }
 }
 
-
-

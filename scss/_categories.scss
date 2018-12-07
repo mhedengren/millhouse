@@ -2,19 +2,82 @@
 
 
 #categories {
+
+    .hero-image {
+        background: -webkit-linear-gradient(257.7deg, rgba(28, 48, 69, 0.81) 1.68%, rgba(96, 73, 90, 0.63) 97.8%);
+        width: 100vw;
+        margin-bottom: 4em;
+
+        img {
+            position: relative;
+            height: 400px;
+            z-index: -1;
+        }
+
+        h1 {
+            position: absolute;
+            left: 105px;
+            bottom: 15%;
+            font-family: $bodyFamily;
+            text-transform: uppercase;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            font-size: 50px;
+            letter-spacing: 0.5px;
+            color: #F0F0F0;
+            text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+        }
+    }
+
+    .category-gallery {
+        margin: 0 10%;
+
+        .content {
+            margin: 50px 0;
+
+            .post-details {
+                border-bottom: 1px solid #C4C4C4;
+                border-top: 1px solid #C4C4C4;
+                
+
+                .post-title {
+                    font-weight: bold;
+                    line-height: 30px;
+                    font-size: 18px;
+                    letter-spacing: 0.5px;
+                    margin-top: 2em;
+                    color: #1C3045;
+                }
+
+                .post-description {
+                    text-align: left;
+                    padding: 0;
+                    font-style: normal;
+                    font-weight: normal;
+                    line-height: 24px;
+                    font-size: 14px;
+                    letter-spacing: 0.5px;
+                    color: #000000;
+                    margin-bottom: 3em;
+
+                }
+
+                .read-more a {
+                    
+                }
+
+            }
+
+            .post-img {
+
+                img {
+                    padding-left: 5%;
+                }
+            }
+        }
+        
+    }
+
     
-
-    h1 {
-        font-size: 35px;
-        font-weight: bold;
-        color: $secondColorP;
-        //margin-top: 4rem;
-        border-bottom: 3px solid $secondColorP;
-        line-height: 1.5em;
-    }
-
-    .category-list {
-        box-sizing: border-box;
-        margin-top: 3em;
-    }
 }
