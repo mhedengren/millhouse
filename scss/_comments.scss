@@ -73,15 +73,19 @@
     }
 
 
-    .post-comment-btn {
+    .comments-form{
 
-        margin: 5% 0;
+        .post-comment-btn {
 
-        @include buttonStyle($secondColorP, #fff);
-
-        &:hover {
-            @include buttonStyle($primalColorL, $primalColorD);
+            margin: 5% 0;
+    
+            @include buttonStyle($secondColorP, #fff);
+    
+            &:hover {
+                @include buttonStyle($primalColorL, $primalColorD);
+            }
         }
     }
+    
 
 }

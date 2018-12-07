@@ -117,9 +117,10 @@ $read = $comments->readComments($_GET['posts_id']);
                             <p><?=  $single_comment["content"]; ?></p>
                         </div>
                     </div>
+                    </div>
                     <?php endforeach; ?>
                 </div>
-</div>
+            </div>
 
     <div class="row justify-content-center">
         <div class="d-none d-lg-block col-lg-10 text-center">
@@ -132,23 +133,23 @@ $read = $comments->readComments($_GET['posts_id']);
             echo $comments->validation();
         }
     ?>    
-    
+    <div class="comments-form text-center">
         <?php if(isset($_SESSION['username'])) : ?>
-        <div class="comments-form text-center">
+        
             <form action="../includes/comments.php?action=create_comment" method="POST">
                 <label for="write-comment"></label>
                 <input type="hidden" name="posts_id" value="<?= $post['posts_id']; ?>"> 
                 <textarea class="form-control" type="text" id="write-comment" name="content" placeholder="Write comment here...."></textarea>
                 <input class="post-comment-btn" type="submit" value="POST" id="post-comment" name="post-comment">
             </form>
-            </div>
+        
         <?php else: ?>
         <p>Please log in to comment</p>
         <?php endif; ?>
-    
+    </div>
 </div>
 
-</div>
+
     <?php
 
     include '../includes/footer.php';
