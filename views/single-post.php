@@ -78,15 +78,16 @@ include '../includes/functions.php';
 
     <?php include '../includes/aside.php'; ?>
 
+</div>
 
 
 <div id="comments" class="container comment-container">
 
-<div class="row">
-    <div class="col-12">
-        <h4>Comments (<?= count($read) ?>)</h4>
+    <div class="row">
+        <div class="col-12">
+            <h4>Comments (<?= count($read) ?>)</h4>
+        </div>
     </div>
-</div>
     <?php foreach ($read as $single_comment) :?>
     <?php if(isset($_SESSION['user']) && $_SESSION['user'] == "admin"): ?>
                   <div class="comment-field">
@@ -119,19 +120,13 @@ include '../includes/functions.php';
                         </div>
                     </div>
                     <?php endforeach; ?>
-                </div>
-</div>
-
-    <div class="row justify-content-center">
-        <div class="d-none d-lg-block col-lg-10 text-center">
-            <hr class="after-post">
-        </div>
-    </div>
+                    </div>
+            
 
     <?php 
         new_comment_form_check();
     ?>    
-    
+    <div class="comments-form text-center">
         <?php if(isset($_SESSION['username'])) : ?>
         
             <form action="../includes/comments.php?action=create_comment&posts_id=<?= $post['posts_id']; ?>" method="POST">
@@ -140,16 +135,18 @@ include '../includes/functions.php';
                 <textarea class="form-control" type="text" id="write-comment" name="content" placeholder="Write comment here...."></textarea>
                 <input class="post-comment-btn" type="submit" value="POST" id="post-comment" name="post-comment">
             </form>
-            </div>
+        
         <?php else: ?>
         <div class="alert alert-danger text-center" role="alert">
             <p>Please log in to comment</p>
         </div>
         <?php endif; ?>
-    
+        </div>
+    </div>
 </div>
 
-</div>
+
+
     <?php
 
     include '../includes/footer.php';
