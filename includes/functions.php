@@ -65,7 +65,7 @@ function new_comment_form_check(){
         if($_GET['action'] == 'added')
        echo "<div class='alert alert-success text-center' role='alert'>Your comment has been successfully added!</div>";
 }
-
+}
 function upload_file_check() {
     if(isset($_GET['upload'])) {
         if($_GET['upload'] == 'wrongformat') {
@@ -82,5 +82,5 @@ function insert_line_break($text){
     }
 }
 
-}
+
 
