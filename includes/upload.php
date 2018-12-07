@@ -38,7 +38,6 @@ if(isset($_POST['submit'])){
       }
     } 
 
-
   //Check if the text inputs are empty
   if(empty($_POST["postTitle"]) && empty($_POST["postDesc"]) && empty($_POST["postCont"])) {
     header('Location: ../views/admin-page.php?empty=form');

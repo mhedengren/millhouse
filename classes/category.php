@@ -14,9 +14,7 @@ class Category
     public function getAllCategories(){
         //select all data
         $statement = $this->pdo->prepare(
-            "SELECT * FROM posts
-            LEFT JOIN post_category ON posts.posts_id = post_category.posts_id
-            LEFT JOIN categories ON categories.categories_id = post_category.category_id"
+            "SELECT * FROM posts order by created_on DESC"
         );
 
         $statement->execute();
