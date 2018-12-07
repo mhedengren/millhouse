@@ -28,11 +28,33 @@
     }
 
     .footer-logo{
-        max-width: 50%;
-        padding: 20px;
-        margin: 4rem 0rem;
+        max-width: 40%;
+        padding: 5px;
+        margin: 20px auto;
     }
 
+    .fab {
+        color: white;
+        padding: 5px;
+        font-size: 2.5rem;
+        text-align: center;
+        text-decoration: none;
+    }
+/*
+    .fa:hover {
+        opacity: 0.7;
+    }
+    
+    .fa-facebook {
+      background: #3B5998;
+      color: white;
+    }
+    
+    .fa-twitter {
+      background: #55ACEE;
+      color: white;
+    }
+*/
    
 //}
 //tablet size
@@ -53,6 +75,10 @@
        
         height: 35vh;
       
+    }
+
+    .fab{
+        padding: 10px;
     }
 
 }
