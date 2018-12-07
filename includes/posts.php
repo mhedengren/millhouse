@@ -11,41 +11,6 @@ $temporary_location = $image["tmp_name"];
 $new_location = "uploads/" . $image["name"];
 $upload_ok = move_uploaded_file($temporary_location, $new_location);
 
-  //Check if the user has uploaded an image
-  if (!isset($_FILES['image']) || $_FILES['image']['error'] == UPLOAD_ERR_NO_FILE) {
-   header('Location: ../views/admin-page.php?upload=empty');
-   exit(); 
-} else if(isset($_FILES['image'])){
-   $errors= array();
-   $file_ext=strtolower(end(explode('.',$_FILES['image']['name'])));
-   $formats = array("jpeg","jpg","png");
-   
-   //Checking the file format of the uploaded file
-   if(in_array($file_ext,$formats) === false) {
-     header('Location: ../views/admin-page.php?upload=wrongformat');
-     exit();
-   }
- } 
-
-//Check if the text inputs are empty
-if(empty($_POST["postTitle"]) && empty($_POST["postDesc"]) && empty($_POST["postCont"])) {
- header('Location: ../views/admin-page.php?empty=form');
- exit();
-}
-
-if(empty($_POST["postTitle"])) {
-     header('Location: ../views/admin-page.php?empty=title');
-     exit();
-} else if (empty($_POST["postDesc"])) {
-     header('Location: ../views/admin-page.php?empty=description');
-     exit();
-} else if (empty($_POST["postCont"])) {
-     header('Location: ../views/admin-page.php?empty=content');
-     exit();
-}
-
-/* Following the MVC-model. This is the controller. 
-   Index is the view. And Class is the model. */
 
 $action = $_GET["action"] ?? '';
 
