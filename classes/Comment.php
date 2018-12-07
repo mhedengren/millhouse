@@ -44,17 +44,6 @@ class Comments{
         );
     }
 
-    public function validation()
-    {   
-        if(empty($this->content)){
-        //if(isset($_POST['post-comment'])){
-                $this->errors = "Please fill in comment box before posting.";
-            }
-            return $this->errors;
-        //}
-    }
-
-
     public function readComments($posts_id)
     {
         $statement = $this->pdo->prepare("SELECT users.username, users.id, comments.comments_id, comments.content, comments.posts_id, comments.created_by, comments.created_on FROM comments
