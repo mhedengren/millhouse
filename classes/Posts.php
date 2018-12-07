@@ -96,4 +96,7 @@ class Posts
          header('Location: ../index.php');
          exit;
   }
+
+  public function validatePost(){
+  }
 }
