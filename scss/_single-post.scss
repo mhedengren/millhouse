@@ -6,17 +6,6 @@
     article {
         padding: 5% 0;
     }
-    div{
-         @include toCheckStyle(#9FF781);
-     }
- 
-     nav, img, i, ul, li{
-         @include toCheckStyle(pink);
-     }
- 
-     main, aside, button{
-         @include toCheckStyle(blue);
-     }
 
     .hero-image {
 
