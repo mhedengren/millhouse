@@ -23,14 +23,14 @@ $comments = new Comments($pdo);
 $read = $comments->readComments($_GET['posts_id']);
 
 ?>
-<div class="container">
+<div class="container" id="single-post">
 
-    <main class="row justify-content-center feature-post" id="single-post">
+    <div class="row">
+    <main class="col-lg-8">
         <!--this allows all info from a single post to be shown from the database-->
         <article class="hero-image-post-container row justify-content-center">
-            <div class="feature-post col-12  text-left">
+            <div class="feature-post hero-image col-10-sm col-12">
                 <!--takes image from database-->
-                <div class="hero-image col-12">
                     <img src="../includes/<?= $post["image"]; ?>" alt="Hero-image">
                     <!--takes title from database for tablet and larger-->
                     <div class="row d-flex justify-content-center">
@@ -38,47 +38,46 @@ $read = $comments->readComments($_GET['posts_id']);
                             <h2 class="d-none d-md-block"><span><?= $post["title"]; ?></span></h2>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-10">
-                <!--takes date and displays clean from database-->
-                <div class="row justify-content-center">
-                    <div class="date-circle">    
-                        <h6 class="post-date"><?= $month; ?><br><?= $day; ?></h6>
-                    </div>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-10">
-                        <div class="date-author">    
-                            <h2 class="post-date d-none d-md-block"><?= $month . " " . $day . ", " . $year . " - " . $post["username"] ?></h2>
+                    <div class="row justify-content-center">
+                        <div class="col-10">
+                            <div class="date-author">    
+                                <h2 class="post-date d-none d-md-block"><?= $month . " " . $day . ", " . $year . " - " . $post["username"] ?></h2>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!--takes title from database up to 767.9px-->
-                <h2 class="post-title-mobile d-md-none"><?= $post["title"]; ?></h2>
-                <div class="row justify-content-center">
-                    <div class="d-none d-md-block col-md-3 text-center">    
-                        <hr class="before-post">
-                    </div>        
+                <div class="col-10">
+                <!--takes date and displays clean from database-->
+                    <div class="row justify-content-center">
+                        <div class="date-circle">    
+                            <h6 class="post-date"><?= $month; ?><br><?= $day; ?></h6>
+                        </div>
+                    </div>
+                    <!--takes title from database up to 767.9px-->
+                    <h2 class="post-title-mobile d-md-none"><?= $post["title"]; ?></h2>
+                    <div class="row justify-content-center">
+                        <div class="d-none d-md-block col-md-3 text-center">    
+                            <hr class="before-post">
+                        </div>        
+                    </div>
+                    <h2 class="post-description"><?= $post["description"]; ?></h2> 
+                    <p class="post-content"><?= $post["content"]; ?></p>
+                    <p class="written-by d-md-none text-left">Written by</p>
+                    <p class="post-author-mobile d-md-none text-left"><?= $post["username"]; ?></p>                 
                 </div>
-                <h2 class="post-description"><?= $post["description"]; ?></h2> 
-                <p class="post-content"><?= $post["content"]; ?></p>
-                <p class="written-by d-md-none text-left">Written by</p>
-                <p class="post-author-mobile d-md-none d-lg-block text-left"><?= $post["username"]; ?></p>                 
+            </article>
+            <div class="row justify-content-center">
+                <div class="col-10 text-center">
+                    <hr class="after-post">
+                </div>
             </div>
-        </article>
-        <div class="row justify-content-center">
-            <div class="d-lg-none col-lg-10 text-center">
-                <hr class="after-post">
-            </div>
-        </div>
 
 
     </main>
 
     <?php include '../includes/aside.php'; ?>
 
-</div>
+
 
 <div id="comments" class="container comment-container">
 
@@ -120,6 +119,7 @@ $read = $comments->readComments($_GET['posts_id']);
                     </div>
                     <?php endforeach; ?>
                 </div>
+</div>
 
     <div class="row justify-content-center">
         <div class="d-none d-lg-block col-lg-10 text-center">
@@ -132,23 +132,23 @@ $read = $comments->readComments($_GET['posts_id']);
             echo $comments->validation();
         }
     ?>    
-    <div class="comments-form text-center">
+    
         <?php if(isset($_SESSION['username'])) : ?>
-        
+        <div class="comments-form text-center">
             <form action="../includes/comments.php?action=create_comment" method="POST">
                 <label for="write-comment"></label>
                 <input type="hidden" name="posts_id" value="<?= $post['posts_id']; ?>"> 
                 <textarea class="form-control" type="text" id="write-comment" name="content" placeholder="Write comment here...."></textarea>
                 <input class="post-comment-btn" type="submit" value="POST" id="post-comment" name="post-comment">
             </form>
-        
+            </div>
         <?php else: ?>
         <p>Please log in to comment</p>
         <?php endif; ?>
-    </div>
+    
 </div>
 
-
+</div>
     <?php
 
     include '../includes/footer.php';
