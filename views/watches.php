@@ -1,8 +1,6 @@
 <?php
 session_start();
 
-ini_set(‘display_errors’, 1); ini_set(‘display_startup_errors’, 1); error_reporting(E_ALL);
-
 //Include for absolute path
 require '../config.php';
 require '../includes/database-connection.php';
