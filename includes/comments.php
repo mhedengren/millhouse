@@ -14,7 +14,7 @@ $comments = new Comments($pdo);
 $action = $_GET["action"] ?? '';
 
 if($action === "create_comment"){
-    $comments->prepareInfoForComments($_POST['content'], $_POST['posts_id'], $_SESSION['user_id'], date('Y-m-d'));
+    $comments->prepareInfoForComments($_POST['content'], $_POST['posts_id'], $_SESSION['user_id'], date('Y-m-d H:i:s'));
     if(empty($comments->validation())){
     $comments->insertComment();
     header('Location: ../views/single-post.php?posts_id='.$comments->posts_id);
