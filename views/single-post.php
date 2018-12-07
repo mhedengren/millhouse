@@ -25,12 +25,11 @@ $read = $comments->readComments($_GET['posts_id']);
 ?>
 <div class="container">
 
-    <main class="row justify-content-center feature-post" id="single-post">
+    <main id="single-post">
         <!--this allows all info from a single post to be shown from the database-->
         <article class="hero-image-post-container row justify-content-center">
-            <div class="feature-post col-12  text-left">
+            <div class="feature-post hero-image col-12">
                 <!--takes image from database-->
-                <div class="hero-image col-12">
                     <img src="../includes/<?= $post["image"]; ?>" alt="Hero-image">
                     <!--takes title from database for tablet and larger-->
                     <div class="row d-flex justify-content-center">
@@ -38,40 +37,39 @@ $read = $comments->readComments($_GET['posts_id']);
                             <h2 class="d-none d-md-block"><span><?= $post["title"]; ?></span></h2>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-10">
-                <!--takes date and displays clean from database-->
-                <div class="row justify-content-center">
-                    <div class="date-circle">    
-                        <h6 class="post-date"><?= $month; ?><br><?= $day; ?></h6>
-                    </div>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-10">
-                        <div class="date-author">    
-                            <h2 class="post-date d-none d-md-block"><?= $month . " " . $day . ", " . $year . " - " . $post["username"] ?></h2>
+                    <div class="row justify-content-center">
+                        <div class="col-10">
+                            <div class="date-author">    
+                                <h2 class="post-date d-none d-md-block"><?= $month . " " . $day . ", " . $year . " - " . $post["username"] ?></h2>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!--takes title from database up to 767.9px-->
-                <h2 class="post-title-mobile d-md-none"><?= $post["title"]; ?></h2>
-                <div class="row justify-content-center">
-                    <div class="d-none d-md-block col-md-3 text-center">    
-                        <hr class="before-post">
-                    </div>        
+                <div class="col-10">
+                <!--takes date and displays clean from database-->
+                    <div class="row justify-content-center">
+                        <div class="date-circle">    
+                            <h6 class="post-date"><?= $month; ?><br><?= $day; ?></h6>
+                        </div>
+                    </div>
+                    <!--takes title from database up to 767.9px-->
+                    <h2 class="post-title-mobile d-md-none"><?= $post["title"]; ?></h2>
+                    <div class="row justify-content-center">
+                        <div class="d-none d-md-block col-md-3 text-center">    
+                            <hr class="before-post">
+                        </div>        
+                    </div>
+                    <h2 class="post-description"><?= $post["description"]; ?></h2> 
+                    <p class="post-content"><?= $post["content"]; ?></p>
+                    <p class="written-by d-md-none text-left">Written by</p>
+                    <p class="post-author-mobile d-md-none text-left"><?= $post["username"]; ?></p>                 
                 </div>
-                <h2 class="post-description"><?= $post["description"]; ?></h2> 
-                <p class="post-content"><?= $post["content"]; ?></p>
-                <p class="written-by d-md-none text-left">Written by</p>
-                <p class="post-author-mobile d-md-none d-lg-block text-left"><?= $post["username"]; ?></p>                 
+            </article>
+            <div class="row justify-content-center">
+                <div class="col-10 text-center">
+                    <hr class="after-post">
+                </div>
             </div>
-        </article>
-        <div class="row justify-content-center">
-            <div class="d-lg-none col-lg-10 text-center">
-                <hr class="after-post">
-            </div>
-        </div>
 
 
     </main>
