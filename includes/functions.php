@@ -56,6 +56,16 @@ function new_post_form_check() {
  }
 }
 
+function new_comment_form_check(){
+    if(isset($_GET['empty'])){
+        if($_GET['empty'] == 'content'){
+            echo "<div class='alert alert-danger text-center' role='alert'>Please fill in comment box before posting.</div>";
+        }
+    } else if (isset($_GET['action'])) {
+        if($_GET['action'] == 'added')
+       echo "<div class='alert alert-success text-center' role='alert'>Your comment has been successfully added!</div>";
+}
+
 function upload_file_check() {
     if(isset($_GET['upload'])) {
         if($_GET['upload'] == 'wrongformat') {
@@ -72,4 +82,5 @@ function insert_line_break($text){
     }
 }
 
-?>
+}
+
