@@ -6,12 +6,24 @@
     article {
         padding: 5% 0;
     }
+    div{
+         @include toCheckStyle(#9FF781);
+     }
+ 
+     nav, img, i, ul, li{
+         @include toCheckStyle(pink);
+     }
+ 
+     main, aside, button{
+         @include toCheckStyle(blue);
+     }
 
     .hero-image {
 
         background: -webkit-linear-gradient(90deg, #1C3045 -1%, rgba(96, 73, 90, 0.54) 100%);
         padding-right:0;
-            padding-left:0;
+        padding-left:0;
+        
         img {
 
             // width: 100vw;
