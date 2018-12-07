@@ -16,6 +16,7 @@
 
     .comment-field{
         border-bottom: 0.03rem solid $paleGray;
+        margin-bottom: 2%;
     }
 
     .comment-user {
@@ -29,19 +30,6 @@
             margin:0;
             padding:0;
             
-        }
-    }
-
-    .comment-dot {
-
-        p {
-            text-align: left;
-            font-family: Open Sans;
-            color: $paleGray;
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin:0;
-            padding:0;
         }
     }
 
@@ -72,15 +60,20 @@
         }
     }
 
+    .comments-form{
 
-    .post-comment-btn {
+        form{
 
-        margin: 5% 0;
+            .post-comment-btn {
 
-        @include buttonStyle($secondColorP, #fff);
-
-        &:hover {
-            @include buttonStyle($primalColorL, $primalColorD);
+                margin: 5% 0;
+                
+                @include buttonStyle($secondColorP, #fff);
+                
+                &:hover {
+                    @include buttonStyle($primalColorL, $primalColorD);
+                    }
+            }
         }
     }
 
