@@ -23,7 +23,7 @@ $watches = $object2->getWatchesCat();
     <div class="container"> 
         <div class="row">
             <div class="col-sm">
-                <h1>Category: Watches</h1>
+                <h1>Watches</h1>
             </div>
         </div>
 

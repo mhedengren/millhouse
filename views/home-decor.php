@@ -24,7 +24,7 @@ $homeDecor = $object4->getHomeDecoCat();
     <div class="container"> 
         <div class="row">
             <div class="col-sm">
-                <h1>Category: Home Decor</h1>
+                <h1>Home Decor</h1>
             </div>
         </div>        
     

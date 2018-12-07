@@ -24,7 +24,7 @@ $sunglasses = $object3->getSunglassesCat();
     <div class="container">
         <div class="row">
             <div class="col-sm">
-                <h1>Category: Sunglasses</h1>
+                <h1>Sunglasses</h1>
             </div>
         </div> 
 
