@@ -18,20 +18,10 @@ include_once '../includes/functions.php';
 include '../includes/register.php';
 
 
-/*
-//If already logged in skip log in again and jump to check out page directly.
-if(isset($_SESSION["username"])){
-    redirect_to('../index.php');
-}
-
-*/
-?>
-
-<?php    include '../includes/head.php'; ?>
+include '../includes/head.php'; ?>
 
 <body>
 
-    <?php include "../includes/header.php"; ?>
     <main id="register-form"> 
 
         <div class="container row">

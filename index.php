@@ -15,6 +15,9 @@ $object = new Feature($pdo);
 $object->getFeaturePost();
 $feature = $object->getFeaturePost();
 include 'includes/date.php';
+
+//Redirect to login.php if user is not logged in
+is_login('views/login-form.php');
 ?>
 
   <div class="container">

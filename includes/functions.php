@@ -9,10 +9,17 @@ function redirect_to($location){
     exit; //exit() should be set if more action is set after this redirect.
 }
 
+//Redirect if user is not logged in
+function is_login($location){
+    if(!isset($_SESSION['username'])){
+        redirect_to($location);
+    }
+}
+
 //This function redirects if user is not logged in as an admin
 /*
 * Example:
-* is_admin('register-form.php');
+* is_admin('login-form.php');
 */
 function is_admin($location){
     if(!isset($_SESSION['user']) && !$_SESSION['user'] == "admin"){
@@ -77,12 +84,4 @@ function upload_file_check() {
         }
     }
 } 
-
-function insert_line_break($text){
-    if (strlen($text) < 10 ) {
-        return "<br>";
-    }
-}
-
-
 
