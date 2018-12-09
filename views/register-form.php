@@ -20,8 +20,6 @@ include '../includes/register.php';
 
 include '../includes/head.php'; ?>
 
-<body>
-
     <main id="register-form"> 
 
         <div class="container row">
