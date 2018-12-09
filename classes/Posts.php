@@ -23,10 +23,10 @@ class Posts
     $this->pdo = $pdo;
   }
 
-  // Method for deleting a post
+  // Method for deleting a post and coorelating comments
   public function delete()
   {
-      // Preperare the query
+      // Preperare the query to delete post
       $stmt = $this->pdo->prepare("DELETE FROM posts WHERE posts_id = :posts_id");
       $stmt->execute(
           [
@@ -34,9 +34,18 @@ class Posts
       ":posts_id" => $_GET["id"],
           ]
       );
+
+      // Preperare the query to delete all comments on this post
+      $stmt = $this->pdo->prepare("DELETE FROM comments WHERE posts_id = :posts_id");
+      $stmt->execute(
+                [
+      // Fetches the unique post id and executes the query.
+      ":posts_id" => $_GET["id"],
+          ]
+      );
       // Return to index
       header('Location: ../index.php');
-      return true;
+       return true;
   }
 
  //Method for creating a new post
