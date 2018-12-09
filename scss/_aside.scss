@@ -20,7 +20,7 @@ aside{
         // margin-top: 1rem;
         padding-top: 1rem;
         padding-bottom: 1rem;
-        
+
         hr{
             margin-top: 0;
         }
@@ -33,11 +33,11 @@ aside{
         }
 
         article{
-            @include toCheckStyle(pink); 
+            //@include toCheckStyle(pink); 
             margin-bottom: 0.7rem;
             padding-left: 0;
             padding-right: 0;
-            
+
             h5 {
                 font-size: $textSize;
                 font-weight: bold;
@@ -65,7 +65,7 @@ aside{
             .article-images{
                 padding-left: 0;
                 padding-right: 0;
-                height: 9rem;
+                height: 6rem;
 
                 img{
                     width: 100%;
@@ -100,22 +100,15 @@ aside{
     h2 {
         font-size: 1rem;
     }
- }
+}
 
 
 //md (Large devices (desktops, 992px and up))
 @media screen and (min-width: 992px){
     aside{
-        
+
         .container{
-           margin-top: 0;
-
-            article{
-                .article-images{
-                    height: 6rem;
-
-                }
-            }
+            margin-top: 0;
         }
     }
 }
