@@ -45,6 +45,7 @@ include "../includes/login.php";
             <p>New to the site? <a href="<?= $siteroot; ?>/views/register-form.php">Sign up!</a></p>
 
 
+            <img class="login-logo" src="<?= $siteroot; ?>/images/logo_light.png" alt="Millhouse Logo">
         </div>
     </div>
 </main>
