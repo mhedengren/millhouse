@@ -1,9 +1,6 @@
 <?php
-//Date to string conversion for index feature.
-$date = $feature["created_on"];
+$date = $post["created_on"];
 $month = date('M', strtotime($date));
 $day = date('j', strtotime($date));
-$year = date('o', strtotime($date));
-
-
+$year = date('Y', strtotime($date));
 ?>

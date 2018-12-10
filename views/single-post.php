@@ -8,23 +8,13 @@ include '../includes/initialize.php';
 //Redirect to login.php if user is not logged in
 is_login('login-form.php');
 
-//Defines site root
-
-//include '../config.php';
-//include '../includes/head.php';
 include '../includes/header.php';
-//include '../includes/database-connection.php';
-//this is my SinglePost class 
-//this initiates a new object
 $object = new Posts($pdo);        
 $post = $object->getSinglePost();
-include '../includes/date-single.php';
-//this is my Comment class
+include '../includes/date.php';
 include '../classes/Comment.php';
 $comments = new Comments($pdo);
 $read = $comments->readComments($_GET['posts_id']);
-//include '../includes/functions.php';
-
 ?>
 <div class="container">
 

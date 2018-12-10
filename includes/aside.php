@@ -2,7 +2,7 @@
 //include dirname(__DIR__) .'/classes/Aside.php';
 
 //$aside = new Aside($pdo);
-$asidePosts = $postObject->getPostAside();
+$asidePosts = $object->getPostAside();
 
 ?>
 
