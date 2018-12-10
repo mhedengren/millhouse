@@ -115,4 +115,94 @@ class Posts
         return $asidePosts; 
     }
 
+        //fetches the last post from the db.
+    public function getFeaturePost()
+    {
+        $stmt = $this->pdo->prepare("SELECT * FROM posts ORDER BY posts_id DESC LIMIT 1");
+        $stmt->execute();
+        $latestPost = $stmt->fetch();
+        return $latestPost; 
+    }
+    //fetches the 4 latests posts from the db.
+    public function getLatestPosts()
+    {
+        $stmt = $this->pdo->prepare("SELECT * FROM posts ORDER BY posts_id DESC LIMIT 1,4");
+        $stmt->execute();
+        $rows = $stmt->fetchAll();
+        return $rows;
+    }
+    public function getSinglePost()
+    {
+        $stmt = $this->pdo->prepare("SELECT posts_id, posts.title, posts.description, posts.created_by, posts.created_on, posts.image, posts.content, 
+        users.username FROM posts
+        INNER JOIN users
+        ON posts.created_by = users.id
+        where posts_id = :posts_id");
+        
+        $stmt->execute([
+          ":posts_id" => $_GET["posts_id"],
+        ]);
+    
+        $singlePost = $stmt->fetch();
+        return $singlePost;  
+      }
+
+      //Used to fetch all the categories in one single page
+    public function getAllCategories()
+    {
+        //select all data
+        $statement = $this->pdo->prepare(
+            "SELECT * FROM posts order by created_on DESC"
+        );
+
+        $statement->execute();
+
+        $rows = $statement->fetchAll();
+        return $rows;
+    }
+
+
+    public function getWatchesCat()
+    {
+        //select all data
+        $statement = $this->pdo->prepare(
+            "SELECT * FROM posts
+            WHERE posts.category = 'watches' 
+            order by created_on DESC"
+        );
+
+        $statement->execute();
+        $rows = $statement->fetchAll();
+
+        return $rows;
+    } 
+    
+    public function getSunglassesCat(){
+        //select all data
+        $statement = $this->pdo->prepare(
+            "SELECT * FROM posts
+            WHERE posts.category = 'sunglasses'
+            order by created_on DESC"
+        );
+
+        $statement->execute();
+        $rows = $statement->fetchAll();
+
+        return $rows;
+    } 
+
+    public function getHomeDecoCat()
+    {
+        //select all data
+        $statement = $this->pdo->prepare(
+            "SELECT * FROM posts
+            WHERE posts.category = 'homedecor'
+            order by created_on DESC"
+        );
+        $statement->execute();
+
+        $rows = $statement->fetchAll();
+        
+        return $rows;
+    } 
 }
