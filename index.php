@@ -1,20 +1,20 @@
 <?php
-session_start();
-
-//Define the siteroot for includes/requires'
-include 'config.php';
-
 //Page title
 $page_title = 'Index';
-include 'includes/head.php';
+
+//Includes session, database, config, classes
+include './includes/initialize.php';
+
+
+//include 'includes/head.php';
 include 'includes/header.php';
-include 'includes/database-connection.php';
-include 'includes/functions.php';
-include 'classes/Feature.php';
-$object = new Feature($pdo);
-$object->getFeaturePost();
-$feature = $object->getFeaturePost();
-include 'includes/date.php';
+//include 'includes/database-connection.php';
+//include 'includes/functions.php';
+//include 'classes/Feature.php';
+//$object = new Feature($pdo);
+//$object->getFeaturePost();
+//$feature = $object->getFeaturePost();
+//include 'includes/date.php';
 
 //Redirect to login.php if user is not logged in
 is_login('views/login-form.php');

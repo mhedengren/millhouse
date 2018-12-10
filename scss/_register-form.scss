@@ -20,6 +20,7 @@
         margin: auto;
 
     }
+
     .contents {
         background: -webkit-gradient(linear, left bottom, left top, color-stop(26.6%, $primalColorD), to($secondColorP));
         background: -webkit-linear-gradient(bottom, $primalColorD 26.6%, $secondColorP 100%);
@@ -34,6 +35,10 @@
             text-align: left;
             max-width: 70vw;
             margin: 5% auto;
+            
+            label{
+                margin-top: .5rem;
+            }
         }
 
         *:not(input){
@@ -97,14 +102,14 @@
         }
 
         .contents {
-            width: 50vw;
+            width: 47vw;
             
             .errors ul{
                 width: 35vw;
             }
 
             form div{
-                max-width: 25vw;
+                max-width: 30vw;
                 margin: 5% auto;
             }
         }

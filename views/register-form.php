@@ -1,26 +1,21 @@
 <?php
-//Start session
-session_start(); 
-
-//Include for absolute path
-include '../config.php';
-
 //Page title
 $page_title = 'Sign in';
 
+//Includes session, database, config, classes
+include './includes/initialize.php';
+
 //Database connection
-include '../includes/database-connection.php';
+//include '../includes/database-connection.php';
 
 //Functions
-include_once '../includes/functions.php';
+//include_once '../includes/functions.php';
 
 //Registering actions
 include '../includes/register.php';
 
 
-include '../includes/head.php'; ?>
-
-<body>
+//include '../includes/head.php'; ?>
 
     <main id="register-form"> 
 

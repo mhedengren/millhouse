@@ -1,8 +1,8 @@
 <?php
-include dirname(__DIR__) .'/classes/Aside.php';
+//include dirname(__DIR__) .'/classes/Aside.php';
 
-$object = new Aside($pdo);
-$asidePosts = $object->getPostAside();
+//$aside = new Aside($pdo);
+$asidePosts = $postObject->getPostAside();
 
 ?>
 
@@ -13,8 +13,8 @@ $asidePosts = $object->getPostAside();
         <div class="row latest-posts">
             <?php foreach ($asidePosts as $asidePost) :?>
 
-            <a href="<?= $siteroot ?>/views/single-post.php?posts_id=<?= $asidePost["posts_id"]; ?>">
-                <article class="col-6 col-md-12 row">
+            <article class="col-lg-12 col-md-6 row">
+                <a href="<?= $siteroot ?>/views/single-post.php?posts_id=<?= $asidePost["posts_id"]; ?>" class="row">
                     <div class="article-images col-4">
                         <img src="<?= $siteroot ?>/includes/<?= $asidePost["image"]; ?>" alt="<?= $asidePost["title"]; ?>">
                     </div>
@@ -22,13 +22,13 @@ $asidePosts = $object->getPostAside();
                         <h5 class="aside-post-title"><?= $asidePost["title"]; ?></h5>
                         <p><?= date('F d Y', strtotime($asidePost["created_on"])); ?></p>
                     </div>
-                </article>
-            </a>
+                </a>
+            </article>
             <?php endforeach ;?>
         </div>
-        <hr>
-        <h2>GET WEEKLY UPPDATES</h2>
-        <div>
+        <hr class="d-none d-lg-block">
+        <div class="d-none d-lg-block">
+            <h2>GET WEEKLY UPPDATES</h2>
             <form action="#" method="post">
                 <div class="form-group">
                     <label class="d-none" for="email">Email</label>
