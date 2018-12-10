@@ -19,8 +19,7 @@ is_login('login-form.php');
 //include '../includes/head.php';
 include '../includes/header.php';
 
-include '../classes/category.php';
-$object3 = new Category($pdo);
+$object3 = new Posts($pdo);
 $object3->getSunglassesCat();
 $sunglasses = $object3->getSunglassesCat();
 

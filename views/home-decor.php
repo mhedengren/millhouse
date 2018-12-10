@@ -19,8 +19,7 @@ is_login('login-form.php');
 //include '../includes/head.php';
 include '../includes/header.php';
 
-include '../classes/category.php';
-$object4 = new Category($pdo);
+$object4 = new Posts($pdo);
 $object4->getHomeDecoCat();
 $homeDecor = $object4->getHomeDecoCat();
 

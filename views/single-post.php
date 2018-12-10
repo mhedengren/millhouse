@@ -15,9 +15,8 @@ is_login('login-form.php');
 include '../includes/header.php';
 //include '../includes/database-connection.php';
 //this is my SinglePost class 
-include '../classes/Single-post.php';
 //this initiates a new object
-$object = new SinglePost($pdo);        
+$object = new Posts($pdo);        
 $post = $object->getSinglePost();
 include '../includes/date-single.php';
 //this is my Comment class

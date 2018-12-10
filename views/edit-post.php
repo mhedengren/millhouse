@@ -10,13 +10,8 @@ is_admin('login-form.php');
 
 include '../includes/header.php';
 
-
-//Class
-include '../classes/Posts.php';
-
 $object = new Posts($pdo);        
 $post = $object->readPost();
-
 
 ?>
 

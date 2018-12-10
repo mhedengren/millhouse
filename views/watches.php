@@ -20,8 +20,8 @@ is_login('login-form.php');
 include '../includes/header.php';
 include '../includes/date.php';
 
-include '../classes/category.php';
-$object2 = new Category($pdo);
+
+$object2 = new Posts($pdo);
 $object2->getWatchesCat();
 $watches = $object2->getWatchesCat();
 

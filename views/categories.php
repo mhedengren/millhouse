@@ -21,8 +21,7 @@ $page_title = 'Categories';
 //include '../includes/head.php';
 include '../includes/header.php';
 
-include '../classes/category.php';
-$object = new Category($pdo);
+$object = new Posts($pdo);
 $object->getAllCategories();
 $categories = $object->getAllCategories();
 

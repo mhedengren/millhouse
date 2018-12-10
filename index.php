@@ -64,7 +64,7 @@ include 'includes/header.php';
 <div class="row">
    <main id="index-page" class="col-lg-8">
     <?php
-    $object2 = new Feature($pdo);
+    $object2 = new Posts($pdo);
     $object2->getLatestPosts();
     $latestPosts = $object2->getLatestPosts();
     

@@ -14,8 +14,7 @@ include dirname(__FILE__).'/head.php';
 include dirname(__DIR__).'/classes/Posts.php';
 $postObject = new Posts($pdo);
 
-include dirname(__DIR__).'/classes/Feature.php';
-$object = new Feature($pdo);
+$object = new Posts($pdo);
 $object->getFeaturePost();
 $feature = $object->getFeaturePost();
 
