@@ -34,15 +34,21 @@
             text-align: left;
             max-width: 70vw;
             margin: 5% auto;
+
+            label{
+                margin-top: .5rem;
+            }
         }
     }
+
+
 
     *:not(input){
         color: #fff;
     }
 
     .errors ul{
-        margin: 0;
+        margin: 5% auto;
         list-style-type: none;
         text-align: left;
     }
@@ -77,8 +83,11 @@
         }
         .content {
             width: 60vw;
-            padding: 10%;
+            padding: 5%;
 
+            .errors ul{
+                width: 50vw;
+            }
 
         }
     }
@@ -93,11 +102,14 @@
             //border: 1px dashed pink;
         }
 
-        .content {
-            width: 50vw;
-        
+        .contents {
+            width: 47vw;
+            
+            .errors ul{
+                width: 35vw;
+            }
             form div{
-                max-width: 25vw;
+                max-width: 30vw;
                 margin: 5% auto;
             }
         }
