@@ -41,6 +41,12 @@
             }
         }
 
+        .register-logo {
+            max-width: 25%;
+            padding: 5px;
+            margin: 20px auto;
+        }
+
         *:not(input){
             color: #fff;
         }
@@ -88,6 +94,10 @@
             .errors ul{
                 width: 50vw;
             }
+
+            .register-logo {
+                max-width: 20%;
+            }
         }
     }
 }
@@ -112,6 +122,7 @@
                 max-width: 30vw;
                 margin: 5% auto;
             }
+
         }
 
     }
