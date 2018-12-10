@@ -18,31 +18,40 @@ class Posts
 
     /* Inject the pdo connection so it is available inside of the class
    * so we can call it with '$this->pdo', always available inside of the class */
-    public function __construct($pdo)
-    {
-        $this->pdo = $pdo;
-    }
+  public function __construct($pdo)
+  {
+    $this->pdo = $pdo;
+  }
 
-    // Method for deleting a post
-    public function delete()
-    {
-        // Preperare the query
-        $stmt = $this->pdo->prepare("DELETE FROM posts WHERE posts_id = :posts_id");
-        $stmt->execute(
-            [
-                // Fetches the unique post id and executes the query.
-                ":posts_id" => $_GET["id"],
-            ]
-        );
-        // Return to index
-        header('Location: ../index.php');
-        return true;
-    }
+  // Method for deleting a post and coorelating comments
+  public function delete()
+  {
+      // Preperare the query to delete post
+      $stmt = $this->pdo->prepare("DELETE FROM posts WHERE posts_id = :posts_id");
+      $stmt->execute(
+          [
+      // Fetches the unique post id and executes the query.
+      ":posts_id" => $_GET["id"],
+          ]
+      );
 
-    //Method for creating a new post
-    public function create($title, $description, $content, $created_by, $created_on, $image, $category){
+      // Preperare the query to delete all comments on this post
+      $stmt = $this->pdo->prepare("DELETE FROM comments WHERE posts_id = :posts_id");
+      $stmt->execute(
+                [
+      // Fetches the unique post id and executes the query.
+      ":posts_id" => $_GET["id"],
+          ]
+      );
+      // Return to index
+      header('Location: ../index.php');
+       return true;
+  }
 
-        $statement = $this->pdo->prepare("INSERT INTO posts (title, description, content, created_by, created_on, image, category) 
+ //Method for creating a new post
+  public function create($title, $description, $content, $created_by, $created_on, $image, $category){
+    
+    $statement = $this->pdo->prepare("INSERT INTO posts (title, description, content, created_by, created_on, image, category) 
     VALUES (:postTitle, :postDesc, :postCont, :created_by, :postDate, :image, :categories)");
         $statement->execute(
             [
