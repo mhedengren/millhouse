@@ -3,7 +3,7 @@
 $page_title = 'Sign in';
 
 //Includes session, database, config, classes
-include './includes/initialize.php';
+include '../includes/initialize.php';
 
 //Database connection
 //include '../includes/database-connection.php';
