@@ -39,7 +39,7 @@ $post = $object->readPost();
                         <input hidden type="text" id="postId" name="postId" value="<?= $post["posts_id"] ?>" class="form-control" placeholder="Your description here">
                         <label for="content">Content</label>
                         <textarea name="postCont" id="content" class="form-control">  <?= $post["content"] ?> </textarea>
-                        <input type="submit" name="submit" value="Update">
+                        <input type="submit" name="submit" class="admin-button" value="Update">
                     </form>
                 </div>
                 <div class="col-sm-12 col-md-4">

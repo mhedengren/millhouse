@@ -1,4 +1,5 @@
 @import "variables";
+@import "mixins";
 
 #admin-panel {
 
@@ -20,7 +21,13 @@
 
     .new-post {
         margin-top: 3em;
-
+        .admin-button{
+            margin-bottom: 20px;
+            @include buttonStyle($secondColorP, #fff);
+            &:hover{
+                @include buttonStyle($primalColorL, $primalColorD); 
+            }
+        }
         .add-new-post {
             margin-bottom: 1.5em;
         }
@@ -83,7 +90,8 @@
         //@include buttonStyle($secondColorP, #fff);
     }
 
-    input[type="submit"] {
+    input[type="submit"],
+    {  
         @include buttonStyle($secondColorP, #fff);
     }
 

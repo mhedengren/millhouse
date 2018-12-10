@@ -51,7 +51,7 @@ include '../includes/header.php';
                         <input type="text" id="desc" name="postDesc" class="form-control" placeholder="Your description here">
                         <label for="content">Content</label>
                         <textarea name="postCont" id="content" class="form-control"></textarea>
-                        <input type="submit" name="submit" value="Send">
+                        <input type="submit" class="admin-button" name="submit" value="Create">
                     </form>
                 </div>
                 <div class="col-sm-12 col-md-4">
