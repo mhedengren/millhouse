@@ -30,7 +30,7 @@ $read = $comments->readComments($_GET['posts_id']);
         <main class="col-lg-8">
             <!--this allows all info from a single post to be shown from the database-->
             <article class="hero-image-post-container row justify-content-center">
-                <div class="feature-post hero-image col-10-sm col-12">
+                <div class="feature-post hero-image col-sm-12">
                     <!--takes image from database-->
                     <img src="../includes/<?= $post["image"]; ?>" alt="Hero-image">
                     <!--takes title from database for tablet and larger-->
@@ -47,7 +47,7 @@ $read = $comments->readComments($_GET['posts_id']);
                         </div>
                     </div>
                 </div>
-                <div class="col-10">
+                <div class="col-12">
                     <!--takes date and displays clean from database-->
                     <div class="row justify-content-center">
                         <div class="date-circle">    
@@ -56,23 +56,18 @@ $read = $comments->readComments($_GET['posts_id']);
                     </div>
                     <!--takes title from database up to 767.9px-->
                     <h2 class="post-title-mobile d-md-none"><?= $post["title"]; ?></h2>
+                    <h2 class="post-description"><?= $post["description"]; ?></h2> 
                     <div class="row justify-content-center">
                         <div class="d-none d-md-block col-md-3 text-center">    
                             <hr class="before-post">
                         </div>        
                     </div>
-                    <h2 class="post-description"><?= $post["description"]; ?></h2> 
                     <p class="post-content"><?= $post["content"]; ?></p>
                     <p class="written-by d-md-none text-left">Written by</p>
                     <p class="post-author-mobile d-md-none text-left"><?= $post["username"]; ?></p>                 
                 </div>
             </article>
-            <div class="row justify-content-center">
-                <div class="col-10 text-center">
-                    <hr class="after-post">
-                </div>
-            </div>
-
+        
 
         </main>
 
@@ -81,7 +76,12 @@ $read = $comments->readComments($_GET['posts_id']);
     </div>
 
 
+   <hr>
+
     <div id="comments" class="container comment-container">
+       
+        <div class="row justify-content-start">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-0 p-0">
 
         <div class="row">
             <div class="col-12">
@@ -103,21 +103,20 @@ $read = $comments->readComments($_GET['posts_id']);
             </ul>
             <?php endif; ?>
             <div class="comment-field row">
-                <div class="col-sm-2 comment-user">
+                
+                <div class="col-sm-4 comment-user">
                     <p><?= $single_comment["username"]; ?></p>
-                    <div class="d-sm-none d-md-block comment-date">
+                    <div class="comment-date">
                         <p><?= date('F d Y', strtotime($single_comment["created_on"])); ?></p>
                     </div>
                 </div>
-                <div class="col-sm-4 d-none d-sm-block d-md-none comment-date">
-                    <p><?= date('F d Y', strtotime($single_comment["created_on"])); ?></p>
-                </div>
-                <div class="col-md-10 d-sm-none d-md-block comment-content">
+               
+                <div class="col-md-10 d-md-none d-lg-block comment-content">
                     <p><?=  $single_comment["content"]; ?></p>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-sm d-none d-sm-block d-md-none comment-content">
+            <div class="row hejsan">
+                <div class="col-sm d-none d-md-block d-lg-none comment-content">
                     <p><?=  $single_comment["content"]; ?></p>
                 </div>
             </div>
@@ -134,7 +133,7 @@ $read = $comments->readComments($_GET['posts_id']);
             <form action="../includes/comments.php?action=create_comment&posts_id=<?= $post['posts_id']; ?>" method="POST">
                 <label for="write-comment"></label>
                 <input type="hidden" name="posts_id" value="<?= $post['posts_id']; ?>"> 
-                <textarea class="form-control" type="text" id="write-comment" name="content" placeholder="Write comment here...."></textarea>
+                <textarea class="form-control" type="text" id="write-comment" name="content" rows="7"  placeholder="Write comment here..."></textarea>
                 <input class="post-comment-btn" type="submit" value="POST" id="post-comment" name="post-comment">
             </form>
 
@@ -147,6 +146,8 @@ $read = $comments->readComments($_GET['posts_id']);
 
     </div>
 </div>
+</div>
+        </div>
 
 
 

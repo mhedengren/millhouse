@@ -1,9 +1,15 @@
 @import "variables";
 @import "mixins";
 
+.hejsan {
+   // border: 1px solid green;
+}
+
 #comments {
 
+    margin: 3rem 0 0 0;
 
+   
 
     h4 {
         text-align: left;
@@ -11,14 +17,11 @@
             line-height: 1rem;
             font-size: 1.1rem;
             font-weight: 600;
-            margin: 5% 0;
+            margin: 0;
     }
 
-    .comment-field{
-        border-bottom: 0.03rem solid $paleGray;
-        margin-bottom: 2%;
-    }
-
+ 
+   
     .comment-user {
 
         p {
@@ -42,7 +45,7 @@
             line-height: 1rem;
             font-size: 0.7rem;
             font-weight: 600;
-            margin:0;
+            margin:.3rem 0;
             padding:0;
             
         }
@@ -54,12 +57,23 @@
             font-family: Open Sans;
             line-height: 1rem;
             font-size: 0.9rem;
-            font-weight: 600;
-            margin:0;
-            padding:5% 0;
+            font-weight: 400;
+            margin:.3rem 0;
+            padding: 0;
         }
     }
 
+.alert {
+    margin: 2rem 0 1rem 0;
+}
+.after-post{
+    margin: 5rem 0;
+}
+
+
+.post-comment-btn {
+    margin: 2rem 0 !important;
+}
     .comments-form{
 
         form{
