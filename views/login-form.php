@@ -41,11 +41,10 @@ include "../includes/login.php";
 
             </form>
 
+            <img class="login-logo animated fadeInUp delay-4s slower" src="<?= $siteroot; ?>/images/logo_light.png" alt="Millhouse Logo">
 
             <p>New to the site? <a href="<?= $siteroot; ?>/views/register-form.php">Sign up!</a></p>
 
-
-            <img class="login-logo" src="<?= $siteroot; ?>/images/logo_light.png" alt="Millhouse Logo">
         </div>
     </div>
 </main>
