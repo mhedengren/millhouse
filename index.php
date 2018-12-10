@@ -3,7 +3,7 @@
 $page_title = 'Index';
 
 //Includes session, database, config, classes
-include './includes/initialize.php';
+include 'includes/initialize.php';
 
 
 //include 'includes/head.php';
