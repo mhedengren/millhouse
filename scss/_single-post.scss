@@ -78,11 +78,10 @@
         text-align: center;
         letter-spacing: 0.01rem;
         color: #60495A;
-        margin: 2rem 0 1rem 0;
+       
     }
 
-   
-
+  
     .written-by {
         text-align: center;
         font-family: Open Sans;
@@ -171,7 +170,13 @@
             }
         }
 
+        .post-description {
+            margin: 2rem 0 1rem 0;
+           }
+        
+
     }
+
 
     @media screen and (min-width: 992px) {
         

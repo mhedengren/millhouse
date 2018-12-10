@@ -133,7 +133,7 @@ $read = $comments->readComments($_GET['posts_id']);
             <form action="../includes/comments.php?action=create_comment&posts_id=<?= $post['posts_id']; ?>" method="POST">
                 <label for="write-comment"></label>
                 <input type="hidden" name="posts_id" value="<?= $post['posts_id']; ?>"> 
-                <textarea class="form-control" type="text" id="write-comment" name="content" rows="7"  placeholder="Write comment here..."></textarea>
+                <textarea class="form-control" type="text" id="write-comment" name="content" rows="5"  placeholder="Write comment here..."></textarea>
                 <input class="post-comment-btn" type="submit" value="POST" id="post-comment" name="post-comment">
             </form>
 
