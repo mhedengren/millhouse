@@ -5,6 +5,9 @@ $page_title = 'Index';
 //Includes session, database, config, classes
 include 'includes/initialize.php';
 
+//Redirect to login.php if user is not logged in
+is_login('views/login-form.php');
+
 
 //include 'includes/head.php';
 include 'includes/header.php';
@@ -16,8 +19,6 @@ include 'includes/header.php';
 //$feature = $object->getFeaturePost();
 //include 'includes/date.php';
 
-//Redirect to login.php if user is not logged in
-is_login('views/login-form.php');
 ?>
 
   <div class="container">

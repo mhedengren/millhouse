@@ -1,14 +1,24 @@
 <?php
-session_start();
+//Page title
+$page_title = 'Categories'; 
+
+//Includes session, database, config, classes
+include '../includes/initialize.php';
+
+//Redirect to login.php if user is not logged in
+is_login('views/login-form.php');
+
+
+//session_start();
 
 //Include for absolute path
-require '../config.php';
-require '../includes/database-connection.php';
-include '../includes/functions.php';
+//require '../config.php';
+//require '../includes/database-connection.php';
+//include '../includes/functions.php';
 
 //Page title
 $page_title = 'Categories'; 
-include '../includes/head.php';
+//include '../includes/head.php';
 include '../includes/header.php';
 
 include '../classes/category.php';

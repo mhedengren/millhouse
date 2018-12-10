@@ -5,6 +5,9 @@ $page_title = "single-post";
 //Includes session, database, config, classes
 include '../includes/initialize.php';
 
+//Redirect to login.php if user is not logged in
+is_login('login-form.php');
+
 //Defines site root
 
 //include '../config.php';
