@@ -52,7 +52,3 @@ include "../includes/login.php";
 <?php
 require "../includes/scripts.php"
 ?>
-
-</body>
-
-</html>
