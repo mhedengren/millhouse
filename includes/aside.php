@@ -1,8 +1,8 @@
 <?php
-include dirname(__DIR__) .'/classes/Aside.php';
+//include dirname(__DIR__) .'/classes/Aside.php';
 
-$object = new Aside($pdo);
-$asidePosts = $object->getPostAside();
+//$aside = new Aside($pdo);
+$asidePosts = $postObject->getPostAside();
 
 ?>
 

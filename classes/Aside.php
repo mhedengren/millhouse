@@ -12,10 +12,10 @@ class Aside
         $this->pdo = $pdo;
     }
     //fetches the post from the db.
-    public function getPostAside(){
-        $stmt = $this->pdo->prepare("SELECT * FROM posts ORDER BY title ASC LIMIT 4");
-        $stmt->execute();
-        $asidePosts = $stmt->fetchAll();
-        return $asidePosts; 
-    }
+        public function getPostAside(){
+            $aside_stmt = $this->pdo->prepare("SELECT * FROM posts ORDER BY title ASC LIMIT 4");
+            $aside_stmt->execute();
+            $asidePosts = $aside_stmt->fetchAll();
+            return $asidePosts; 
+        }
 }

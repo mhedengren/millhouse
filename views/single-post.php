@@ -1,15 +1,16 @@
 <?php
-//Start session
-session_start(); 
+//Defines page title
+$page_title = "single-post";
+
+//Includes session, database, config, classes
+include '../includes/initialize.php';
 
 //Defines site root
 
-include '../config.php';
-//Defines page title
-$page_title = "single-post";
-include '../includes/head.php';
+//include '../config.php';
+//include '../includes/head.php';
 include '../includes/header.php';
-include '../includes/database-connection.php';
+//include '../includes/database-connection.php';
 //this is my SinglePost class 
 include '../classes/Single-post.php';
 //this initiates a new object
@@ -20,7 +21,7 @@ include '../includes/date-single.php';
 include '../classes/Comment.php';
 $comments = new Comments($pdo);
 $read = $comments->readComments($_GET['posts_id']);
-include '../includes/functions.php';
+//include '../includes/functions.php';
 
 ?>
 <div class="container">
