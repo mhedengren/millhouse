@@ -8,15 +8,6 @@ include '../includes/initialize.php';
 //Redirect to login.php if user is not logged in
 is_login('views/login-form.php');
 
-
-//session_start();
-
-//Include for absolute path
-//require '../config.php';
-//require '../includes/database-connection.php';
-//include '../includes/functions.php';
-
-//Page title
 $page_title = 'Categories'; 
 //include '../includes/head.php';
 include '../includes/header.php';
@@ -25,8 +16,6 @@ $object = new Posts($pdo);
 $object->getAllCategories();
 $categories = $object->getAllCategories();
 
-
-//var_dump($categories);
 
 ?>
 

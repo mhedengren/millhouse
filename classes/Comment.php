@@ -10,24 +10,13 @@ class Comments{
     public $created_on;
     public $created_by;
     public $posts_id;
-    public $errors;
     public $comments_id;
-
 
     //Inject the pdo connection so it is available inside of the class so we can call it with '$this->pdo', always available inside of the class
     public function __construct($pdo)
     {
         $this->pdo = $pdo;
     }
-    
-    //This sets properties for comments 
-   /* public function prepareInfoForComments($content, $posts_id, $created_by, $created_on)
-    {
-        $this->content = $content;
-        $this->posts_id = $posts_id;
-        $this->created_by = $created_by;
-        $this->created_on = $created_on;
-    }*/
 
     public function insertComment($content, $posts_id, $created_by, $created_on)
     {

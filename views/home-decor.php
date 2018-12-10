@@ -8,15 +8,6 @@ include '../includes/initialize.php';
 //Redirect to login.php if user is not logged in
 is_login('login-form.php');
 
-
-//session_start();
-
-//Include for absolute path
-//require '../config.php';
-//require '../includes/database-connection.php';
-//include '../includes/functions.php';
-
-//include '../includes/head.php';
 include '../includes/header.php';
 
 $object4 = new Posts($pdo);
