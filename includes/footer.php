@@ -1,8 +1,8 @@
-<footer class="container-fluid" id="footer">
+<footer class="" id="footer">
    
     <div class="row footer-color d-flex align-items-center justify-content-center">
         <div class="col-6 text-center">
-            <h3 class="footer-title">Contact Us</h3>
+            <p class="footer-title">Contact Us</p>
                 <p class="footer-p">admin@millhouse.com</p>
         </div>
         <div class="col-6 text-center">

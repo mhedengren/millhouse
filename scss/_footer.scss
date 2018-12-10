@@ -6,9 +6,9 @@
     
     .footer-color{
         margin-top: 4rem;
-        height: 25vh;
+        height: 15vh;
         background: linear-gradient(95.95deg, #1C3045 0%, #D7BCC8 100%);
-        padding: 10px;
+        //padding: 10px;
        
     }
 
@@ -24,11 +24,12 @@
 
     .footer-p{
         color: white;
-        font-size: 0.5em;
+        font-size: 0.8em;
+        padding: 0px 10px 10px 10px;
     }
 
     .footer-logo{
-        max-width: 40%;
+        max-width: 25%;
         padding: 5px;
         margin: 20px auto;
     }
@@ -36,7 +37,7 @@
     .fab {
         color: white;
         padding: 5px;
-        font-size: 2.5rem;
+        font-size: 2.0rem;
         text-align: center;
         text-decoration: none;
     }
@@ -60,25 +61,42 @@
 //tablet size
 @media screen and (min-width: 768px){
     .footer-title{
-        font-size: 1.25em;
+        font-size: 1.6em;
     }
 
     .footer-p{
-        font-size: 1em;
-    }
-
-    .footer-logo{
-        max-width: 25%; 
-
-    }
-    .footer-color{
-       
-        height: 35vh;
-      
+        font-size: 1.0em;
     }
 
     .fab{
+        font-size: 3.0em;
         padding: 10px;
     }
+    .footer-logo{
+        max-width: 20%;
+    }
 
+}
+
+@media screen and (min-width: 992px){
+    .footer-color{
+        height: 20vh;
+    }
+
+    .footer-title{
+        font-size: 2.0em;
+    }
+
+    .footer-p{
+        font-size: 1.4em;
+    }
+
+    .fab{
+        font-size: 3.5em
+    }    
+    
+    .footer-logo{
+        max-width: 15%;
+    }
+    
 }
