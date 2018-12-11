@@ -22,7 +22,7 @@ function is_login($location){
 * is_admin('login-form.php');
 */
 function is_admin($location){
-    if($_SESSION['user'] == "standard"){
+    if((!isset($_SESSION['user']))&& (!$_SESSION['user'] == "admin")){
         redirect_to($location);
     }
 }
