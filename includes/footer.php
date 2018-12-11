@@ -5,17 +5,17 @@
             <img src="<?= $siteroot; ?>/images/logo_light.png" alt="logo with Millhouse text" class="footer-logo">
         </div>
         
-        <div class="col-6 col-md-3 text-right">
+        <div class="col-6 col-md-4 text-right contactInfo">
             <p class="footer-title">Contact Us</p>
             <p class="footer-p">admin@millhouse.com</p>
             <p class="footer-p">055-895-8975</p>
             <p class="footer-p">Tulegatan 12</p>
             <p class="footer-p">Stockholm</p>
         </div>
-        <div class="d-none d-md-block col-md-6 text-center">
+        <div class="d-none d-md-block col-md-4 text-center">
             <img src="<?= $siteroot; ?>/images/logo_light.png" alt="logo with Millhouse text" class="footer-logo">
         </div>
-        <div class="col-6 col-md-3 text-left">
+        <div class="col-6 col-md-4 text-left icons">
            <a href="#"><i class="fab fa-facebook-square"></i></a>
            <a href="#"><i class="fab fa-twitter-square"></i></a>
            <a href="#"><i class="fab fa-instagram"></i></a>
