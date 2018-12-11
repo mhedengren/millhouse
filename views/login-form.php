@@ -17,11 +17,14 @@ include "../includes/login.php";
 
             <!-- Login form -->
             <h1>Login</h1>
+
             <?php
             //Shows the error message from validation only when $_POST is set
             if(isset($_POST['login'])){
+
                 if(!empty($errors)){
                     echo display_errors($errors);
+                    
                 }
             }
             ?>
