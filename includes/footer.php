@@ -5,7 +5,7 @@
             <img src="<?= $siteroot; ?>/images/logo_light.png" alt="logo with Millhouse text" class="footer-logo">
         </div>
         
-        <div class="col-6 col-md-4 text-right">
+        <div class="col-6 col-md-4 text-right contactInfo">
             <p class="footer-title">Contact Us</p>
             <p class="footer-p">admin@millhouse.com</p>
             <p class="footer-p">055-895-8975</p>

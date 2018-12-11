@@ -73,7 +73,7 @@
 //desktop size
 @media screen and (min-width: 992px){
     .footer-color{
-        height: 20vh;
+        height: 25vh;
     }
 
     .footer-title{
@@ -83,11 +83,13 @@
 
     .footer-p{
         font-size: 0.8em;
+    }
+    
+    .contactInfo{
         padding-bottom: 10px;
     }
-
     .fab{
-        font-size: 3.5em;
+        font-size: 3.0em;
         padding: 10px 0px 10px 0px; 
     }
 
