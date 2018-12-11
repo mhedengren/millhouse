@@ -42,6 +42,8 @@ include '../includes/register.php';
                 <button type="submit" name="signup" class="btn button-color">SIGN UP</button>
             </form>
 
+            <img class="register-logo animated fadeInUp delay-4s slower" src="<?= $siteroot; ?>/images/logo_light.png" alt="Millhouse Logo">
+
             <p>Already a member? <a href="./login-form.php">Log in!</a></p>
 
         </div>
