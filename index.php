@@ -32,7 +32,7 @@ include 'includes/header.php';
                               <i class="fas fa-times"></i></a>
                            </li>
                       </ul>
-                  <?php endif; ?>
+                <?php endif; ?>
                   <a href="views/single-post.php?posts_id=<?= $feature["posts_id"]; ?>">
                <div class="hero-image">
                    <img src="includes/<?= $feature["image"]; ?>" alt="feature-image">
@@ -97,5 +97,4 @@ include 'includes/header.php';
 <?php include 'includes/aside.php'; ?>
 </div>
 </div>
-
 <?php include 'includes/footer.php'; ?>
