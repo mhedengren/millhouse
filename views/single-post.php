@@ -71,7 +71,7 @@ $read = $comments->readComments($_GET['posts_id']);
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-0 p-0">
 
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 comment-counter">
                 <h4>Comments (<?= count($read) ?>)</h4>
             </div>
         </div>
