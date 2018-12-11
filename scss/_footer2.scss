@@ -1,0 +1,100 @@
+@import "variables";
+@import "mixins";
+
+//#footer{
+    .footer-color{
+        margin-top: 4rem;
+        height: 35vh;
+        background: linear-gradient(95.95deg, #1C3045 0%, #D7BCC8 100%);
+        //padding: 10px;
+       
+    }
+
+    a.button-link{
+        @include buttonStyleFooter(#fff,#fff);
+}
+
+    .footer-title{
+        margin-top: 20px;
+        color: white;
+        font-size: 1.4em;
+    }
+
+    .footer-p{
+        color: white;
+        font-size: 0.8em;
+        //padding: 0px 10px 10px 10px;
+    }
+
+    .footer-logo{
+        max-width: 50%;
+        padding: 5px;
+        margin: 20px auto;
+    }
+
+    .fab {
+        color: white;
+        padding: 5px;
+        font-size: 2.0rem;
+        text-align: center;
+        text-decoration: none;
+    }
+/*
+    .fa:hover {
+        opacity: 0.7;
+    }
+    
+    .fa-facebook {
+      background: #3B5998;
+      color: white;
+    }
+    
+    .fa-twitter {
+      background: #55ACEE;
+      color: white;
+    }
+*/
+   
+//}
+//tablet size
+/*@media screen and (min-width: 768px){
+    .footer-title{
+        font-size: 1.6em;
+    }
+
+    .footer-p{
+        font-size: 1.0em;
+    }
+
+    .fab{
+        font-size: 3.0em;
+        padding: 10px;
+    }
+    .footer-logo{
+        max-width: 20%;
+    }
+
+}
+
+@media screen and (min-width: 992px){
+    .footer-color{
+        height: 20vh;
+    }
+
+    .footer-title{
+        font-size: 2.0em;
+    }
+
+    .footer-p{
+        font-size: 1.4em;
+    }
+
+    .fab{
+        font-size: 3.5em
+    }    
+    
+    .footer-logo{
+        max-width: 15%;
+    }
+  
+} */ 
