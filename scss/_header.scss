@@ -21,8 +21,7 @@ header {
     margin: 0px;
     padding:0px;
         img {
-           width: 15vw;
-        
+            width: 100px;        
     }
 }
 
@@ -72,8 +71,10 @@ and the hamburger menu when collapsed */
      //site logo.
     .navbar-brand{
         margin: 0px;
-        padding: 0px;
-     
+        padding:0px;
+            img {
+            width: 150px;       
+    }
 }
 
  // Tablet navbar link properties 
@@ -118,9 +119,9 @@ and the hamburger menu when collapsed */
     .navbar-brand{
         margin: 0px;
         padding:0px;
-            img{
-                width: 12vw;
-            }
+            img {
+            width: 150px;           
+    }
 }
    
     .navbar-nav {

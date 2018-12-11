@@ -41,9 +41,9 @@ include "../includes/login.php";
 
             </form>
 
+            <img class="login-logo animated fadeInUp delay-4s slower" src="<?= $siteroot; ?>/images/logo_light.png" alt="Millhouse Logo">
 
             <p>New to the site? <a href="<?= $siteroot; ?>/views/register-form.php">Sign up!</a></p>
-
 
         </div>
     </div>
@@ -52,7 +52,3 @@ include "../includes/login.php";
 <?php
 require "../includes/scripts.php"
 ?>
-
-</body>
-
-</html>

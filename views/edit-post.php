@@ -5,7 +5,7 @@ $page_title = 'Admin Panel';
 //Includes session, database, config, classes
 include '../includes/initialize.php';
 
-//Redirect to login-form.php if an end user is not logged in
+//Redirect to login-form.php if an end user is logged in as a standard user
 is_admin('login-form.php');
 
 include '../includes/header.php';

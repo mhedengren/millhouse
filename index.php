@@ -8,19 +8,8 @@ include 'includes/initialize.php';
 //Redirect to login.php if user is not logged in
 is_login('views/login-form.php');
 
-
-//include 'includes/head.php';
 include 'includes/header.php';
-//include 'includes/database-connection.php';
-//include 'includes/functions.php';
-//include 'classes/Feature.php';
-//$object = new Feature($pdo);
-//$object->getFeaturePost();
-//$feature = $object->getFeaturePost();
-//include 'includes/date.php';
-
 ?>
-
   <div class="container">
        <article class="row justify-content-center feature-post">
            <div class="col-sm-12 col-md-12 col-lg-12">
@@ -30,7 +19,7 @@ include 'includes/header.php';
                    <p class="read-more-desktop d-none d-md-block">
                        <a href="views/single-post.php?posts_id=<?= $feature["posts_id"]; ?>">Read article</a>
                    </p>
-                       <hr>
+                <hr>
                </div>
                <?php if(isset($_SESSION['user']) && $_SESSION['user'] == "admin"): ?>
                       <ul class="edit-remove-buttons">
@@ -43,7 +32,7 @@ include 'includes/header.php';
                               <i class="fas fa-times"></i></a>
                            </li>
                       </ul>
-                  <?php endif; ?>
+                <?php endif; ?>
                   <a href="views/single-post.php?posts_id=<?= $feature["posts_id"]; ?>">
                <div class="hero-image">
                    <img src="includes/<?= $feature["image"]; ?>" alt="feature-image">
@@ -67,11 +56,10 @@ include 'includes/header.php';
     $object2 = new Posts($pdo);
     $object2->getLatestPosts();
     $latestPosts = $object2->getLatestPosts();
-    
     ?>
       <section class="gallery row">
           <?php foreach ($latestPosts as $post) :?>
-          <?php include 'includes/date-gallery.php';?>
+          <?php include 'includes/date.php';?>
               <div class="col-sm-12 col-md-6 gallery-card">
                   <?php if(isset($_SESSION['user']) && $_SESSION['user'] == "admin"): ?>
                       <ul class="edit-remove-buttons">
@@ -109,5 +97,4 @@ include 'includes/header.php';
 <?php include 'includes/aside.php'; ?>
 </div>
 </div>
-
 <?php include 'includes/footer.php'; ?>

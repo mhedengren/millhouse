@@ -34,13 +34,9 @@ $read = $comments->readComments($_GET['posts_id']);
                             <h2 class="d-none d-md-block"><span><?= $post["title"]; ?></span></h2>
                         </div>
                     </div>
-                    <div class="row justify-content-center">
-                        <div class="col-10">
                             <div class="date-author">    
                                 <h2 class="post-date d-none d-md-block"><?= $month . " " . $day . ", " . $year . " - " . $post["username"] ?></h2>
                             </div>
-                        </div>
-                    </div>
                 </div>
                 
                 <div class="col-12">
@@ -64,7 +60,6 @@ $read = $comments->readComments($_GET['posts_id']);
                 </div>
             </article>
         
-
         </main>
 
         <?php include '../includes/aside.php'; ?>

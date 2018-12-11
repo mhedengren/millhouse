@@ -1,12 +1,5 @@
 <?php
-
-
-include '../classes/Register.php';
-include 'database-connection.php';
-include_once 'functions.php';
-
 $errors = [];
-
 
 //If sign-up btn is clicked activate Register class
 if(isset($_POST['login'])){

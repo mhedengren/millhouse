@@ -2,24 +2,32 @@
 @import "mixins";
 
 #login {
+
     //borders for checking
-    div{
-       // @include toCheckStyle(#9FF781);
+    div {
+        // @include toCheckStyle(#9FF781);
     }
 
-    nav, img, i, ul, li{
+    nav,
+    img,
+    i,
+    ul,
+    li {
         //@include toCheckStyle(pink);
     }
 
-    main, aside, button{
-       // @include toCheckStyle(blue);
+    main,
+    aside,
+    button {
+        // @include toCheckStyle(blue);
     }
 
-    .container{
+    .container {
         height: 100vh;
         margin: auto;
 
     }
+
     .content {
         background: -webkit-gradient(linear, left bottom, left top, color-stop(26.6%, $primalColorD), to($secondColorP));
         background: -webkit-linear-gradient(bottom, $primalColorD 26.6%, $secondColorP 100%);
@@ -30,77 +38,99 @@
         width: 100vw;
         padding: 10vh 5%;
 
-        form div{
+        form div {
             text-align: left;
             max-width: 70vw;
             margin: 5% auto;
+
+            label {
+                margin-top: .5rem;
+            }
         }
-    }
 
-    *:not(input){
-        color: #fff;
-    }
-
-    .errors ul{
-        margin: 0;
-        list-style-type: none;
-        text-align: left;
-    }
-
-    .button-color{
-        @include buttonStyle($secondColorP, #fff);
-
-        &:hover{
-            @include buttonStyle($primalColorL, $primalColorD); 
+        .login-logo {
+            max-width: 25%;
+            padding: 5px;
+            margin: 20px auto;
         }
-    }
 
-    p{
-        margin-top: 5%;
+        *:not(input) {
+            color: #fff;
+        }
+
+        .errors ul {
+            margin: 5% auto;
+            list-style-type: none;
+            text-align: left;
+        }
+
+        .button-color {
+            @include buttonStyle($secondColorP, #fff);
+
+            &:hover {
+                @include buttonStyle($primalColorL, $primalColorD);
+            }
+        }
+
+        p {
+            margin-top: 5%;
+        }
     }
 
 }
 
 //Tablet size
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
     #login {
 
         //borders for checking
-        div{
+        div {
             //border: 1px dashed blue;
         }
-        
-        .container{
+
+        .container {
             height: 100vh;
             margin: auto;
 
         }
+
         .content {
             width: 60vw;
-            padding: 10%;
+            padding: 5%;
 
+            .errors ul {
+                width: 50vw;
+            }
 
+            .login-logo {
+                max-width: 20%;
+            }
         }
     }
 }
 
 //Desktop size
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 1024px) {
     #login {
 
         //borders for checking
-        div{
+        div {
             //border: 1px dashed pink;
         }
 
         .content {
-            width: 50vw;
-        
-            form div{
-                max-width: 25vw;
+            width: 47vw;
+
+            .errors ul {
+                width: 35vw;
+            }
+
+            form div {
+                max-width: 30vw;
                 margin: 5% auto;
             }
+
         }
-        
+
     }
 }

@@ -8,26 +8,15 @@ include '../includes/initialize.php';
 //Redirect to login.php if user is not logged in
 is_login('login-form.php');
 
-
-//session_start();
-
-//Include for absolute path
-//require '../config.php';
-//require '../includes/database-connection.php';
-//include '../includes/functions.php';
-
-//include '../includes/head.php';
 include '../includes/header.php';
 
 $object3 = new Posts($pdo);
 $object3->getSunglassesCat();
 $sunglasses = $object3->getSunglassesCat();
-
-
 ?>
 
 <main id="categories">  
-
+    
     <div class="container-fluid"> 
         <div class="row"> 
             <div class="hero-image">
