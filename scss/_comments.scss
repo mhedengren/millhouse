@@ -4,14 +4,13 @@
 #comments {
 
     margin: 3rem 0 0 0;
+    .comment-field {
+        margin-top: 1rem;
+    }
 
-   .comment-field {
-     margin-top: 1rem;
-   }
-
-   .comment-counter {
-       margin-bottom: .3rem;
-   }
+    .comment-counter {
+        margin-bottom: .3rem;
+    }
 
     h4 {
         text-align: left;
@@ -22,10 +21,7 @@
             margin: 0;
     }
 
- 
-   
     .comment-user {
-
         p {
             text-align: left;
             font-family: Open Sans;
@@ -34,12 +30,10 @@
             font-weight: 600;
             margin:0 ;
             padding:0;
-            
         }
     }
 
     .comment-date {
-
         p {
             text-align: left;
             font-family: Open Sans;
@@ -49,11 +43,9 @@
             font-weight: 600;
             margin:.3rem 0;
             padding:0;
-            
         }
     }
     .comment-content {
-
         p {
             text-align: left;
             font-family: Open Sans;
@@ -65,28 +57,23 @@
         }
     }
 
-.alert {
-    margin: 2rem 0 1rem 0;
-}
-.after-post{
-    margin: 5rem 0;
-}
+    .alert {
+        margin: 2rem 0 1rem 0;
+    }
 
+    .after-post{
+        margin: 5rem 0;
+    }
 
-
-.post-comment-btn {
-    margin: 2rem 0 !important;
-}
+    .post-comment-btn {
+        margin: 2rem 0 !important;
+    }
     .comments-form{
-
         form{
-
             .post-comment-btn {
-
                 margin: 5% 0;
-                
                 @include buttonStyle($secondColorP, #fff);
-                
+
                 &:hover {
                     @include buttonStyle($primalColorL, $primalColorD);
                     }
