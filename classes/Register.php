@@ -5,7 +5,7 @@ class Register
     //Property for pdo    
     private $pdo;
 
-    //Properties of inputting datas    
+    //Properties for user datas    
     public $username;
     public $email;
     protected $hashedPassword;
@@ -17,24 +17,13 @@ class Register
     public $errors = [];
 
     
-    //Inject the pdo connection so it is available inside of the class so we can call it with '$this->pdo', always available inside of the class
+    //Inject the pdo connection so it is available inside of the class and we can call it with '$this->pdo', always available inside of the class
     public function __construct($pdo)
     {
         $this->pdo = $pdo;
     }
 
-    /*
-    I want to use static for args etc if i have time..
-    
-    static private $pdo;
-
-    static public function set_pdo($pdo)
-    {
-        self::$pdo = $pdo;
-    }
-    */
-
-    //Stor values in $args array to properties
+    //Store values in $args array to properties
     public function args($args = [])
     {
         $this->username = $args['username'] ?? '';

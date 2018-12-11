@@ -15,15 +15,17 @@ include '../includes/register.php';
     <div class="container row">
         <div class="contents">
 
+            <img class="regi-logo" src="../images/logo_light.png" alt="Millhouse logo">
+            
             <!--  Register form  -->
             <h1>Sign up</h1>
             <?php
-            //Shows the error message from validation only when $_POST is set
-            if(isset($_POST['signup'])){
-                if(!empty($register->errors)){
-                    echo display_errors($register->errors);
+                //Shows the error message from validation only when $_POST is set
+                if(isset($_POST['signup'])){
+                    if(!empty($register->errors)){
+                        echo display_errors($register->errors);
+                    }
                 }
-            }
             ?>
 
             <form action="register-form.php" method="post" id="form_register">

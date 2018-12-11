@@ -9,7 +9,6 @@ include '../includes/initialize.php';
 is_login('login-form.php');
 
 include '../includes/header.php';
-include '../includes/date.php';
 
 $object2 = new Posts($pdo);
 $object2->getWatchesCat();

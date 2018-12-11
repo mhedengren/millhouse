@@ -1,9 +1,4 @@
 <?php
-
-include '../classes/Register.php';
-include 'database-connection.php';
-include_once 'functions.php';
-
 //If sign-up btn is clicked activate Register class
 if(isset($_POST['signup'])){
     //Stor all input which sent by POST into $args array
@@ -18,12 +13,12 @@ if(isset($_POST['signup'])){
     if(empty($register->errors)){
         //If there is no error add user information to database
         $register->add_user();
-        
+
         //Redirect to login-form page
         redirect_to('login-form.php');
 
-        
+
     }
 
-//Do not do anything if POST is not sent.
+    //Do not do anything if POST is not sent.
 }
