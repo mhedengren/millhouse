@@ -31,11 +31,15 @@
         width: 100vw;
         padding: 10vh 5%;
 
+        .regi-logo{
+            width: 20%;                
+        }
+
         form div{
             text-align: left;
             max-width: 70vw;
             margin: 5% auto;
-            
+                        
             label{
                 margin-top: .5rem;
             }
