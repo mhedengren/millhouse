@@ -8,14 +8,17 @@ include '../includes/initialize.php';
 //Redirect to login.php if user is not logged in
 is_login('login-form.php');
 
+//Includes header and nav
 include '../includes/header.php';
+//Initiates a new object
 $object = new Posts($pdo);        
 $post = $object->getSinglePost();
-include '../includes/date.php';
+//My Comment class
 include '../classes/Comment.php';
 $comments = new Comments($pdo);
 $read = $comments->readComments($_GET['posts_id']);
 ?>
+
 <div class="container">
 
     <div class="row" id="single-post">
@@ -35,6 +38,7 @@ $read = $comments->readComments($_GET['posts_id']);
                                 <h2 class="post-date d-none d-md-block"><?= $month . " " . $day . ", " . $year . " - " . $post["username"] ?></h2>
                             </div>
                 </div>
+                
                 <div class="col-12">
                     <!--takes date and displays clean from database-->
                     <div class="row justify-content-center">
