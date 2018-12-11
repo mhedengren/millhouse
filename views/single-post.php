@@ -77,20 +77,15 @@ $read = $comments->readComments($_GET['posts_id']);
         </div>
         <div>
             <?php foreach ($read as $single_comment) :?>
-
             <?php if(isset($_SESSION['user']) && $_SESSION['user'] == "admin"): ?>
-
-            <ul class="edit-remove-buttons">
-                <li class="list-inline-item remove-button">
-
-
-                    <a href="../includes/comments.php?action=delete_comment&post_id=<?= $post["posts_id"] ?>&comments_id=<?= $single_comment["comments_id"]; ?>">    
-                        <i class="fas fa-times"></i></a>
-                </li>
-            </ul>
+                <ul class="edit-remove-buttons">
+                    <li class="list-inline-item remove-button">
+                        <a href="../includes/comments.php?action=delete_comment&post_id=<?= $post["posts_id"] ?>&comments_id=<?= $single_comment["comments_id"]; ?>">    
+                    <i class="fas fa-times"></i></a>
+                    </li>
+                </ul>
             <?php endif; ?>
             <div class="comment-field row">
-                
                 <div class="col-sm-4 comment-user">
                     <p><?= $single_comment["username"]; ?></p>
                     <div class="comment-date">

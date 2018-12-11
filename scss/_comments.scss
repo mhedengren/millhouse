@@ -1,15 +1,13 @@
 @import "variables";
 @import "mixins";
 
-.hejsan {
-   // border: 1px solid green;
-}
-
 #comments {
 
     margin: 3rem 0 0 0;
 
-   
+   .comment-field {
+      margin-top: 1rem;
+   }
 
     h4 {
         text-align: left;
@@ -30,7 +28,7 @@
             line-height: 1rem;
             font-size: 1.1rem;
             font-weight: 600;
-            margin:0;
+            margin:0 ;
             padding:0;
             
         }
@@ -69,6 +67,7 @@
 .after-post{
     margin: 5rem 0;
 }
+
 
 
 .post-comment-btn {
