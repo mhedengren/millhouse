@@ -2,6 +2,89 @@
 @import "mixins";
 
 //#footer{
+    .footer-color{
+        margin-top: 4rem;
+        height: 30vh;
+        background: linear-gradient(95.95deg, #1C3045 0%, #D7BCC8 100%);   
+    }
+
+    a.button-link{
+        @include buttonStyleFooter(#fff,#fff);
+}
+
+    .footer-title{
+        margin-top: 5px;
+        margin-bottom: 5px;
+        color: white;
+        font-size: 0.6em;
+    }
+
+    .footer-p{
+        color: white;
+        font-size: 0.4em;
+        margin: 0px;
+    }
+
+    .footer-logo{
+        width: 25vw;
+        padding: 5px;
+        margin: 10px auto;
+    }
+
+    .fab {
+        color: white;
+        padding: 5px;
+        font-size: 1.7rem;
+        text-align: center;
+        text-decoration: none;
+    }
+
+//tablet size
+@media screen and (min-width: 768px){
+    .footer-title{
+    margin-top: 5px;
+    font-size: 1.0em;
+    }
+
+    .footer-p{
+        font-size: 0.6em;
+    }
+
+
+    .fab{
+        font-size: 2.0em;
+        padding: 10px;
+    }
+    
+}
+
+//desktop size
+@media screen and (min-width: 992px){
+    .footer-color{
+        height: 15vh;
+    }
+
+    .footer-title{
+        font-size: 1.4em;
+    }
+
+    .footer-p{
+        font-size: 0.8em;
+    }
+
+    .fab{
+        font-size: 3.5em
+    }    
+    
+    .footer-logo{
+        width: 15vh;
+    }
+ 
+} /* 
+@import "variables";
+@import "mixins";
+
+//#footer{
     
     
     .footer-color{
@@ -55,10 +138,10 @@
       background: #55ACEE;
       color: white;
     }
-*/
+
    
-//}
-//tablet size
+}
+tablet size
 @media screen and (min-width: 768px){
     .footer-title{
         font-size: 1.6em;
@@ -99,4 +182,4 @@
         max-width: 15%;
     }
     
-}
+}*/
