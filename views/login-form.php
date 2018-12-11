@@ -5,7 +5,7 @@ $page_title = 'Login';
 //Includes session, database, config, classes
 include '../includes/initialize.php';
 
-//Loggin action
+//Login action
 include "../includes/login.php";
 ?>
 
@@ -40,7 +40,7 @@ include "../includes/login.php";
                 <button type="submit" name="login" class="btn button-color">LOGIN</button>
 
             </form>
-
+            
             <img class="login-logo animated fadeInUp delay-4s slower" src="<?= $siteroot; ?>/images/logo_light.png" alt="Millhouse Logo">
 
             <p>New to the site? <a href="<?= $siteroot; ?>/views/register-form.php">Sign up!</a></p>

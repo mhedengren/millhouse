@@ -14,8 +14,6 @@ include '../includes/register.php';
 
     <div class="container row">
         <div class="contents">
-
-            <img class="regi-logo" src="../images/logo_light.png" alt="Millhouse logo">
             
             <!--  Register form  -->
             <h1>Sign up</h1>
