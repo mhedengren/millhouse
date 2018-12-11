@@ -15,8 +15,7 @@ class Register
 
     //Property for correcting error messages
     public $errors = [];
-
-    
+ 
     //Inject the pdo connection so it is available inside of the class and we can call it with '$this->pdo', always available inside of the class
     public function __construct($pdo)
     {
