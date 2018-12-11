@@ -12,6 +12,8 @@ include dirname(__FILE__).'/head.php';
 
 //Include and call all post classes
 include dirname(__DIR__).'/classes/Posts.php';
+include dirname(__DIR__).'/classes/Register.php';
+
 
 //Fetches the big feature on index.
 $object = new Posts($pdo);

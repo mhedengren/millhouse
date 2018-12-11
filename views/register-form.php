@@ -18,12 +18,12 @@ include '../includes/register.php';
             <!--  Register form  -->
             <h1>Sign up</h1>
             <?php
-            //Shows the error message from validation only when $_POST is set
-            if(isset($_POST['signup'])){
-                if(!empty($register->errors)){
-                    echo display_errors($register->errors);
+                //Shows the error message from validation only when $_POST is set
+                if(isset($_POST['signup'])){
+                    if(!empty($register->errors)){
+                        echo display_errors($register->errors);
+                    }
                 }
-            }
             ?>
 
             <form action="register-form.php" method="post" id="form_register">
