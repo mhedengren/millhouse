@@ -3,7 +3,7 @@
 
 //#footer{
     .footer-color{
-        margin-top: 4rem;
+        margin-top: 2rem;
         height: 30vh;
         background: linear-gradient(95.95deg, #1C3045 0%, #D7BCC8 100%);   
     }
@@ -13,22 +13,22 @@
 }
 
     .footer-title{
-        margin-top: 5px;
+        margin-top: 0px;
         margin-bottom: 5px;
         color: white;
-        font-size: 0.6em;
+        font-size: 0.8em;
     }
 
     .footer-p{
         color: white;
-        font-size: 0.4em;
+        font-size: 0.6em;
         margin: 0px;
     }
 
     .footer-logo{
         width: 25vw;
         padding: 5px;
-        margin: 10px auto;
+        //margin: 10px auto 0px auto;
     }
 
     .fab {
@@ -41,19 +41,31 @@
 
 //tablet size
 @media screen and (min-width: 768px){
+    .footer-color{
+        margin-top: 0.5rem;
+        height: 25vh;
+    } 
+
     .footer-title{
     margin-top: 5px;
     font-size: 1.0em;
     }
 
     .footer-p{
-        font-size: 0.6em;
+        font-size: 0.8em;
     }
 
+    .footer-logo{
+        width: 20vw;
+    }    
 
     .fab{
         font-size: 2.0em;
         padding: 10px;
+    }
+
+    .icons{
+        padding-right: 5px;
     }
     
 }
@@ -61,23 +73,29 @@
 //desktop size
 @media screen and (min-width: 992px){
     .footer-color{
-        height: 15vh;
+        height: 20vh;
     }
 
     .footer-title{
         font-size: 1.4em;
+        padding-top: 10px;
     }
 
     .footer-p{
         font-size: 0.8em;
+        padding-bottom: 10px;
     }
 
     .fab{
-        font-size: 3.5em
-    }    
+        font-size: 3.5em;
+        padding: 10px 0px 10px 0px; 
+    }
+
     
+
     .footer-logo{
         width: 15vh;
+        padding: 10px 0px 10px 0px;
     }
  
 } /* 
