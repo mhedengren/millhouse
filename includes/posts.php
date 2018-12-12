@@ -97,7 +97,7 @@ if($action === "update_post")
          header('Location: ../views/edit-post.php?id='.$_GET["id"].'&empty=content');
          exit();
       }
-
+   //Call to update method
    $posts->update($_POST["postTitle"], $_POST["postDesc"], $_POST["postCont"], $new_location, $_POST['categories'], $postId );
 }
 

@@ -85,31 +85,14 @@ and the hamburger menu when collapsed */
     text-align: left;
 }
 
-   
 }
 
 // Desktop navigation
 @media screen and (min-width: 992px){
 
-    .container {
-        //@include toCheckStyle(blue);
-    }
-/*
-    header {
-        margin: 0 0 3rem 0;
-       // @include toCheckStyle(blue);
-       background-color: #fafafa; //f6f6f6
-       padding: 1.5rem 0;
-*/
-
     header {
         margin: 3rem 0 4rem 0;
-       // @include toCheckStyle(blue);
-
-    }
-       
-
-    
+    }  
 
     .navbar {
         padding: 0 1rem;
@@ -136,7 +119,6 @@ and the hamburger menu when collapsed */
         text-align: center;
         font-weight: 400;
        
-        
     }
 
     .nav-link-highlight{
