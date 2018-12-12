@@ -22,13 +22,19 @@
 
     .new-post {
         margin-top: 2em;
-        .admin-button{
-            margin-bottom: 20px;
-            @include buttonStyle($secondColorP, #fff);
-            &:hover{
-                @include buttonStyle($primalColorL, $primalColorD); 
+
+        .submit-btn-area{
+            margin-left: 5px;
+
+            .admin-button{
+                @include buttonStyle($secondColorP, #fff);
+
+                &:hover{
+                    @include buttonStyle($primalColorD, #fff); 
+                }
             }
         }
+
         .add-new-post {
             margin-bottom: 1.5em;
         }
@@ -50,7 +56,6 @@
 }
 
 .upload-image-form {
-    margin-top: 1.5rem;
     padding: 15px 0;
     border: 1px solid #CED4DA;
     box-sizing: border-box;
@@ -60,7 +65,7 @@
     -moz-border-radius: 4px;
     -ms-border-radius: 4px;
     -o-border-radius: 4px;
-        
+
     .upload-label {
         font-family: $bodyFamily;
         font-weight: 600;
@@ -70,7 +75,7 @@
         margin-left: 15px;
         margin-bottom: 20px;
     }
-    
+
     .alt-label{
         margin-left: 15px;
     }
@@ -85,8 +90,8 @@
     }
 
     /*hiding the input visually but keeping it visible for the browser
-      so that it can be styled */
-    
+    so that it can be styled */
+
 
     input[type="submit"],
     input[type="file"],
