@@ -43,7 +43,7 @@ $sunglasses = $object3->getSunglassesCat();
                             </a>
                             <p class="post-description"><?= $post["description"]; ?></p>
                             <p class="read-more d-none d-md-block">
-                                <a href="single-post.php?posts_id=<?= $post["posts_id"]; ?>">Read/comment article</a>
+                                
                             </p>  
                         </div>
                      
@@ -72,7 +72,7 @@ $sunglasses = $object3->getSunglassesCat();
             <?php include '../includes/date.php'; ?>
             <?php include '../includes/edit-remove-category.php'; ?>
                 <div class="category-card">
-                        <a href="single-post.php?posts_id=<?= $post["posts_id"]; ?>">
+                        <a class="no-hover" href="single-post.php?posts_id=<?= $post["posts_id"]; ?>">
                         <div class="gallery-hero-image">
                             <img src="../includes/<?= $post["image"]; ?>" alt="feature-image">
                         </div>

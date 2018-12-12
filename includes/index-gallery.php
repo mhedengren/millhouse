@@ -20,7 +20,7 @@ $latestPosts = $object2->getLatestPosts();
                     </li>
                 </ul>
             <?php endif; ?>
-            <a href="views/single-post.php?posts_id=<?= $post["posts_id"]; ?>">
+            <a class="no-hover" href="views/single-post.php?posts_id=<?= $post["posts_id"]; ?>">
                 <div class="gallery-hero-image">
                     <img src="includes/<?= $post["image"]; ?>" alt="feature-image">
                 </div>
