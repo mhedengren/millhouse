@@ -24,14 +24,25 @@ $categories = $object->getAllCategories();
     <div class="container"> 
         <div class="row">
             <div class="col-sm-12">
-                <h1>All categories</h1>
+                <h1 class="all-categories">All categories</h1>
             </div>
         </div>
 
         <div class="row category-list">
             <?php foreach($categories as $category) : ?>
-       
             <div class="col-sm-12 col-md-6 col-lg-4">
+                  <?php if(isset($_SESSION['user']) && $_SESSION['user'] == "admin"): ?>
+                      <ul class="edit-remove-buttons">
+                          <li class="list-inline-item edit-button">
+                          <a href="../includes/posts.php?action=read_post&id=<?= $category["posts_id"]; ?>">
+                              <i class="fas fa-pencil-alt"></i></a>
+                           </li>
+                          <li class="list-inline-item remove-button">
+                              <a href="../includes/posts.php?action=delete_post&id=<?= $category["posts_id"]; ?>">
+                              <i class="fas fa-times"></i></a>
+                           </li>
+                      </ul>
+                  <?php endif; ?>
                 <div class="category-card">
                         <a href="single-post.php?posts_id=<?= $category["posts_id"]; ?>">
                         <div class="gallery-hero-image">

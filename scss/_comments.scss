@@ -4,6 +4,13 @@
 #comments {
 
     margin: 3rem 0 0 0;
+    .comment-field {
+        margin-top: 1rem;
+    }
+
+    .comment-counter {
+        margin-bottom: .3rem;
+    }
 
     h4 {
         text-align: left;
@@ -16,7 +23,6 @@
     }
 
     .comment-user {
-
         p {
             text-align: left;
             font-family: Open Sans;
@@ -30,7 +36,6 @@
     }
 
     .comment-date {
-
         p {
             text-align: left;
             font-family: Open Sans;
@@ -45,7 +50,6 @@
     }
 
     .comment-content {
-
         p {
             text-align: left;
             font-family: Open Sans;
@@ -60,6 +64,7 @@
 
     .alert {
         margin: 2rem 0 1rem 0;
+
 
     }
 
@@ -78,8 +83,8 @@
 
         form {
 
-            .post-comment-btn {
 
+            .post-comment-btn {
                 margin: 5% 0;
 
                 @include buttonStyle($secondColorP, #fff);

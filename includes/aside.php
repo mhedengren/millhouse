@@ -1,16 +1,17 @@
 <?php
-//include dirname(__DIR__) .'/classes/Aside.php';
-
-//$aside = new Aside($pdo);
+//Call a method
 $asidePosts = $object->getPostAside();
-
 ?>
 
 <aside class="d-none d-md-block col-lg-4">
     <div class="container">
         <h2>TOP ARTICLES</h2>
+
         <hr>
+
         <div class="row latest-posts">
+
+            <!-- Run foreach to display data from posts table -->
             <?php foreach ($asidePosts as $asidePost) :?>
 
             <article class="col-lg-12 col-md-6 row">
@@ -24,9 +25,12 @@ $asidePosts = $object->getPostAside();
                     </div>
                 </a>
             </article>
+
             <?php endforeach ;?>
         </div>
-        <hr class="d-none d-lg-block">
+
+        <hr>
+
         <div class="d-none d-lg-block">
             <h2>GET WEEKLY UPPDATES</h2>
             <form action="#" method="post">
@@ -37,6 +41,6 @@ $asidePosts = $object->getPostAside();
                 <button type="submit" name="signup" class="btn button-color">SUBSCRIBE</button>
             </form>
         </div>
-    </div>
 
+    </div>
 </aside>

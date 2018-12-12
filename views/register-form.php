@@ -10,15 +10,14 @@ include '../includes/register.php';
 
 ?>
 
-<main id="register-form"> 
-
+<main id="register-form">
     <div class="container row">
         <div class="contents">
-            
+
             <!--  Register form  -->
             <h1>Sign up</h1>
             <?php
-                //Shows the error message from validation only when $_POST is set
+            //Shows the error message from validation only when $_POST is set
                 if(isset($_POST['signup'])){
                     if(!empty($register->errors)){
                         echo display_errors($register->errors);
@@ -45,10 +44,10 @@ include '../includes/register.php';
             <p>Already a member? <a href="./login-form.php">Log in!</a></p>
 
         </div>
-
     </div>
-
 </main>
+
 <?php include "../includes/scripts.php"; ?>
+
 </body>
 </html>

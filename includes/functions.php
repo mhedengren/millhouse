@@ -1,9 +1,5 @@
 <?php
 //This function redirects to a specific page
-/*
-* Example:
-* redirect_to('../views/register-form.php');
-*/
 function redirect_to($location){
     header('Location: ' .$location);
     exit; //exit() should be set if more action is set after this redirect.
@@ -17,10 +13,6 @@ function is_login($location){
 }
 
 //This function redirects if user is not logged in as an admin
-/*
-* Example:
-* is_admin('login-form.php');
-*/
 function is_admin($location){
     if((!isset($_SESSION['user']))&& (!$_SESSION['user'] == "admin")){
         redirect_to($location);
