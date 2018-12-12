@@ -17,7 +17,7 @@ $asidePosts = $object->getPostAside();
             <article class="col-lg-12 col-md-6 row">
                 <a href="<?= $siteroot ?>/views/single-post.php?posts_id=<?= $asidePost["posts_id"]; ?>" class="row">
                     <div class="article-images col-4">
-                        <img src="<?= $siteroot ?>/includes/<?= $asidePost["image"]; ?>" alt="<?= $asidePost["title"]; ?>">
+                        <img src="<?= $siteroot ?>/includes/<?= $asidePost["image"]; ?>" alt="<?= $asidePost["alt"]; ?>">
                     </div>
                     <div class="article-contents col-7">
                         <h5 class="aside-post-title"><?= $asidePost["title"]; ?></h5>
