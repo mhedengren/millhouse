@@ -77,6 +77,7 @@ $post = $object->readPost();
         $(function () {
             $('textarea').froalaEditor()
         });
+
     </script>
 
     <?php //include '../includes/footer.php'; ?>

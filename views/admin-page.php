@@ -72,6 +72,10 @@ include '../includes/header.php';
         $(function () {
             $('textarea').froalaEditor()
         });
+
+        $('textarea').froalaEditor({
+            height: 300
+            });
     </script>
 
     <?php //include '../includes/footer.php'; ?>
