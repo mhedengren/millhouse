@@ -17,7 +17,6 @@
                     </li>
                     <?php endif; ?>
                     <?php
-                    //if(isset($_SESSION['username'])):
                     if(isset($_SESSION['user']) && $_SESSION['user'] == "admin"):
                     ?>
                     <li class="nav-item">
