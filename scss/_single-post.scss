@@ -51,7 +51,7 @@
         text-align: center;
         letter-spacing: 0.5px;
         color: #60495A;
-        padding: 20px;
+        padding: 20px 0;
         margin-bottom: 0px;
     }
 
@@ -88,7 +88,8 @@
         font-size: 1.3rem;
         font-weight: 600;
         text-align: center;
-        letter-spacing: 0.1rem;
+        margin-top: .3rem;
+        //letter-spacing: 0.1rem;
     }
 
     @media screen and (min-width: 768px) {
@@ -135,7 +136,7 @@
             position: absolute;
             bottom: 5%;
             left: 40%;
-            margin-bottom: %;
+          
 
             h2 {
                 color: #FFF;
