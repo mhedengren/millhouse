@@ -24,7 +24,7 @@ include '../includes/header.php';
             </div>
 
             <div class="row new-post">
-                <div class="col-sm-12 col-md-8">
+                <div class="col-sm-12 col-xl-8">
                     <h2 class="add-new-post">Add New Post</h2>
                     <?php new_post_form_check(); ?>
                     <form action="../includes/posts.php?action=create_post" method="POST" enctype="multipart/form-data" id="upload-form">
@@ -37,12 +37,12 @@ include '../includes/header.php';
                         <input type="submit" class="admin-button" name="submit" value="Create">
                     </form>
                 </div>
-                <div class="col-sm-12 col-md-4">
+                <div class="col-sm-12 col-xl-4">
                     <div class="upload-image-form">
                         <?php upload_file_check(); ?>
                         <label for="upload-input" class="upload-label">Select Image</label>
-                        <input type="file" class="input-file" name="image" id="upload-input" form="upload-form" />
-                        <label for="alt">Alt</label>
+                        <input type="file" class="input-file d-block" name="image" id="upload-input" form="upload-form" />
+                        <label for="alt" class="alt-label d-block">Alt text</label>
                         <input type="text" name="postAlt" id="alt" class="upload-label" form="upload-form">
                         <hr>
                         <h4 class="upload-label">Select category</h4>

@@ -53,7 +53,7 @@
     padding: 15px 0;
     border: 1px solid #CED4DA;
     box-sizing: border-box;
-    margin-left: 20px;
+    margin-left: auto;
     border-radius: 4px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -68,6 +68,10 @@
         color: #1C3045;
         margin-left: 15px;
         margin-bottom: 20px;
+    }
+    
+    .alt-label{
+        margin-left: 15px;
     }
 
     h4 {
