@@ -20,7 +20,7 @@ $watches = $object2->getWatchesCat();
     <div class="container-fluid"> 
         <div class="row"> 
             <div class="hero-image">
-                <img src="../images/watch_light.jpg" alt="Watch">
+                <img src="../images/watch_lightest.jpg" alt="Watch">
                 <h1>Watches</h1>  
             </div>
         </div>

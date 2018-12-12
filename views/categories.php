@@ -21,12 +21,16 @@ $categories = $object->getAllCategories();
 
 <main id="categories">  
 
-    <div class="container"> 
-        <div class="row">
-            <div class="col-sm-12">
-                <h1 class="all-categories">All categories</h1>
+    <div class="container-fluid"> 
+        <div class="row"> 
+            <div class="hero-image">
+                <img src="../images/categories.jpg" alt="Watch">
+                <h1>ALL CATEGORIES</h1>  
             </div>
         </div>
+
+    <div class="container p-0"> 
+     
 
         <div class="row category-list">
             <?php foreach($categories as $post) : ?>

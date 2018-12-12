@@ -21,7 +21,7 @@ $homeDecor = $object4->getHomeDecoCat();
     <div class="container-fluid"> 
         <div class="row"> 
             <div class="hero-image">
-                <img src="../images/homedecor_light.jpg" alt="Watch">
+                <img src="../images/homedecor_lightest.jpg" alt="Watch">
                 <h1>Home Decor</h1>  
             </div>
         </div>
