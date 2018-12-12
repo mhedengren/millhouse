@@ -103,13 +103,13 @@ $read = $comments->readComments($_GET['posts_id']);
                         </div>
 
                         <div class="col-md-10 d-md-none d-lg-block comment-content">
-                            <p><?=  $single_comment["content"]; ?></p>
+                            <p><?=  htmlentities($single_comment["content"]); ?></p>
                         </div>
                     </div>
 
                     <div class="row hejsan">
                         <div class="col-sm d-none d-md-block d-lg-none comment-content">
-                            <p><?=  $single_comment["content"]; ?></p>
+                            <p><?=  htmlentities($single_comment["content"]); ?></p>
                         </div>
                     </div>
 
