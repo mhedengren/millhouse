@@ -1,4 +1,3 @@
-
 <header>
     <div class="container">
         <nav class="navbar navbar-expand-lg">
@@ -14,7 +13,7 @@
                         <a class="nav-link nav-link-highlight" href="<?= $siteroot; ?>/views/login-form.php">LOGIN</a>
                     </li>
                     <?php else: ?>
-                   
+
                     <li class="nav-item d-lg-none">
                         <a class="nav-link nav-link-highlight" href="<?= $siteroot; ?>/includes/logout.php">LOGOUT</a>
                     </li>
@@ -52,7 +51,7 @@
                 <?php
                 else:
                 ?>
-            
+
                 <button class="login-button">
                     <a href="<?= $siteroot; ?>/includes/logout.php">LOGOUT</a>
                 </button>
