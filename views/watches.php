@@ -31,22 +31,15 @@ $watches = $object2->getWatchesCat();
             <?php foreach($watches as $post) : ?>
             <div class="container">
             <?php include '../includes/edit-remove-category.php'; ?>
+            <?php include '../includes/date.php'; ?>
                 <div class="row content">
-                    <div class="col-sm-12 col-md-6 post-details">
-                            <div class="date row d-md-none justify-content-center">
-                                <div class="date-circle">
-                                    <h6 class="date"><?= $post["created_on"]; ?></h6>
-                                </div>
-                            </div>
+                <div class="col-sm-12 col-md-6 post-details">
+                            <h6><?= $longmonth.' '. $day; ?></h6>
                             <a href="single-post.php?posts_id=<?= $post["posts_id"]; ?>">
                                 <h2 class="post-title"><?= $post["title"]; ?></h2>
                             </a>
                             <p class="post-description"><?= $post["description"]; ?></p>
-                            <p class="read-more d-none d-md-block">
-                                <a href="single-post.php?posts_id=<?= $post["posts_id"]; ?>">Read/comment article</a>
-                            </p>  
                         </div>
-                     
                     <div class="col-sm-12 col-md-6">
                         <div class="post-img">
                             <a href="single-post.php?posts_id=<?= $post["posts_id"]; ?>">
