@@ -42,7 +42,7 @@ include 'includes/header.php';
                        <h6><?= $month; ?><br><?= $day; ?></h6>
                    </div>
                </div>
-               <h2 class="feature-title d-md-none"><?= $feature["title"]; ?></h2>
+               <h2 class="feature-title-mobile d-md-none"><?= $feature["title"]; ?></h2>
                </a>
                <p class="post-description d-md-none"><?= $feature["description"]; ?></p>
            </div>
