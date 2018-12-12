@@ -49,8 +49,9 @@ if($action === "create_post")
          header('Location: ../views/admin-page.php?empty=content');
          exit();
       }
+    
    //Call to create method.
-   $posts->create($_POST["postTitle"], $_POST["postDesc"], $_POST["postCont"], $_SESSION["user_id"], date('Y-m-d H:i:s'), $new_location, $_POST['categories'] );
+    $posts->create($_POST["postTitle"], $_POST["postDesc"], $_POST["postCont"], $_SESSION["user_id"], date('Y-m-d H:i:s'), $new_location, $_POST["postAlt"], $_POST['categories'] );
 }
 
 // Handles what happens if the GET action is read_post.
@@ -98,7 +99,7 @@ if($action === "update_post")
          exit();
       }
 
-   $posts->update($_POST["postTitle"], $_POST["postDesc"], $_POST["postCont"], $new_location, $_POST['categories'], $postId );
+    $posts->update($_POST["postTitle"], $_POST["postDesc"], $_POST["postCont"], $new_location, $_POST["postAlt"], $_POST['categories'], $postId );
 }
 
 // Handles what happens if the GET action is delete_post.
