@@ -11,6 +11,7 @@ $temporary_location = $image["tmp_name"];
 $new_location = "uploads/" . $image["name"];
 $upload_ok = move_uploaded_file($temporary_location, $new_location);
 
+//Define action variable.
 $action = $_GET["action"] ?? '';
 
 // Handles what happens if the GET action is create_post.
@@ -48,7 +49,7 @@ if($action === "create_post")
          header('Location: ../views/admin-page.php?empty=content');
          exit();
       }
-
+   //Call to create method.
    $posts->create($_POST["postTitle"], $_POST["postDesc"], $_POST["postCont"], $_SESSION["user_id"], date('Y-m-d H:i:s'), $new_location, $_POST['categories'] );
 }
 
