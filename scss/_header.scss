@@ -45,9 +45,9 @@ and the hamburger menu when collapsed */
 
  // Mobile navbar link properties 
 .nav-link {
-    font-family: 'Merriweather';
+    font-family: $rubrikFamily;
     color: $primalColorD;
-    font-size: 2rem;
+    font-size: 1.6rem;
     text-align: left;
 }
 
@@ -79,7 +79,7 @@ and the hamburger menu when collapsed */
 
  // Tablet navbar link properties 
  .nav-link {
-    font-family: 'Merriweather';
+    font-family: $rubrikFamily;
     color: $primalColorD;
     font-size: 1.3rem;
     text-align: left;
@@ -113,7 +113,7 @@ and the hamburger menu when collapsed */
     }
     
     .nav-link {
-        font-family: 'Merriweather';
+        font-family: $rubrikFamily;
         color: $primalColorD;
         font-size: 1rem;
         text-align: center;
