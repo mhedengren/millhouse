@@ -22,6 +22,7 @@
     .new-post {
         margin-top: 3em;
         .admin-button{
+            
             margin-bottom: 20px;
             @include buttonStyle($secondColorP, #fff);
             &:hover{
