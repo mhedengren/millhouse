@@ -26,9 +26,10 @@ $post = $object->readPost();
                 </div>
             </div>
 
+            <h2 class="add-new-post">Edit your post</h2>
+
             <div class="row new-post">
                 <div class="col-sm-12 col-xl-8">
-                    <h2 class="add-new-post">Edit your post</h2>
                     <?php new_post_form_check(); ?>
                     <form action="../includes/posts.php?action=update_post&id=<?= $post["posts_id"] ?>" method="POST" enctype="multipart/form-data" id="upload-form">
                         <label for="title">Title</label>
@@ -39,7 +40,6 @@ $post = $object->readPost();
                         <input hidden type="text" id="postId" name="postId" value="<?= $post["posts_id"] ?>" class="form-control" placeholder="Your description here">
                         <label for="content">Content</label>
                         <textarea name="postCont" id="content" class="form-control">  <?= $post["content"] ?> </textarea>
-                        <input type="submit" name="submit" class="admin-button" value="Update">
                     </form>
                 </div>
                 <div class="col-sm-12 col-xl-4">
@@ -56,10 +56,12 @@ $post = $object->readPost();
                             <option value="watches">Watches</option>
                             <option value="homedecor">Home Decor</option>
                         </select>
-
                     </div>
                 </div>
 
+                <input type="submit" name="submit" class="admin-button" value="Update" form="upload-form">
+
+           
             </div><!-- row new-post -->
 
         </div><!-- container -->

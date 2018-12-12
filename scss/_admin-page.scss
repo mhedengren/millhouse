@@ -17,10 +17,11 @@
         font-weight: 600;
         line-height: 24px;
         letter-spacing: 0.5px;
+        margin-top: 1rem;
     }
 
     .new-post {
-        margin-top: 3em;
+        margin-top: 2em;
         .admin-button{
             margin-bottom: 20px;
             @include buttonStyle($secondColorP, #fff);
@@ -49,7 +50,7 @@
 }
 
 .upload-image-form {
-    margin-top: 5.5em;
+    margin-top: 1.5rem;
     padding: 15px 0;
     border: 1px solid #CED4DA;
     box-sizing: border-box;

@@ -23,9 +23,10 @@ include '../includes/header.php';
                 </div>
             </div>
 
+            <h2 class="add-new-post">Add New Post</h2>
+
             <div class="row new-post">
                 <div class="col-sm-12 col-xl-8">
-                    <h2 class="add-new-post">Add New Post</h2>
                     <?php new_post_form_check(); ?>
                     <form action="../includes/posts.php?action=create_post" method="POST" enctype="multipart/form-data" id="upload-form">
                         <label for="title">Title</label>
@@ -34,7 +35,6 @@ include '../includes/header.php';
                         <input type="text" id="desc" name="postDesc" class="form-control" placeholder="Your description here">
                         <label for="content">Content</label>
                         <textarea name="postCont" id="content" class="form-control"></textarea>
-                        <input type="submit" class="admin-button" name="submit" value="Create">
                     </form>
                 </div>
                 <div class="col-sm-12 col-xl-4">
@@ -51,9 +51,10 @@ include '../includes/header.php';
                             <option value="watches">Watches</option>
                             <option value="homedecor">Home Decor</option>
                         </select>
-
                     </div>
                 </div>
+
+                <input type="submit" class="admin-button" name="submit" value="Create" form="upload-form">
 
             </div><!-- row new-post -->
 
