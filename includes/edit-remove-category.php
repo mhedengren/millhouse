@@ -1,4 +1,4 @@
- <?php if(isset($_SESSION['user']) && $_SESSION['user'] == "admin"): ?>
+<?php if(isset($_SESSION['user']) && $_SESSION['user'] == "admin"): ?>
     <ul class="edit-remove-buttons">
         <li class="list-inline-item edit-button">
         <a href="../includes/posts.php?action=read_post&id=<?= $single_category["posts_id"]; ?>">
