@@ -5,7 +5,7 @@
             <img src="<?= $siteroot; ?>/images/logo_light.png" alt="logo with Millhouse text" class="footer-logo">
         </div>
 
-        <div class="col-6 col-md-4 text-right contactInfo">
+        <div class="col-6 col-md-4 text-center contactInfo">
             <p class="footer-title">Contact Us</p>
             <p class="footer-p">admin@millhouse.com</p>
             <p class="footer-p">055-895-8975</p>
@@ -17,7 +17,7 @@
             <img src="<?= $siteroot; ?>/images/logo_light.png" alt="logo with Millhouse text" class="footer-logo">
         </div>
 
-        <div class="col-6 col-md-4 text-left icons">
+        <div class="col-6 col-md-4 text-center icons">
             <a href="#"><i class="fab fa-facebook-square"></i></a>
             <a href="#"><i class="fab fa-twitter-square"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
@@ -29,7 +29,7 @@
 <div class="col-12 text-center">
 <img src="<?= $siteroot; ?>/images/logo_dark.png" alt="logo with Millhouse text" class="footer-logo">
 </div>
-</div>   
+</div>
 -->
 </footer>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

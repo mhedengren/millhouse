@@ -1,10 +1,13 @@
 @import "variables";
 @import "mixins";
 
-//#footer{
+#footer{
+    
+margin-top: 20vh;
+
     .footer-color{
         margin-top: 2rem;
-        height: 20vh;
+        height: 30vh;
         background: linear-gradient(95.95deg, #1C3045 0%, #D7BCC8 100%);   
     }
 
@@ -26,7 +29,7 @@
     }
 
     .footer-logo{
-        width: 35vw;
+        width: 30vw;
         padding: 5px;
         //margin: 10px auto 0px auto;
     }
@@ -38,31 +41,12 @@
         text-align: center;
         text-decoration: none;
     }
-    
-//large mobile size
-@media screen and (min-width: 576px){
-    .footer-color{
-        height: 25vh;
-    }
-
-    .footer-title{
-        font-size: 1.0em;
-    }
-    
-    .footer-p{
-        font-size: 0.8em;
-    }   
-    
-    .footer-logo{
-        width: 30vw;
-    }    
-}    
 
 //tablet size
 @media screen and (min-width: 768px){
     .footer-color{
         margin-top: 0.5rem;
-        height: 25vh;
+        height: 30vh;
     } 
 
     .footer-title{
@@ -91,7 +75,7 @@
 //desktop size
 @media screen and (min-width: 992px){
     .footer-color{
-        height: 25vh;
+        height: 30vh;
     }
 
     .footer-title{
@@ -112,8 +96,7 @@
     }
 
     .footer-logo{
-        width: 15vh;
+        width: 15vw;
         padding: 10px 0px 10px 0px;
     }
- 
-} 
+  }

@@ -10,8 +10,10 @@ is_login('views/login-form.php');
 
 include 'includes/header.php';
 ?>
+
+<!-- Index Feature -->
   <div class="container">
-       <article class="row justify-content-center feature-post">
+       <section class="row justify-content-center feature-post">
            <div class="col-sm-12 col-md-12 col-lg-12">
                <div class="main-feature-headings d-none d-md-block">
                    <h6><?= $month . ' ' ?><?= $day . ', ' ?><?= $year; ?></h6>
@@ -42,59 +44,20 @@ include 'includes/header.php';
                        <h6><?= $month; ?><br><?= $day; ?></h6>
                    </div>
                </div>
-               <h2 class="feature-title d-md-none"><?= $feature["title"]; ?></h2>
+               <h2 class="feature-title-mobile d-md-none"><?= $feature["title"]; ?></h2>
                </a>
                <p class="post-description d-md-none"><?= $feature["description"]; ?></p>
            </div>
-       </article>
+       </section>
    </div>
 
+<!-- Main section -->
 <div class="main-container container">
-<div class="row">
-   <main id="index-page" class="col-lg-8">
-    <?php
-    $object2 = new Posts($pdo);
-    $object2->getLatestPosts();
-    $latestPosts = $object2->getLatestPosts();
-    ?>
-      <section class="gallery row">
-          <?php foreach ($latestPosts as $post) :?>
-          <?php include 'includes/date.php';?>
-              <div class="col-sm-12 col-md-6 gallery-card">
-                  <?php if(isset($_SESSION['user']) && $_SESSION['user'] == "admin"): ?>
-                      <ul class="edit-remove-buttons">
-                          <li class="list-inline-item edit-button">
-                          <a href="includes/posts.php?action=read_post&id=<?= $post["posts_id"]; ?>">
-                              <i class="fas fa-pencil-alt"></i></a>
-                           </li>
-                          <li class="list-inline-item remove-button">
-                              <a href="includes/posts.php?action=delete_post&id=<?= $post["posts_id"]; ?>">
-                              <i class="fas fa-times"></i></a>
-                           </li>
-                      </ul>
-                  <?php endif; ?>
-                  <a href="views/single-post.php?posts_id=<?= $post["posts_id"]; ?>">
-                      <div class="gallery-hero-image">
-                          <img src="includes/<?= $post["image"]; ?>" alt="feature-image">
-                      </div>
-                      <div class="date row d-md-none justify-content-center">
-                          <div class="date-circle">
-                          <h6><?= $month; ?><br><?= $day; ?></h6>
-                          </div>
-                      </div>
-                      <h2 class="gallery-post-title"><?= $post["title"]; ?></h2>
-                  </a>
-                  <p class="gallery-post-description">
-                      <?= $post["description"]; ?>
-                   </p>
-                  <p class="read-more d-none d-md-block">
-                      <a href="views/single-post.php?posts_id=<?= $post["posts_id"]; ?>">Read/comment article</a>
-                   </p>
-              </div>
-          <?php endforeach ;?>
-      </section>
-   </main>
-<?php include 'includes/aside.php'; ?>
-</div>
+    <div class="row">
+        <main id="index-page" class="col-lg-8">
+            <?php include 'includes/index-gallery.php'; ?>
+        </main>
+    <?php include 'includes/aside.php'; ?>
+    </div>
 </div>
 <?php include 'includes/footer.php'; ?>

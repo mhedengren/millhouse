@@ -16,7 +16,7 @@ class Posts
     public $errors;
     public $category;
 
-    /* Inject the pdo connection so it is available inside of the class
+  /* Inject the pdo connection so it is available inside of the class
    * so we can call it with '$this->pdo', always available inside of the class */
   public function __construct($pdo)
   {
@@ -88,7 +88,7 @@ class Posts
     public function update($title, $description, $content, $image, $category, $postId){
 
         $statement = $this->pdo->prepare(
-            'UPDATE posts SET title = :postTitle, description = :postDesc, content = :postCont, image = :image, category = :categories
+        'UPDATE posts SET title = :postTitle, description = :postDesc, content = :postCont, image = :image, category = :categories
          WHERE posts_id = :posts_id'
         );
 
