@@ -13,7 +13,6 @@ include '../includes/header.php';
 $object4 = new Posts($pdo);
 $object4->getHomeDecoCat();
 $homeDecor = $object4->getHomeDecoCat();
-
 ?>
 
 <main id="categories">  
@@ -32,37 +31,37 @@ $homeDecor = $object4->getHomeDecoCat();
         <section class="category-gallery d-none d-md-block">
             <div class="container">
         
-            <?php foreach($homeDecor as $post) : ?>
-                <div class="container">
+                <?php foreach($homeDecor as $post) : ?>
+                    <div class="container">
 
-                    <?php include '../includes/edit-remove-category.php'; ?>
-                    <?php include '../includes/date.php'; ?>
-                    <div class="row content">
-                        <div class="col-sm-12 col-md-6 post-details">
+                        <?php include '../includes/edit-remove-category.php'; ?>
+                        <?php include '../includes/date.php'; ?>
+                        <div class="row content">
+                            <div class="col-sm-12 col-md-6 post-details">
 
-                            <h6><?= $longmonth.' '. $day; ?></h6>
-                            <a href="single-post.php?posts_id=<?= $post["posts_id"]; ?>">
-                                <h2 class="post-title"><?= $post["title"]; ?></h2>
-                            </a>
-                            <p class="post-description"><?= $post["description"]; ?></p>
-
-                        </div>
-                        
-                        <div class="col-sm-12 col-md-6">
-                            <div class="post-img">
+                                <h6><?= $longmonth.' '. $day; ?></h6>
                                 <a href="single-post.php?posts_id=<?= $post["posts_id"]; ?>">
-                                    <div class="gallery-hero-image">
-                                        <img src="../includes/<?= $post["image"]; ?>" alt="feature-image">
-                                    </div>  
-                                </a>  
-                            </div>
-                        </div> 
+                                    <h2 class="post-title"><?= $post["title"]; ?></h2>
+                                </a>
+                                <p class="post-description"><?= $post["description"]; ?></p>
 
-                    </div><!-- row .content -->
-                </div><!-- container -->     
-            <?php endforeach ;?>
-        </div><!--- category-list -->
-    </div>
+                            </div>
+                            
+                            <div class="col-sm-12 col-md-6">
+                                <div class="post-img">
+                                    <a href="single-post.php?posts_id=<?= $post["posts_id"]; ?>">
+                                        <div class="gallery-hero-image">
+                                            <img src="../includes/<?= $post["image"]; ?>" alt="feature-image">
+                                        </div>  
+                                    </a>  
+                                </div>
+                            </div> 
+
+                        </div><!-- row .content -->
+                    </div><!-- container -->     
+                <?php endforeach ;?>
+            </div><!--- container -->
+        </section>
         
     <!--- Mobile gallery --->
     <div class="container d-md-none"> 
