@@ -2,7 +2,6 @@
 
 class Posts
 {
-
     //property for pdo
     private $pdo;
 
@@ -73,8 +72,9 @@ class Posts
     }
 
     //Method for reading the post that is going to be updated.
-    public function readPost(){
-        $stmt = $this->pdo->prepare("SELECT posts_id, posts.title, posts.description, posts.created_by, posts.created_on, posts.image, posts.content
+    public function readPost()
+    {
+    $stmt = $this->pdo->prepare("SELECT posts_id, posts.title, posts.description, posts.created_by, posts.created_on, posts.image, posts.content
     FROM posts
     where posts_id = :posts_id");
 
@@ -179,7 +179,8 @@ class Posts
         return $rows;
     } 
     
-    public function getSunglassesCat(){
+    public function getSunglassesCat()
+    {
         //select all data
         $statement = $this->pdo->prepare(
             "SELECT * FROM posts
