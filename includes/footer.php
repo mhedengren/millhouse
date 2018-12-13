@@ -1,6 +1,6 @@
 <footer class="" id="footer">
 
-    <div class="row footer-color d-flex align-items-center justify-content-center">
+    <div class="row m-0 footer-color align-items-center justify-content-center">
         <div class="col-12 d-md-none text-center">
             <img src="<?= $siteroot; ?>/images/logo_light.png" alt="logo with Millhouse text" class="footer-logo">
         </div>
