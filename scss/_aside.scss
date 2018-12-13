@@ -15,6 +15,7 @@ aside{
         }
 
     }
+    
     .container{
         background-color: $paleGrayB;
         // margin-top: 1rem;
@@ -35,6 +36,7 @@ aside{
         article{
             //@include toCheckStyle(pink); 
             margin-bottom: 0.7rem;
+            margin-left: 0;
             padding-left: 0;
             padding-right: 0;
 
@@ -43,11 +45,11 @@ aside{
                 font-weight: bold;
                 color: $primalColorD;
             }
+
             p {
                 font-size: 12px;
                 letter-spacing: 0.5px;
             }
-
 
             //borders for checking
             div{
@@ -92,16 +94,20 @@ aside{
     }
 }
 
+//Tablet size
 @media screen and (min-width: 768px){
 
-    .container {
-        margin-top: 2rem;
-    }
-    h2 {
-        font-size: 1rem;
+    aside{
+
+        .container {
+            margin-top: 2rem;
+        }
+
+        h2 {
+            font-size: 1rem;
+        }
     }
 }
-
 
 //md (Large devices (desktops, 992px and up))
 @media screen and (min-width: 992px){
