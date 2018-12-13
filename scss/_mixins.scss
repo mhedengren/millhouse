@@ -1,14 +1,4 @@
 //Button style
-/*
-*Example
-    .button-color{
-        @include buttonStyle($secondColorP,#fff); 
-
-        &:hover{
-            @include buttonStyle($primalColorD,#fff); 
-        }
-    }
-*/
 @mixin buttonStyle($bgColor,$tColor) {
     background-color: $bgColor;
     color: $tColor;
