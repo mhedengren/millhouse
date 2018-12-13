@@ -49,10 +49,10 @@ class Posts
   }
 
  //Method for creating a new post
-  public function create($title, $description, $content, $created_by, $created_on, $image, $category){
-    
-    $statement = $this->pdo->prepare("INSERT INTO posts (title, description, content, created_by, created_on, image, category) 
-    VALUES (:postTitle, :postDesc, :postCont, :created_by, :postDate, :image, :categories)");
+    public function create($title, $description, $content, $created_by, $created_on, $image, $alt, $category){
+
+        $statement = $this->pdo->prepare("INSERT INTO posts (title, description, content, created_by, created_on, image, alt, category) 
+        VALUES (:postTitle, :postDesc, :postCont, :created_by, :postDate, :image, :alt, :categories)");
         $statement->execute(
             [
                 ":postTitle" => $title,
@@ -61,6 +61,7 @@ class Posts
                 ":created_by" => $created_by,
                 ":postDate" => $created_on,
                 ":image" => $image,
+                ":alt" => $alt,
                 ":categories" => $category
             ]
         );
@@ -85,10 +86,10 @@ class Posts
     }
 
     //Method for updating a post.
-    public function update($title, $description, $content, $image, $category, $postId){
+    public function update($title, $description, $content, $image, $alt, $category, $postId){
 
         $statement = $this->pdo->prepare(
-        'UPDATE posts SET title = :postTitle, description = :postDesc, content = :postCont, image = :image, category = :categories
+        'UPDATE posts SET title = :postTitle, description = :postDesc, content = :postCont, image = :image, alt = :alt, category = :categories
          WHERE posts_id = :posts_id'
         );
 
@@ -97,6 +98,7 @@ class Posts
             ':postDesc' => $description,
             ':postCont' => $content,
             ':image' => $image,
+            ':alt' => $alt,
             ':categories' => $category,
             ':posts_id' => $postId
 

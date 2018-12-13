@@ -51,7 +51,7 @@ if($action === "create_post")
       }
 
    //Call to create method.
-   $posts->create($_POST["postTitle"], $_POST["postDesc"], $_POST["postCont"], $_SESSION["user_id"], date('Y-m-d H:i:s'), $new_location, $_POST['categories'] );
+    $posts->create($_POST["postTitle"], $_POST["postDesc"], $_POST["postCont"], $_SESSION["user_id"], date('Y-m-d H:i:s'), $new_location, $_POST["postAlt"], $_POST['categories'] );
 }
 
 // Handles what happens if the GET action is read_post.
@@ -98,9 +98,9 @@ if($action === "update_post")
          header('Location: ../views/edit-post.php?id='.$_GET["id"].'&empty=content');
          exit();
       }
-      
-   //Call to update method
-   $posts->update($_POST["postTitle"], $_POST["postDesc"], $_POST["postCont"], $new_location, $_POST['categories'], $postId );
+
+  //Call to update method
+    $posts->update($_POST["postTitle"], $_POST["postDesc"], $_POST["postCont"], $new_location, $_POST["postAlt"], $_POST['categories'], $postId );
 }
 
 // Handles what happens if the GET action is delete_post.

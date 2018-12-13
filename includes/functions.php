@@ -5,7 +5,7 @@ function redirect_to($location){
     exit; //exit() should be set if more action is set after this redirect.
 }
 
-//Redirect if user is not logged in
+//This function redirect if user is not logged in
 function is_login($location){
     if(!isset($_SESSION['username'])){
         redirect_to($location);
@@ -14,7 +14,7 @@ function is_login($location){
 
 //This function redirects if user is not logged in as an admin
 function is_admin($location){
-    if((!isset($_SESSION['user']))&& (!$_SESSION['user'] == "admin")){
+    if((!isset($_SESSION['user'])) || $_SESSION['user'] == "standard"){
         redirect_to($location);
     }
 }
