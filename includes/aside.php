@@ -14,6 +14,7 @@ $asidePosts = $object->getPostAside();
             <!-- Run foreach to display data from posts table -->
             <?php foreach ($asidePosts as $asidePost) :?>
 
+            <!-- Display posts -->
             <article class="col-lg-12 col-md-6 row">
                 <a href="<?= $siteroot ?>/views/single-post.php?posts_id=<?= $asidePost["posts_id"]; ?>" class="row">
                     <div class="article-images col-4">
@@ -31,6 +32,7 @@ $asidePosts = $object->getPostAside();
 
         <hr>
 
+        <!-- Subscription application form -->
         <div class="d-none d-lg-block">
             <h2>GET WEEKLY UPPDATES</h2>
             <form action="#" method="post">
