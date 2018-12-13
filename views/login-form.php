@@ -52,6 +52,7 @@ include "../includes/login.php";
     </div>
 </main>
 
-<?php
-require "../includes/scripts.php"
-?>
+<?php require "../includes/scripts.php" ?>
+
+</body>
+</html>

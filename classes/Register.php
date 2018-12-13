@@ -111,23 +111,24 @@ class Register
 
 }
 
+//Extend the Register class to access the methods
 class Login extends Register
 {
-        
-        public function add_session()
-        {
-            $_SESSION["username"] = $this->find_user()["username"];
-            $_SESSION["user_id"] = $this->find_user()["id"];
-            if($this->find_user()["admin"] == true ){
-                $_SESSION["user"] = "admin";
-            } else{
-                $_SESSION["user"] = "standard";
-            }
+    //Set if the session is used by a standard or admin user
+    public function add_session()
+    {
+        $_SESSION["username"] = $this->find_user()["username"];
+        $_SESSION["user_id"] = $this->find_user()["id"];
+        if($this->find_user()["admin"] == true ){
+            $_SESSION["user"] = "admin";
+        } else{
+            $_SESSION["user"] = "standard";
         }
+    }
         
-        //Verify password to check if password matches with the one in the database
-        public function verify_password($password)
-        {
-            return password_verify($password, $this->find_user()["password"]);
-        }
+    //Verify password to check if password matches with the one in the database
+    public function verify_password($password)
+    {
+        return password_verify($password, $this->find_user()["password"]);
+    }
 }

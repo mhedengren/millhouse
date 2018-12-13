@@ -25,18 +25,23 @@ include '../includes/header.php';
 
         <div class="row new-post">
             <div class="col-sm-12 col-lg-8">
+
                 <?php new_post_form_check(); ?>
                 <form action="../includes/posts.php?action=create_post" method="POST" enctype="multipart/form-data" id="upload-form">
+
                     <label for="title">Title</label>
                     <input type="text" id="title" name="postTitle" class="form-control" placeholder="Your title here"><!-- if validation fails then show all content entered into the form's input and textarea -->
                     <label for="desc">Description</label>
                     <input type="text" id="desc" name="postDesc" class="form-control" placeholder="Your description here">
                     <label for="content">Content</label>
                     <textarea name="postCont" id="content" class="form-control"></textarea>
+
                 </form>
             </div>
+
             <div class="col-sm-12 col-lg-4 mt-3 mt-lg-0">
                 <div class="upload-image-form">
+
                     <?php upload_file_check(); ?>
                     <label for="upload-input" class="upload-label">Select Image</label>
                     <input type="file" class="input-file d-block" name="image" id="upload-input" form="upload-form" />
@@ -45,9 +50,11 @@ include '../includes/header.php';
                     <hr>
                     <h4 class="upload-label">Select category</h4>
                     <select name="categories" form="upload-form" id="categories">
+
                         <option value="sunglasses">Sunglasses</option>
                         <option value="watches">Watches</option>
                         <option value="homedecor">Home Decor</option>
+
                     </select>
                 </div>
             </div>
@@ -55,6 +62,7 @@ include '../includes/header.php';
             <div class="row submit-btn-area">
                 <input type="submit" class="admin-button" name="submit" value="Create" form="upload-form">
             </div>
+            
         </div><!-- row new-post -->
 
     </div><!-- container -->
