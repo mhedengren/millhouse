@@ -20,7 +20,7 @@ $watches = $object2->getWatchesCat();
     <div class="container-fluid"> 
         <div class="row"> 
             <div class="hero-image">
-                <img src="../images/watch_light.jpg" alt="Watch">
+                <img src="../images/watch_lightest.jpg" alt="Watch">
                 <h1>Watches</h1>  
             </div>
         </div>
@@ -28,30 +28,30 @@ $watches = $object2->getWatchesCat();
         <section class="category-gallery d-none d-md-block">
             <div class="container">
         
-            <?php foreach($watches as $single_category) : ?>
+            <?php foreach($watches as $post) : ?>
             <div class="container">
             <?php include '../includes/edit-remove-category.php'; ?>
                 <div class="row content">
                     <div class="col-sm-12 col-md-6 post-details">
                             <div class="date row d-md-none justify-content-center">
                                 <div class="date-circle">
-                                    <h6 class="date"><?= $single_category["created_on"]; ?></h6>
+                                    <h6 class="date"><?= $post["created_on"]; ?></h6>
                                 </div>
                             </div>
-                            <a href="single-post.php?posts_id=<?= $single_category["posts_id"]; ?>">
-                                <h2 class="post-title"><?= $single_category["title"]; ?></h2>
+                            <a href="single-post.php?posts_id=<?= $post["posts_id"]; ?>">
+                                <h2 class="post-title"><?= $post["title"]; ?></h2>
                             </a>
-                            <p class="post-description"><?= $single_category["description"]; ?></p>
+                            <p class="post-description"><?= $post["description"]; ?></p>
                             <p class="read-more d-none d-md-block">
-                                <a href="single-post.php?posts_id=<?= $single_category["posts_id"]; ?>">Read/comment article</a>
+                                <a href="single-post.php?posts_id=<?= $post["posts_id"]; ?>">Read/comment article</a>
                             </p>  
                         </div>
                      
                     <div class="col-sm-12 col-md-6">
                         <div class="post-img">
-                            <a href="single-post.php?posts_id=<?= $single_category["posts_id"]; ?>">
+                            <a href="single-post.php?posts_id=<?= $post["posts_id"]; ?>">
                                 <div class="gallery-hero-image">
-                                    <img src="../includes/<?= $single_category["image"]; ?>" alt="feature-image">
+                                    <img src="../includes/<?= $post["image"]; ?>" alt="feature-image">
                                 </div>  
                             </a>  
                         </div>
@@ -73,27 +73,27 @@ $watches = $object2->getWatchesCat();
     <!--- Mobile gallery --->
 <div class="container d-md-none"> 
         <div class="row category-list">
-            <?php foreach($watches as $single_category) : ?>
-       
+            <?php foreach($watches as $post) : ?>
             <div class="col-sm-12 col-md-6 col-lg-4">
+            <?php include '../includes/date.php'; ?>
             <?php include '../includes/edit-remove-category.php'; ?>
                 <div class="category-card">
-                        <a href="single-post.php?posts_id=<?= $single_category["posts_id"]; ?>">
+                        <a href="single-post.php?posts_id=<?= $post["posts_id"]; ?>">
                         <div class="gallery-hero-image">
-                            <img src="../includes/<?= $single_category["image"]; ?>" alt="feature-image">
+                            <img src="../includes/<?= $post["image"]; ?>" alt="feature-image">
                         </div>
                         <div class="date row d-md-none justify-content-center">
                             <div class="date-circle">
                             <h6><?= $month; ?><br><?= $day; ?></h6>
                             </div>
                         </div>
-                        <h2 class="gallery-post-title"><?= $single_category["title"]; ?></h2>
+                        <h2 class="gallery-post-title"><?= $post["title"]; ?></h2>
                         </a>
                         <p class="gallery-post-description">
-                        <?= $single_category["description"]; ?>
+                        <?= $post["description"]; ?>
                     </p>
                     <p class="read-more d-none d-md-block">
-                        <a href="single-post.php?posts_id=<?= $single_category["posts_id"]; ?>">Read/comment article</a>
+                        <a href="single-post.php?posts_id=<?= $post["posts_id"]; ?>">Read/comment article</a>
                     </p>
                     </div><!-- category-card -->
                 </div><!-- col -->    
