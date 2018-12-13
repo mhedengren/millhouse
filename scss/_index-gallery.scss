@@ -3,6 +3,11 @@
 //Index gallery mobile
 .gallery-card {
     margin: 0.3rem 0;
+
+    .no-hover:hover {
+        text-decoration: none;
+        
+    }
 }
 
 .gallery-hero-image {

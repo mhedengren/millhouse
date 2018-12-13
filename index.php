@@ -35,7 +35,7 @@ include 'includes/header.php';
                            </li>
                       </ul>
                 <?php endif; ?>
-                  <a href="views/single-post.php?posts_id=<?= $feature["posts_id"]; ?>">
+                  <a class="no-hover" href="views/single-post.php?posts_id=<?= $feature["posts_id"]; ?>">
                <div class="hero-image">
                    <img src="includes/<?= $feature["image"]; ?>" alt="feature-image">
                </div>
