@@ -80,8 +80,10 @@ $post = $object->readPost();
     $(function () {
         $('textarea').froalaEditor()
     });
+    $('textarea').froalaEditor({
+            height: 400
+    });
 </script>
-
 <?php include "../includes/scripts.php"; ?>
 
 </body>
