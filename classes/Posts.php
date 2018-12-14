@@ -74,7 +74,7 @@ class Posts
     //Method for reading the post that is going to be updated.
     public function readPost()
     {
-    $stmt = $this->pdo->prepare("SELECT posts_id, posts.title, posts.description, posts.created_by, posts.created_on, posts.image, posts.content
+    $stmt = $this->pdo->prepare("SELECT posts_id, posts.title, posts.description, posts.created_by, posts.created_on, posts.image, posts.alt, posts.content
     FROM posts
     where posts_id = :posts_id");
 
