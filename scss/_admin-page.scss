@@ -78,7 +78,7 @@
     .alt-label{
         margin-left: 15px;
     }
-    
+
     .form-control{
         margin-left: 15px;
         width: 50%;
@@ -115,8 +115,10 @@
 @media screen and (min-width: 992px){
     #admin-panel {
 
-        .form-control{
-            width: 90%;
+        .upload-image-form {
+            .form-control{
+                width: 90%;
+            }
         }
     }
 }
