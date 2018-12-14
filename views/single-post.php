@@ -27,7 +27,7 @@ $read = $comments->readComments($_GET['posts_id']);
             <article class="hero-image-post-container row justify-content-center">
                 <div class="feature-post hero-image col-sm-12">
                     <!--takes image from database-->
-                    <img src="../includes/<?= $post["image"]; ?>" alt="Hero-image">
+                    <img src="../includes/<?= $post["image"]; ?>" alt="<?= $post["alt"]; ?>">
                     <!--takes title from database for tablet and larger-->
                     <div class="row d-flex justify-content-center">
                         <div class="col-12 post-title">
