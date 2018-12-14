@@ -31,56 +31,58 @@ $categories = $object->getAllCategories();
             </div>
         </div>
 
-    <div class="container p-0"> 
-        <div class="row category-list">
-            <?php foreach($categories as $post) : ?>
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                    <?php include '../includes/date.php'; ?>
-                    <?php if(isset($_SESSION['user']) && $_SESSION['user'] == "admin"): ?>
-                        <ul class="edit-remove-buttons">
+        <div class="container p-0"> 
+            <div class="row category-list">
+                <?php foreach($categories as $post) : ?>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <?php include '../includes/date.php'; ?>
+                        <?php if(isset($_SESSION['user']) && $_SESSION['user'] == "admin"): ?>
+                            <ul class="edit-remove-buttons">
 
-                            <li class="list-inline-item edit-button">
-                                <a href="../includes/posts.php?action=read_post&id=<?= $post["posts_id"]; ?>">
-                                <i class="fas fa-pencil-alt"></i></a>
-                            </li>
+                                <li class="list-inline-item edit-button">
+                                    <a href="../includes/posts.php?action=read_post&id=<?= $post["posts_id"]; ?>">
+                                    <i class="fas fa-pencil-alt"></i></a>
+                                </li>
 
-                            <li class="list-inline-item remove-button">
-                                <a href="../includes/posts.php?action=delete_post&id=<?= $post["posts_id"]; ?>">
-                                <i class="fas fa-times"></i></a>
-                            </li>
+                                <li class="list-inline-item remove-button">
+                                    <a href="../includes/posts.php?action=delete_post&id=<?= $post["posts_id"]; ?>">
+                                    <i class="fas fa-times"></i></a>
+                                </li>
 
-                        </ul>
-                    <?php endif; ?>
+                            </ul>
+                        <?php endif; ?>
 
-                    <div class="category-card">
-                        <a href="single-post.php?posts_id=<?= $post["posts_id"]; ?>">
+                        <div class="category-card">
+                            <a href="single-post.php?posts_id=<?= $post["posts_id"]; ?>">
 
-                            <div class="gallery-hero-image">
-                                <img src="../includes/<?= $post["image"]; ?>" alt="feature-image">
-                            </div>
-
-                            <div class="date row d-md-none justify-content-center">
-                                <div class="date-circle">
-                                    <h6><?= $month; ?><br><?= $day; ?></h6>
+                                <div class="gallery-hero-image">
+                                    <img src="../includes/<?= $post["image"]; ?>" alt="feature-image">
                                 </div>
-                            </div>
 
-                            <h2 class="gallery-post-title"><?= $post["title"]; ?></h2>
-                        </a>
-                            
-                        <p class="gallery-post-description">
-                            <?= $post["description"]; ?>
-                        </p>
+                                <div class="date row d-md-none justify-content-center">
+                                    <div class="date-circle">
+                                        <h6><?= $month; ?><br><?= $day; ?></h6>
+                                    </div>
+                                </div>
 
-                        <p class="read-more d-none d-md-block">
-                            <a href="single-post.php?posts_id=<?= $post["posts_id"]; ?>">Read/comment article</a>
-                        </p>
+                                <h2 class="gallery-post-title"><?= $post["title"]; ?></h2>
+                            </a>
+                                
+                            <p class="gallery-post-description">
+                                <?= $post["description"]; ?>
+                            </p>
 
-                    </div><!-- category-card -->
-                </div><!-- col -->       
-            <?php endforeach ;?>
-        </div><!--- category-list -->
-    </div>
+                            <p class="read-more d-none d-md-block">
+                                <a href="single-post.php?posts_id=<?= $post["posts_id"]; ?>">Read/comment article</a>
+                            </p>
+
+                        </div><!-- category-card -->
+                    </div><!-- col -->       
+                <?php endforeach ;?>
+            </div><!--- category-list --->
+        </div><!--- container p-0 --->
+    </div><!--- container-fluid --->
+    
 </main>
 
 <?php include '../includes/footer.php'; ?>
