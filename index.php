@@ -14,10 +14,10 @@ include 'includes/header.php';
 <!-- Index Feature -->
 <div class="container">
 
-    <section class="row justify-content-center feature-post">
+    <section class="row feature-post justify-content-center ">
         <div class="col-12">
         
-        <!-- Tablet/Desktop feature --->
+            <!-- Tablet/Desktop feature --->
             <div class="main-feature-headings d-none d-md-block">
                 <h6><?= $month . ' ' ?><?= $day . ', ' ?><?= $year; ?></h6>
                 <h2><span class="bg-color"><?= $feature["title"]; ?></span></h2>
