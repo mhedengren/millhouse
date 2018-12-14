@@ -31,7 +31,7 @@ $categories = $object->getAllCategories();
             </div>
         </div>
 
-        <div class="container p-0"> 
+        <div class="container all-cat-container p-0"> 
             <div class="row category-list">
                 <?php foreach($categories as $post) : ?>
                     <div class="col-sm-12 col-md-6 col-lg-4">
@@ -53,7 +53,7 @@ $categories = $object->getAllCategories();
                         <?php endif; ?>
 
                         <div class="category-card">
-                            <a href="single-post.php?posts_id=<?= $post["posts_id"]; ?>">
+                            <a class="no-hover" href="single-post.php?posts_id=<?= $post["posts_id"]; ?>">
 
                                 <div class="gallery-hero-image">
                                     <img src="../includes/<?= $post["image"]; ?>" alt="<?= $post["alt"]; ?>">
