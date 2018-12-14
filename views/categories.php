@@ -56,7 +56,7 @@ $categories = $object->getAllCategories();
                             <a href="single-post.php?posts_id=<?= $post["posts_id"]; ?>">
 
                                 <div class="gallery-hero-image">
-                                    <img src="../includes/<?= $post["image"]; ?>" alt="feature-image">
+                                    <img src="../includes/<?= $post["image"]; ?>" alt="<?= $post["alt"]; ?>">
                                 </div>
 
                                 <div class="date row d-md-none justify-content-center">

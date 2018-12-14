@@ -51,7 +51,7 @@ $sunglasses = $object3->getSunglassesCat();
                                 <div class="post-img">
                                     <a href="single-post.php?posts_id=<?= $post["posts_id"]; ?>">
                                         <div class="gallery-hero-image">
-                                            <img src="../includes/<?= $post["image"]; ?>" alt="feature-image">
+                                            <img src="../includes/<?= $post["image"]; ?>" alt="<?= $post["alt"]; ?>">
                                         </div>  
                                     </a>  
                                 </div>
@@ -76,7 +76,7 @@ $sunglasses = $object3->getSunglassesCat();
                         <a class="no-hover" href="single-post.php?posts_id=<?= $post["posts_id"]; ?>">
 
                             <div class="gallery-hero-image">
-                                <img src="../includes/<?= $post["image"]; ?>" alt="feature-image">
+                                <img src="../includes/<?= $post["image"]; ?>" alt="<?= $post["alt"]; ?>">
                             </div>
 
                             <div class="date row d-md-none justify-content-center">

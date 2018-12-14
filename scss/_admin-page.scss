@@ -17,7 +17,8 @@
         font-weight: 600;
         line-height: 24px;
         letter-spacing: 0.5px;
-        margin-top: 1rem;
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
     }
 
     .new-post {
@@ -28,6 +29,7 @@
 
             .admin-button{
                 @include buttonStyle($secondColorP, #fff);
+                text-transform: uppercase;
 
                 &:hover{
                     @include buttonStyle($primalColorD, #fff); 
@@ -35,9 +37,6 @@
             }
         }
 
-        .add-new-post {
-            margin-bottom: 1.5em;
-        }
     }
 }
 
