@@ -135,7 +135,7 @@ class Posts
     }
     public function getSinglePost()
     {
-        $stmt = $this->pdo->prepare("SELECT posts_id, posts.title, posts.description, posts.created_by, posts.created_on, posts.image, posts.content, 
+        $stmt = $this->pdo->prepare("SELECT posts_id, posts.title, posts.description, posts.created_by, posts.created_on, posts.image, posts.alt, posts.content, 
         users.username FROM posts
         INNER JOIN users
         ON posts.created_by = users.id
