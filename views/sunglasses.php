@@ -64,7 +64,7 @@ $sunglasses = $object3->getSunglassesCat();
         </section>
 
     <!--- Mobile gallery --->
-    <div class="container d-md-none"> 
+    <div class="container p-0 d-md-none"> 
         <div class="row category-list">
             <?php foreach($sunglasses as $post) : ?>
 
