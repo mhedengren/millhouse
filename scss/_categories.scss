@@ -4,6 +4,8 @@
 
 #categories {
 
+    
+    
     h1 {
         font-family: $bodyFamily;
         
@@ -46,7 +48,8 @@
 
 
     @media screen and (min-width: 768px){
- 
+
+        
         .hero-image {
             background: -webkit-linear-gradient(257.7deg, rgba(28, 48, 69, 0.81) 1.68%, rgba(96, 73, 90, 0.63) 97.8%);
             width: 100vw;
@@ -118,6 +121,23 @@
 
 @media screen and (min-width: 992px){
 
+    .all-cat-container {
+        margin-top: 3rem;
+
+    }
+
+    .gallery-hero-image {
+
+        img {
+    
+        
+            height: 300px;
+         
+    
+        }
+    
+    }
+    
     
     .hero-image {
         background: -webkit-linear-gradient(257.7deg, rgba(28, 48, 69, 0.81) 1.68%, rgba(96, 73, 90, 0.63) 97.8%);
@@ -150,7 +170,11 @@
         }
     }
 
+   
+
 }
+
+
 
 
     .category-gallery {
