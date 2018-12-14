@@ -25,7 +25,7 @@ $categories = $object->getAllCategories();
         <div class="row"> 
             <div class="hero-image">
 
-                <img src="../images/allcategories.jpg" alt="Watch">
+                <img src="../images/allcategories.jpg" alt="All the categories">
                 <h1>ALL CATEGORIES</h1> 
 
             </div>
