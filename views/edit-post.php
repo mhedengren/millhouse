@@ -50,7 +50,7 @@ $post = $object->readPost();
                     <?php upload_file_check(); ?>
                     <label for="upload-input" class="upload-label">Select Image</label>
                     <input type="file" class="input-file d-block" name="image" id="upload-input" form="upload-form" />
-                    <label for="alt" class="alt-label d-inline d-xl-block">Alt text</label>
+                    <label for="alt" class="alt-label d-inline d-xl-block">Image Title</label>
                     <input type="text" name="postAlt" id="alt" class="upload-label" form="upload-form">
                     <hr>
                     <h4 class="upload-label">Select category</h4>
