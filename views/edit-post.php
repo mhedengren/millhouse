@@ -51,7 +51,7 @@ $post = $object->readPost();
                     <label for="upload-input" class="upload-label">Select Image</label>
                     <input type="file" class="input-file d-block" name="image" id="upload-input" form="upload-form" />
                     <label for="alt" class="alt-label d-inline d-xl-block">Image Title</label>
-                    <input type="text" name="postAlt" id="alt" class="upload-label" form="upload-form">
+                    <input type="text" name="postAlt" id="alt" class="form-control" form="upload-form" value="<?= $post["alt"] ?>">
                     <hr>
                     <h4 class="upload-label">Select category</h4>
                     <select name="categories" form="upload-form" id="categories">
