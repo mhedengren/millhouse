@@ -6,12 +6,12 @@ class Register
     private $pdo;
 
     //Properties for user datas    
-    public $username;
-    public $email;
-    protected $hashedPassword;
-    public $password;
-    public $confirmPassword;
-    protected $hashedConfirmPassword;
+    protected $username;
+    private $email;
+    private $hashedPassword;
+    private $password;
+    private $confirmPassword;
+    private $hashedConfirmPassword;
 
     //Property for correcting error messages
     public $errors = [];
@@ -114,6 +114,12 @@ class Register
 //Extend the Register class to access the methods
 class Login extends Register
 {
+     //To get and store a username
+     public function get_user_by_name($username)
+     {
+         return $this->username = $username;
+     }  
+
     //Set if the session is used by a standard or admin user
     public function add_session()
     {
