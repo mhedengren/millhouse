@@ -7,9 +7,7 @@ $latestPosts = $object2->getLatestPosts();
 <section class="gallery row">
 
     <?php foreach ($latestPosts as $post) :?>
-
-        <?php include 'date.php';?>
-
+    <?php include 'date.php';?>
             <div class="col-sm-12 col-md-6 gallery-card">
 
                     <?php if(isset($_SESSION['user']) && $_SESSION['user'] == "admin"): ?>
@@ -24,22 +22,27 @@ $latestPosts = $object2->getLatestPosts();
                     <?php endif; ?>
 
                 <a class="no-hover" href="views/single-post.php?posts_id=<?= $post["posts_id"]; ?>">
+
+                    <!-- Gallery image -->
                     <div class="gallery-hero-image">
-                    <img src="includes/<?= $post["image"]; ?>" alt="feature-image">
+                        <img src="includes/<?= $post["image"]; ?>" alt="feature-image">
                     </div>
                     <div class="date row d-md-none justify-content-center">
-                    <div class="date-circle">
-                    <h6><?= $month; ?><br><?= $day; ?></h6>
-                    </div>
+                        <div class="date-circle">
+                            <h6><?= $month; ?><br><?= $day; ?></h6>
+                        </div>
                     </div>
                     <h2 class="gallery-post-title"><?= $post["title"]; ?></h2>
+
                 </a>
-                    <p class="gallery-post-description">
-                    <?= $post["description"]; ?>
+
+                    <p class="gallery-post-description"> 
+                        <?= $post["description"]; ?>
                     </p>
                     <p class="read-more d-none d-md-block">
-                    <a href="views/single-post.php?posts_id=<?= $post["posts_id"]; ?>">Read/comment article</a>
+                        <a href="views/single-post.php?posts_id=<?= $post["posts_id"]; ?>">Read/comment article</a>
                     </p>
+
             </div>
 
     <?php endforeach ;?>
