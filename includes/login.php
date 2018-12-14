@@ -8,11 +8,12 @@ if(isset($_POST['login'])){
     $login = new Login($pdo);
 
     //Run class to store values in $args array to properties
-    $login->username = $_POST['login_username'];
+    $username = $_POST['login_username'];
     $password = $_POST['login_password'];
-    $login->find_user();
-    $login->verify_password($password);
+    $login->get_user_by_name($username);
+    
 
+    // Verify if password match password that is passed in
     if($login->verify_password($password)){
 
         //If there is no error add username and admin/standard in the session
