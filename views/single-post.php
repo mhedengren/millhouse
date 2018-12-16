@@ -15,6 +15,7 @@ $object = new Posts($pdo);
 $post = $object->getSinglePost();
 //My Comment class
 include '../classes/Comment.php';
+include '../includes/date.php';
 $comments = new Comments($pdo);
 $read = $comments->readComments($_GET['posts_id']);
 ?>

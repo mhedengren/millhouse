@@ -14,15 +14,4 @@ include dirname(__FILE__).'/head.php';
 include dirname(__DIR__).'/classes/Posts.php';
 include dirname(__DIR__).'/classes/Register.php';
 
-
-//Fetches the big feature on index.
-$object = new Posts($pdo);
-$object->getFeaturePost();
-$feature = $object->getFeaturePost();
-
-//Date to string conversion for index feature.
-$date = $feature["created_on"];
-$month = date('M', strtotime($date));
-$day = date('j', strtotime($date));
-$year = date('o', strtotime($date));
 ?>

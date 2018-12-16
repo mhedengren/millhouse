@@ -79,6 +79,11 @@
         margin-left: 15px;
     }
 
+    .form-control{
+        margin-left: 15px;
+        width: 50%;
+    }
+
     h4 {
         font-family: $bodyFamily;
         line-height: 22px;
@@ -104,7 +109,16 @@
         @include buttonStyle($secondColorP, #fff);
     }
 
+}
 
+//md (Large devices (desktops, 992px and up))
+@media screen and (min-width: 992px){
+    #admin-panel {
 
-
+        .upload-image-form {
+            .form-control{
+                width: 90%;
+            }
+        }
+    }
 }
