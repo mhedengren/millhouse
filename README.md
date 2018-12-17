@@ -1,5 +1,9 @@
-# PHP Project Structure
+Millhouse Project.
+Grupp 7.
+(Worldwide Solutions).
 
-> Maintainers: All members of the project.
-
-This is an example structure for starting a new project
+Ahnna Östling
+Cristina Barbagallo
+Kaori Yoshimura
+Aladdin Kanngo
+Melker Hedengren
