@@ -133,6 +133,8 @@ class Posts
         $rows = $stmt->fetchAll();
         return $rows;
     }
+
+    //fetches a single post based on post id 
     public function getSinglePost()
     {
         $stmt = $this->pdo->prepare("SELECT posts_id, posts.title, posts.description, posts.created_by, posts.created_on, posts.image, posts.alt, posts.content, 
