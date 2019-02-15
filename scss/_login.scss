@@ -1,0 +1,115 @@
+@import "variables";
+@import "mixins";
+
+#login {
+
+    .container {
+        height: 100vh;
+        margin: auto;
+
+    }
+
+    .content {
+        background: -webkit-gradient(linear, left bottom, left top, color-stop(26.6%, $primalColorD), to($secondColorP));
+        background: -webkit-linear-gradient(bottom, $primalColorD 26.6%, $secondColorP 100%);
+        background: -o-linear-gradient(bottom, $primalColorD 26.6%, $secondColorP 100%);
+        background: linear-gradient(to top, $primalColorD 26.6%, $secondColorP 100%);
+        margin: auto;
+        text-align: center;
+        width: 100vw;
+        padding: 10vh 5%;
+
+        form div {
+            text-align: left;
+            max-width: 70vw;
+            margin: 5% auto;
+
+            label {
+                margin-top: .5rem;
+
+            }
+        }
+
+        .login-logo {
+            max-width: 25%;
+            padding: 5px;
+            margin: 20px auto;
+
+        }
+
+        *:not(input) {
+            color: #fff;
+
+        }
+
+        .errors ul {
+            margin: 5% auto;
+            list-style-type: none;
+            text-align: center;
+
+        }
+
+        .button-color {
+            @include buttonStyle($secondColorP, #fff);
+
+            &:hover {
+                @include buttonStyle($primalColorL, $primalColorD);
+
+            }
+        }
+
+        p {
+            margin-top: 5%;
+
+        }
+    }
+
+}
+
+//Tablet size
+@media screen and (min-width: 768px) {
+    #login {
+
+        .container {
+            height: 100vh;
+            margin: auto;
+
+        }
+
+        .content {
+            width: 60vw;
+            padding: 5%;
+
+            .errors ul {
+                width: 50vw;
+
+            }
+
+            .login-logo {
+                max-width: 20%;
+
+            }
+        }
+    }
+}
+
+//Desktop size
+@media screen and (min-width: 1024px) {
+    #login {
+
+        .content {
+            width: 47vw;
+
+            .errors ul {
+                width: 35vw;
+            }
+
+            form div {
+                max-width: 30vw;
+                margin: 5% auto;
+            }
+
+        }
+
+    }
+}

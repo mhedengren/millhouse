@@ -1,0 +1,124 @@
+@import "variables";
+@import "mixins";
+
+#admin-panel {
+
+    h1 {
+        font-weight: bold;
+        color: $secondColorP;
+        //margin-top: 4rem;
+        border-bottom: 3px solid $secondColorP;
+    }
+
+    h2 {
+        font-family: $bodyFamily;
+        color:$primalColorD;
+        font-size: 25px;
+        font-weight: 600;
+        line-height: 24px;
+        letter-spacing: 0.5px;
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+    }
+
+    .new-post {
+        margin-top: 2em;
+
+        .submit-btn-area{
+            margin-left: 5px;
+
+            .admin-button{
+                @include buttonStyle($secondColorP, #fff);
+                text-transform: uppercase;
+
+                &:hover{
+                    @include buttonStyle($primalColorD, #fff); 
+                }
+            }
+        }
+
+    }
+}
+
+.form-group {
+    label {
+        text-transform: uppercase;
+        color: $primalColorD;
+        line-height: 16px;
+        font-weight: bold;
+    }
+
+    input, textarea {
+        background: #F4F4F4;
+    }
+
+}
+
+.upload-image-form {
+    padding: 15px 0;
+    border: 1px solid #CED4DA;
+    box-sizing: border-box;
+    margin-left: auto;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+
+    .upload-label {
+        font-family: $bodyFamily;
+        font-weight: 600;
+        font-size: 20px;
+        letter-spacing: 0.5px;
+        color: #1C3045;
+        margin-left: 15px;
+        margin-bottom: 20px;
+    }
+
+    .alt-label{
+        margin-left: 15px;
+    }
+
+    .form-control{
+        margin-left: 15px;
+        width: 50%;
+    }
+
+    h4 {
+        font-family: $bodyFamily;
+        line-height: 22px;
+        font-size: 18px;
+        letter-spacing: 0.5px;
+        color: #1C3045;
+        margin-left: 15px;
+    }
+
+    /*hiding the input visually but keeping it visible for the browser
+    so that it can be styled */
+
+
+    input[type="submit"],
+    input[type="file"],
+    select {
+        margin: 10px;
+        //@include buttonStyle($secondColorP, #fff);
+    }
+
+    input[type="submit"],
+    {  
+        @include buttonStyle($secondColorP, #fff);
+    }
+
+}
+
+//md (Large devices (desktops, 992px and up))
+@media screen and (min-width: 992px){
+    #admin-panel {
+
+        .upload-image-form {
+            .form-control{
+                width: 90%;
+            }
+        }
+    }
+}

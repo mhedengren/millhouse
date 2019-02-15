@@ -1,0 +1,173 @@
+@import "variables";
+
+//Index gallery mobile
+.gallery-card {
+    margin: 0.3rem 0;
+
+    .no-hover:hover {
+        text-decoration: none;
+        
+    }
+}
+
+.gallery-hero-image {
+
+    img {
+
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        position: relative;
+        z-index: -1;
+        display: block;
+
+    }
+
+}
+
+.gallery-post-description {
+
+    font-family: $bodyFamily;
+    line-height: 24px;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    margin-bottom: 1rem;
+
+}
+
+.gallery-post-title {
+
+    font-family: $rubrikFamily;
+    font-weight: 900;
+    line-height: 24px;
+    font-size: 1rem;
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: $secondColorP;
+    margin: 0.5rem 0;
+}
+
+.edit-remove-buttons {
+
+    padding: 0;
+    margin: 0;
+    opacity: 0.5;
+    text-align: right;
+
+    ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    .edit-button a {
+        color: gray;
+    }
+
+    .remove-button a {
+        color: red;
+    }
+
+}
+
+//Index gallery tablet
+@media screen and (min-width: 768px) {
+
+    .main-container {
+        margin-top: 1rem;
+        padding: 2rem;
+    }
+
+
+    .gallery-card {
+        margin: 0;
+    }
+
+
+    .gallery-hero-image {
+
+        img {
+
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            box-shadow: none;
+            position: relative;
+            z-index: -1;
+            display: block;
+            margin-top: 0;
+
+        }
+
+    }
+
+    .gallery-post-title {
+
+        font-family: $bodyFamily;
+        text-align: left;
+        font-weight: 600;
+        line-height: 30px;
+        font-size: 1rem;
+        letter-spacing: 0px;
+        color: #1C3045;
+        margin: 0;
+        padding: 10px 0 5px 0;
+
+        //This makes the title automatically break off and add the ...
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+
+    }
+
+    .gallery-post-description {
+
+        font-family: $bodyFamily;
+        line-height: 24px;
+        font-size: 0.8rem;
+        letter-spacing: 0.5px;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+        margin-bottom: 0;
+
+        //This makes the description automatically break off and add the ...
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+
+    }
+}
+
+
+.read-more {
+
+    padding: 5px 0;
+
+    a {
+        font-family: $bodyFamily;
+        line-height: 24px;
+        font-size: 16px;
+        letter-spacing: 0.5px;
+        text-decoration-line: underline;
+        color: #A6C9C6;
+
+    }
+}
+
+.edit-remove-buttons {
+
+    margin-bottom: 0.3rem;
+}
+
+//Index gallery desktop
+@media screen and (min-width: 992px) {
+
+    .main-container {
+        margin-top: 3rem;
+        padding: 2rem;
+    }
+}

@@ -1,28 +1,34 @@
-@mixin flex {
-    display:-webkit-box;
-    display:-ms-flexbox;
-    display:flex;
+//Button style
+@mixin buttonStyle($bgColor,$tColor) {
+    background-color: $bgColor;
+    color: $tColor;
+    line-height: 22px;
+    padding: 10px;
+    margin: 10px;
+    margin-bottom: 25px;
+    text-decoration: none;
+    border: none;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
 }
 
-@mixin limitScreenForMobile {
-    @media screen and (min-width: 460px){
-        @content;
-    }
+//Button style for footer
+@mixin buttonStyleFooter($tColor,$bColor) {
+    color: $tColor;
+    line-height: 22px;
+    padding: 10px;
+    margin: 10px;
+    text-decoration: none;
+    border: 0.1rem solid $bColor;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
 }
 
-@mixin tablet {
-    @media screen and (min-width: 768px){
-        @content;
-    }
-}
-
-@mixin desktop {
-    @media screen and (min-width: 1024px){
-        @content;
-    }
-}
-
-@mixin textColor($color, $textShadow){
-    color: $color;
-    text-shadow: -1px -1px 0 $textShadow,-1px 1px 0 $textShadow,1px -1px 0 $textShadow,1px 1px 0 $textShadow, 0 0 10px $textShadow;
+//To check division/breakpoint etc
+@mixin toCheckStyle($borderColor) {
+    border: 1px dashed $borderColor;
 }

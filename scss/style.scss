@@ -1,7 +1,27 @@
-
-@import "mixins";
+@import "footer";
+@import "single-post";
+@import "header";
+@import "register-form";
+@import "login";
+@import "admin-page";
+@import "index-page";
+@import "index-gallery";
 @import "variables";
-@import "base";
-@import "modules";
-@import "icomoon";
-@import "animation";
+@import "mixins";
+@import "aside";
+@import "comments";
+@import "categories";
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    font-family: 'Merriweather', serif;
+}
+
+/* Initialization */
+*{
+    margin: 0px;
+    padding: 0px;
+}

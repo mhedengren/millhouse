@@ -1,0 +1,332 @@
+@import "variables";
+
+//Index mobile
+
+.no-hover:hover {
+
+    text-decoration: none;
+    
+}
+
+.hero-image {
+
+    background: -webkit-linear-gradient(90deg, #1C3045 -1%, rgba(96, 73, 90, 0.54) 100%);
+
+    img {
+
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        position: relative;
+        z-index: -1;
+        display: block;
+    }
+
+}
+
+// Date cirle only visile on mobile.
+.date-circle {
+
+    margin-top: -40px;
+    width: 70px;
+    height: 70px;
+    background-color: $secondColorP;
+    border-radius: 50%;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+    //Date
+    h6 {
+
+        text-transform: uppercase;
+        color: white;
+        text-align: center;
+        font-family: $bodyFamily;
+        line-height: 20px;
+        font-size: 1.1em;
+        letter-spacing: 0.5px;
+        padding: 0;
+        margin: 0;
+
+    }
+
+}
+
+// This title is hidden in tablet and desktop mode.
+.feature-title-mobile {
+
+    font-family: $rubrikFamily;
+    font-weight: 900;
+    line-height: 24px;
+    font-size: 1.2em;
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: $secondColorP;
+    margin: 0.5rem 0;
+
+}
+
+.post-description {
+
+    padding: 0 20px;
+    font-family: $bodyFamily;
+    line-height: 24px;
+    font-size: .8em;
+    text-align: center;
+    letter-spacing: 0.5px;
+
+
+}
+
+//Index feature tablet
+@media screen and (min-width: 768px) {
+
+    .edit-remove-buttons {
+
+        margin-top: 0;
+
+    }
+
+    .hero-image {
+
+        background: -webkit-linear-gradient(90deg, #1C3045 -1%, rgba(96, 73, 90, 0.54) 100%);
+        width: 100%;
+
+        img {
+
+            height: 300px;
+            object-fit: cover;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            position: relative;
+            z-index: -1;
+            display: block;
+        }
+
+    }
+
+    .main-feature-headings {
+
+        position: absolute;
+        bottom: 10px;
+        padding-right: 20px;
+        padding-left: 20px;
+
+        //Title
+        h2 {
+            font-family: $rubrikFamily;
+            font-weight: 900;
+            font-size: 1.6em;
+            letter-spacing: 0.5px;
+            color: white;
+
+            //Span class
+            .bg-color {
+                background-color: $secondColorP;
+                padding: 5px;
+            }
+
+        }
+
+        //Date
+        h6 {
+            opacity: 1;
+            font-family: $rubrikFamily;
+            font-size: 1.3em;
+            letter-spacing: 0.5px;
+            color: white;
+
+        }
+
+        //Link to read article
+        .read-more-desktop {
+
+            a {
+                font-family: $bodyFamily;
+                line-height: 24px;
+                font-size: 1em;
+                letter-spacing: 0.5px;
+                text-decoration-line: underline;
+                color: white;
+
+            }
+        }
+    }
+}
+
+//Index desktop small
+@media screen and (min-width: 992px) {
+
+    .feature-post {
+        margin: 0;
+    }
+
+    .hero-image {
+
+        background: -webkit-linear-gradient(90deg, #1C3045 -1%, rgba(96, 73, 90, 0.54) 100%);
+        width: 80%;
+        float: right;
+
+        img {
+
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            //object-position: 0px -100px;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            position: relative;
+            z-index: -1;
+            display: block;
+
+        }
+    }
+
+    .main-feature-headings {
+
+        position: absolute;
+        top: 15%;
+        max-width: 50%;
+        padding: 0;
+
+        //Title
+        h2 {
+            
+            font-family: $rubrikFamily;
+            font-weight: 900;
+            line-height: 44px;
+            font-size: 1.9rem;
+            letter-spacing: 0.5px;
+            color: white;
+            background-color: $secondColorP;
+            padding: 0.8rem;
+            border-radius: 4px;
+
+            //Hide the padding from tablet
+            .bg-color {
+                background-color: none;
+                padding: 0px;
+            }
+
+        }
+
+        hr {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            border-top: 3px solid $secondColorP;
+            width: 50%;
+        }
+
+        //Date
+        h6 {
+            font-family: $bodyFamily;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+            color: $secondColorP;
+
+        }
+
+        //Link to read article
+        .read-more-desktop {
+            margin-bottom: 0rem;
+
+            a {
+                font-family: $bodyFamily;
+                font-weight: 600;
+                text-decoration: none;
+                font-size: 14px;
+                letter-spacing: 0.5px;
+                color: $secondColorP;
+
+            }
+
+        }
+
+    }
+
+}
+
+//Index desktop large
+@media screen and (min-width: 1200px) {
+
+    .hero-image {
+
+        background: -webkit-linear-gradient(90deg, #1C3045 -1%, rgba(96, 73, 90, 0.54) 100%);
+        width: 80%;
+        float: right;
+
+        img {
+
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            position: relative;
+            z-index: -1;
+            display: block;
+
+        }
+    }
+
+    .main-feature-headings {
+
+        position: absolute;
+        top: 15%;
+        padding: 0;
+        max-width: 50%;
+
+        //Title
+        h2 {
+            font-family: $rubrikFamily;
+            font-weight: bolder;
+            line-height: 60px;
+            font-size: 2.6rem;
+            letter-spacing: 0.5px;
+            color: white;
+            //@include toCheckStyle(pink); 
+            background-color: $secondColorP;
+            padding: 0.8rem;
+            font-weight: 900;
+
+        }
+
+        hr {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            border-top: 3px solid $secondColorP;
+            width: 50%;
+        }
+
+        //Date
+        h6 {
+            color: $secondColorP;
+        }
+
+        //Link to read article
+        .read-more-desktop {
+
+            margin-bottom: 0rem;
+
+            a {
+                font-family: $bodyFamily;
+                font-weight: 600;
+                text-decoration: none;
+                font-size: 14px;
+                letter-spacing: 0.5px;
+                color: $secondColorP;
+
+
+            }
+
+        }
+
+
+    }
+
+
+}
