@@ -1,0 +1,201 @@
+#index{
+
+    .container{
+
+        main{
+            height: 100vh;
+
+            .content-center{
+                position: absolute;
+                width: 100%;
+                height: 50vh;
+                margin: auto;
+
+                .logo{
+                    height: auto;
+                    display: block;
+                    width: 50vw;
+                    max-width: 230px;
+                    position: absolute;
+                    z-index: 1;
+                    top: 75px;
+                    left: 25%;
+                }
+
+                .dryck-back{
+                    width: 100vw;
+                    max-width: 300px;
+                    height: 300px;
+                    background-color: $background;
+                    -webkit-clip-path: polygon(0 0, 67% 30%, 67% 70%, 0 100%);
+                    clip-path: polygon(0 0, 67% 34%, 67% 70%, 0 100%);
+                    z-index: 0;
+                    position: absolute;
+                    top: 0%;
+                    left: 0%;
+
+                    .dryck{
+                        position: absolute;
+                        top:40%;
+                        left: 2%;
+                    }
+                }
+
+                .meny-back{
+                    width: 100vw;
+                    max-width: 300px;
+                    height: 300px;
+                    background-color: $background;
+                    -webkit-clip-path: polygon(100% 0, 30% 34%, 30% 67%, 100% 100%);
+                    clip-path: polygon(100% 0, 30% 34%, 30% 67%, 100% 100%);
+                    z-index: 0;
+                    position: absolute;
+                    right: -1px;
+                    top: 0%;
+
+                    .meny{
+                        position: absolute;
+                        top:40%;
+                        right: 2%;
+                    }
+        
+                }
+
+            }
+
+            .hitta-back{
+                width: 300px;
+                height: 100px;
+                margin-top: 80%;
+        
+                .hitta{
+                    @include textColor($fontColorHitta, $fontColor);
+                    position: relative;
+                }
+            }
+        }
+        
+    }
+
+    @media screen and (min-width: 460px){
+
+        .container{
+            max-width: 460px;
+        }
+
+    }
+    
+//Tablet 
+    @include tablet{
+
+        .container{
+            max-width: 90vw;
+
+                main{
+
+                .content-center{
+
+                    .logo{
+                        height: auto;
+                        display: block;
+                        width: 30vw;
+                        max-width: 500px;
+                        position: absolute;
+                        z-index: 1;
+                        top: 75px;
+                        left: 35%;
+                    }
+
+                    .dryck-back{
+                        height: 400px;
+                        -webkit-clip-path: polygon(0 0, 37% 20%, 37% 80%, 0 100%);
+                        clip-path: polygon(0 0, 37% 20%, 37% 80%, 0 100%);
+                    }
+
+                    .meny-back{
+                        height: 400px;
+                        -webkit-clip-path: polygon(100% 0, 67% 20%, 67% 80%, 100% 100%);
+                        clip-path: polygon(100% 0, 67% 20%, 67% 80%, 100% 100%);
+                    }
+                }
+
+                .hitta-back{
+                    width: 400px;
+                    height: 250px;
+                    background-color: $background;
+                    -webkit-clip-path: polygon(100% 100%, 80% 63%, 20% 63%, 0 100%);
+                    clip-path: polygon(100% 100%, 80% 63%, 20% 63%, 0 100%);
+                    margin-top: auto;
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: center;
+
+                    .hitta{
+                    @include textColor($fontColor, $fontStroke);
+                    }
+                }
+
+            }
+
+        }
+    }
+
+//Desktop
+    @media screen and (min-width: 1024px){
+
+        .container{
+            max-width: 1024px;
+            width: 90vm;
+
+            main{
+
+                .content-center{
+                    height: 100vh;
+
+                    .logo{
+                        width: 50vw;
+                        max-width: 400px;
+                        top: 15%;
+                        left: 30%;
+                    }
+
+                    .dryck-back{
+                        height: 70px;
+                        background-color: inherit;
+                        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+                        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+
+                        .dryck{
+                            top:10%;
+                            left: 10%;
+                        }
+                    }
+
+                    .meny-back{
+                        height: 70px;
+                        background-color: inherit;
+                        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+                        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+
+                        .meny{
+                            top:10%;
+                            right: 10%;
+                        }
+                    }
+
+                
+                }
+
+                .hitta-back{
+                    right: 30%;
+
+                }
+
+            }
+        }
+
+    }
+    
+}
+
+

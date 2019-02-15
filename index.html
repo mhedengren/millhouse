@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- google font-->
+    <link href="https://fonts.googleapis.com/css?family=Archivo|Archivo+Black" rel="stylesheet">
+
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!--jQuery-->
+    <script
+      src="http://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+
+
+    <!-- Page title -->
+    <title>Index | DOG BAR</title>
+  </head>
+
+  <body id="index" class="bg-init">
+
+    <div class="container animsition">
+
+    <main>
+      
+      <div class="content-center">
+
+        <img class="logo" src="images/dogbar-logo.svg" alt="Dog Bar logo" />
+
+        <div class="dryck-back">
+            <h2 class="dryck">
+                <a href="#" class="animsition-link" aria-label="Gå till dryck meny sida">
+                  Dryck<br />
+                <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                </a>
+              </h2>
+        </div>
+
+        <div class="meny-back">
+            <h2 class="meny">
+                <a href="#" class="animsition-link" aria-label="Gå till mat meny sida">
+                  Meny<br />
+                <i class="fas fa-arrow-left" aria-hidden="true"></i>
+                </a>
+            </h2>
+        </div>
+
+      </div>
+
+      <div class="hitta-back">
+          <h2 id="nav-hitta" class="hitta">
+              <a href="hitta.html" class="animsition-link" aria-label="Gå till Hitta hit sida">
+                <i class="fas fa-arrow-up" aria-hidden="true"></i> <br />
+                Hitta hit
+              </a>
+          </h2>
+      </div>
+
+    </main>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+    <script src="js/animsition.min.js" charset="utf-8"></script>
+    <script>
+      $(document).ready(function() {
+
+        $(".animsition").animsition({
+          //inClass: 'fade-in-up',
+          outClass: "fade-out-up",
+          inDuration: 1000,
+          outDuration: 800,
+          linkElement: ".animsition-link",
+          // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+          loading: true,
+          loadingParentElement: "body", //animsition wrapper element
+          loadingClass: "animsition-loading",
+          loadingInner: "", // e.g '<img src="loading.svg" />'
+          timeout: false,
+          timeoutCountdown: 500,
+          onLoadEvent: true,
+          browser: ["animation-duration", "-webkit-animation-duration"],
+          // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+          // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+          overlay: false,
+          overlayClass: "animsition-overlay-slide",
+          overlayParentElement: "body",
+          transition: function(url) {
+            window.location.href = url;
+          }
+        });
+
+        //Hover for menus
+        $("#nav-hitta").mouseover(function(){
+        $(this).css('font-size' , '250%');
+        });
+
+        $("#nav-hitta").mouseleave(function(){
+        $(this).css('font-size' , '200%');
+        });
+
+
+
+
+      });
+    </script>
+  
+  </body>
+</html>

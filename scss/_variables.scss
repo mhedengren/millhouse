@@ -1,24 +1,13 @@
-//---- Font family ----//
-$rubrikFamily: 'Merriweather', serif;
-$bodyFamily:'Open Sans', sans-serif;
+/*variabler start*/
+$fontFamilyHeader: 'Archivo Black', sans-serif;
+$fontFamilyBody: 'Archivo', sans-serif;
+$background: #000;
+$mainBackColor: #4F4F4F;
+$fontColor: #F2F2F2;
+$fontStroke: #828282;
+$fontColorHitta: #333333;
+$headerBackColor: #C4C4C4
 
-//---- Font sizes ----//
-//Primary Color light
-$textSize: 0.8rem;
 
-//---- Colors ----//
-//Primary Color light
-$primalColorL: #F0F0F0;
-//Primary Color dark
-$primalColorD: #1C3045;
-//Second colour purplefont
-$secondColorP: #60495A;
 
-//---- Others ----//
-//Post description, article data
-$paleGray: rgba(28, 48, 69, 0.5);
-//Background
-$paleGrayB: rgba(166, 201, 198, 0.3);
-//Aside main color
-$colorAside: #252525;
 
