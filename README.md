@@ -1,5 +1,7 @@
 Millhouse Project.
-Grupp 7.
+Create an easily navigated blogging system from ground up using PHP & MySQL.
+
+Group 7.
 (Worldwide Solutions).
 
 Ahnna Östling
