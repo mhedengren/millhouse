@@ -1,9 +1,6 @@
 Millhouse Project.
 Create an easily navigated blogging system from ground up using PHP & MySQL.
 
-See the site at
-www.reklem.se
-
 Group 7.
 (Worldwide Solutions).
 
